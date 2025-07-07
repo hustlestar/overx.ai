@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build",
+    "build": "npm run build:shared && turbo run build",
+    "build:shared": "cd shared && npm run build",
     "postbuild": "npm run generate-sitemap && npm run check-seo",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "check-seo": "node scripts/seo-audit.js",

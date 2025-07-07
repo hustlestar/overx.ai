@@ -23,7 +23,18 @@ export const SmartLink: React.FC<Omit<Parameters<typeof SharedSmartLink>[0], 'Li
 }
 
 // Wrapper for OptimizedImage that provides Next.js Image component
-export const OptimizedImage: React.FC<Omit<Parameters<typeof SharedOptimizedImage>[0], 'ImageComponent'>> = (props) => {
+interface OptimizedImageProps {
+  src: string
+  alt: string
+  width?: number | string
+  height?: number | string
+  priority?: boolean
+  eager?: boolean
+  className?: string
+  [key: string]: any
+}
+
+export const OptimizedImage: React.FC<OptimizedImageProps> = (props) => {
   return <SharedOptimizedImage {...props} ImageComponent={Image} />
 }
 
