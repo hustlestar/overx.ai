@@ -11,7 +11,7 @@
     "build": "npm run build:shared && turbo run build --filter=@overx-ai/main",
     "build:all": "npm run build:shared && turbo run build",
     "build:shared": "cd shared && npm run build",
-    "postbuild": "npm run generate-sitemap && npm run check-seo",
+    "postbuild": "npm run generate-sitemap",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "check-seo": "node scripts/seo-audit.js",
     "analyze": "turbo run analyze",
