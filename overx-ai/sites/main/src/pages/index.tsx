@@ -343,7 +343,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                 <p className="text-xl text-gray-500">Technologies that transcend traditional boundaries</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20">
+                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
@@ -363,7 +363,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </SmartLink>
                   </div>
                 </div>
-                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20">
+                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
@@ -383,7 +383,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </SmartLink>
                   </div>
                 </div>
-                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20">
+                <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
