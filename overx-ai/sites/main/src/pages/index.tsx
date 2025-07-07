@@ -170,20 +170,14 @@ export default function HomePage({ lastModified }: HomePageProps) {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <div className="text-center">
-                <div className="mb-8 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <div className="mb-6">
-                    <span className="text-lg md:text-xl text-gray-500 font-light tracking-widest uppercase">Welcome to</span>
-                  </div>
+                <div className="mb-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                   <h1 className="text-6xl md:text-8xl font-bold mb-4">
                     <span className="block bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-gradient-x">OverX AI</span>
                   </h1>
                   <div className="mt-4">
-                    <span className="text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-sky-400 animate-gradient-x font-light italic">Over the Xorizon</span>
+                    <span className="text-xl md:text-2xl text-gray-500 font-light">Over the Xorizon</span>
                   </div>
                 </div>
-                <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto opacity-0 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                  Step beyond conventional boundaries. Pioneer the future with AI solutions that transform possibilities into reality.
-                </p>
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                   <SmartLink 
                     href="/demo" 
@@ -201,14 +195,14 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   </SmartLink>
                 </div>
               </div>
-              
-              {/* Scroll indicator */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: '1s' }}>
-                <div className="flex flex-col items-center">
-                  <span className="text-sm text-gray-500 mb-2">Scroll to explore</span>
-                  <div className="w-6 h-10 border border-white/20 rounded-full relative">
-                    <div className="absolute w-1 h-3 bg-white/60 rounded-full left-1/2 transform -translate-x-1/2 top-2 animate-scroll-down"></div>
-                  </div>
+            </div>
+            
+            {/* Scroll indicator */}
+            <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 transition-opacity duration-500 ${scrollY > 100 ? 'opacity-0 pointer-events-none' : 'opacity-100 animate-fade-in'}`} style={{ animationDelay: '1s' }}>
+              <div className="flex flex-col items-center">
+                <span className="text-sm text-gray-500 mb-2">Scroll to explore</span>
+                <div className="w-6 h-10 border border-white/20 rounded-full relative">
+                  <div className="absolute w-1 h-3 bg-white/60 rounded-full left-1/2 transform -translate-x-1/2 top-2 animate-scroll-down"></div>
                 </div>
               </div>
             </div>
