@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "rootDir": ".",
+    "resolveJsonModule": true,
+    "lib": ["ES2018", "DOM", "DOM.Iterable"]
+  },
+  "include": ["components/**/*", "lib/**/*", "content/**/*", "index.ts"],
+  "exclude": ["node_modules", "dist", "tsup.config.ts"]
+}
