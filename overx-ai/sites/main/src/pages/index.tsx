@@ -98,6 +98,133 @@ export default function HomePage({ lastModified }: HomePageProps) {
       <PreconnectLink origins={['https://cdn.overx.ai', 'https://api.overx.ai']} />
       
       <div className="min-h-screen bg-black text-white overflow-x-hidden">
+        {/* Horizon line with sunrise */}
+        <div className="fixed inset-0 pointer-events-none">
+          {/* Dynamic sun glow that follows the sun */}
+          <div 
+            className="absolute bottom-0 left-0 w-full h-full transition-all duration-300"
+            style={{
+              background: `radial-gradient(ellipse at ${15 + (scrollY * 0.026)}% 100%, rgba(255, 255, 255, 0.15) 0%, transparent 35%)`,
+            }}
+          />
+          
+          {/* Main horizon atmosphere */}
+          <div 
+            className="absolute bottom-0 left-0 right-0 h-[70vh]"
+            style={{
+              background: 'radial-gradient(ellipse at bottom center, rgba(255,255,255,0.05) 0%, transparent 60%)',
+            }}
+          />
+          
+          <svg 
+            className="absolute bottom-0 left-0 right-0 w-full"
+            style={{ height: '60vh' }}
+            viewBox="0 0 1920 600"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <radialGradient id="sunGlow">
+                <stop offset="0%" stopColor="rgba(255,255,255,1)" />
+                <stop offset="40%" stopColor="rgba(255,255,255,0.8)" />
+                <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+              </radialGradient>
+              <filter id="rayGlow">
+                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            {/* Dynamic sun position following a curved path */}
+            {(() => {
+              const sunX = 300 + (scrollY * 0.5);
+              // Create a parabolic arc: sun rises and then sets
+              const scrollProgress = Math.min(scrollY / 2000, 1);
+              const sunY = Math.pow((scrollProgress - 0.5) * 2, 2) * 200 - 200; // Much larger arc - 200px peak
+              
+              return (
+                <g transform={`translate(${sunX}, ${sunY})`}>
+              {/* Sun glow */}
+              <circle
+                cx="0"
+                cy="280"
+                r="40"
+                fill="url(#sunGlow)"
+                opacity="0.3"
+              />
+              {/* Sun core */}
+              <circle
+                cx="0"
+                cy="280"
+                r="12"
+                fill="rgba(255,255,255,0.7)"
+              />
+              
+              {/* Dynamic rays that change direction as sun moves */}
+              <g filter="url(#rayGlow)">
+                {/* Calculate progress (0 to 1) based on sun position */}
+                {(() => {
+                  const sunProgress = Math.min(scrollY / 2000, 1); // Normalize scroll to 0-1
+                  
+                  // Rays with wider angles - all falling to y=400
+                  const leftRayEndX = 600 - (sunProgress * 1200); // 600 to -600
+                  const centerRayEndX = 300 - (sunProgress * 600); // 300 to -300
+                  const rightRayEndX = 1200 - (sunProgress * 2400); // 1200 to -1200 (much wider)
+                  
+                  return (
+                    <>
+                      {/* Left ray - wide angle */}
+                      <line 
+                        x1="0" 
+                        y1="280" 
+                        x2={leftRayEndX} 
+                        y2={400 - sunY} 
+                        stroke="rgba(255,255,255,0.3)" 
+                        strokeWidth="2"
+                      />
+                      {/* Center ray */}
+                      <line 
+                        x1="0" 
+                        y1="280" 
+                        x2={centerRayEndX} 
+                        y2={400 - sunY} 
+                        stroke="rgba(255,255,255,0.35)" 
+                        strokeWidth="2.5"
+                      />
+                      {/* Right ray - extra wide angle */}
+                      <line 
+                        x1="0" 
+                        y1="280" 
+                        x2={rightRayEndX} 
+                        y2={400 - sunY} 
+                        stroke="rgba(255,255,255,0.3)" 
+                        strokeWidth="2"
+                      />
+                    </>
+                  );
+                })()}
+              </g>
+              </g>
+              );
+            })()}
+            
+            {/* Horizon curve - simple and clean */}
+            <path
+              d="M0,400 Q960,370 1920,400 L1920,600 L0,600 Z"
+              fill="rgba(255,255,255,0.02)"
+            />
+            <path
+              d="M0,400 Q960,370 1920,400"
+              stroke="rgba(255,255,255,0.2)"
+              strokeWidth="1.5"
+              fill="none"
+            />
+          </svg>
+        </div>
+        
         {/* Animated background gradient */}
         <div 
           className="fixed inset-0 opacity-30 pointer-events-none"

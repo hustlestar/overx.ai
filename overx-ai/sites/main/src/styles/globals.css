@@ -174,3 +174,17 @@
 .animate-slide-in-right.slide-in-active {
   animation: slide-in-right 1s ease-out forwards;
 }
+
+/* Horizon glow animation */
+@keyframes horizon-glow {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.08;
+  }
+}
+
+.animate-horizon-glow {
+  animation: horizon-glow 8s ease-in-out infinite;
+}
