@@ -1,0 +1,4 @@
+{
+  "framework": "nextjs",
+  "outputDirectory": "sites/main/.next"
+}
