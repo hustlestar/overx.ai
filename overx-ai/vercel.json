@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "sites/main/.next",
-  "installCommand": "npm install",
+  "buildCommand": "cd ../.. && npm install && npm run build:shared && cd sites/main && npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "cd ../.. && npm install",
   "framework": null
 }
