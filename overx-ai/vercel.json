@@ -1,4 +1,5 @@
 {
-  "framework": "nextjs",
-  "outputDirectory": "sites/main/.next"
+  "buildCommand": "npm run build && cp -r sites/main/.next .",
+  "outputDirectory": ".next",
+  "framework": "nextjs"
 }
