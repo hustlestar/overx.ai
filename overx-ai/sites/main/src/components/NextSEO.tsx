@@ -3,14 +3,15 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { BaseSEO as SharedBaseSEO, SmartLink as SharedSmartLink } from '@overx-ai/shared/seo'
 import { 
+  BaseSEO as SharedBaseSEO, 
+  SmartLink as SharedSmartLink,
   OptimizedImage as SharedOptimizedImage, 
   PreconnectLink as SharedPreconnectLink,
   PreloadLink as SharedPreloadLink,
   PrefetchLink as SharedPrefetchLink
-} from '@overx-ai/shared/performance'
-import type { SEOProps } from '@overx-ai/shared/seo'
+} from '@overx-ai/shared'
+import type { SEOProps } from '@overx-ai/shared'
 
 // Wrapper for BaseSEO that provides Next.js Head component
 export const BaseSEO: React.FC<SEOProps> = (props) => {

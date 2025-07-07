@@ -1,8 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useEffect, useState } from 'react'
 import { BaseSEO, SmartLink, OptimizedImage, PreconnectLink } from '../components/NextSEO'
-import { Breadcrumbs } from '@overx-ai/shared/seo'
-import { createOrganizationSchema, createWebSiteSchema } from '@overx-ai/shared/lib/schema'
+import { Breadcrumbs, createOrganizationSchema, createWebSiteSchema } from '@overx-ai/shared'
 
 interface HomePageProps {
   lastModified: string
