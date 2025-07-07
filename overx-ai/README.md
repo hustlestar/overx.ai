@@ -1,4 +1,4 @@
-# OverX.ai - SEO-Optimized Multi-Subdomain Website
+# OverX AI - SEO-Optimized Multi-Subdomain Website
 
 A high-performance, SEO-first multi-subdomain website built with Next.js, featuring comprehensive SEO optimization, structured data, and performance monitoring.
 
@@ -80,7 +80,7 @@ npm run check-seo
 ### Structured Data
 ```tsx
 const schema = createOrganizationSchema({
-  name: 'OverX.ai',
+  name: 'OverX AI',
   url: 'https://overx.ai',
   logo: 'https://overx.ai/logo.png',
   sameAs: ['https://twitter.com/overxai']

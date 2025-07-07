@@ -1,7 +1,7 @@
-# CLAUDE.md - OverX.ai Development Guidelines
+# CLAUDE.md - OverX AI Development Guidelines
 
 ## Project Overview
-OverX.ai is a multi-subdomain company website with **exceptional SEO** as the primary focus. Every technical decision should prioritize search engine visibility and Core Web Vitals performance.
+OverX AI is a multi-subdomain company website with **exceptional SEO** as the primary focus. Every technical decision should prioritize search engine visibility and Core Web Vitals performance.
 
 ## Project Structure
 ```
@@ -80,7 +80,7 @@ export default function ProductPage() {
   return (
     <>
       <BaseSEO
-        title="Product Name - AI Solution | OverX.ai"
+        title="Product Name - AI Solution | OverX AI"
         description="Product description with keywords..."
         canonical="https://overx.ai/products/product-name"
         structuredData={structuredData}
