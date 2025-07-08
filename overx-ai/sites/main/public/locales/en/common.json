@@ -41,6 +41,13 @@
       "description": "Human-like understanding at scale"
     }
   },
+  "navigation": {
+    "products": "Products",
+    "about": "About",
+    "blog": "Blog",
+    "cv": "CV",
+    "getStarted": "Get Started"
+  },
   "footer": {
     "rights": "All rights reserved",
     "navigation": {
@@ -48,6 +55,13 @@
       "about": "About",
       "careers": "Careers",
       "blog": "Blog"
-    }
+    },
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "documentation": "Documentation",
+    "support": "Support",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
   }
 }

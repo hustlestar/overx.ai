@@ -41,6 +41,13 @@
       "description": "Comprensión similar a la humana a escala"
     }
   },
+  "navigation": {
+    "products": "Productos",
+    "about": "Acerca de",
+    "blog": "Blog",
+    "cv": "CV",
+    "getStarted": "Comenzar"
+  },
   "footer": {
     "rights": "Todos los derechos reservados",
     "navigation": {
@@ -48,6 +55,13 @@
       "about": "Acerca de",
       "careers": "Carreras",
       "blog": "Blog"
-    }
+    },
+    "company": "Empresa",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "documentation": "Documentación",
+    "support": "Soporte",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
   }
 }

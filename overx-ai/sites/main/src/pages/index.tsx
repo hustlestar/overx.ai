@@ -253,26 +253,26 @@ export default function HomePage({ lastModified }: HomePageProps) {
               </div>
               <div className="hidden md:flex items-center space-x-8">
                 <SmartLink href="/products" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                  <span>Products</span>
+                  <span>{t('navigation.products')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
                 <SmartLink href="/about" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                  <span>About</span>
+                  <span>{t('navigation.about')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
                 <SmartLink href="https://blog.overx.ai" className="text-gray-300 hover:text-white transition-colors duration-300 relative group" external>
-                  <span>Blog</span>
+                  <span>{t('navigation.blog')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
                 <SmartLink href="/cv" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                  <span>CV</span>
+                  <span>{t('navigation.cv')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
                 <SmartLink 
                   href="/contact" 
                   className="relative overflow-hidden px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
                 >
-                  <span className="relative z-10">Get Started</span>
+                  <span className="relative z-10">{t('navigation.getStarted')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
                 <LanguageSwitcher />
@@ -510,34 +510,34 @@ export default function HomePage({ lastModified }: HomePageProps) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
-                <h4 className="text-lg font-semibold mb-4">Products</h4>
+                <h4 className="text-lg font-semibold mb-4">{t('footer.navigation.products')}</h4>
                 <ul className="space-y-2">
-                  <li><SmartLink href="/products/neural-interface" className="text-gray-400 hover:text-white transition-colors duration-300">Neural Interface</SmartLink></li>
-                  <li><SmartLink href="/products/quantum-flow" className="text-gray-400 hover:text-white transition-colors duration-300">Quantum Flow</SmartLink></li>
-                  <li><SmartLink href="/products/infinite-vision" className="text-gray-400 hover:text-white transition-colors duration-300">Infinite Vision</SmartLink></li>
+                  <li><SmartLink href="/products/neural-interface" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.neuralInterface.title')}</SmartLink></li>
+                  <li><SmartLink href="/products/quantum-flow" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.quantumFlow.title')}</SmartLink></li>
+                  <li><SmartLink href="/products/infinite-vision" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.infiniteVision.title')}</SmartLink></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-4">Company</h4>
+                <h4 className="text-lg font-semibold mb-4">{t('footer.company')}</h4>
                 <ul className="space-y-2">
-                  <li><SmartLink href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">About</SmartLink></li>
-                  <li><SmartLink href="/careers" className="text-gray-400 hover:text-white transition-colors duration-300">Careers</SmartLink></li>
+                  <li><SmartLink href="/about" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.navigation.about')}</SmartLink></li>
+                  <li><SmartLink href="/careers" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.navigation.careers')}</SmartLink></li>
                   <li><SmartLink href="/contact" className="text-gray-400 hover:text-white transition-colors duration-300">Contact</SmartLink></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-4">Resources</h4>
+                <h4 className="text-lg font-semibold mb-4">{t('footer.resources')}</h4>
                 <ul className="space-y-2">
-                  <li><SmartLink href="https://blog.overx.ai" className="text-gray-400 hover:text-white transition-colors duration-300" external>Blog</SmartLink></li>
-                  <li><SmartLink href="/docs" className="text-gray-400 hover:text-white transition-colors duration-300">Documentation</SmartLink></li>
-                  <li><SmartLink href="/support" className="text-gray-400 hover:text-white transition-colors duration-300">Support</SmartLink></li>
+                  <li><SmartLink href="https://blog.overx.ai" className="text-gray-400 hover:text-white transition-colors duration-300" external>{t('footer.navigation.blog')}</SmartLink></li>
+                  <li><SmartLink href="/docs" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.documentation')}</SmartLink></li>
+                  <li><SmartLink href="/support" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.support')}</SmartLink></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-lg font-semibold mb-4">Legal</h4>
+                <h4 className="text-lg font-semibold mb-4">{t('footer.legal')}</h4>
                 <ul className="space-y-2">
-                  <li><SmartLink href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-300">Privacy Policy</SmartLink></li>
-                  <li><SmartLink href="/terms" className="text-gray-400 hover:text-white transition-colors duration-300">Terms of Service</SmartLink></li>
+                  <li><SmartLink href="/privacy" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.privacyPolicy')}</SmartLink></li>
+                  <li><SmartLink href="/terms" className="text-gray-400 hover:text-white transition-colors duration-300">{t('footer.termsOfService')}</SmartLink></li>
                 </ul>
               </div>
             </div>
