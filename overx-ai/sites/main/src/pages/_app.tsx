@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
+import { appWithTranslation } from 'next-i18next'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -10,7 +11,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
 
   useEffect(() => {
@@ -34,3 +35,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </div>
   )
 }
+
+export default appWithTranslation(App)

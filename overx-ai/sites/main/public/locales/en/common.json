@@ -1,0 +1,53 @@
+{
+  "companyName": "OverX AI",
+  "tagline": "Over the Xorizon",
+  "hero": {
+    "title": "OverX AI",
+    "subtitle": "Over the Xorizon",
+    "cta1": "Experience the Future",
+    "cta2": "Explore Solutions",
+    "scrollPrompt": "Scroll to explore"
+  },
+  "products": {
+    "title": "Pioneering Solutions",
+    "subtitle": "Technologies that transcend traditional boundaries",
+    "learnMore": "Discover More",
+    "neuralInterface": {
+      "title": "Neural Interface",
+      "description": "Advanced language models that understand context, intent, and nuance like never before"
+    },
+    "quantumFlow": {
+      "title": "Quantum Flow",
+      "description": "Intelligent automation that learns, adapts, and evolves with your business ecosystem"
+    },
+    "infiniteVision": {
+      "title": "Infinite Vision",
+      "description": "Predictive intelligence that sees beyond data, revealing patterns invisible to traditional analytics"
+    }
+  },
+  "innovation": {
+    "title": "Beyond Innovation",
+    "subtitle": "Where imagination meets intelligence",
+    "card1": {
+      "title": "Adaptive Intelligence",
+      "description": "Systems that evolve with your needs"
+    },
+    "card2": {
+      "title": "Quantum Processing",
+      "description": "Unprecedented computational power"
+    },
+    "card3": {
+      "title": "Neural Synthesis",
+      "description": "Human-like understanding at scale"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "navigation": {
+      "products": "Products",
+      "about": "About",
+      "careers": "Careers",
+      "blog": "Blog"
+    }
+  }
+}

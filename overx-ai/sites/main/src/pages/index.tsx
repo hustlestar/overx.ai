@@ -2,12 +2,16 @@ import { GetStaticProps } from 'next'
 import { useEffect, useState } from 'react'
 import { BaseSEO, SmartLink, OptimizedImage, PreconnectLink } from '../components/NextSEO'
 import { Breadcrumbs, createOrganizationSchema, createWebSiteSchema } from '@overx-ai/shared'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { LanguageSwitcher } from '../components/LanguageSwitcher'
 
 interface HomePageProps {
   lastModified: string
 }
 
 export default function HomePage({ lastModified }: HomePageProps) {
+  const { t } = useTranslation('common')
   const [scrollY, setScrollY] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -271,6 +275,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <span className="relative z-10">Get Started</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
+                <LanguageSwitcher />
               </div>
             </div>
           </nav>
@@ -298,10 +303,10 @@ export default function HomePage({ lastModified }: HomePageProps) {
               <div className="text-center">
                 <div className="mb-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                   <h1 className="text-6xl md:text-8xl font-bold mb-4">
-                    <span className="block bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-gradient-x">OverX AI</span>
+                    <span className="block bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-gradient-x">{t('hero.title')}</span>
                   </h1>
                   <div className="mt-4">
-                    <span className="text-xl md:text-2xl text-gray-500 font-light">Over the Xorizon</span>
+                    <span className="text-xl md:text-2xl text-gray-500 font-light">{t('hero.subtitle')}</span>
                   </div>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
@@ -309,14 +314,14 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     href="/demo" 
                     className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
                   >
-                    <span className="relative z-10">Experience the Future</span>
+                    <span className="relative z-10">{t('hero.cta1')}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </SmartLink>
                   <SmartLink 
                     href="/products" 
                     className="group relative px-8 py-4 border border-white/20 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
                   >
-                    <span className="relative z-10">Explore Solutions</span>
+                    <span className="relative z-10">{t('hero.cta2')}</span>
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </SmartLink>
                 </div>
@@ -326,7 +331,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
             {/* Scroll indicator */}
             <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 z-20 transition-opacity duration-500 ${scrollY > 100 ? 'opacity-0 pointer-events-none' : 'opacity-100 animate-fade-in'}`} style={{ animationDelay: '1s' }}>
               <div className="flex flex-col items-center">
-                <span className="text-sm text-gray-500 mb-2">Scroll to explore</span>
+                <span className="text-sm text-gray-500 mb-2">{t('hero.scrollPrompt')}</span>
                 <div className="w-6 h-10 border border-white/20 rounded-full relative">
                   <div className="absolute w-1 h-3 bg-white/60 rounded-full left-1/2 transform -translate-x-1/2 top-2 animate-scroll-down"></div>
                 </div>
@@ -338,25 +343,25 @@ export default function HomePage({ lastModified }: HomePageProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 opacity-0 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Pioneering Solutions</span>
+                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">{t('products.title')}</span>
                 </h2>
-                <p className="text-xl text-gray-500">Technologies that transcend traditional boundaries</p>
+                <p className="text-xl text-gray-500">{t('products.subtitle')}</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">Neural Interface</h3>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">{t('products.neuralInterface.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Advanced language models that understand context, intent, and nuance like never before
+                      {t('products.neuralInterface.description')}
                     </p>
                     <SmartLink 
                       href="https://producta.overx.ai" 
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group/link transition-colors duration-300"
                       external
                     >
-                      <span>Discover More</span>
+                      <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
@@ -367,16 +372,16 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">Quantum Flow</h3>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">{t('products.quantumFlow.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Intelligent automation that learns, adapts, and evolves with your business ecosystem
+                      {t('products.quantumFlow.description')}
                     </p>
                     <SmartLink 
                       href="https://productb.overx.ai" 
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group/link transition-colors duration-300"
                       external
                     >
-                      <span>Discover More</span>
+                      <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
@@ -387,16 +392,16 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">Infinite Vision</h3>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">{t('products.infiniteVision.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      Predictive intelligence that sees beyond data, revealing patterns invisible to traditional analytics
+                      {t('products.infiniteVision.description')}
                     </p>
                     <SmartLink 
                       href="https://productc.overx.ai" 
                       className="inline-flex items-center text-teal-400 hover:text-teal-300 font-medium group/link transition-colors duration-300"
                       external
                     >
-                      <span>Discover More</span>
+                      <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
@@ -539,7 +544,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
             <div className="mt-12 pt-8 border-t border-white/10">
               <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="mb-4 md:mb-0">
-                  <p className="text-gray-400">&copy; 2024 OverX AI. All rights reserved.</p>
+                  <p className="text-gray-400">&copy; 2024 {t('companyName')}. {t('footer.rights')}.</p>
                 </div>
                 <div className="flex space-x-6">
                   <a href="https://twitter.com/overxai" className="text-gray-400 hover:text-white transition-colors duration-300">
@@ -567,9 +572,10 @@ export default function HomePage({ lastModified }: HomePageProps) {
   )
 }
 
-export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
+export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) => {
   return {
     props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
       lastModified: new Date().toISOString()
     },
     revalidate: 60 * 60 * 24 // Revalidate once per day

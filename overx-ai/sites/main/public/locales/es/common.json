@@ -1,0 +1,53 @@
+{
+  "companyName": "OverX AI",
+  "tagline": "Más allá del Xorizonte",
+  "hero": {
+    "title": "OverX AI",
+    "subtitle": "Más allá del Xorizonte",
+    "cta1": "Experimenta el Futuro",
+    "cta2": "Explora Soluciones",
+    "scrollPrompt": "Desplázate para explorar"
+  },
+  "products": {
+    "title": "Soluciones Pioneras",
+    "subtitle": "Tecnologías que trascienden los límites tradicionales",
+    "learnMore": "Descubre Más",
+    "neuralInterface": {
+      "title": "Interfaz Neural",
+      "description": "Modelos de lenguaje avanzados que comprenden contexto, intención y matices como nunca antes"
+    },
+    "quantumFlow": {
+      "title": "Flujo Cuántico",
+      "description": "Automatización inteligente que aprende, se adapta y evoluciona con tu ecosistema empresarial"
+    },
+    "infiniteVision": {
+      "title": "Visión Infinita",
+      "description": "Inteligencia predictiva que ve más allá de los datos, revelando patrones invisibles para el análisis tradicional"
+    }
+  },
+  "innovation": {
+    "title": "Más Allá de la Innovación",
+    "subtitle": "Donde la imaginación se encuentra con la inteligencia",
+    "card1": {
+      "title": "Inteligencia Adaptativa",
+      "description": "Sistemas que evolucionan con tus necesidades"
+    },
+    "card2": {
+      "title": "Procesamiento Cuántico",
+      "description": "Poder computacional sin precedentes"
+    },
+    "card3": {
+      "title": "Síntesis Neural",
+      "description": "Comprensión similar a la humana a escala"
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "navigation": {
+      "products": "Productos",
+      "about": "Acerca de",
+      "careers": "Carreras",
+      "blog": "Blog"
+    }
+  }
+}
