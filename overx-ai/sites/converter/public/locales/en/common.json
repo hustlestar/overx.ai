@@ -1,0 +1,400 @@
+{
+  "title": "Currency Converter Pro - Real-time Exchange Rates",
+  "description": "Convert between 100+ currencies with real-time exchange rates. Compare providers, see API support, and choose the best rate source.",
+  "hero": {
+    "title": "Real-Time Currency Converter",
+    "subtitle": "Convert between 100+ currencies with transparent exchange rates",
+    "amount": "Amount",
+    "from": "From",
+    "to": "To",
+    "convert": "Convert",
+    "swap": "Swap currencies",
+    "result": "{{amount}} {{from}} = {{result}} {{to}}",
+    "lastUpdated": "Last updated: {{time}}"
+  },
+  "features": {
+    "realTime": "Real-time rates",
+    "currencies": "100+ currencies",
+    "transparent": "Transparent calculations",
+    "noFees": "No hidden fees"
+  },
+  "navigation": {
+    "home": "Home",
+    "converter": "Simple Converter",
+    "rates": "Exchange Rates",
+    "apis": "Currency Sources",
+    "blog": "Blog",
+    "about": "About",
+    "favorites": "Favorites",
+    "settings": "Settings"
+  },
+  "home": {
+    "baseCurrency": "Base Currency",
+    "lastUpdate": "Last Update",
+    "yourCurrencies": "Your Selected Currencies",
+    "customize": "Customize",
+    "allRates": "All Exchange Rates",
+    "searchCurrencies": "Search currencies...",
+    "allRegions": "All Regions",
+    "triangulatedRate": "Triangulated rate (hover for details)",
+    "loadMoreRegions": "Load More Regions...",
+    "justNow": "Just now",
+    "minsAgo": "{{mins}} mins ago",
+    "hoursAgo": "{{hours}} hours ago"
+  },
+  "rates": {
+    "title": "Live Exchange Rates",
+    "base": "Base Currency",
+    "searchPlaceholder": "Search currencies...",
+    "popularCurrencies": "Popular Currencies",
+    "allCurrencies": "All Currencies",
+    "currency": "Currency",
+    "rate": "Rate",
+    "change": "24h Change",
+    "triangulation": "Triangulation",
+    "providers": "Rate Providers",
+    "showMore": "Show more currencies",
+    "showLess": "Show less"
+  },
+  "apis": {
+    "title": "Available Exchange Rate APIs",
+    "subtitle": "Compare which APIs support your currencies and see their real-time exchange rates."
+  },
+  "sources": {
+    "title": "Currency Data Sources",
+    "subtitle": "We aggregate exchange rates from multiple trusted sources to provide accurate and up-to-date currency conversions.",
+    "coverage": "Coverage",
+    "source": "Source",
+    "features": "Features",
+    "learnMore": "Learn more",
+    "currencies": "{{count}}+ currencies",
+    "dataAccuracy": {
+      "title": "Data Accuracy & Updates",
+      "description1": "All exchange rates are fetched in real-time from their respective sources. Update frequencies vary by provider, from real-time updates to daily snapshots. We use intelligent caching to ensure fast response times while maintaining data freshness.",
+      "description2": "For critical financial transactions, we recommend verifying rates with your financial institution. The rates displayed are mid-market rates and may not reflect the exact rate you'll receive for currency exchanges."
+    }
+  },
+  "providers": {
+    "title": "Compare Exchange Rate Providers",
+    "subtitle": "See which providers support your currencies and compare their rates.",
+    "notSupported": "Not supported",
+    "currencies": "Currencies",
+    "updates": "Updates",
+    "availableWithRate": "Available with rate",
+    "notSupportedLegend": "Not supported",
+    "currencyLimit": "You can select up to 5 currencies with the free plan. Upgrade to premium for unlimited currencies.",
+    "selectCurrenciesToCompare": "Select currencies from the table below to compare exchange rates across providers",
+    "clickRowToSelect": "Click on any currency row to add or remove it from your selection",
+    "updateFrequencies": {
+      "realTime": "Real-time",
+      "everyMinute": "Every minute",
+      "every10Minutes": "Every 10 minutes",
+      "every60Seconds": "Every 60 seconds",
+      "hourly": "Hourly",
+      "daily": "Daily",
+      "dailyAt": "Daily at {{time}}"
+    },
+    "names": {
+      "exchangerate-api": "ExchangeRate-API",
+      "openexchangerates": "Open Exchange Rates",
+      "fixer": "Fixer.io",
+      "ecb": "European Central Bank",
+      "cbr": "Central Bank of Russia",
+      "nbu": "National Bank of Ukraine",
+      "nbp": "National Bank of Poland",
+      "nbrb": "National Bank of Belarus",
+      "nbg": "National Bank of Georgia",
+      "tradermade": "TraderMade",
+      "forex": "Forex API"
+    },
+    "descriptions": {
+      "exchangerate-api": "A reliable and easy-to-use exchange rate API with excellent uptime and coverage of over 160 currencies.",
+      "openexchangerates": "Trusted by thousands of developers, providing exchange rates for over 200 currencies with historical data.",
+      "fixer": "Real-time exchange rate data for 170 world currencies, with data updates every 60 seconds.",
+      "ecb": "Official reference rates published by the European Central Bank for major world currencies.",
+      "cbr": "Official exchange rates set by the Central Bank of the Russian Federation.",
+      "nbu": "Official exchange rates provided by the National Bank of Ukraine.",
+      "nbp": "Exchange rates published by Narodowy Bank Polski (National Bank of Poland).",
+      "nbrb": "Official exchange rates from the National Bank of the Republic of Belarus.",
+      "nbg": "Exchange rates provided by the National Bank of Georgia.",
+      "tradermade": "Professional-grade forex data with real-time updates and extensive currency pair coverage.",
+      "forex": "Real-time foreign exchange rates with low latency and high reliability."
+    },
+    "sources": {
+      "exchangerate-api": "Multiple bank feeds",
+      "openexchangerates": "Central banks and commercial sources",
+      "fixer": "Financial data providers",
+      "ecb": "ECB official rates",
+      "cbr": "Bank of Russia official rates",
+      "nbu": "NBU official rates",
+      "nbp": "NBP official rates",
+      "nbrb": "NBRB official rates",
+      "nbg": "NBG official rates",
+      "tradermade": "Forex market data",
+      "forex": "Interbank rates"
+    },
+    "features": {
+      "exchangerate-api": "Historical data, currency conversion endpoint",
+      "openexchangerates": "Time-series data, alternative currencies",
+      "fixer": "Fluctuation data, time-series endpoint",
+      "ecb": "Official EU reference rates",
+      "cbr": "Russian market rates",
+      "nbu": "Ukrainian market rates",
+      "nbp": "Polish market rates",
+      "nbrb": "Belarusian market rates",
+      "nbg": "Georgian market rates",
+      "tradermade": "Real-time WebSocket, tick data",
+      "forex": "WebSocket support, crypto rates"
+    }
+  },
+  "regions": {
+    "yourSelected": "Your Selected Currencies",
+    "major": "Major Currencies",
+    "americas": "Americas",
+    "europe": "Europe",
+    "asiaPacific": "Asia-Pacific",
+    "middleEastAfrica": "Middle East & Africa",
+    "centralAsia": "Central Asia",
+    "other": "Other Currencies"
+  },
+  "triangulation": {
+    "title": "Triangulation Transparency",
+    "description": "See how rates are calculated through intermediate currencies",
+    "direct": "Direct rate",
+    "via": "Via {{currency}}",
+    "difference": "Difference",
+    "explanation": "Sometimes converting through an intermediate currency can provide better rates"
+  },
+  "favorites": {
+    "title": "Your Favorite Pairs",
+    "empty": "No favorite pairs yet",
+    "add": "Add to favorites",
+    "remove": "Remove from favorites"
+  },
+  "settings": {
+    "title": "Settings",
+    "preferences": "Preferences",
+    "defaultBase": "Default base currency",
+    "defaultTargets": "Default target currencies",
+    "display": "Display Options",
+    "showTriangulation": "Show triangulation paths",
+    "showProviders": "Show rate providers",
+    "theme": "Theme",
+    "language": "Language",
+    "info": "Your preferences are saved locally and will be remembered on your next visit.",
+    "addToDefaults": "Add to defaults",
+    "removeFromDefaults": "Remove from defaults",
+    "selected": "selected",
+    "currencyLimitReached": "You have reached the limit of 5 currencies. Upgrade to premium for unlimited currency selection."
+  },
+  "currencies": {
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "British Pound",
+    "JPY": "Japanese Yen",
+    "CNY": "Chinese Yuan",
+    "CAD": "Canadian Dollar",
+    "AUD": "Australian Dollar",
+    "CHF": "Swiss Franc",
+    "HKD": "Hong Kong Dollar",
+    "SGD": "Singapore Dollar",
+    "SEK": "Swedish Krona",
+    "NOK": "Norwegian Krone",
+    "NZD": "New Zealand Dollar",
+    "MXN": "Mexican Peso",
+    "INR": "Indian Rupee",
+    "BRL": "Brazilian Real",
+    "RUB": "Russian Ruble",
+    "ZAR": "South African Rand",
+    "TRY": "Turkish Lira",
+    "KRW": "South Korean Won",
+    "IDR": "Indonesian Rupiah",
+    "THB": "Thai Baht",
+    "MYR": "Malaysian Ringgit",
+    "PHP": "Philippine Peso",
+    "PLN": "Polish Zloty",
+    "CZK": "Czech Koruna",
+    "ILS": "Israeli Shekel",
+    "AED": "UAE Dirham",
+    "SAR": "Saudi Riyal",
+    "CLP": "Chilean Peso",
+    "ARS": "Argentine Peso",
+    "COP": "Colombian Peso",
+    "PEN": "Peruvian Sol",
+    "VND": "Vietnamese Dong",
+    "EGP": "Egyptian Pound",
+    "PKR": "Pakistani Rupee",
+    "BDT": "Bangladeshi Taka",
+    "NGN": "Nigerian Naira",
+    "UAH": "Ukrainian Hryvnia",
+    "KES": "Kenyan Shilling",
+    "DKK": "Danish Krone",
+    "HUF": "Hungarian Forint",
+    "RON": "Romanian Leu",
+    "ISK": "Icelandic Króna",
+    "BGN": "Bulgarian Lev"
+  },
+  "footer": {
+    "about": "About",
+    "api": "API",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "contact": "Contact",
+    "poweredBy": "Powered by OverX AI"
+  },
+  "about": {
+    "pageTitle": "Currency Converter PRO - Real-Time Exchange Rates at Your Fingertips",
+    "pageDescription": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money.",
+    "hero": {
+      "title": "Currency Converter PRO",
+      "subtitle": "The Smart Choice for Currency Conversion",
+      "tagline": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money.",
+      "chromeButton": "Add to Chrome - It's Free",
+      "webButton": "Try Web Version",
+      "reviews": "4.8/5 (2,543 reviews)",
+      "activeUsers": "50,000+ active users"
+    },
+    "mission": {
+      "title": "Why Professionals Choose Currency Converter PRO",
+      "description": "Stop guessing. Start knowing. Join thousands of smart users who make data-driven decisions with professional-grade currency data."
+    },
+    "whyUs": {
+      "title": "Why Professionals Choose Currency Converter PRO",
+      "transparency": {
+        "title": "Unmatched Accuracy",
+        "description": "Access real-time rates from the world's most reliable sources including European Central Bank, national banks, and leading financial data providers. Our intelligent system automatically selects the freshest data."
+      },
+      "realTime": {
+        "title": "Lightning-Fast Performance",
+        "description": "Convert currencies instantly as you type. No waiting, no loading screens - just immediate results when you need them. Perfect for fast-paced trading environments and time-sensitive decisions."
+      },
+      "trusted": {
+        "title": "Complete Global Coverage",
+        "description": "170+ currencies including all major pairs, cryptocurrencies (Bitcoin, Ethereum), regional currencies from emerging markets, and precious metals (Gold XAU, Silver XAG)."
+      }
+    },
+    "features": {
+      "title": "Features That Save You Time and Money",
+      "multipleDataSources": {
+        "title": "Multiple Data Sources = Better Rates",
+        "description": "Unlike basic converters that rely on a single source, we aggregate data from 12 premium providers. Compare rates across sources, choose the best rate for your transaction, and avoid hidden margins."
+      },
+      "smartConversion": {
+        "title": "Smart Conversion Features",
+        "description": "Auto-detect amounts on any webpage - just highlight and convert. Reverse calculations with one click. Multi-currency support for any pair. Offline mode with cached rates."
+      },
+      "professionalTools": {
+        "title": "Professional Tools",
+        "description": "Historical data to see rate changes over time. Percentage change indicators to spot trends. Favorite pairs for quick access. Decimal precision control from 2 to 10 places."
+      },
+      "instantConversion": {
+        "title": "Instant Conversion",
+        "description": "Convert currencies with one click directly from your browser toolbar. Support for 150+ currencies worldwide."
+      },
+      "rateComparison": {
+        "title": "Rate Comparison",
+        "description": "Compare rates from multiple providers instantly. See which bank or service offers the best exchange rate for your needs."
+      },
+      "historicalCharts": {
+        "title": "Historical Charts",
+        "description": "View 30-day rate trends to make informed decisions about when to exchange your money."
+      },
+      "smartAlerts": {
+        "title": "Smart Alerts",
+        "description": "Set rate alerts and get notified when your target exchange rate is reached."
+      },
+      "offlineMode": {
+        "title": "Offline Mode",
+        "description": "Access cached rates even when offline. Perfect for travelers without constant internet access."
+      },
+      "privacyFirst": {
+        "title": "Privacy & Security First",
+        "description": "Your data stays yours. No account required, no tracking or analytics, no personal data collection. All conversions happen locally on your device."
+      },
+      "customizable": {
+        "title": "Customizable Experience",
+        "description": "Choose your preferred data source, set default currencies, adjust update frequency, and switch between light and dark themes. Clean, intuitive interface with no clutter or ads."
+      }
+    },
+    "useCases": {
+      "title": "Built for Your Workflow",
+      "business": {
+        "title": "For Business Professionals",
+        "description": "Make informed decisions with institutional-grade exchange rates. Perfect for international invoicing and payments, financial reporting and accounting, e-commerce pricing strategies, and import/export calculations."
+      },
+      "travelers": {
+        "title": "For Travelers",
+        "description": "Plan budgets with confidence, compare prices while shopping online, track spending in multiple currencies, and avoid surprises at currency exchange counters."
+      },
+      "investors": {
+        "title": "For Investors & Traders",
+        "description": "Monitor forex markets throughout the day, track cryptocurrency valuations, spot arbitrage opportunities, and make data-driven investment decisions."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "step1": {
+        "title": "Install the Extension",
+        "description": "Add Currency Converter Pro to Chrome with one click. No registration required."
+      },
+      "step2": {
+        "title": "Select Your Currencies",
+        "description": "Choose from 150+ currencies. The extension remembers your preferences."
+      },
+      "step3": {
+        "title": "Compare Rates Instantly",
+        "description": "See real-time rates from multiple providers. Pick the best rate for your conversion."
+      },
+      "step4": {
+        "title": "Make Informed Decisions",
+        "description": "Use historical charts and rate alerts to time your conversions perfectly."
+      }
+    },
+    "dataSources": {
+      "title": "Our Trusted Data Sources",
+      "description": "We aggregate exchange rates from the most reliable sources in the industry:",
+      "centralBanks": "Central Banks",
+      "centralBanksDesc": "ECB, CBR, NBP",
+      "financialAPIs": "Financial APIs",
+      "financialAPIsDesc": "Fixer, Open Exchange",
+      "marketData": "Market Data",
+      "marketDataDesc": "TraderMade, Forex API",
+      "regionalBanks": "Regional Banks",
+      "regionalBanksDesc": "NBU, NBG, NBB",
+      "viewAll": "View all data sources"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "What makes Currency Converter Pro different?",
+        "answer": "Unlike other converters that show rates from a single source, we aggregate data from 12+ trusted providers, allowing you to compare and choose the best rate. This transparency can save you significant money on large conversions."
+      },
+      "q2": {
+        "question": "Is the Chrome extension really free?",
+        "answer": "Yes, Currency Converter Pro is 100% free with no hidden costs, premium tiers, or subscription fees. We believe everyone deserves access to transparent exchange rates."
+      },
+      "q3": {
+        "question": "How accurate are the exchange rates?",
+        "answer": "Our rates come directly from central banks, major financial institutions, and established forex providers. Most sources update every 60 seconds to 10 minutes, ensuring you always have current market rates."
+      },
+      "q4": {
+        "question": "Does the extension track my data?",
+        "answer": "No. We respect your privacy completely. The extension works entirely on your device, stores preferences locally, and never sends your conversion history or personal data to any servers."
+      },
+      "q5": {
+        "question": "Can I use it offline?",
+        "answer": "Yes! The extension caches the latest rates, so you can continue converting currencies even without an internet connection. Perfect for international travelers."
+      }
+    },
+    "cta": {
+      "title": "Ready to Save on Currency Conversion?",
+      "subtitle": "Whether you're managing international business, planning your next trip, or tracking investments, Currency Converter PRO gives you the edge with accurate, real-time data from sources you can trust.",
+      "installButton": "Install Currency Converter PRO",
+      "tryWebButton": "Try Web Version First",
+      "tagline": "Free to use. No registration. No hidden costs. Just better currency conversion."
+    }
+  },
+  "common": {
+    "scrollToTop": "Scroll to top"
+  }
+}

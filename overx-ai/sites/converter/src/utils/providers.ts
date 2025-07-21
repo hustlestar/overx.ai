@@ -1,0 +1,150 @@
+import { Provider } from '@/types/api'
+
+export interface ExtendedProvider extends Provider {
+  description: string
+  supportedCurrenciesCount: number
+  source: string
+  specialFeatures?: string
+  website?: string
+}
+
+// Provider information based on the API response
+export const PROVIDERS: ExtendedProvider[] = [
+  {
+    id: 'exchangerate-api',
+    name: 'ExchangeRate-API',
+    type: 'freemium',
+    supportedCurrencies: [],
+    updateFrequency: 'Every 10 minutes',
+    description: 'A reliable and easy-to-use exchange rate API with excellent uptime and coverage of over 160 currencies.',
+    supportedCurrenciesCount: 161,
+    source: 'Multiple bank feeds',
+    specialFeatures: 'Historical data, currency conversion endpoint',
+    website: 'https://www.exchangerate-api.com',
+  },
+  {
+    id: 'openexchangerates',
+    name: 'Open Exchange Rates',
+    type: 'freemium',
+    supportedCurrencies: [],
+    updateFrequency: 'Hourly',
+    description: 'Trusted by thousands of developers, providing exchange rates for over 200 currencies with historical data.',
+    supportedCurrenciesCount: 200,
+    source: 'Central banks and commercial sources',
+    specialFeatures: 'Time-series data, alternative currencies',
+    website: 'https://openexchangerates.org',
+  },
+  {
+    id: 'fixer',
+    name: 'Fixer.io',
+    type: 'paid',
+    supportedCurrencies: [],
+    updateFrequency: 'Every 60 seconds',
+    description: 'Real-time exchange rate data for 170 world currencies, with data updates every 60 seconds.',
+    supportedCurrenciesCount: 170,
+    source: 'Financial data providers',
+    specialFeatures: 'Fluctuation data, time-series endpoint',
+    website: 'https://fixer.io',
+  },
+  {
+    id: 'ecb',
+    name: 'European Central Bank',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily at 16:00 CET',
+    description: 'Official reference rates published by the European Central Bank for major world currencies.',
+    supportedCurrenciesCount: 32,
+    source: 'ECB official rates',
+    specialFeatures: 'Official EU reference rates',
+    website: 'https://www.ecb.europa.eu',
+  },
+  {
+    id: 'cbr',
+    name: 'Central Bank of Russia',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily',
+    description: 'Official exchange rates set by the Central Bank of the Russian Federation.',
+    supportedCurrenciesCount: 34,
+    source: 'Bank of Russia official rates',
+    specialFeatures: 'Russian market rates',
+    website: 'https://www.cbr.ru',
+  },
+  {
+    id: 'nbu',
+    name: 'National Bank of Ukraine',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily',
+    description: 'Official exchange rates provided by the National Bank of Ukraine.',
+    supportedCurrenciesCount: 52,
+    source: 'NBU official rates',
+    specialFeatures: 'Ukrainian market rates',
+    website: 'https://bank.gov.ua',
+  },
+  {
+    id: 'nbp',
+    name: 'National Bank of Poland',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily',
+    description: 'Exchange rates published by Narodowy Bank Polski (National Bank of Poland).',
+    supportedCurrenciesCount: 35,
+    source: 'NBP official rates',
+    specialFeatures: 'Polish market rates',
+    website: 'https://www.nbp.pl',
+  },
+  {
+    id: 'nbrb',
+    name: 'National Bank of Belarus',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily',
+    description: 'Official exchange rates from the National Bank of the Republic of Belarus.',
+    supportedCurrenciesCount: 30,
+    source: 'NBRB official rates',
+    specialFeatures: 'Belarusian market rates',
+    website: 'https://www.nbrb.by',
+  },
+  {
+    id: 'nbg',
+    name: 'National Bank of Georgia',
+    type: 'free',
+    supportedCurrencies: [],
+    updateFrequency: 'Daily',
+    description: 'Exchange rates provided by the National Bank of Georgia.',
+    supportedCurrenciesCount: 43,
+    source: 'NBG official rates',
+    specialFeatures: 'Georgian market rates',
+    website: 'https://nbg.gov.ge',
+  },
+  {
+    id: 'tradermade',
+    name: 'TraderMade',
+    type: 'freemium',
+    supportedCurrencies: [],
+    updateFrequency: 'Real-time',
+    description: 'Professional-grade forex data with real-time updates and extensive currency pair coverage.',
+    supportedCurrenciesCount: 150,
+    source: 'Forex market data',
+    specialFeatures: 'Real-time WebSocket, tick data',
+    website: 'https://tradermade.com',
+  },
+  {
+    id: 'forex',
+    name: 'Forex API',
+    type: 'freemium',
+    supportedCurrencies: [],
+    updateFrequency: 'Real-time',
+    description: 'Real-time foreign exchange rates with low latency and high reliability.',
+    supportedCurrenciesCount: 140,
+    source: 'Interbank rates',
+    specialFeatures: 'WebSocket support, crypto rates',
+    website: 'https://forexapi.net',
+  },
+]
+
+// Exclude crypto providers
+export function getNonCryptoProviders(): Provider[] {
+  return PROVIDERS.filter(p => !p.id.toLowerCase().includes('binance'))
+}

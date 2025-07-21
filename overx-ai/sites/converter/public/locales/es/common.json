@@ -1,0 +1,522 @@
+{
+  "title": "Conversor de Divisas - Tipos de Cambio en Tiempo Real",
+  "description": "Convierte entre más de 100 monedas con tipos de cambio en tiempo real. Cálculos de triangulación transparentes y comparaciones de tasas.",
+  "hero": {
+    "title": "Conversor de Divisas en Tiempo Real",
+    "subtitle": "Convierte entre más de 100 monedas con tipos de cambio transparentes",
+    "amount": "Cantidad",
+    "from": "De",
+    "to": "A",
+    "convert": "Convertir",
+    "swap": "Intercambiar monedas",
+    "result": "{{amount}} {{from}} = {{result}} {{to}}",
+    "lastUpdated": "Última actualización: {{time}}"
+  },
+  "features": {
+    "realTime": "Tasas en tiempo real",
+    "currencies": "Más de 100 monedas",
+    "transparent": "Cálculos transparentes",
+    "noFees": "Sin tarifas ocultas"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "converter": "Convertidor Simple",
+    "rates": "Tipos de Cambio",
+    "apis": "Fuentes de Divisas",
+    "blog": "Blog",
+    "about": "Acerca de",
+    "favorites": "Favoritos",
+    "settings": "Configuración"
+  },
+  "home": {
+    "baseCurrency": "Moneda Base",
+    "lastUpdate": "Última Actualización",
+    "yourCurrencies": "Tus Monedas Seleccionadas",
+    "customize": "Personalizar",
+    "allRates": "Todos los Tipos de Cambio",
+    "searchCurrencies": "Buscar monedas...",
+    "allRegions": "Todas las Regiones",
+    "triangulatedRate": "Tasa triangulada (pasar el cursor para más detalles)",
+    "loadMoreRegions": "Cargar Más Regiones...",
+    "justNow": "Ahora mismo",
+    "minsAgo": "Hace {{mins}} mins",
+    "hoursAgo": "Hace {{hours}} horas"
+  },
+  "rates": {
+    "title": "Tipos de Cambio en Vivo",
+    "base": "Moneda Base",
+    "searchPlaceholder": "Buscar monedas...",
+    "popularCurrencies": "Monedas Populares",
+    "allCurrencies": "Todas las Monedas",
+    "currency": "Moneda",
+    "rate": "Tasa",
+    "change": "Cambio 24h",
+    "triangulation": "Triangulación",
+    "providers": "Proveedores de Tasas",
+    "showMore": "Mostrar más monedas",
+    "showLess": "Mostrar menos"
+  },
+  "apis": {
+    "title": "APIs de Tipos de Cambio Disponibles",
+    "subtitle": "Compara qué APIs admiten tus monedas y ve sus tipos de cambio en tiempo real."
+  },
+  "sources": {
+    "title": "Fuentes de Datos de Divisas",
+    "subtitle": "Agregamos tipos de cambio de múltiples fuentes confiables para proporcionar conversiones de divisas precisas y actualizadas.",
+    "coverage": "Cobertura",
+    "source": "Fuente",
+    "features": "Características",
+    "learnMore": "Más información",
+    "currencies": "{{count}}+ monedas",
+    "dataAccuracy": {
+      "title": "Precisión y Actualizaciones de Datos",
+      "description1": "Todos los tipos de cambio se obtienen en tiempo real de sus respectivas fuentes. Las frecuencias de actualización varían según el proveedor, desde actualizaciones en tiempo real hasta instantáneas diarias. Utilizamos almacenamiento en caché inteligente para garantizar tiempos de respuesta rápidos mientras mantenemos la frescura de los datos.",
+      "description2": "Para transacciones financieras críticas, recomendamos verificar las tasas con su institución financiera. Las tasas mostradas son tasas de mercado medio y pueden no reflejar la tasa exacta que recibirá para los intercambios de divisas."
+    }
+  },
+  "triangulation": {
+    "title": "Transparencia de Triangulación",
+    "description": "Vea cómo se calculan las tasas a través de monedas intermedias",
+    "direct": "Tasa directa",
+    "via": "A través de {{currency}}",
+    "difference": "Diferencia",
+    "explanation": "A veces convertir a través de una moneda intermedia puede proporcionar mejores tasas"
+  },
+  "favorites": {
+    "title": "Tus Pares Favoritos",
+    "empty": "No hay pares favoritos aún",
+    "add": "Agregar a favoritos",
+    "remove": "Eliminar de favoritos"
+  },
+  "settings": {
+    "title": "Configuración",
+    "preferences": "Preferencias",
+    "defaultBase": "Moneda base predeterminada",
+    "defaultTargets": "Monedas objetivo predeterminadas",
+    "display": "Opciones de Visualización",
+    "showTriangulation": "Mostrar rutas de triangulación",
+    "showProviders": "Mostrar proveedores de tasas",
+    "theme": "Tema",
+    "language": "Idioma",
+    "info": "Sus preferencias se guardan localmente y se recordarán en su próxima visita.",
+    "addToDefaults": "Agregar a predeterminadas",
+    "removeFromDefaults": "Quitar de predeterminadas",
+    "selected": "seleccionadas",
+    "currencyLimitReached": "Has alcanzado el límite de 5 monedas. Actualiza a premium para selección ilimitada de monedas."
+  },
+  "providers": {
+    "title": "Comparar Proveedores de Tasas de Cambio",
+    "subtitle": "Vea qué proveedores soportan sus monedas y compare sus tasas.",
+    "notSupported": "No soportado",
+    "currencies": "Monedas",
+    "updates": "Actualizaciones",
+    "availableWithRate": "Disponible con tasa",
+    "notSupportedLegend": "No soportado",
+    "currencyLimit": "Puedes seleccionar hasta 5 monedas con el plan gratuito. Actualiza a premium para monedas ilimitadas.",
+    "selectCurrenciesToCompare": "Selecciona monedas de la tabla a continuación para comparar tipos de cambio entre proveedores",
+    "clickRowToSelect": "Haz clic en cualquier fila de moneda para añadirla o eliminarla de tu selección",
+    "updateFrequencies": {
+      "realTime": "Tiempo real",
+      "everyMinute": "Cada minuto",
+      "every10Minutes": "Cada 10 minutos",
+      "every60Seconds": "Cada 60 segundos",
+      "hourly": "Cada hora",
+      "daily": "Diario",
+      "dailyAt": "Diario a las {{time}}"
+    },
+    "names": {
+      "exchangerate-api": "ExchangeRate-API",
+      "openexchangerates": "Open Exchange Rates",
+      "fixer": "Fixer.io",
+      "ecb": "Banco Central Europeo",
+      "cbr": "Banco Central de Rusia",
+      "nbu": "Banco Nacional de Ucrania",
+      "nbp": "Banco Nacional de Polonia",
+      "nbrb": "Banco Nacional de Bielorrusia",
+      "nbg": "Banco Nacional de Georgia",
+      "tradermade": "TraderMade",
+      "forex": "Forex API"
+    },
+    "descriptions": {
+      "exchangerate-api": "Una API de tipos de cambio confiable y fácil de usar con excelente tiempo de actividad y cobertura de más de 160 monedas.",
+      "openexchangerates": "Confiado por miles de desarrolladores, proporciona tipos de cambio para más de 200 monedas con datos históricos.",
+      "fixer": "Datos de tipos de cambio en tiempo real para 170 monedas mundiales, con actualizaciones cada 60 segundos.",
+      "ecb": "Tasas de referencia oficiales publicadas por el Banco Central Europeo para las principales monedas del mundo.",
+      "cbr": "Tipos de cambio oficiales establecidos por el Banco Central de la Federación Rusa.",
+      "nbu": "Tipos de cambio oficiales proporcionados por el Banco Nacional de Ucrania.",
+      "nbp": "Tipos de cambio publicados por Narodowy Bank Polski (Banco Nacional de Polonia).",
+      "nbrb": "Tipos de cambio oficiales del Banco Nacional de la República de Bielorrusia.",
+      "nbg": "Tipos de cambio proporcionados por el Banco Nacional de Georgia.",
+      "tradermade": "Datos forex de grado profesional con actualizaciones en tiempo real y amplia cobertura de pares de divisas.",
+      "forex": "Tipos de cambio en tiempo real con baja latencia y alta confiabilidad."
+    },
+    "sources": {
+      "exchangerate-api": "Múltiples fuentes bancarias",
+      "openexchangerates": "Bancos centrales y fuentes comerciales",
+      "fixer": "Proveedores de datos financieros",
+      "ecb": "Tasas oficiales del BCE",
+      "cbr": "Tasas oficiales del Banco de Rusia",
+      "nbu": "Tasas oficiales del NBU",
+      "nbp": "Tasas oficiales del NBP",
+      "nbrb": "Tasas oficiales del NBRB",
+      "nbg": "Tasas oficiales del NBG",
+      "tradermade": "Datos del mercado Forex",
+      "forex": "Tasas interbancarias"
+    },
+    "features": {
+      "exchangerate-api": "Datos históricos, endpoint de conversión",
+      "openexchangerates": "Datos de series temporales, monedas alternativas",
+      "fixer": "Datos de fluctuación, endpoint de series temporales",
+      "ecb": "Tasas de referencia oficiales de la UE",
+      "cbr": "Tasas del mercado ruso",
+      "nbu": "Tasas del mercado ucraniano",
+      "nbp": "Tasas del mercado polaco",
+      "nbrb": "Tasas del mercado bielorruso",
+      "nbg": "Tasas del mercado georgiano",
+      "tradermade": "WebSocket en tiempo real, datos tick",
+      "forex": "Soporte WebSocket, tasas cripto"
+    }
+  },
+  "regions": {
+    "yourSelected": "Sus Monedas Seleccionadas",
+    "major": "Monedas Principales",
+    "americas": "Américas",
+    "europe": "Europa",
+    "asiaPacific": "Asia-Pacífico",
+    "middleEastAfrica": "Medio Oriente y África",
+    "centralAsia": "Asia Central",
+    "other": "Otras Monedas"
+  },
+  "currencies": {
+    "USD": "Dólar Estadounidense",
+    "EUR": "Euro",
+    "GBP": "Libra Esterlina",
+    "JPY": "Yen Japonés",
+    "CNY": "Yuan Chino",
+    "CAD": "Dólar Canadiense",
+    "AUD": "Dólar Australiano",
+    "CHF": "Franco Suizo",
+    "HKD": "Dólar de Hong Kong",
+    "SGD": "Dólar de Singapur",
+    "SEK": "Corona Sueca",
+    "NOK": "Corona Noruega",
+    "NZD": "Dólar Neozelandés",
+    "MXN": "Peso Mexicano",
+    "INR": "Rupia India",
+    "BRL": "Real Brasileño",
+    "RUB": "Rublo Ruso",
+    "ZAR": "Rand Sudafricano",
+    "TRY": "Lira Turca",
+    "KRW": "Won Surcoreano",
+    "IDR": "Rupia Indonesia",
+    "THB": "Baht Tailandés",
+    "MYR": "Ringgit Malayo",
+    "PHP": "Peso Filipino",
+    "PLN": "Zloty Polaco",
+    "CZK": "Corona Checa",
+    "ILS": "Shekel Israelí",
+    "AED": "Dirham de EAU",
+    "SAR": "Riyal Saudí",
+    "CLP": "Peso Chileno",
+    "ARS": "Peso Argentino",
+    "COP": "Peso Colombiano",
+    "PEN": "Sol Peruano",
+    "VND": "Dong Vietnamita",
+    "EGP": "Libra Egipcia",
+    "PKR": "Rupia Pakistaní",
+    "BDT": "Taka Bangladesí",
+    "NGN": "Naira Nigeriana",
+    "UAH": "Grivna Ucraniana",
+    "KES": "Chelín Keniano",
+    "DKK": "Corona Danesa",
+    "HUF": "Forinto Húngaro",
+    "RON": "Leu Rumano",
+    "ISK": "Corona Islandesa",
+    "BGN": "Lev Búlgaro",
+    "AFN": "Afgani Afgano",
+    "ALL": "Lek Albanés",
+    "AMD": "Dram Armenio",
+    "ANG": "Florín de las Antillas Neerlandesas",
+    "AOA": "Kwanza Angoleño",
+    "AWG": "Florín Arubeño",
+    "AZN": "Manat Azerbaiyano",
+    "BAM": "Marco Convertible",
+    "BBD": "Dólar de Barbados",
+    "BHD": "Dinar de Bahrein",
+    "BIF": "Franco Burundés",
+    "BMD": "Dólar de Bermudas",
+    "BND": "Dólar de Brunéi",
+    "BOB": "Boliviano",
+    "BSD": "Dólar Bahameño",
+    "BTN": "Ngultrum Butanés",
+    "BWP": "Pula de Botsuana",
+    "BYN": "Rublo Bielorruso",
+    "BZD": "Dólar de Belice",
+    "CDF": "Franco Congoleño",
+    "CLF": "Unidad de Fomento Chilena",
+    "CNH": "Yuan Chino (Offshore)",
+    "CRC": "Colón Costarricense",
+    "CUC": "Peso Cubano Convertible",
+    "CUP": "Peso Cubano",
+    "CVE": "Escudo Caboverdiano",
+    "DJF": "Franco Yibutiano",
+    "DOP": "Peso Dominicano",
+    "DZD": "Dinar Argelino",
+    "ERN": "Nakfa Eritreo",
+    "ETB": "Birr Etíope",
+    "FJD": "Dólar Fiyiano",
+    "FKP": "Libra de las Islas Malvinas",
+    "GEL": "Lari Georgiano",
+    "GGP": "Libra de Guernsey",
+    "GHS": "Cedi Ghanés",
+    "GIP": "Libra de Gibraltar",
+    "GMD": "Dalasi Gambiano",
+    "GNF": "Franco Guineano",
+    "GTQ": "Quetzal Guatemalteco",
+    "GYD": "Dólar Guyanés",
+    "HNL": "Lempira Hondureña",
+    "HRK": "Kuna Croata",
+    "HTG": "Gourde Haitiano",
+    "IMP": "Libra de la Isla de Man",
+    "IQD": "Dinar Iraquí",
+    "IRR": "Rial Iraní",
+    "JEP": "Libra de Jersey",
+    "JMD": "Dólar Jamaiquino",
+    "JOD": "Dinar Jordano",
+    "KGS": "Som Kirguís",
+    "KHR": "Riel Camboyano",
+    "KMF": "Franco Comorense",
+    "KPW": "Won Norcoreano",
+    "KWD": "Dinar Kuwaití",
+    "KYD": "Dólar de las Islas Caimán",
+    "KZT": "Tenge Kazajo",
+    "LAK": "Kip Laosiano",
+    "LBP": "Libra Libanesa",
+    "LKR": "Rupia de Sri Lanka",
+    "LRD": "Dólar Liberiano",
+    "LSL": "Loti de Lesoto",
+    "LYD": "Dinar Libio",
+    "MAD": "Dirham Marroquí",
+    "MDL": "Leu Moldavo",
+    "MGA": "Ariary Malgache",
+    "MKD": "Denar Macedonio",
+    "MMK": "Kyat Birmano",
+    "MNT": "Tugrik Mongol",
+    "MOP": "Pataca de Macao",
+    "MRU": "Uguiya Mauritana",
+    "MUR": "Rupia de Mauricio",
+    "MVR": "Rufia de Maldivas",
+    "MWK": "Kwacha de Malaui",
+    "MZN": "Metical Mozambiqueño",
+    "NAD": "Dólar Namibio",
+    "NIO": "Córdoba Nicaragüense",
+    "NPR": "Rupia Nepalí",
+    "OMR": "Rial Omaní",
+    "PAB": "Balboa Panameño",
+    "PGK": "Kina de Papúa Nueva Guinea",
+    "PYG": "Guaraní Paraguayo",
+    "QAR": "Riyal Catarí",
+    "RSD": "Dinar Serbio",
+    "RWF": "Franco Ruandés",
+    "SBD": "Dólar de las Islas Salomón",
+    "SCR": "Rupia de Seychelles",
+    "SDG": "Libra Sudanesa",
+    "SHP": "Libra de Santa Elena",
+    "SLE": "Leone de Sierra Leona",
+    "SLL": "Leone de Sierra Leona (antiguo)",
+    "SOS": "Chelín Somalí",
+    "SRD": "Dólar Surinamés",
+    "SSP": "Libra Sursudanesa",
+    "STN": "Dobra de Santo Tomé y Príncipe",
+    "SYP": "Libra Siria",
+    "SZL": "Lilangeni Suazi",
+    "TJS": "Somoni Tayiko",
+    "TMT": "Manat Turcomano",
+    "TND": "Dinar Tunecino",
+    "TOP": "Paʻanga Tongano",
+    "TTD": "Dólar de Trinidad y Tobago",
+    "TVD": "Dólar Tuvaluano",
+    "TWD": "Nuevo Dólar Taiwanés",
+    "TZS": "Chelín Tanzano",
+    "UGX": "Chelín Ugandés",
+    "UYU": "Peso Uruguayo",
+    "UZS": "Som Uzbeko",
+    "VES": "Bolívar Venezolano",
+    "VUV": "Vatu de Vanuatu",
+    "WST": "Tala Samoano",
+    "XAF": "Franco CFA de BEAC",
+    "XAG": "Plata (onza)",
+    "XAU": "Oro (onza)",
+    "XCD": "Dólar del Caribe Oriental",
+    "XDR": "Derechos Especiales de Giro",
+    "XOF": "Franco CFA de BCEAO",
+    "XPD": "Paladio (onza)",
+    "XPF": "Franco CFP",
+    "XPT": "Platino (onza)",
+    "YER": "Rial Yemení",
+    "ZMW": "Kwacha Zambiano",
+    "ZWL": "Dólar Zimbabuense"
+  },
+  "footer": {
+    "about": "Acerca de",
+    "api": "API",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "contact": "Contacto",
+    "poweredBy": "Desarrollado por OverX AI"
+  },
+  "about": {
+    "pageTitle": "Acerca de Currency Converter Pro - Extensión de Chrome para Tipos de Cambio Transparentes",
+    "pageDescription": "La extensión Currency Converter Pro para Chrome ofrece conversión de divisas en tiempo real con tipos transparentes de más de 12 fuentes confiables. Compare tipos de cambio, evite tarifas ocultas y tome decisiones informadas.",
+    "hero": {
+      "title": "Currency Converter Pro",
+      "subtitle": "La extensión de Chrome que revoluciona la conversión de divisas con total transparencia",
+      "chromeButton": "Añadir a Chrome - Es Gratis",
+      "webButton": "Probar Versión Web",
+      "reviews": "4.8/5 (2,543 reseñas)",
+      "activeUsers": "Más de 50,000 usuarios activos"
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Democratizar el acceso a tipos de cambio justos proporcionando transparencia completa en el mercado de divisas. Creemos que todos merecen conocer el costo real de la conversión de divisas sin tarifas ocultas o tipos engañosos."
+    },
+    "whyUs": {
+      "title": "¿Por qué Currency Converter Pro?",
+      "transparency": {
+        "title": "Transparencia Total",
+        "description": "Vea tipos de más de 12 proveedores lado a lado. Sin márgenes ocultos, sin sorpresas. Sepa exactamente lo que está pagando por la conversión de divisas."
+      },
+      "realTime": {
+        "title": "Actualizaciones en Tiempo Real",
+        "description": "Obtenga los últimos tipos de cambio actualizados cada 60 segundos de los proveedores más rápidos. Nunca pierda movimientos favorables de tipos."
+      },
+      "trusted": {
+        "title": "Fuentes Confiables",
+        "description": "Agregamos datos de bancos centrales, instituciones financieras importantes y proveedores de forex establecidos en los que puede confiar."
+      }
+    },
+    "features": {
+      "title": "Características que te Ahorran Tiempo y Dinero",
+      "multipleDataSources": {
+        "title": "Múltiples Fuentes de Datos = Mejores Tipos",
+        "description": "A diferencia de los convertidores básicos que dependen de una sola fuente, agregamos datos de 12 proveedores premium. Compara tipos entre fuentes, elige el mejor tipo para tu transacción y evita márgenes ocultos."
+      },
+      "smartConversion": {
+        "title": "Funciones de Conversión Inteligente",
+        "description": "Detecta automáticamente cantidades en cualquier página web - solo resalta y convierte. Cálculos inversos con un clic. Soporte multi-divisa para cualquier par. Modo sin conexión con tipos en caché."
+      },
+      "professionalTools": {
+        "title": "Herramientas Profesionales",
+        "description": "Datos históricos para ver cambios de tipos a lo largo del tiempo. Indicadores de cambio porcentual para detectar tendencias. Pares favoritos para acceso rápido. Control de precisión decimal de 2 a 10 lugares."
+      },
+      "instantConversion": {
+        "title": "Conversión Instantánea",
+        "description": "Convierta divisas con un clic directamente desde la barra de herramientas de su navegador. Soporte para más de 150 divisas en todo el mundo."
+      },
+      "rateComparison": {
+        "title": "Comparación de Tipos",
+        "description": "Compare tipos de múltiples proveedores al instante. Vea qué banco o servicio ofrece el mejor tipo de cambio para sus necesidades."
+      },
+      "historicalCharts": {
+        "title": "Gráficos Históricos",
+        "description": "Vea tendencias de tipos de 30 días para tomar decisiones informadas sobre cuándo cambiar su dinero."
+      },
+      "smartAlerts": {
+        "title": "Alertas Inteligentes",
+        "description": "Configure alertas de tipos y reciba notificaciones cuando se alcance su tipo de cambio objetivo."
+      },
+      "offlineMode": {
+        "title": "Modo Sin Conexión",
+        "description": "Acceda a tipos almacenados en caché incluso sin conexión. Perfecto para viajeros sin acceso constante a internet."
+      },
+      "privacyFirst": {
+        "title": "Privacidad y Seguridad Primero",
+        "description": "Tus datos siguen siendo tuyos. Sin necesidad de cuenta, sin seguimiento o análisis, sin recolección de datos personales. Todas las conversiones ocurren localmente en tu dispositivo."
+      },
+      "customizable": {
+        "title": "Experiencia Personalizable",
+        "description": "Elige tu fuente de datos preferida, establece divisas predeterminadas, ajusta la frecuencia de actualización y cambia entre temas claros y oscuros. Interfaz limpia e intuitiva sin desorden ni anuncios."
+      }
+    },
+    "useCases": {
+      "title": "Diseñado para tu Flujo de Trabajo",
+      "business": {
+        "title": "Para Profesionales de Negocios",
+        "description": "Toma decisiones informadas con tipos de cambio de grado institucional. Perfecto para facturación y pagos internacionales, informes financieros y contabilidad, estrategias de precios de comercio electrónico y cálculos de importación/exportación."
+      },
+      "travelers": {
+        "title": "Para Viajeros",
+        "description": "Planifica presupuestos con confianza, compara precios mientras compras en línea, rastrea gastos en múltiples divisas y evita sorpresas en los mostradores de cambio de divisas."
+      },
+      "investors": {
+        "title": "Para Inversores y Traders",
+        "description": "Monitorea los mercados forex durante todo el día, rastrea valuaciones de criptomonedas, detecta oportunidades de arbitraje y toma decisiones de inversión basadas en datos."
+      }
+    },
+    "howItWorks": {
+      "title": "Cómo Funciona",
+      "step1": {
+        "title": "Instale la Extensión",
+        "description": "Añada Currency Converter Pro a Chrome con un clic. No se requiere registro."
+      },
+      "step2": {
+        "title": "Seleccione Sus Divisas",
+        "description": "Elija entre más de 150 divisas. La extensión recuerda sus preferencias."
+      },
+      "step3": {
+        "title": "Compare Tipos al Instante",
+        "description": "Vea tipos en tiempo real de múltiples proveedores. Elija el mejor tipo para su conversión."
+      },
+      "step4": {
+        "title": "Tome Decisiones Informadas",
+        "description": "Use gráficos históricos y alertas de tipos para cronometrar sus conversiones perfectamente."
+      }
+    },
+    "dataSources": {
+      "title": "Nuestras Fuentes de Datos Confiables",
+      "description": "Agregamos tipos de cambio de las fuentes más confiables de la industria:",
+      "centralBanks": "Bancos Centrales",
+      "centralBanksDesc": "BCE, CBR, NBP",
+      "financialAPIs": "APIs Financieras",
+      "financialAPIsDesc": "Fixer, Open Exchange",
+      "marketData": "Datos del Mercado",
+      "marketDataDesc": "TraderMade, Forex API",
+      "regionalBanks": "Bancos Regionales",
+      "regionalBanksDesc": "NBU, NBG, NBB",
+      "viewAll": "Ver todas las fuentes de datos"
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "q1": {
+        "question": "¿Qué hace diferente a Currency Converter Pro?",
+        "answer": "A diferencia de otros convertidores que muestran tipos de una sola fuente, agregamos datos de más de 12 proveedores confiables, permitiéndole comparar y elegir el mejor tipo. Esta transparencia puede ahorrarle dinero significativo en conversiones grandes."
+      },
+      "q2": {
+        "question": "¿Es realmente gratis la extensión de Chrome?",
+        "answer": "Sí, Currency Converter Pro es 100% gratis sin costos ocultos, niveles premium o tarifas de suscripción. Creemos que todos merecen acceso a tipos de cambio transparentes."
+      },
+      "q3": {
+        "question": "¿Qué tan precisos son los tipos de cambio?",
+        "answer": "Nuestros tipos vienen directamente de bancos centrales, instituciones financieras importantes y proveedores de forex establecidos. La mayoría de las fuentes se actualizan cada 60 segundos a 10 minutos, asegurando que siempre tenga tipos de mercado actuales."
+      },
+      "q4": {
+        "question": "¿La extensión rastrea mis datos?",
+        "answer": "No. Respetamos completamente su privacidad. La extensión funciona completamente en su dispositivo, almacena preferencias localmente y nunca envía su historial de conversión o datos personales a ningún servidor."
+      },
+      "q5": {
+        "question": "¿Puedo usarla sin conexión?",
+        "answer": "¡Sí! La extensión almacena en caché los últimos tipos, por lo que puede continuar convirtiendo divisas incluso sin conexión a internet. Perfecto para viajeros internacionales."
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Ahorrar en Conversión de Divisas?",
+      "subtitle": "Ya sea que estés gestionando negocios internacionales, planeando tu próximo viaje o rastreando inversiones, Currency Converter PRO te da la ventaja con datos precisos en tiempo real de fuentes en las que puedes confiar.",
+      "installButton": "Instalar Currency Converter PRO",
+      "tryWebButton": "Probar Versión Web Primero",
+      "tagline": "Gratis para usar. Sin registro. Sin costos ocultos. Solo mejor conversión de divisas."
+    }
+  },
+  "common": {
+    "scrollToTop": "Volver arriba"
+  }
+}

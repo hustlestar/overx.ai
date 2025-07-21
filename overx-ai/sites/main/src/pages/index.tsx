@@ -71,8 +71,8 @@ export default function HomePage({ lastModified }: HomePageProps) {
   return (
     <>
       <BaseSEO
-        title="OverX AI - Over the Xorizon"
-        description="Step beyond the horizon with OverX AI. Pioneering artificial intelligence solutions that transform businesses through cutting-edge technology and visionary innovation."
+        title="OverX AI - Get Your Time Back with Smart AI Solutions"
+        description="OverX AI creates intelligent solutions that automate repetitive tasks and give you more free time. From productivity tools to AI assistants, we make life better through smart automation."
         canonical="https://overx.ai"
         openGraph={{
           type: 'website',
@@ -256,23 +256,15 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <span>{t('navigation.products')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
-                <SmartLink href="/about" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                  <span>{t('navigation.about')}</span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-                </SmartLink>
                 <SmartLink href="https://blog.overx.ai" className="text-gray-300 hover:text-white transition-colors duration-300 relative group" external>
                   <span>{t('navigation.blog')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
-                <SmartLink href="/cv" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
-                  <span>{t('navigation.cv')}</span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-                </SmartLink>
                 <SmartLink 
-                  href="/contact" 
+                  href="/consultancy" 
                   className="relative overflow-hidden px-6 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
                 >
-                  <span className="relative z-10">{t('navigation.getStarted')}</span>
+                  <span className="relative z-10">{t('navigation.bookConsultation')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
                 <LanguageSwitcher />
@@ -311,14 +303,14 @@ export default function HomePage({ lastModified }: HomePageProps) {
                 </div>
                 <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
                   <SmartLink 
-                    href="/demo" 
+                    href="/products" 
                     className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
                   >
                     <span className="relative z-10">{t('hero.cta1')}</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-sky-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </SmartLink>
                   <SmartLink 
-                    href="/products" 
+                    href="/consultancy" 
                     className="group relative px-8 py-4 border border-white/20 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
                   >
                     <span className="relative z-10">{t('hero.cta2')}</span>
@@ -348,18 +340,22 @@ export default function HomePage({ lastModified }: HomePageProps) {
                 <p className="text-xl text-gray-500">{t('products.subtitle')}</p>
               </div>
               <div className="grid md:grid-cols-3 gap-8">
+                {/* Productivity Tools */}
                 <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">{t('products.neuralInterface.title')}</h3>
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">{t('productList.blockWebsite.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      {t('products.neuralInterface.description')}
+                      {t('productList.blockWebsite.description')}
                     </p>
                     <SmartLink 
-                      href="https://producta.overx.ai" 
+                      href="/products#productivity" 
                       className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group/link transition-colors duration-300"
-                      external
                     >
                       <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -368,18 +364,22 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </SmartLink>
                   </div>
                 </div>
+                {/* AI Assistants */}
                 <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">{t('products.quantumFlow.title')}</h3>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">{t('productList.claudeCodeBot.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      {t('products.quantumFlow.description')}
+                      {t('productList.claudeCodeBot.description')}
                     </p>
                     <SmartLink 
-                      href="https://productb.overx.ai" 
+                      href="/products#communication" 
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group/link transition-colors duration-300"
-                      external
                     >
                       <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -388,24 +388,112 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </SmartLink>
                   </div>
                 </div>
+                {/* Legal Services */}
                 <div className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20" style={{ willChange: 'transform' }}>
                   <div className="absolute inset-0 bg-gradient-to-br from-teal-600/10 to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300"></div>
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">{t('products.infiniteVision.title')}</h3>
+                    <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">{t('productList.consultBy.title')}</h3>
                     <p className="text-gray-400 mb-6 leading-relaxed">
-                      {t('products.infiniteVision.description')}
+                      {t('productList.consultBy.description')}
                     </p>
                     <SmartLink 
-                      href="https://productc.overx.ai" 
+                      href="/products#legal" 
                       className="inline-flex items-center text-teal-400 hover:text-teal-300 font-medium group/link transition-colors duration-300"
-                      external
                     >
                       <span>{t('products.learnMore')}</span>
                       <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
                     </SmartLink>
+                  </div>
+                </div>
+              </div>
+              {/* View All Products CTA */}
+              <div className="text-center mt-12">
+                <SmartLink 
+                  href="/products" 
+                  className="inline-flex items-center px-8 py-3 border border-white/20 rounded-full text-lg font-medium hover:bg-white/5 transition-all duration-300"
+                >
+                  <span>{t('products.viewAll')}</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                  </svg>
+                </SmartLink>
+              </div>
+            </div>
+          </section>
+
+          {/* Featured Product - Learn Words Bot */}
+          <section className="py-24 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 via-emerald-600/10 to-teal-600/10"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+              <div className="grid md:grid-cols-2 gap-16 items-center">
+                <div className="opacity-0 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
+                  <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-600/30 rounded-full mb-6">
+                    <span className="text-green-400 font-medium">{t('featuredProduct.label')}</span>
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                      {t('productList.learnWords.title')}
+                    </span>
+                  </h2>
+                  <p className="text-xl text-gray-400 mb-8">
+                    {t('productList.learnWords.description')}
+                  </p>
+                  <div className="space-y-4 mb-8">
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-300">{t('featuredProduct.feature1')}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-300">{t('featuredProduct.feature2')}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-gray-300">{t('featuredProduct.feature3')}</span>
+                    </div>
+                  </div>
+                  <SmartLink 
+                    href="https://learn.overx.ai" 
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30"
+                    external
+                  >
+                    <span>{t('featuredProduct.cta')}</span>
+                    <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                  </SmartLink>
+                </div>
+                <div className="opacity-0 animate-slide-in-right" style={{ animationDelay: '0.4s' }}>
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 blur-3xl"></div>
+                    <div className="relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10">
+                      <div className="space-y-4">
+                        <div className="flex justify-end">
+                          <div className="bg-green-600/20 border border-green-600/30 rounded-2xl rounded-br-none px-6 py-3 max-w-xs">
+                            <p className="text-green-400 font-medium">despertar</p>
+                          </div>
+                        </div>
+                        <div className="flex justify-start">
+                          <div className="bg-gray-800 rounded-2xl rounded-bl-none px-6 py-4 max-w-md">
+                            <p className="text-white mb-2">🇪🇸 despertar → 🇬🇧 to wake up</p>
+                            <p className="text-gray-400 text-sm">Wake up, awaken, rouse from sleep</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -417,33 +505,45 @@ export default function HomePage({ lastModified }: HomePageProps) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16 opacity-0 animate-slide-in-left" style={{ animationDelay: '0.1s' }}>
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">Why Choose OverX AI</span>
+                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">{t('values.title')}</span>
                 </h2>
-                <p className="text-xl text-gray-500">Experience the future of AI-driven innovation</p>
+                <p className="text-xl text-gray-500">{t('values.subtitle')}</p>
               </div>
               
               <div className="grid md:grid-cols-2 gap-16 items-center">
                 <div className="opacity-0 animate-slide-in-left" style={{ animationDelay: '0.3s' }}>
                   <div className="space-y-8">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex-shrink-0"></div>
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex-shrink-0 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">Cutting-Edge Technology</h3>
-                        <p className="text-gray-400">Leverage the latest AI advancements with our continuously evolving platform</p>
+                        <h3 className="text-xl font-semibold mb-2">{t('values.card1.title')}</h3>
+                        <p className="text-gray-400">{t('values.card1.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex-shrink-0"></div>
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg flex-shrink-0 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">Enterprise Ready</h3>
-                        <p className="text-gray-400">Built for scale with robust security, compliance, and performance</p>
+                        <h3 className="text-xl font-semibold mb-2">{t('values.card2.title')}</h3>
+                        <p className="text-gray-400">{t('values.card2.description')}</p>
                       </div>
                     </div>
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex-shrink-0"></div>
+                      <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg flex-shrink-0 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                      </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-                        <p className="text-gray-400">Expert assistance whenever you need it, ensuring smooth operations</p>
+                        <h3 className="text-xl font-semibold mb-2">{t('values.card3.title')}</h3>
+                        <p className="text-gray-400">{t('values.card3.description')}</p>
                       </div>
                     </div>
                   </div>
@@ -473,48 +573,105 @@ export default function HomePage({ lastModified }: HomePageProps) {
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="py-24 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-cyan-600/10 to-teal-600/10"></div>
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-              <div className="opacity-0 animate-slide-in-right" style={{ animationDelay: '0.2s' }}>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">Ready to Transform Your Business?</span>
+          {/* Contact Form Section */}
+          <section className="py-24 bg-gradient-to-b from-gray-900/50 to-black" id="consultation-form">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                    {t('consultancy.cta.bookConsultation')}
+                  </span>
                 </h2>
-                <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                  Join thousands of companies already leveraging OverX AI to stay ahead of the competition
-                </p>
-                <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                  <SmartLink 
-                    href="/demo" 
-                    className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
-                  >
-                    <span className="relative z-10">Start Free Trial</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-teal-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </SmartLink>
-                  <SmartLink 
-                    href="/contact" 
-                    className="group relative px-8 py-4 border border-white/20 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
-                  >
-                    <span className="relative z-10">Talk to Sales</span>
-                    <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </SmartLink>
-                </div>
+                <p className="text-xl text-gray-400">{t('consultancy.form.heading')}</p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-gray-900 to-black p-10 rounded-2xl border border-white/10">
+                <form onSubmit={(e) => {
+                  e.preventDefault()
+                  // Handle form submission
+                  console.log('Form submitted')
+                }} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('consultancy.form.name')}
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        {t('consultancy.form.email')}
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      {t('consultancy.form.company')}
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      {t('consultancy.form.message')}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    />
+                  </div>
+                  
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
+                    >
+                      <span>{t('consultancy.form.submit')}</span>
+                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </section>
         </main>
         
-        <footer className="relative bg-black border-t border-white/10 py-16 mt-24">
+        <footer className="relative bg-black border-t border-white/10 py-16">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <h4 className="text-lg font-semibold mb-4">{t('footer.navigation.products')}</h4>
                 <ul className="space-y-2">
-                  <li><SmartLink href="/products/neural-interface" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.neuralInterface.title')}</SmartLink></li>
-                  <li><SmartLink href="/products/quantum-flow" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.quantumFlow.title')}</SmartLink></li>
-                  <li><SmartLink href="/products/infinite-vision" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.infiniteVision.title')}</SmartLink></li>
+                  <li><SmartLink href="/products#productivity" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.categories.productivity')}</SmartLink></li>
+                  <li><SmartLink href="/products#communication" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.categories.communication')}</SmartLink></li>
+                  <li><SmartLink href="/products#legal" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.categories.legal')}</SmartLink></li>
+                  <li><SmartLink href="/products#education" className="text-gray-400 hover:text-white transition-colors duration-300">{t('products.categories.education')}</SmartLink></li>
                 </ul>
               </div>
               <div>

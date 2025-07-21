@@ -1,52 +1,235 @@
 {
   "companyName": "OverX AI",
   "tagline": "Over the Xorizon",
+  "companyMission": "Making life better by giving people more free time",
   "hero": {
-    "title": "OverX AI",
-    "subtitle": "Over the Xorizon",
-    "cta1": "Experience the Future",
-    "cta2": "Explore Solutions",
+    "title": "Get Your Time Back",
+    "subtitle": "AI solutions that automate the mundane, so you can focus on what matters",
+    "cta1": "View Our Products",
+    "cta2": "Book Consultation",
     "scrollPrompt": "Scroll to explore"
   },
   "products": {
-    "title": "Pioneering Solutions",
-    "subtitle": "Technologies that transcend traditional boundaries",
-    "learnMore": "Discover More",
-    "neuralInterface": {
-      "title": "Neural Interface",
-      "description": "Advanced language models that understand context, intent, and nuance like never before"
-    },
-    "quantumFlow": {
-      "title": "Quantum Flow",
-      "description": "Intelligent automation that learns, adapts, and evolves with your business ecosystem"
-    },
-    "infiniteVision": {
-      "title": "Infinite Vision",
-      "description": "Predictive intelligence that sees beyond data, revealing patterns invisible to traditional analytics"
+    "title": "Our Product Suite",
+    "subtitle": "Smart solutions that give you back your most valuable asset - time",
+    "learnMore": "Learn More",
+    "viewAll": "View All Products",
+    "categories": {
+      "productivity": "Productivity",
+      "communication": "Communication",
+      "legal": "Legal Services",
+      "finance": "Finance",
+      "education": "Education"
     }
   },
-  "innovation": {
-    "title": "Beyond Innovation",
-    "subtitle": "Where imagination meets intelligence",
+  "productList": {
+    "blockWebsite": {
+      "title": "Block Website: Self Control",
+      "description": "Transform digital distractions into physical wellness. The only website blocker that makes you healthier."
+    },
+    "claudeCodeBot": {
+      "title": "Claude Code Telegram Bot",
+      "description": "Code anywhere with AI assistance. Voice or text, zero API costs."
+    },
+    "consultBy": {
+      "title": "Consult.by",
+      "description": "Instant, affordable legal guidance for Belarus. Professional advice at the price of coffee."
+    },
+    "currencyConverter": {
+      "title": "Currency Converter",
+      "description": "Privacy-first currency conversion with complex calculations across 100+ currencies."
+    },
+    "instagramSaver": {
+      "title": "Instagram Description Saver",
+      "description": "Never lose Instagram descriptions. Extract and archive captions instantly."
+    },
+    "languageFocus": {
+      "title": "Language Focus Bot",
+      "description": "Master verbal reframing with AI-powered practice. Transform your communication skills."
+    },
+    "learnWords": {
+      "title": "Learn Words Bot",
+      "description": "Turn daily messaging into language learning. 13 languages with smart repetition."
+    },
+    "memeBuyBot": {
+      "title": "Meme Telegram Buy Bot",
+      "description": "Never miss crypto opportunities. Automated trading at superhuman speed."
+    },
+    "privetBot": {
+      "title": "Privet Bot",
+      "description": "AI companion with real memory and emotions. Natural voice conversations in multiple languages."
+    },
+    "reelSaver": {
+      "title": "Instagram Reel/Post Saver",
+      "description": "Save Instagram content privately. Original quality, no watermarks."
+    },
+    "yourLawyer": {
+      "title": "Your Lawyer Bot",
+      "description": "Expert Belarusian legal guidance 24/7. 90% less cost than traditional lawyers."
+    },
+    "yourLearner": {
+      "title": "Your Learner Bot",
+      "description": "Master grammar with personalized AI tutoring. Adaptive learning at your pace."
+    }
+  },
+  "values": {
+    "title": "Why Choose OverX AI",
+    "subtitle": "We believe in making technology work for people, not the other way around",
     "card1": {
-      "title": "Adaptive Intelligence",
-      "description": "Systems that evolve with your needs"
+      "title": "Save Your Time",
+      "description": "Our AI solutions handle repetitive tasks so you can focus on what truly matters"
     },
     "card2": {
-      "title": "Quantum Processing",
-      "description": "Unprecedented computational power"
+      "title": "Boost Productivity",
+      "description": "Work smarter with intelligent automation that learns and adapts to your needs"
     },
     "card3": {
-      "title": "Neural Synthesis",
-      "description": "Human-like understanding at scale"
+      "title": "Affordable Excellence",
+      "description": "Enterprise-grade solutions at prices that make sense for everyone"
+    }
+  },
+  "consultancy": {
+    "title": "AI Consultancy Services",
+    "subtitle": "Let our experts help you leverage AI to transform your business",
+    "description": "From strategy to implementation, we guide you through every step of your AI journey",
+    "services": {
+      "strategy": {
+        "title": "AI Strategy Development",
+        "description": "Define your AI roadmap with clear goals and measurable outcomes"
+      },
+      "implementation": {
+        "title": "Custom AI Solutions",
+        "description": "Tailored AI implementations that solve your specific business challenges"
+      },
+      "integration": {
+        "title": "System Integration",
+        "description": "Seamlessly integrate AI into your existing workflows and systems"
+      },
+      "training": {
+        "title": "Team Training",
+        "description": "Empower your team with the skills to leverage AI effectively"
+      }
+    },
+    "cta": {
+      "bookConsultation": "Book Consultation",
+      "learnMore": "Learn More About Our Services"
+    },
+    "features": {
+      "aiReadiness": "AI readiness assessment",
+      "roadmapDev": "Technology roadmap development",
+      "roiAnalysis": "ROI analysis and projections",
+      "riskAssessment": "Risk assessment and mitigation",
+      "customAI": "Custom AI model development",
+      "processAuto": "Process automation solutions",
+      "dataPipeline": "Data pipeline architecture",
+      "performance": "Performance optimization",
+      "apiDev": "API development and integration",
+      "modernization": "Legacy system modernization",
+      "cloudMigration": "Cloud migration services",
+      "security": "Security and compliance setup",
+      "executiveWorkshops": "Executive AI workshops",
+      "teamTraining": "Technical team training",
+      "bestPractices": "Best practices documentation",
+      "ongoingSupport": "Ongoing support programs"
+    },
+    "process": {
+      "title": "Our Process",
+      "subtitle": "Simple, effective, results-driven",
+      "steps": {
+        "discovery": {
+          "title": "Discovery",
+          "description": "Understanding your needs and goals"
+        },
+        "strategy": {
+          "title": "Strategy", 
+          "description": "Developing a tailored AI roadmap"
+        },
+        "implementation": {
+          "title": "Implementation",
+          "description": "Building and deploying solutions"
+        },
+        "support": {
+          "title": "Support",
+          "description": "Ongoing optimization and training"
+        }
+      }
+    },
+    "form": {
+      "heading": "Let's discuss how AI can transform your business",
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "message": "How can we help you?",
+      "submit": "Send Message"
     }
   },
   "navigation": {
+    "home": "Home",
     "products": "Products",
     "about": "About",
     "blog": "Blog",
-    "cv": "CV",
-    "getStarted": "Get Started"
+    "bookConsultation": "Book Consultation"
+  },
+  "featuredProduct": {
+    "label": "Featured Product",
+    "feature1": "13 languages with AI-powered translations",
+    "feature2": "Spaced repetition for optimal retention",
+    "feature3": "50,000+ active learners worldwide",
+    "cta": "Start Learning Free"
+  },
+  "productFeatures": {
+    "smartPatternBlocking": "Smart pattern blocking",
+    "wellnessActivities": "Wellness activities",
+    "passwordProtection": "Password protection",
+    "realTimeSync": "Real-time sync",
+    "currencies100Plus": "100+ currencies",
+    "complexCalculations": "Complex calculations",
+    "privacyFirst": "Privacy-first",
+    "languages9": "9 languages",
+    "antiDetectionTech": "Anti-detection tech",
+    "smartCaching": "Smart caching",
+    "multiLanguage": "Multi-language",
+    "originalQuality": "Original quality",
+    "noWatermarks": "No watermarks",
+    "privacyFocused": "Privacy-focused",
+    "enterpriseReliability": "Enterprise reliability",
+    "voiceCoding": "Voice coding",
+    "zeroApiCosts": "Zero API costs",
+    "multipleProjects": "Multiple projects",
+    "taskQueueSystem": "Task queue system",
+    "emotionalAwareness": "Emotional awareness",
+    "longTermMemory": "Long-term memory",
+    "multiLanguageVoice": "Multi-language voice",
+    "openSource": "Open source",
+    "monitoring247": "24/7 monitoring",
+    "subSecondExecution": "Sub-second execution",
+    "multiDexSupport": "Multi-DEX support",
+    "patternRecognition": "Pattern recognition",
+    "responseUnder1Min": "Response < 1 minute",
+    "completePrivacy": "Complete privacy",
+    "affordablePricing": "Affordable pricing",
+    "belarusianLaw": "Belarusian law coverage",
+    "availability247": "24/7 availability",
+    "costSavings90": "90% cost savings",
+    "customKnowledgeBase": "Custom knowledge base",
+    "contextualThreads": "Contextual threads",
+    "languagePatterns14": "14 language patterns",
+    "aiScoring": "AI scoring",
+    "progressTracking": "Progress tracking",
+    "scenarios100Plus": "100+ scenarios",
+    "languages13": "13 languages",
+    "spacedRepetition": "Spaced repetition",
+    "voiceSupport": "Voice support",
+    "exerciseTypes4": "4 exercise types",
+    "aiGeneratedExercises": "AI-generated exercises",
+    "intelligentEvaluation": "Intelligent evaluation",
+    "smartNotifications": "Smart notifications",
+    "adaptiveLearning": "Adaptive learning"
+  },
+  "productsCta": {
+    "title": "Need a Custom Solution?",
+    "description": "Our AI consultancy team can help you build tailored solutions that perfectly fit your business needs.",
+    "button": "Book a Consultation"
   },
   "footer": {
     "rights": "All rights reserved",

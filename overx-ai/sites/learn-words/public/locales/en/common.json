@@ -1,0 +1,172 @@
+{
+  "site": {
+    "title": "Learn Words Bot",
+    "tagline": "Your AI Language Learning Companion",
+    "description": "Master vocabulary in 13 languages with AI-powered learning"
+  },
+  "navigation": {
+    "home": "Home",
+    "features": "Features",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "getStarted": "Start Learning",
+    "tryFree": "Try Free"
+  },
+  "hero": {
+    "title": "Master Languages",
+    "subtitle": "One Word at a Time",
+    "description": "Transform your daily messaging into powerful language learning moments with AI-powered vocabulary acquisition",
+    "cta1": "Start Free on Telegram",
+    "cta2": "See How It Works",
+    "stats": {
+      "users": "50,000+ Active Learners",
+      "words": "2M+ Words Learned Monthly",
+      "languages": "13 Languages Supported"
+    }
+  },
+  "features": {
+    "title": "Powerful Features for Effective Learning",
+    "subtitle": "Everything you need to master vocabulary in any language",
+    "list": {
+      "ai": {
+        "title": "AI-Powered Intelligence",
+        "description": "Smart translations with context, usage examples, and cultural notes"
+      },
+      "exercises": {
+        "title": "4 Exercise Types",
+        "description": "Direct translation, multiple choice, reverse translation, and synonym differentiation"
+      },
+      "spaced": {
+        "title": "Spaced Repetition",
+        "description": "Scientifically optimized review timing for long-term retention"
+      },
+      "languages": {
+        "title": "13 Languages",
+        "description": "Learn English, Spanish, French, German, Italian, Portuguese, Russian, Polish, Chinese, Japanese, Korean, Arabic, and Hindi"
+      },
+      "tracking": {
+        "title": "Progress Tracking",
+        "description": "Watch your vocabulary grow with detailed statistics and insights"
+      },
+      "personalized": {
+        "title": "Personalized Learning",
+        "description": "Custom notifications, timezone support, and adaptive difficulty"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Simple, effective, and integrated into your daily routine",
+    "steps": {
+      "1": {
+        "title": "Send Any Word",
+        "description": "Just send a word in any language to the bot"
+      },
+      "2": {
+        "title": "Get AI Translation",
+        "description": "Receive instant translation with context and examples"
+      },
+      "3": {
+        "title": "Practice Daily",
+        "description": "Complete quick exercises at your convenience"
+      },
+      "4": {
+        "title": "Master Vocabulary",
+        "description": "Track progress and achieve fluency"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Choose Your Plan",
+    "subtitle": "Start free, upgrade when you're ready",
+    "free": {
+      "name": "Free Forever",
+      "price": "$0",
+      "period": "/month",
+      "features": [
+        "Full AI translations",
+        "All training exercises",
+        "5-10 new words daily",
+        "Progress tracking",
+        "Basic notifications",
+        "Supported by minimal ads"
+      ],
+      "cta": "Start Free"
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$1.99",
+      "period": "/month",
+      "badge": "Most Popular",
+      "features": [
+        "Everything in Free",
+        "Unlimited new words",
+        "No advertisements",
+        "Daily streak gamification",
+        "Priority AI processing",
+        "Advanced statistics",
+        "Regional pricing available"
+      ],
+      "cta": "Try Plus Free"
+    }
+  },
+  "testimonials": {
+    "title": "What Learners Say",
+    "subtitle": "Join thousands who've transformed their language skills",
+    "items": {
+      "1": {
+        "text": "Passed my Spanish exam after just 3 months! The AI explanations made everything click.",
+        "author": "Maria",
+        "role": "University Student"
+      },
+      "2": {
+        "text": "Landed my dream job in Berlin. Daily practice made German vocabulary second nature.",
+        "author": "Alex",
+        "role": "Software Developer"
+      },
+      "3": {
+        "text": "Traveled through 5 countries speaking local languages. This bot was my secret weapon!",
+        "author": "Sarah",
+        "role": "Digital Nomad"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Start Your Language Journey?",
+    "subtitle": "Join 50,000+ learners mastering languages with AI",
+    "button": "Start Learning Free",
+    "telegram": "Open in Telegram"
+  },
+  "blog": {
+    "title": "Language Learning Blog",
+    "subtitle": "Tips, insights, and strategies for mastering languages",
+    "readMore": "Read More",
+    "allPosts": "View All Posts",
+    "categories": {
+      "tips": "Learning Tips",
+      "languages": "Language Guides",
+      "updates": "Product Updates",
+      "success": "Success Stories"
+    }
+  },
+  "footer": {
+    "tagline": "Where AI Meets Language Mastery",
+    "product": "Product",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "telegram": "Telegram Bot",
+      "about": "About Us",
+      "blog": "Blog",
+      "careers": "Careers",
+      "help": "Help Center",
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "rights": "All rights reserved"
+  }
+}

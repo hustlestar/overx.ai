@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "id": "ai-insights",
+      "name": "AI Insights",
+      "slug": "ai-insights",
+      "description": "Deep dives into artificial intelligence, machine learning, and the future of AI technology",
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "product-updates",
+      "name": "Product Updates",
+      "slug": "product-updates",
+      "description": "Latest features, improvements, and announcements about OverX AI products",
+      "color": "from-purple-500 to-pink-500"
+    },
+    {
+      "id": "tutorials",
+      "name": "Tutorials",
+      "slug": "tutorials",
+      "description": "Step-by-step guides and how-to articles for getting the most out of our products",
+      "color": "from-green-500 to-emerald-500"
+    },
+    {
+      "id": "case-studies",
+      "name": "Case Studies",
+      "slug": "case-studies",
+      "description": "Real-world success stories and implementation examples from our clients",
+      "color": "from-amber-500 to-orange-500"
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "slug": "technology",
+      "description": "Technical deep-dives, architecture discussions, and engineering insights",
+      "color": "from-indigo-500 to-purple-500"
+    }
+  ]
+}

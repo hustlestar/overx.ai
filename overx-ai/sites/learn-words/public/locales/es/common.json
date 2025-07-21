@@ -1,0 +1,172 @@
+{
+  "site": {
+    "title": "Learn Words Bot",
+    "tagline": "Tu Compañero de Aprendizaje de Idiomas con IA",
+    "description": "Domina el vocabulario en 13 idiomas con aprendizaje potenciado por IA"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "features": "Características",
+    "pricing": "Precios",
+    "blog": "Blog",
+    "getStarted": "Comenzar a Aprender",
+    "tryFree": "Prueba Gratis"
+  },
+  "hero": {
+    "title": "Domina Idiomas",
+    "subtitle": "Una Palabra a la Vez",
+    "description": "Transforma tus mensajes diarios en poderosos momentos de aprendizaje de idiomas con adquisición de vocabulario impulsada por IA",
+    "cta1": "Comenzar Gratis en Telegram",
+    "cta2": "Ver Cómo Funciona",
+    "stats": {
+      "users": "50,000+ Estudiantes Activos",
+      "words": "2M+ Palabras Aprendidas Mensualmente",
+      "languages": "13 Idiomas Soportados"
+    }
+  },
+  "features": {
+    "title": "Características Poderosas para un Aprendizaje Efectivo",
+    "subtitle": "Todo lo que necesitas para dominar el vocabulario en cualquier idioma",
+    "list": {
+      "ai": {
+        "title": "Inteligencia Impulsada por IA",
+        "description": "Traducciones inteligentes con contexto, ejemplos de uso y notas culturales"
+      },
+      "exercises": {
+        "title": "4 Tipos de Ejercicios",
+        "description": "Traducción directa, opción múltiple, traducción inversa y diferenciación de sinónimos"
+      },
+      "spaced": {
+        "title": "Repetición Espaciada",
+        "description": "Tiempo de revisión optimizado científicamente para retención a largo plazo"
+      },
+      "languages": {
+        "title": "13 Idiomas",
+        "description": "Aprende inglés, español, francés, alemán, italiano, portugués, ruso, polaco, chino, japonés, coreano, árabe e hindi"
+      },
+      "tracking": {
+        "title": "Seguimiento del Progreso",
+        "description": "Observa crecer tu vocabulario con estadísticas detalladas e información"
+      },
+      "personalized": {
+        "title": "Aprendizaje Personalizado",
+        "description": "Notificaciones personalizadas, soporte de zona horaria y dificultad adaptativa"
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Simple, efectivo e integrado en tu rutina diaria",
+    "steps": {
+      "1": {
+        "title": "Envía Cualquier Palabra",
+        "description": "Solo envía una palabra en cualquier idioma al bot"
+      },
+      "2": {
+        "title": "Obtén Traducción IA",
+        "description": "Recibe traducción instantánea con contexto y ejemplos"
+      },
+      "3": {
+        "title": "Practica Diariamente",
+        "description": "Completa ejercicios rápidos a tu conveniencia"
+      },
+      "4": {
+        "title": "Domina el Vocabulario",
+        "description": "Sigue el progreso y alcanza la fluidez"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Elige Tu Plan",
+    "subtitle": "Comienza gratis, actualiza cuando estés listo",
+    "free": {
+      "name": "Gratis para Siempre",
+      "price": "$0",
+      "period": "/mes",
+      "features": [
+        "Traducciones IA completas",
+        "Todos los ejercicios de entrenamiento",
+        "5-10 palabras nuevas diarias",
+        "Seguimiento del progreso",
+        "Notificaciones básicas",
+        "Soportado por anuncios mínimos"
+      ],
+      "cta": "Comenzar Gratis"
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$1.99",
+      "period": "/mes",
+      "badge": "Más Popular",
+      "features": [
+        "Todo en Gratis",
+        "Palabras nuevas ilimitadas",
+        "Sin anuncios",
+        "Gamificación de racha diaria",
+        "Procesamiento IA prioritario",
+        "Estadísticas avanzadas",
+        "Precios regionales disponibles"
+      ],
+      "cta": "Prueba Plus Gratis"
+    }
+  },
+  "testimonials": {
+    "title": "Lo que Dicen los Estudiantes",
+    "subtitle": "Únete a miles que han transformado sus habilidades lingüísticas",
+    "items": {
+      "1": {
+        "text": "¡Aprobé mi examen de español después de solo 3 meses! Las explicaciones de IA hicieron que todo encajara.",
+        "author": "María",
+        "role": "Estudiante Universitaria"
+      },
+      "2": {
+        "text": "Conseguí mi trabajo soñado en Berlín. La práctica diaria hizo que el vocabulario alemán fuera natural.",
+        "author": "Alex",
+        "role": "Desarrollador de Software"
+      },
+      "3": {
+        "text": "¡Viajé por 5 países hablando idiomas locales. Este bot fue mi arma secreta!",
+        "author": "Sarah",
+        "role": "Nómada Digital"
+      }
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Comenzar tu Viaje Lingüístico?",
+    "subtitle": "Únete a más de 50,000 estudiantes dominando idiomas con IA",
+    "button": "Comenzar a Aprender Gratis",
+    "telegram": "Abrir en Telegram"
+  },
+  "blog": {
+    "title": "Blog de Aprendizaje de Idiomas",
+    "subtitle": "Consejos, ideas y estrategias para dominar idiomas",
+    "readMore": "Leer Más",
+    "allPosts": "Ver Todas las Publicaciones",
+    "categories": {
+      "tips": "Consejos de Aprendizaje",
+      "languages": "Guías de Idiomas",
+      "updates": "Actualizaciones del Producto",
+      "success": "Historias de Éxito"
+    }
+  },
+  "footer": {
+    "tagline": "Donde la IA se Encuentra con el Dominio del Idioma",
+    "product": "Producto",
+    "company": "Empresa",
+    "support": "Soporte",
+    "legal": "Legal",
+    "links": {
+      "features": "Características",
+      "pricing": "Precios",
+      "telegram": "Bot de Telegram",
+      "about": "Acerca de Nosotros",
+      "blog": "Blog",
+      "careers": "Carreras",
+      "help": "Centro de Ayuda",
+      "contact": "Contacto",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    },
+    "rights": "Todos los derechos reservados"
+  }
+}

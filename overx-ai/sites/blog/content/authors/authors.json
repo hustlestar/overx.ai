@@ -1,0 +1,32 @@
+{
+  "authors": [
+    {
+      "id": "overx-team",
+      "name": "OverX AI Team",
+      "bio": "The collective voice of OverX AI's engineering, product, and research teams",
+      "avatar": "/images/authors/overx-team.jpg",
+      "social": {
+        "twitter": "overxai",
+        "linkedin": "company/overxai"
+      }
+    },
+    {
+      "id": "ai-research",
+      "name": "AI Research Team",
+      "bio": "Our AI research team explores cutting-edge developments in artificial intelligence and machine learning",
+      "avatar": "/images/authors/ai-research.jpg",
+      "social": {
+        "twitter": "overxai_research"
+      }
+    },
+    {
+      "id": "engineering",
+      "name": "Engineering Team",
+      "bio": "Technical insights and best practices from OverX AI's engineering team",
+      "avatar": "/images/authors/engineering.jpg",
+      "social": {
+        "github": "overxai"
+      }
+    }
+  ]
+}

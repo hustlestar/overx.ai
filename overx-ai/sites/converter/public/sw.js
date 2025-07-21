@@ -1,0 +1,96 @@
+const CACHE_NAME = 'converter-v1'
+const RUNTIME_CACHE = 'runtime-cache'
+
+// URLs to cache on install
+const urlsToCache = [
+  '/',
+  '/manifest.json',
+  '/favicon.ico',
+  '/locales/en/common.json',
+  '/locales/es/common.json',
+  '/locales/ru/common.json',
+]
+
+// Install event - cache essential files
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache)
+    })
+  )
+  self.skipWaiting()
+})
+
+// Activate event - clean up old caches
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames
+          .filter((cacheName) => cacheName !== CACHE_NAME && cacheName !== RUNTIME_CACHE)
+          .map((cacheName) => caches.delete(cacheName))
+      )
+    })
+  )
+  self.clients.claim()
+})
+
+// Fetch event - serve from cache, fallback to network
+self.addEventListener('fetch', (event) => {
+  // Skip non-GET requests
+  if (event.request.method !== 'GET') return
+
+  const { request } = event
+  const url = new URL(request.url)
+
+  // Handle API requests with network-first strategy
+  if (url.pathname.startsWith('/api/')) {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          // Cache successful responses
+          if (response.status === 200) {
+            const responseClone = response.clone()
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              cache.put(request, responseClone)
+            })
+          }
+          return response
+        })
+        .catch(() => {
+          // Fallback to cache on network failure
+          return caches.match(request)
+        })
+    )
+    return
+  }
+
+  // Handle other requests with cache-first strategy
+  event.respondWith(
+    caches.match(request).then((response) => {
+      if (response) {
+        // Update cache in the background
+        fetch(request).then((fetchResponse) => {
+          if (fetchResponse.status === 200) {
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              cache.put(request, fetchResponse)
+            })
+          }
+        })
+        return response
+      }
+
+      // Fallback to network
+      return fetch(request).then((fetchResponse) => {
+        // Cache successful responses
+        if (fetchResponse.status === 200) {
+          const responseClone = fetchResponse.clone()
+          caches.open(RUNTIME_CACHE).then((cache) => {
+            cache.put(request, responseClone)
+          })
+        }
+        return fetchResponse
+      })
+    })
+  )
+})

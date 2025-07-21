@@ -1,52 +1,235 @@
 {
   "companyName": "OverX AI",
   "tagline": "Más allá del Xorizonte",
+  "companyMission": "Mejoramos la vida dando a las personas más tiempo libre",
   "hero": {
-    "title": "OverX AI",
-    "subtitle": "Más allá del Xorizonte",
-    "cta1": "Experimenta el Futuro",
-    "cta2": "Explora Soluciones",
+    "title": "Recupera Tu Tiempo",
+    "subtitle": "Soluciones IA que automatizan lo rutinario para que te enfoques en lo importante",
+    "cta1": "Ver Nuestros Productos",
+    "cta2": "Reservar Consultoría",
     "scrollPrompt": "Desplázate para explorar"
   },
   "products": {
-    "title": "Soluciones Pioneras",
-    "subtitle": "Tecnologías que trascienden los límites tradicionales",
-    "learnMore": "Descubre Más",
-    "neuralInterface": {
-      "title": "Interfaz Neural",
-      "description": "Modelos de lenguaje avanzados que comprenden contexto, intención y matices como nunca antes"
-    },
-    "quantumFlow": {
-      "title": "Flujo Cuántico",
-      "description": "Automatización inteligente que aprende, se adapta y evoluciona con tu ecosistema empresarial"
-    },
-    "infiniteVision": {
-      "title": "Visión Infinita",
-      "description": "Inteligencia predictiva que ve más allá de los datos, revelando patrones invisibles para el análisis tradicional"
+    "title": "Nuestros Productos",
+    "subtitle": "Soluciones inteligentes que te devuelven tu recurso más valioso: el tiempo",
+    "learnMore": "Más Información",
+    "viewAll": "Ver Todos los Productos",
+    "categories": {
+      "productivity": "Productividad",
+      "communication": "Comunicación",
+      "legal": "Servicios Legales",
+      "finance": "Finanzas",
+      "education": "Educación"
     }
   },
-  "innovation": {
-    "title": "Más Allá de la Innovación",
-    "subtitle": "Donde la imaginación se encuentra con la inteligencia",
+  "productList": {
+    "blockWebsite": {
+      "title": "Block Website: Autocontrol",
+      "description": "Transforma las distracciones digitales en bienestar físico. El único bloqueador que te hace más saludable."
+    },
+    "claudeCodeBot": {
+      "title": "Claude Code Bot de Telegram",
+      "description": "Programa en cualquier lugar con asistencia IA. Por voz o texto, sin costos de API."
+    },
+    "consultBy": {
+      "title": "Consult.by",
+      "description": "Asesoría legal instantánea y asequible para Bielorrusia. Consejo profesional al precio de un café."
+    },
+    "currencyConverter": {
+      "title": "Conversor de Divisas",
+      "description": "Conversión de divisas con privacidad y cálculos complejos en más de 100 monedas."
+    },
+    "instagramSaver": {
+      "title": "Guardador de Descripciones Instagram",
+      "description": "Nunca pierdas descripciones de Instagram. Extrae y archiva subtítulos al instante."
+    },
+    "languageFocus": {
+      "title": "Bot de Enfoque Lingüístico",
+      "description": "Domina el reencuadre verbal con práctica potenciada por IA. Transforma tus habilidades comunicativas."
+    },
+    "learnWords": {
+      "title": "Bot Aprende Palabras",
+      "description": "Convierte la mensajería diaria en aprendizaje de idiomas. 13 idiomas con repetición inteligente."
+    },
+    "memeBuyBot": {
+      "title": "Bot de Compra de Memes Telegram",
+      "description": "Nunca pierdas oportunidades cripto. Trading automatizado a velocidad sobrehumana."
+    },
+    "privetBot": {
+      "title": "Bot Privet",
+      "description": "Compañero IA con memoria real y emociones. Conversaciones naturales por voz en múltiples idiomas."
+    },
+    "reelSaver": {
+      "title": "Guardador de Reels/Posts Instagram",
+      "description": "Guarda contenido de Instagram en privado. Calidad original, sin marcas de agua."
+    },
+    "yourLawyer": {
+      "title": "Tu Abogado Bot",
+      "description": "Orientación legal bielorrusa experta 24/7. 90% menos costo que abogados tradicionales."
+    },
+    "yourLearner": {
+      "title": "Tu Aprendiz Bot",
+      "description": "Domina la gramática con tutoría IA personalizada. Aprendizaje adaptativo a tu ritmo."
+    }
+  },
+  "values": {
+    "title": "Por Qué Elegir OverX AI",
+    "subtitle": "Creemos en hacer que la tecnología trabaje para las personas, no al revés",
     "card1": {
-      "title": "Inteligencia Adaptativa",
-      "description": "Sistemas que evolucionan con tus necesidades"
+      "title": "Ahorra Tu Tiempo",
+      "description": "Nuestras soluciones IA manejan tareas repetitivas para que te enfoques en lo que realmente importa"
     },
     "card2": {
-      "title": "Procesamiento Cuántico",
-      "description": "Poder computacional sin precedentes"
+      "title": "Aumenta la Productividad",
+      "description": "Trabaja más inteligentemente con automatización que aprende y se adapta a tus necesidades"
     },
     "card3": {
-      "title": "Síntesis Neural",
-      "description": "Comprensión similar a la humana a escala"
+      "title": "Excelencia Asequible",
+      "description": "Soluciones de nivel empresarial a precios que tienen sentido para todos"
+    }
+  },
+  "consultancy": {
+    "title": "Servicios de Consultoría IA",
+    "subtitle": "Deja que nuestros expertos te ayuden a aprovechar la IA para transformar tu negocio",
+    "description": "Desde la estrategia hasta la implementación, te guiamos en cada paso de tu viaje con IA",
+    "services": {
+      "strategy": {
+        "title": "Desarrollo de Estrategia IA",
+        "description": "Define tu hoja de ruta IA con objetivos claros y resultados medibles"
+      },
+      "implementation": {
+        "title": "Soluciones IA Personalizadas",
+        "description": "Implementaciones IA a medida que resuelven tus desafíos empresariales específicos"
+      },
+      "integration": {
+        "title": "Integración de Sistemas",
+        "description": "Integra perfectamente la IA en tus flujos de trabajo y sistemas existentes"
+      },
+      "training": {
+        "title": "Capacitación de Equipo",
+        "description": "Empodera a tu equipo con las habilidades para aprovechar la IA efectivamente"
+      }
+    },
+    "cta": {
+      "bookConsultation": "Reservar Consulta",
+      "learnMore": "Conoce Más Sobre Nuestros Servicios"
+    },
+    "features": {
+      "aiReadiness": "Evaluación de preparación para IA",
+      "roadmapDev": "Desarrollo de hoja de ruta tecnológica",
+      "roiAnalysis": "Análisis y proyecciones de ROI",
+      "riskAssessment": "Evaluación y mitigación de riesgos",
+      "customAI": "Desarrollo de modelos IA personalizados",
+      "processAuto": "Soluciones de automatización de procesos",
+      "dataPipeline": "Arquitectura de pipeline de datos",
+      "performance": "Optimización de rendimiento",
+      "apiDev": "Desarrollo e integración de API",
+      "modernization": "Modernización de sistemas heredados",
+      "cloudMigration": "Servicios de migración a la nube",
+      "security": "Configuración de seguridad y cumplimiento",
+      "executiveWorkshops": "Talleres ejecutivos de IA",
+      "teamTraining": "Capacitación técnica del equipo",
+      "bestPractices": "Documentación de mejores prácticas",
+      "ongoingSupport": "Programas de soporte continuo"
+    },
+    "process": {
+      "title": "Nuestro Proceso",
+      "subtitle": "Simple, efectivo, orientado a resultados",
+      "steps": {
+        "discovery": {
+          "title": "Descubrimiento",
+          "description": "Comprendiendo tus necesidades y objetivos"
+        },
+        "strategy": {
+          "title": "Estrategia",
+          "description": "Desarrollando una hoja de ruta de IA personalizada"
+        },
+        "implementation": {
+          "title": "Implementación",
+          "description": "Construyendo y desplegando soluciones"
+        },
+        "support": {
+          "title": "Soporte",
+          "description": "Optimización y capacitación continua"
+        }
+      }
+    },
+    "form": {
+      "heading": "Hablemos sobre cómo la IA puede transformar tu negocio",
+      "name": "Tu Nombre",
+      "email": "Correo Electrónico",
+      "company": "Nombre de la Empresa",
+      "message": "¿Cómo podemos ayudarte?",
+      "submit": "Enviar Mensaje"
     }
   },
   "navigation": {
+    "home": "Inicio",
     "products": "Productos",
     "about": "Acerca de",
     "blog": "Blog",
-    "cv": "CV",
-    "getStarted": "Comenzar"
+    "bookConsultation": "Reservar Consulta"
+  },
+  "featuredProduct": {
+    "label": "Producto Destacado",
+    "feature1": "13 idiomas con traducciones potenciadas por IA",
+    "feature2": "Repetición espaciada para retención óptima",
+    "feature3": "Más de 50,000 estudiantes activos en todo el mundo",
+    "cta": "Empieza a Aprender Gratis"
+  },
+  "productFeatures": {
+    "smartPatternBlocking": "Bloqueo inteligente de patrones",
+    "wellnessActivities": "Actividades de bienestar",
+    "passwordProtection": "Protección con contraseña",
+    "realTimeSync": "Sincronización en tiempo real",
+    "currencies100Plus": "Más de 100 monedas",
+    "complexCalculations": "Cálculos complejos",
+    "privacyFirst": "Privacidad primero",
+    "languages9": "9 idiomas",
+    "antiDetectionTech": "Tecnología anti-detección",
+    "smartCaching": "Caché inteligente",
+    "multiLanguage": "Multi-idioma",
+    "originalQuality": "Calidad original",
+    "noWatermarks": "Sin marcas de agua",
+    "privacyFocused": "Enfocado en privacidad",
+    "enterpriseReliability": "Confiabilidad empresarial",
+    "voiceCoding": "Programación por voz",
+    "zeroApiCosts": "Sin costos de API",
+    "multipleProjects": "Múltiples proyectos",
+    "taskQueueSystem": "Sistema de cola de tareas",
+    "emotionalAwareness": "Conciencia emocional",
+    "longTermMemory": "Memoria a largo plazo",
+    "multiLanguageVoice": "Voz multi-idioma",
+    "openSource": "Código abierto",
+    "monitoring247": "Monitoreo 24/7",
+    "subSecondExecution": "Ejecución sub-segundo",
+    "multiDexSupport": "Soporte multi-DEX",
+    "patternRecognition": "Reconocimiento de patrones",
+    "responseUnder1Min": "Respuesta < 1 minuto",
+    "completePrivacy": "Privacidad completa",
+    "affordablePricing": "Precios accesibles",
+    "belarusianLaw": "Cobertura de ley bielorrusa",
+    "availability247": "Disponibilidad 24/7",
+    "costSavings90": "90% de ahorro en costos",
+    "customKnowledgeBase": "Base de conocimiento personalizada",
+    "contextualThreads": "Hilos contextuales",
+    "languagePatterns14": "14 patrones lingüísticos",
+    "aiScoring": "Puntuación con IA",
+    "progressTracking": "Seguimiento de progreso",
+    "scenarios100Plus": "Más de 100 escenarios",
+    "languages13": "13 idiomas",
+    "spacedRepetition": "Repetición espaciada",
+    "voiceSupport": "Soporte de voz",
+    "exerciseTypes4": "4 tipos de ejercicios",
+    "aiGeneratedExercises": "Ejercicios generados por IA",
+    "intelligentEvaluation": "Evaluación inteligente",
+    "smartNotifications": "Notificaciones inteligentes",
+    "adaptiveLearning": "Aprendizaje adaptativo"
+  },
+  "productsCta": {
+    "title": "¿Necesitas una Solución Personalizada?",
+    "description": "Nuestro equipo de consultoría IA puede ayudarte a construir soluciones a medida que se ajusten perfectamente a las necesidades de tu negocio.",
+    "button": "Reservar Consulta"
   },
   "footer": {
     "rights": "Todos los derechos reservados",
