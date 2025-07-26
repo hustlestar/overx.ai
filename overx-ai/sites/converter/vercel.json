@@ -7,7 +7,7 @@
   "framework": "nextjs",
   "regions": ["iad1"],
   "functions": {
-    "sites/converter/pages/api/**/*.ts": {
+    "sites/converter/src/pages/api/**/*.ts": {
       "maxDuration": 10
     }
   },
