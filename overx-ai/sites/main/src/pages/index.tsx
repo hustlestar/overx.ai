@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useEffect, useState } from 'react'
 import { BaseSEO, SmartLink, OptimizedImage, PreconnectLink } from '../components/NextSEO'
-import { Breadcrumbs, createOrganizationSchema, createWebSiteSchema } from '@overx-ai/shared'
+import { Breadcrumbs, createOrganizationSchema, createWebSiteSchema, ThemeToggle, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
@@ -12,6 +12,7 @@ interface HomePageProps {
 
 export default function HomePage({ lastModified }: HomePageProps) {
   const { t } = useTranslation('common')
+  const { theme } = useTheme()
   const [scrollY, setScrollY] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -100,7 +101,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
       
       <PreconnectLink origins={['https://cdn.overx.ai', 'https://api.overx.ai']} />
       
-      <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900 overflow-x-hidden transition-colors duration-300">
         {/* Horizon line with sunrise */}
         <div className="fixed inset-0 pointer-events-none">
           {/* Dynamic sun glow that follows the sun */}
@@ -237,9 +238,11 @@ export default function HomePage({ lastModified }: HomePageProps) {
           }}
         />
 
-        <header className="fixed top-0 w-full bg-black/50 backdrop-blur-xl border-b border-white/10 z-50 transition-all duration-300"
+        <header className="fixed top-0 w-full bg-black/50 light:bg-white/70 backdrop-blur-xl border-b border-white/10 light:border-gray-200 z-50 transition-all duration-300"
           style={{
-            backgroundColor: scrollY > 50 ? 'rgba(0, 0, 0, 0.9)' : 'rgba(0, 0, 0, 0.3)',
+            backgroundColor: scrollY > 50 
+              ? (theme === 'light' ? 'rgba(255, 255, 255, 0.95)' : 'rgba(0, 0, 0, 0.9)') 
+              : (theme === 'light' ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.3)'),
           }}>
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -252,11 +255,11 @@ export default function HomePage({ lastModified }: HomePageProps) {
                 </SmartLink>
               </div>
               <div className="hidden md:flex items-center space-x-8">
-                <SmartLink href="/products" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
+                <SmartLink href="/products" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group">
                   <span>{t('navigation.products')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
-                <SmartLink href="https://blog.overx.ai" className="text-gray-300 hover:text-white transition-colors duration-300 relative group" external>
+                <SmartLink href="https://blog.overx.ai" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group" external>
                   <span>{t('navigation.blog')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
@@ -267,6 +270,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <span className="relative z-10">{t('navigation.bookConsultation')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
+                <ThemeToggle />
                 <LanguageSwitcher />
               </div>
             </div>

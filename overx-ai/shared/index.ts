@@ -4,6 +4,12 @@ export * from './components/SEO'
 // Performance Components
 export * from './components/Performance'
 
+// UI Components
+export * from './components/UI'
+
+// Hooks
+export { useTheme } from './hooks/useTheme'
+
 // Schema utilities
 export * from './lib/schema'
 

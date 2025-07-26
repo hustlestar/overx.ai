@@ -8,7 +8,11 @@
   }
   
   body {
-    @apply antialiased;
+    @apply antialiased bg-black text-white;
+  }
+  
+  .light body {
+    @apply bg-gray-50 text-gray-900;
   }
   
   /* Optimize font loading */
@@ -22,6 +26,20 @@
   /* Focus styles for accessibility */
   .focus-visible-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2;
+  }
+  
+  /* Glass morphism effect */
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+  
+  .light .glass-effect {
+    @apply bg-white/90 backdrop-blur-sm border-gray-200;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent;
   }
 }
 
@@ -118,13 +136,25 @@
   background: #000;
 }
 
+.light ::-webkit-scrollbar-track {
+  background: #f3f4f6;
+}
+
 ::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 4px;
 }
 
+.light ::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+}
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
 }
 
 /* Selection colors */
@@ -133,9 +163,19 @@
   color: #fff;
 }
 
+.light ::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1f2937;
+}
+
 ::-moz-selection {
   background: rgba(59, 130, 246, 0.3);
   color: #fff;
+}
+
+.light ::-moz-selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: #1f2937;
 }
 
 /* Horizontal slide animations */
