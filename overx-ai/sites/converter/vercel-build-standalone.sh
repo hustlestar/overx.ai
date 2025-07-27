@@ -6,23 +6,45 @@ echo "Building converter site for Vercel deployment (standalone mode)..."
 echo "Using pre-built shared package..."
 
 # Ensure node_modules exists
-mkdir -p node_modules/@overx-ai
+mkdir -p node_modules/@overx-ai/shared
 
-# Copy shared package and ensure it has proper structure
-echo "Copying shared package..."
-cp -r ../../shared node_modules/@overx-ai/shared
+# Copy only the necessary files from shared package
+echo "Copying shared package dist files..."
+cp -r ../../shared/dist/* node_modules/@overx-ai/shared/
+cp ../../shared/package.json node_modules/@overx-ai/shared/
 
-# Ensure the shared package is recognized as a module
-echo "Ensuring shared package is recognized..."
-if [ ! -f node_modules/@overx-ai/shared/package.json ]; then
-  echo "Warning: shared package.json not found, build may fail"
-fi
-
-# Create symlink for better resolution (in case cp doesn't work properly)
-echo "Creating package symlink..."
-cd node_modules/@overx-ai
-ln -sf shared shared || true
-cd ../..
+# Update package.json to point to correct entry points
+echo "Updating shared package.json..."
+cd node_modules/@overx-ai/shared
+# Create a new package.json with corrected paths
+cat > package.json << 'EOF'
+{
+  "name": "@overx-ai/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./seo": {
+      "types": "./components/SEO/index.d.ts",
+      "default": "./components/SEO/index.js"
+    },
+    "./performance": {
+      "types": "./components/Performance/index.d.ts",
+      "default": "./components/Performance/index.js"
+    },
+    "./lib/schema": {
+      "types": "./lib/schema/index.d.ts",
+      "default": "./lib/schema/index.js"
+    }
+  }
+}
+EOF
+cd ../../..
 
 # Debug: Check if shared package is properly installed
 echo "Checking shared package installation..."
