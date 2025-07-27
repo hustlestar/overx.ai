@@ -1,7 +1,7 @@
 {
   "name": "overx-ai-converter",
   "alias": ["converter.overx.ai"],
-  "installCommand": "echo 'Skipping install - handled by build script'",
+  "installCommand": "./vercel-install.sh",
   "buildCommand": "./vercel-build-standalone.sh",
   "outputDirectory": ".next",
   "framework": "nextjs",

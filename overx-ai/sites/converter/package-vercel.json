@@ -1,0 +1,41 @@
+{
+  "name": "@overx-ai/converter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build",
+    "build:static": "next build --config next.config.static.js",
+    "export": "next export",
+    "build:github": "next build --config next.config.github.js",
+    "start": "next start",
+    "start:static": "npx serve out -p 3003",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.17.0",
+    "@tanstack/react-table": "^8.11.0",
+    "axios": "^1.6.5",
+    "clsx": "^2.1.0",
+    "next": "^14.0.4",
+    "next-i18next": "^15.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "zustand": "^4.5.7"
+  },
+  "devDependencies": {
+    "@tanstack/react-query-devtools": "^5.83.0",
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.54.0",
+    "eslint-config-next": "^14.0.4",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6",
+    "typescript": "^5.3.0"
+  }
+}
