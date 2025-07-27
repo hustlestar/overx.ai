@@ -83,12 +83,6 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           title: post.title[currentLang],
           description: post.excerpt[currentLang],
           type: 'article',
-          article: {
-            publishedTime: post.publishedAt,
-            modifiedTime: post.updatedAt,
-            authors: [post.author.name],
-            tags: post.tags,
-          },
           image: {
             url: `https://converter.overx.ai${post.image.url}`,
             width: post.image.width,
@@ -96,6 +90,12 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
             alt: post.image.alt,
           },
         }}
+        additionalMetaTags={[
+          { property: 'article:published_time', content: post.publishedAt },
+          ...(post.updatedAt ? [{ property: 'article:modified_time', content: post.updatedAt }] : []),
+          { property: 'article:author', content: post.author.name },
+          ...post.tags.map(tag => ({ property: 'article:tag', content: tag }))
+        ]}
         structuredData={structuredData}
       />
       
@@ -191,8 +191,9 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
                     {children}
                   </blockquote>
                 ),
-                code: ({ inline, children }) => {
-                  if (inline) {
+                code: ({ children, className }) => {
+                  const isInline = !className
+                  if (isInline) {
                     return (
                       <code className="px-2 py-1 rounded bg-gray-800 light:bg-gray-200 text-blue-400 light:text-blue-700 font-mono text-sm">
                         {children}

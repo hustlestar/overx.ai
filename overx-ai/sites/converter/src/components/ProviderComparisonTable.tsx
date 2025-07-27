@@ -74,9 +74,9 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
     let mostRecentTime: string | null = null
     
     Object.values(typedRatesData.providers).forEach(provider => {
-      if (provider.status === 'success' && provider.lastUpdated) {
-        if (!mostRecentTime || new Date(provider.lastUpdated) > new Date(mostRecentTime)) {
-          mostRecentTime = provider.lastUpdated
+      if (provider.status === 'success' && provider.last_updated) {
+        if (!mostRecentTime || new Date(provider.last_updated) > new Date(mostRecentTime)) {
+          mostRecentTime = provider.last_updated
         }
       }
     })
