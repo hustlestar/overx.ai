@@ -2,10 +2,14 @@
 
 echo "Building converter site for Vercel deployment (standalone mode)..."
 
-# Ensure shared package is built
+# First, install converter dependencies without workspace dependencies
+echo "Installing converter dependencies..."
+npm install --legacy-peer-deps --omit=optional
+
+# Build shared package
 echo "Building shared package..."
 cd ../../shared
-npm install --legacy-peer-deps
+npm install --legacy-peer-deps --omit=optional
 npm run build
 
 # Go back to converter directory
@@ -16,10 +20,6 @@ echo "Copying shared package..."
 rm -rf node_modules/@overx-ai/shared
 mkdir -p node_modules/@overx-ai
 cp -r ../../shared node_modules/@overx-ai/
-
-# Install converter dependencies
-echo "Installing converter dependencies..."
-npm install --legacy-peer-deps --no-save @overx-ai/shared
 
 # Build converter site
 echo "Building converter site..."
