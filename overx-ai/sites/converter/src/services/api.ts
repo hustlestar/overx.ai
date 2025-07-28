@@ -1,10 +1,7 @@
 import axios from 'axios'
 import { AllRatesResponse, ProviderRate } from '@/types/api'
 
-// Use proxy API routes in production to avoid CORS issues
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? '/api' 
-  : 'https://api.overx.ai/api/v1'
+const API_BASE_URL = 'https://api.overx.ai/api/v1'
 
 const CACHE_TTL = 2 * 60 * 60 * 1000 // 2 hours in milliseconds
 const CACHE_PREFIX = 'rates_cache_'
