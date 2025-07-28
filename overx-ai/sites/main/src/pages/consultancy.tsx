@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useState } from 'react'
 import { BaseSEO, SmartLink } from '../components/NextSEO'
-import { createOrganizationSchema, Breadcrumbs } from '@overx-ai/shared'
+import { createOrganizationSchema, Breadcrumbs, ThemeToggle } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
@@ -150,24 +150,24 @@ export default function ConsultancyPage() {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-black text-white">
-        <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl border-b border-white/10 z-50">
+      <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900 transition-colors duration-300">
+        <header className="fixed top-0 w-full bg-black/90 light:bg-white/90 backdrop-blur-xl border-b border-white/10 light:border-gray-200 z-50 transition-all duration-300">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <SmartLink href="/" className="group">
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">OverX AI</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 light:from-gray-900 light:to-gray-600 bg-clip-text text-transparent">OverX AI</span>
                     <span className="text-xs text-gray-500 font-light tracking-wider transform -translate-y-1">Over the Xorizon</span>
                   </div>
                 </SmartLink>
               </div>
               <div className="hidden md:flex items-center space-x-8">
-                <SmartLink href="/products" className="text-gray-300 hover:text-white transition-colors duration-300 relative group">
+                <SmartLink href="/products" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group">
                   <span>{t('navigation.products')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
-                <SmartLink href="https://blog.overx.ai" className="text-gray-300 hover:text-white transition-colors duration-300 relative group" external>
+                <SmartLink href="https://blog.overx.ai" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group" external>
                   <span>{t('navigation.blog')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
@@ -178,6 +178,7 @@ export default function ConsultancyPage() {
                   <span className="relative z-10">{t('navigation.bookConsultation')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
+                <ThemeToggle />
                 <LanguageSwitcher />
               </div>
             </div>

@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.useCrossSubdomainSync = exports.useThemeSync = exports.useTheme = void 0;
+exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.useCrossSubdomainSync = exports.useTheme = void 0;
 // SEO Components
 __exportStar(require("./components/SEO"), exports);
 // Performance Components
@@ -24,8 +24,6 @@ __exportStar(require("./components/UI"), exports);
 // Hooks
 var useTheme_1 = require("./hooks/useTheme");
 Object.defineProperty(exports, "useTheme", { enumerable: true, get: function () { return useTheme_1.useTheme; } });
-var useThemeSync_1 = require("./hooks/useThemeSync");
-Object.defineProperty(exports, "useThemeSync", { enumerable: true, get: function () { return useThemeSync_1.useThemeSync; } });
 var useCrossSubdomainSync_1 = require("./hooks/useCrossSubdomainSync");
 Object.defineProperty(exports, "useCrossSubdomainSync", { enumerable: true, get: function () { return useCrossSubdomainSync_1.useCrossSubdomainSync; } });
 // Schema utilities

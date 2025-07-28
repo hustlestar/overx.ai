@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useState } from 'react'
 import { BaseSEO, SmartLink, OptimizedImage } from '../components/NextSEO'
-import { createProductSchema, Breadcrumbs } from '@overx-ai/shared'
+import { createProductSchema, Breadcrumbs, ThemeToggle } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { LanguageSwitcher } from '../components/LanguageSwitcher'
@@ -227,24 +227,24 @@ export default function ProductsPage() {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-black text-white">
-        <header className="fixed top-0 w-full bg-black/90 backdrop-blur-xl border-b border-white/10 z-50">
+      <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900 transition-colors duration-300">
+        <header className="fixed top-0 w-full bg-black/90 light:bg-white/90 backdrop-blur-xl border-b border-white/10 light:border-gray-200 z-50 transition-all duration-300">
           <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center">
                 <SmartLink href="/" className="group">
                   <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">OverX AI</span>
+                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 light:from-gray-900 light:to-gray-600 bg-clip-text text-transparent">OverX AI</span>
                     <span className="text-xs text-gray-500 font-light tracking-wider transform -translate-y-1">Over the Xorizon</span>
                   </div>
                 </SmartLink>
               </div>
               <div className="hidden md:flex items-center space-x-8">
-                <SmartLink href="/products" className="text-white relative group">
+                <SmartLink href="/products" className="text-white light:text-gray-900 relative group">
                   <span>{t('navigation.products')}</span>
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500"></span>
                 </SmartLink>
-                <SmartLink href="https://blog.overx.ai" className="text-gray-300 hover:text-white transition-colors duration-300 relative group" external>
+                <SmartLink href="https://blog.overx.ai" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group" external>
                   <span>{t('navigation.blog')}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
                 </SmartLink>
@@ -255,6 +255,7 @@ export default function ProductsPage() {
                   <span className="relative z-10">{t('navigation.bookConsultation')}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </SmartLink>
+                <ThemeToggle />
                 <LanguageSwitcher />
               </div>
             </div>
@@ -263,7 +264,7 @@ export default function ProductsPage() {
         
         <main className="pt-16">
           <section className="relative py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-blue-900/10 to-transparent light:from-blue-100/50 light:to-transparent"></div>
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
               <Breadcrumbs items={[
@@ -277,7 +278,7 @@ export default function ProductsPage() {
                     {t('products.title')}
                   </span>
                 </h1>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-xl text-gray-400 light:text-gray-600 max-w-3xl mx-auto">
                   {t('products.subtitle')}
                 </p>
               </div>
@@ -291,7 +292,7 @@ export default function ProductsPage() {
                     className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25'
-                        : 'bg-gray-900 text-gray-400 hover:text-white hover:bg-gray-800'
+                        : 'bg-gray-900 light:bg-gray-200 text-gray-400 light:text-gray-700 hover:text-white light:hover:text-gray-900 hover:bg-gray-800 light:hover:bg-gray-300'
                     }`}
                   >
                     {category.label}
@@ -305,7 +306,7 @@ export default function ProductsPage() {
                   <div
                     key={product.id}
                     id={product.category}
-                    className="group relative bg-gradient-to-br from-gray-900 to-black p-8 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20"
+                    className="group relative bg-gradient-to-br from-gray-900 to-black light:from-white light:to-gray-100 p-8 rounded-2xl border border-white/10 light:border-gray-200 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20 light:hover:border-gray-300 light:shadow-lg"
                     style={{ 
                       animationDelay: `${index * 0.1}s`,
                       willChange: 'transform'
@@ -324,7 +325,7 @@ export default function ProductsPage() {
                         {t(product.titleKey)}
                       </h3>
                       
-                      <p className="text-gray-400 mb-6 leading-relaxed">
+                      <p className="text-gray-400 light:text-gray-600 mb-6 leading-relaxed">
                         {t(product.descriptionKey)}
                       </p>
                       
@@ -362,7 +363,7 @@ export default function ProductsPage() {
                     {t('productsCta.title')}
                   </span>
                 </h2>
-                <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+                <p className="text-gray-400 light:text-gray-600 mb-8 max-w-2xl mx-auto">
                   {t('productsCta.description')}
                 </p>
                 <SmartLink 
@@ -379,11 +380,11 @@ export default function ProductsPage() {
           </section>
         </main>
         
-        <footer className="relative bg-black border-t border-white/10 py-16 mt-24">
+        <footer className="relative bg-black light:bg-gray-100 border-t border-white/10 light:border-gray-200 py-16 mt-24 transition-colors duration-300">
           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent"></div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center">
-              <p className="text-gray-400">&copy; 2024 {t('companyName')}. {t('footer.rights')}.</p>
+              <p className="text-gray-400 light:text-gray-600">&copy; 2024 {t('companyName')}. {t('footer.rights')}.</p>
             </div>
           </div>
         </footer>
