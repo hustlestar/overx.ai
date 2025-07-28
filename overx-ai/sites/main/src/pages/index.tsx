@@ -284,7 +284,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
               {[...Array(50)].map((_, i) => (
                 <div
                   key={i}
-                  className="absolute w-1 h-1 bg-white/20 rounded-full animate-pulse"
+                  className="absolute w-1 h-1 bg-white/20 light:bg-gray-900/20 rounded-full animate-pulse"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
@@ -299,7 +299,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
               <div className="text-center">
                 <div className="mb-12 opacity-0 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                   <h1 className="text-6xl md:text-8xl font-bold mb-4">
-                    <span className="block bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent animate-gradient-x">{t('hero.title')}</span>
+                    <span className="block bg-gradient-to-r from-white via-gray-200 to-white light:from-gray-900 light:via-gray-700 light:to-gray-900 bg-clip-text text-transparent animate-gradient-x">{t('hero.title')}</span>
                   </h1>
                   <div className="mt-4">
                     <span className="text-xl md:text-2xl text-gray-500 font-light">{t('hero.subtitle')}</span>
@@ -315,7 +315,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   </SmartLink>
                   <SmartLink 
                     href="/consultancy" 
-                    className="group relative px-8 py-4 border border-white/20 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 hover:shadow-2xl hover:shadow-white/10"
+                    className="group relative px-8 py-4 border border-white/20 light:border-gray-300 rounded-full text-lg font-medium overflow-hidden transition-all duration-300 hover:scale-105 hover:border-white/40 light:hover:border-gray-500 hover:shadow-2xl hover:shadow-white/10 light:hover:shadow-gray-900/10"
                   >
                     <span className="relative z-10">{t('hero.cta2')}</span>
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
