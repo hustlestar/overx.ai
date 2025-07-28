@@ -1,5 +1,0 @@
-{
-  "buildCommand": "cd ../.. && npm install --force && cd sites/main && npm run build",
-  "installCommand": "echo 'Skipping install'",
-  "outputDirectory": ".next"
-}
