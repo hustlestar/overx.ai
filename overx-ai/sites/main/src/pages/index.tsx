@@ -738,7 +738,6 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) 
     props: {
       ...(await serverSideTranslations(locale ?? 'en', ['common'])),
       lastModified: new Date().toISOString()
-    },
-    revalidate: 60 * 60 * 24 // Revalidate once per day
+    }
   }
 }
