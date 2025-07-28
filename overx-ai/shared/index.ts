@@ -9,6 +9,7 @@ export * from './components/UI'
 
 // Hooks
 export { useTheme } from './hooks/useTheme'
+export { useLanguageSync } from './hooks/useLanguageSync'
 
 // Schema utilities
 export * from './lib/schema'

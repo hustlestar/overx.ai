@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.useTheme = void 0;
+exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.useLanguageSync = exports.useTheme = void 0;
 // SEO Components
 __exportStar(require("./components/SEO"), exports);
 // Performance Components
@@ -24,6 +24,8 @@ __exportStar(require("./components/UI"), exports);
 // Hooks
 var useTheme_1 = require("./hooks/useTheme");
 Object.defineProperty(exports, "useTheme", { enumerable: true, get: function () { return useTheme_1.useTheme; } });
+var useLanguageSync_1 = require("./hooks/useLanguageSync");
+Object.defineProperty(exports, "useLanguageSync", { enumerable: true, get: function () { return useLanguageSync_1.useLanguageSync; } });
 // Schema utilities
 __exportStar(require("./lib/schema"), exports);
 // SEO utilities
