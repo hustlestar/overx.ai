@@ -1,12 +1,13 @@
 # Main Site Deployment Guide
 
-This guide covers deploying the main OverX AI website as a static site to various platforms.
+This guide covers deploying the main OverX AI website as a static site from a monorepo structure.
 
 ## Prerequisites
 
 - Node.js 18+ installed
 - npm or yarn package manager
 - Git installed
+- GitHub repository with Actions enabled (for GitHub Pages)
 
 ## Building for Production
 
@@ -27,22 +28,47 @@ This creates an `out` directory with all static files.
 
 ## Deployment Options
 
-### 1. GitHub Pages
+### 1. GitHub Pages (Monorepo)
 
+Since this is a monorepo, you have several options:
+
+#### Option A: GitHub Actions (Recommended)
+The repository includes a GitHub Action that automatically deploys the main site when changes are pushed.
+
+**Setup:**
+1. Go to repository Settings > Pages
+2. Source: GitHub Actions
+3. Custom domain: overx.ai
+4. The workflow will automatically run on pushes to master
+
+**Manual trigger:**
 ```bash
-# Run the deployment script
-./deploy-github-pages.sh
-
-# Or manually:
-npm run build:static && npm run export
-npx gh-pages -d out
+# Go to Actions tab in GitHub and manually run "Deploy Main Site to GitHub Pages"
 ```
 
-**GitHub Pages Settings:**
-1. Go to Settings > Pages
-2. Source: Deploy from a branch
-3. Branch: gh-pages / root
-4. Custom domain: overx.ai (add CNAME file)
+#### Option B: Deploy to separate repository
+1. Create a new repository (e.g., `overx-ai-site`)
+2. Build locally:
+   ```bash
+   cd overx-ai/sites/main
+   npm run build:static && npm run export
+   ```
+3. Push the `out` directory to the new repo:
+   ```bash
+   cd out
+   git init
+   git add .
+   git commit -m "Deploy site"
+   git remote add origin https://github.com/yourusername/overx-ai-site.git
+   git push -f origin master
+   ```
+
+#### Option C: Use gh-pages branch in monorepo
+```bash
+cd overx-ai/sites/main
+npm run build:static && npm run export
+npx gh-pages -d out --dest . --repo https://github.com/yourusername/overx.ai.git
+```
 
 ### 2. Cloudflare Pages
 
