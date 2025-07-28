@@ -9,7 +9,6 @@ export * from './components/UI'
 
 // Hooks
 export { useTheme } from './hooks/useTheme'
-export { useCrossSubdomainSync } from './hooks/useCrossSubdomainSync'
 
 // Schema utilities
 export * from './lib/schema'

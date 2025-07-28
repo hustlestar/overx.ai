@@ -4,7 +4,8 @@ import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
-import { useTheme, useCrossSubdomainSync } from '@overx-ai/shared'
+import { useTheme } from '@overx-ai/shared'
+// import { useCrossSubdomainSync } from '@overx-ai/shared'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,7 +16,7 @@ const inter = Inter({
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const { theme } = useTheme()
-  useCrossSubdomainSync() // Enable cross-subdomain theme and language sync
+  // useCrossSubdomainSync() // Enable cross-subdomain theme and language sync
 
   useEffect(() => {
     // Apply theme class to document root
