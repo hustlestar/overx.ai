@@ -4,12 +4,7 @@ import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
-import { useTheme } from '@overx-ai/shared'
-
-// Temporary inline implementation until shared package is fixed
-function useLanguageSync() {
-  // No-op for now
-}
+import { useTheme, useLanguageSync } from '@overx-ai/shared'
 
 const inter = Inter({
   subsets: ['latin'],

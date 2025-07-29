@@ -13,6 +13,12 @@ npm install --no-audit --no-fund
 npm run build
 cd ..
 
+# Install converter site dependencies
+echo "Installing converter site dependencies..."
+cd sites/converter
+npm install --no-audit --no-fund
+cd ../..
+
 # Install main site dependencies
 echo "Installing main site dependencies..."
 cd sites/main
