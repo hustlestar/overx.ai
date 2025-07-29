@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { appWithTranslation } from 'next-i18next'
 import { useState, useEffect } from 'react'
-import { useLanguageSync } from '@overx-ai/shared'
+// import { useLanguageSync } from '@overx-ai/shared' // TODO: Fix shared package export
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       })
   )
   
-  useLanguageSync() // Enable cross-subdomain language sync
+  // useLanguageSync() // Enable cross-subdomain language sync - TODO: Fix shared package export
   
   // Register service worker for offline support
   useEffect(() => {
