@@ -6,6 +6,11 @@ import { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
 import { useTheme } from '@overx-ai/shared'
 
+// Temporary inline implementation until shared package is fixed
+function useLanguageSync() {
+  // No-op for now
+}
+
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -15,6 +20,7 @@ const inter = Inter({
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useTheme() // Initialize theme
+  useLanguageSync() // Enable cross-subdomain language sync
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
