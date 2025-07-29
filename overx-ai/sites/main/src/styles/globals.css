@@ -8,12 +8,17 @@
   }
   
   body {
-    @apply antialiased bg-black text-white;
+    @apply antialiased;
   }
   
-  .light body {
+  body {
     @apply bg-gray-50 text-gray-900;
   }
+  
+  html.dark body {
+    @apply bg-black text-white;
+  }
+  
   
   /* Optimize font loading */
   @font-face {

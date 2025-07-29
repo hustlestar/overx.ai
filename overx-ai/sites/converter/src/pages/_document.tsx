@@ -17,6 +17,9 @@ export default function Document() {
         />
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#000000" />
+        
+        {/* Google Search Console verification */}
+        <meta name="google-site-verification" content="Ss_vYawt-4eUxrOy8j_LBWYOynIY7kseugeq8L9mcBs" />
       </Head>
       <body>
         <Main />

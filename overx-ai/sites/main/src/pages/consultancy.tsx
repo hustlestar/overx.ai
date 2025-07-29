@@ -1,10 +1,11 @@
 import { GetStaticProps } from 'next'
 import { useState } from 'react'
 import { BaseSEO, SmartLink } from '../components/NextSEO'
-import { createOrganizationSchema, Breadcrumbs, ThemeToggle } from '@overx-ai/shared'
+import { createOrganizationSchema, Breadcrumbs, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { LanguageSwitcher } from '../components/LanguageSwitcher'
+import { Navigation } from '../components/Navigation'
+import { Footer } from '../components/Footer'
 
 interface ConsultancyService {
   id: string
@@ -83,6 +84,7 @@ const services: ConsultancyService[] = [
 
 export default function ConsultancyPage() {
   const { t } = useTranslation('common')
+  const { theme } = useTheme()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -150,40 +152,8 @@ export default function ConsultancyPage() {
         structuredData={structuredData}
       />
       
-      <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900 transition-colors duration-300">
-        <header className="fixed top-0 w-full bg-black/90 light:bg-white/90 backdrop-blur-xl border-b border-white/10 light:border-gray-200 z-50 transition-all duration-300">
-          <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
-              <div className="flex items-center">
-                <SmartLink href="/" className="group">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 light:from-gray-900 light:to-gray-600 bg-clip-text text-transparent">OverX AI</span>
-                    <span className="text-xs text-gray-500 font-light tracking-wider transform -translate-y-1">Over the Xorizon</span>
-                  </div>
-                </SmartLink>
-              </div>
-              <div className="hidden md:flex items-center space-x-8">
-                <SmartLink href="/products" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group">
-                  <span>{t('navigation.products')}</span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-                </SmartLink>
-                <SmartLink href="https://blog.overx.ai" className="text-gray-300 light:text-gray-700 hover:text-white light:hover:text-gray-900 transition-colors duration-300 relative group" external>
-                  <span>{t('navigation.blog')}</span>
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
-                </SmartLink>
-                <SmartLink 
-                  href="#booking" 
-                  className="relative overflow-hidden px-6 py-2 rounded-full bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-lg text-white font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/25 border border-white/20"
-                >
-                  <span className="relative z-10">{t('navigation.bookConsultation')}</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                </SmartLink>
-                <ThemeToggle />
-                <LanguageSwitcher />
-              </div>
-            </div>
-          </nav>
-        </header>
+      <div className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white transition-colors duration-300">
+        <Navigation />
         
         <main className="pt-16">
           {/* Hero Section */}
@@ -198,14 +168,14 @@ export default function ConsultancyPage() {
               
               <div className="text-center mb-16 mt-8">
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-200 dark:to-white bg-clip-text text-transparent">
                     {t('consultancy.title')}
                   </span>
                 </h1>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-4">
+                <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-4">
                   {t('consultancy.subtitle')}
                 </p>
-                <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+                <p className="text-lg text-gray-600 dark:text-gray-500 max-w-2xl mx-auto">
                   {t('consultancy.description')}
                 </p>
               </div>
@@ -219,10 +189,10 @@ export default function ConsultancyPage() {
                 {services.map((service, index) => (
                   <div
                     key={service.id}
-                    className="group relative bg-gradient-to-br from-gray-900 to-black p-10 rounded-2xl border border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-white/20"
+                    className="group relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-10 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg dark:shadow-none"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-cyan-100/50 dark:from-blue-600/10 dark:to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <div className="relative z-10">
                       <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -231,11 +201,11 @@ export default function ConsultancyPage() {
                         </div>
                       </div>
                       
-                      <h3 className="text-3xl font-semibold mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
+                      <h3 className="text-3xl font-semibold mb-4 text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-cyan-400 transition-all duration-300">
                         {t(service.titleKey)}
                       </h3>
                       
-                      <p className="text-gray-400 mb-6 text-lg">
+                      <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
                         {t(service.descriptionKey)}
                       </p>
                       
@@ -245,7 +215,7 @@ export default function ConsultancyPage() {
                             <svg className="w-5 h-5 mt-0.5 mr-3 text-cyan-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
-                            <span className="text-gray-300">{t(feature)}</span>
+                            <span className="text-gray-700 dark:text-gray-300">{t(feature)}</span>
                           </li>
                         ))}
                       </ul>
@@ -299,11 +269,11 @@ export default function ConsultancyPage() {
                 <p className="text-xl text-gray-500">{t('consultancy.form.heading')}</p>
               </div>
               
-              <div className="bg-gradient-to-br from-gray-900 to-black p-10 rounded-2xl border border-white/10">
+              <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-10 rounded-2xl border border-gray-200 dark:border-white/10 shadow-xl dark:shadow-none">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         {t('consultancy.form.name')}
                       </label>
                       <input
@@ -318,7 +288,7 @@ export default function ConsultancyPage() {
                     </div>
                     
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                         {t('consultancy.form.email')}
                       </label>
                       <input
@@ -334,7 +304,7 @@ export default function ConsultancyPage() {
                   </div>
                   
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       {t('consultancy.form.company')}
                     </label>
                     <input
@@ -348,7 +318,7 @@ export default function ConsultancyPage() {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       {t('consultancy.form.message')}
                     </label>
                     <textarea
@@ -379,14 +349,7 @@ export default function ConsultancyPage() {
           </section>
         </main>
         
-        <footer className="relative bg-black border-t border-white/10 py-16">
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent"></div>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center">
-              <p className="text-gray-400">&copy; 2024 {t('companyName')}. {t('footer.rights')}.</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </>
   )

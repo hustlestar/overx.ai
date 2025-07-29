@@ -366,10 +366,10 @@
     "poweredBy": "Desarrollado por OverX AI"
   },
   "about": {
-    "pageTitle": "Acerca de Currency Converter Pro - Extensión de Chrome para Tipos de Cambio Transparentes",
-    "pageDescription": "La extensión Currency Converter Pro para Chrome ofrece conversión de divisas en tiempo real con tipos transparentes de más de 12 fuentes confiables. Compare tipos de cambio, evite tarifas ocultas y tome decisiones informadas.",
+    "pageTitle": "Acerca de Exchange Rates Pro - Extensión de Chrome para Tipos de Cambio Transparentes",
+    "pageDescription": "La extensión Exchange Rates Pro para Chrome ofrece conversión de divisas en tiempo real con tipos transparentes de más de 12 fuentes confiables. Compare tipos de cambio, evite tarifas ocultas y tome decisiones informadas.",
     "hero": {
-      "title": "Currency Converter Pro",
+      "title": "Exchange Rates Pro",
       "subtitle": "La extensión de Chrome que revoluciona la conversión de divisas con total transparencia",
       "chromeButton": "Añadir a Chrome - Es Gratis",
       "webButton": "Probar Versión Web",
@@ -381,7 +381,7 @@
       "description": "Democratizar el acceso a tipos de cambio justos proporcionando transparencia completa en el mercado de divisas. Creemos que todos merecen conocer el costo real de la conversión de divisas sin tarifas ocultas o tipos engañosos."
     },
     "whyUs": {
-      "title": "¿Por qué Currency Converter Pro?",
+      "title": "¿Por qué Exchange Rates Pro?",
       "transparency": {
         "title": "Transparencia Total",
         "description": "Vea tipos de más de 12 proveedores lado a lado. Sin márgenes ocultos, sin sorpresas. Sepa exactamente lo que está pagando por la conversión de divisas."
@@ -457,7 +457,7 @@
       "title": "Cómo Funciona",
       "step1": {
         "title": "Instale la Extensión",
-        "description": "Añada Currency Converter Pro a Chrome con un clic. No se requiere registro."
+        "description": "Añada Exchange Rates Pro a Chrome con un clic. No se requiere registro."
       },
       "step2": {
         "title": "Seleccione Sus Divisas",
@@ -488,12 +488,12 @@
     "faq": {
       "title": "Preguntas Frecuentes",
       "q1": {
-        "question": "¿Qué hace diferente a Currency Converter Pro?",
+        "question": "¿Qué hace diferente a Exchange Rates Pro?",
         "answer": "A diferencia de otros convertidores que muestran tipos de una sola fuente, agregamos datos de más de 12 proveedores confiables, permitiéndole comparar y elegir el mejor tipo. Esta transparencia puede ahorrarle dinero significativo en conversiones grandes."
       },
       "q2": {
         "question": "¿Es realmente gratis la extensión de Chrome?",
-        "answer": "Sí, Currency Converter Pro es 100% gratis sin costos ocultos, niveles premium o tarifas de suscripción. Creemos que todos merecen acceso a tipos de cambio transparentes."
+        "answer": "Sí, Exchange Rates Pro es 100% gratis sin costos ocultos, niveles premium o tarifas de suscripción. Creemos que todos merecen acceso a tipos de cambio transparentes."
       },
       "q3": {
         "question": "¿Qué tan precisos son los tipos de cambio?",

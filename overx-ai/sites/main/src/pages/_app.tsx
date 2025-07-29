@@ -14,17 +14,8 @@ const inter = Inter({
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
-  const { theme } = useTheme()
+  useTheme() // Initialize theme
   useLanguageSync() // Enable cross-subdomain language sync
-
-  useEffect(() => {
-    // Apply theme class to document root
-    if (theme === 'light') {
-      document.documentElement.classList.add('light')
-    } else {
-      document.documentElement.classList.remove('light')
-    }
-  }, [theme])
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {

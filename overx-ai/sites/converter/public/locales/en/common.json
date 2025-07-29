@@ -1,5 +1,5 @@
 {
-  "title": "Currency Converter Pro - Real-time Exchange Rates",
+  "title": "Exchange Rates Pro - Real-time Currency Converter",
   "description": "Convert between 100+ currencies with real-time exchange rates. Compare providers, see API support, and choose the best rate source.",
   "hero": {
     "title": "Real-Time Currency Converter",
@@ -335,7 +335,7 @@
       "title": "How It Works",
       "step1": {
         "title": "Install the Extension",
-        "description": "Add Currency Converter Pro to Chrome with one click. No registration required."
+        "description": "Add Exchange Rates Pro to Chrome with one click. No registration required."
       },
       "step2": {
         "title": "Select Your Currencies",
@@ -366,12 +366,12 @@
     "faq": {
       "title": "Frequently Asked Questions",
       "q1": {
-        "question": "What makes Currency Converter Pro different?",
+        "question": "What makes Exchange Rates Pro different?",
         "answer": "Unlike other converters that show rates from a single source, we aggregate data from 12+ trusted providers, allowing you to compare and choose the best rate. This transparency can save you significant money on large conversions."
       },
       "q2": {
         "question": "Is the Chrome extension really free?",
-        "answer": "Yes, Currency Converter Pro is 100% free with no hidden costs, premium tiers, or subscription fees. We believe everyone deserves access to transparent exchange rates."
+        "answer": "Yes, Exchange Rates Pro is 100% free with no hidden costs, premium tiers, or subscription fees. We believe everyone deserves access to transparent exchange rates."
       },
       "q3": {
         "question": "How accurate are the exchange rates?",
