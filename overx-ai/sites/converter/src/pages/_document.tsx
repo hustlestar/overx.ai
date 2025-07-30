@@ -24,6 +24,15 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              console.log('[Converter] Page loaded at:', new Date().toISOString());
+              console.log('[Converter] Domain:', window.location.hostname);
+              console.log('[Converter] Debug sync available:', typeof window.debugSyncStatus);
+            `,
+          }}
+        />
       </body>
     </Html>
   )
