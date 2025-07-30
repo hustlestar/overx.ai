@@ -17,6 +17,12 @@ interface ThemeStorage {
 export function useTheme() {
   const [theme, setThemeState] = useState<Theme>('dark')
   const [mounted, setMounted] = useState(false)
+  
+  // Debug logging
+  useEffect(() => {
+    console.log('[useTheme] Current domain:', window.location.hostname)
+    console.log('[useTheme] Theme state:', theme)
+  }, [theme])
 
   useEffect(() => {
     setMounted(true)
@@ -26,10 +32,13 @@ export function useTheme() {
     
     // Load theme from localStorage
     const loadTheme = () => {
+      console.log('[useTheme] Loading theme from localStorage...')
       try {
         const stored = localStorage.getItem(THEME_STORAGE_KEY)
+        console.log('[useTheme] Raw localStorage value:', stored)
         if (stored) {
           const parsed: ThemeStorage = JSON.parse(stored)
+          console.log('[useTheme] Parsed theme storage:', parsed)
           setThemeState(parsed.state.theme)
           
           // Apply theme class to document
@@ -64,6 +73,7 @@ export function useTheme() {
 
     // Listen for storage changes (from other tabs/windows)
     const handleStorageChange = (e: StorageEvent) => {
+      console.log('[useTheme] Storage event detected:', e.key, e.newValue, 'from:', e.url)
       if (e.key === THEME_STORAGE_KEY) {
         loadTheme()
       }
@@ -85,6 +95,7 @@ export function useTheme() {
   }, [])
 
   const setTheme = (newTheme: Theme) => {
+    console.log('[useTheme] Setting theme to:', newTheme)
     setThemeState(newTheme)
     
     // Update localStorage in zustand format for compatibility

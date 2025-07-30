@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
-import { useTheme, useLanguageSync } from '@overx-ai/shared'
+import { useTheme, useLanguageSync, debugSyncStatus } from '@overx-ai/shared'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,6 +16,13 @@ function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   useTheme() // Initialize theme
   useLanguageSync() // Enable cross-subdomain language sync
+
+  // Make debug function available globally
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).debugSyncStatus = debugSyncStatus;
+    }
+  }, [])
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {

@@ -10,6 +10,7 @@ export * from './components/UI'
 // Hooks
 export { useTheme } from './hooks/useTheme'
 export { useLanguageSync } from './hooks/useLanguageSync'
+export { debugSyncStatus } from './hooks/debugSync'
 
 // Schema utilities
 export * from './lib/schema'

@@ -5,6 +5,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { appWithTranslation } from 'next-i18next'
 import { useState, useEffect } from 'react'
 import { useLanguageSync } from '@/hooks/useLanguageSync'
+import { debugSyncStatus } from '@/utils/debugSync'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
@@ -20,6 +21,13 @@ function MyApp({ Component, pageProps }: AppProps) {
   )
   
   useLanguageSync() // Enable cross-subdomain language sync
+  
+  // Make debug function available globally
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as any).debugSyncStatus = debugSyncStatus;
+    }
+  }, [])
   
   // Register service worker for offline support
   useEffect(() => {
