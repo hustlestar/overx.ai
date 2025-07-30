@@ -24,7 +24,7 @@ OverX AI offers a comprehensive suite of intelligent tools designed to automate 
 
 ### 🚀 Productivity Tools
 - **Block Website: Self Control** - Transform digital distractions into physical wellness
-- **Currency Converter** - Privacy-first currency conversion with complex calculations
+- **Exchange Rates Pro** - Privacy-first currency conversion with complex calculations
 - **Instagram Savers** - Never lose important content again
 
 ### 🤖 AI Assistants

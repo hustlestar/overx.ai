@@ -82,7 +82,7 @@ export default function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org' as const,
     '@type': 'WebApplication',
-    name: 'Currency Converter Pro',
+    name: 'Exchange Rates Pro',
     applicationCategory: 'FinanceApplication',
     operatingSystem: 'Any',
     offers: {
@@ -102,7 +102,7 @@ export default function HomePage() {
           type: 'website',
           title: t('title'),
           description: t('description'),
-          siteName: 'Currency Converter Pro - OverX AI',
+          siteName: 'Exchange Rates Pro - OverX AI',
           locale: 'en_US',
           url: 'https://converter.overx.ai',
         }}
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="glass-effect rounded-xl p-4 mb-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="text-2xl font-bold gradient-text">
-                Currency Converter Pro
+                Exchange Rates Pro
               </div>
               
               <div className="flex items-center gap-6">

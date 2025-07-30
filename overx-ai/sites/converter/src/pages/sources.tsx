@@ -26,7 +26,7 @@ export default function SourcesPage() {
   return (
     <>
       <BaseSEO
-        title="Currency Data Sources - Currency Converter Pro"
+        title="Currency Data Sources - Exchange Rates Pro"
         description="Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
         canonical="https://converter.overx.ai/sources"
         structuredData={[structuredData]}

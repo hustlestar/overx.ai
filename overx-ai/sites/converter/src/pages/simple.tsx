@@ -31,7 +31,7 @@ export default function SimpleConverterPage() {
           type: 'website',
           title: t('title'),
           description: t('description'),
-          siteName: 'Currency Converter Pro - OverX AI',
+          siteName: 'Exchange Rates Pro - OverX AI',
           locale: 'en_US',
           url: 'https://converter.overx.ai/simple',
         }}

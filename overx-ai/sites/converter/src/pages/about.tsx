@@ -12,7 +12,7 @@ export default function AboutPage() {
     {
       '@context': 'https://schema.org' as const,
       '@type': 'SoftwareApplication',
-      name: 'Currency Converter Pro',
+      name: 'Exchange Rates Pro',
       applicationCategory: 'FinanceApplication',
       operatingSystem: 'Chrome',
       offers: {
@@ -73,7 +73,7 @@ export default function AboutPage() {
             url: 'https://converter.overx.ai/og-image.png',
             width: 1200,
             height: 630,
-            alt: 'Currency Converter Pro Chrome Extension'
+            alt: 'Exchange Rates Pro Chrome Extension'
           },
         }}
         structuredData={structuredData}

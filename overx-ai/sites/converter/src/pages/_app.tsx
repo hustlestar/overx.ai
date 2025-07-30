@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { appWithTranslation } from 'next-i18next'
 import { useState, useEffect } from 'react'
-import { useLanguageSync } from '@overx-ai/shared'
+import { useLanguageSync } from '@/hooks/useLanguageSync'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [queryClient] = useState(
