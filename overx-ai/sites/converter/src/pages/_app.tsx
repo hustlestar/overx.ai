@@ -9,6 +9,13 @@ import { debugSyncStatus } from '@/utils/debugSync'
 
 function MyApp({ Component, pageProps }: AppProps) {
   console.log('[Converter _app.tsx] App initializing...')
+  
+  // Debug: Force console log to appear
+  if (typeof window !== 'undefined') {
+    window.console.log = window.console.log || function() {};
+    window.console.error = window.console.error || function() {};
+    console.log('[Converter] Console logging enabled');
+  }
   const [queryClient] = useState(
     () =>
       new QueryClient({
@@ -27,6 +34,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       (window as any).debugSyncStatus = debugSyncStatus;
+      // Add debug indicator
+      const debugDiv = document.createElement('div');
+      debugDiv.id = 'debug-indicator';
+      debugDiv.style.cssText = 'position:fixed;bottom:10px;right:10px;background:green;color:white;padding:5px;font-size:12px;z-index:9999;';
+      debugDiv.textContent = 'Debug: ON';
+      document.body.appendChild(debugDiv);
+      setTimeout(() => {
+        debugDiv.remove();
+      }, 3000);
     }
   }, [])
   
