@@ -15,7 +15,8 @@ const nextConfig = {
   
   // Optimize for performance
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    // Temporarily disable console removal for debugging
+    removeConsole: false, // process.env.NODE_ENV === 'production',
   },
   
   // Environment variables that will be inlined at build time
