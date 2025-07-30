@@ -349,7 +349,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
               </div>
               <div className="grid md:grid-cols-3 gap-8">
                 {/* Productivity Tools */}
-                <SmartLink href="/products#productivity" className="block group">
+                <a href="https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa" target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg hover:shadow-xl" style={{ willChange: 'transform' }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-cyan-100/50 dark:from-blue-600/10 dark:to-cyan-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative z-10">
@@ -364,7 +364,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                       </p>
                     </div>
                   </div>
-                </SmartLink>
+                </a>
                 {/* AI Assistants */}
                 <a href="https://rates.overx.ai" target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg hover:shadow-xl" style={{ willChange: 'transform' }}>
