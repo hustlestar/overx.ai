@@ -64,13 +64,13 @@ export default function AboutPage() {
       <BaseSEO
         title={t('about.pageTitle')}
         description={t('about.pageDescription')}
-        canonical="https://converter.overx.ai/about"
+        canonical="https://rates.overx.ai/about"
         openGraph={{
           title: t('about.hero.title'),
           description: t('about.hero.subtitle'),
           type: 'website',
           image: {
-            url: 'https://converter.overx.ai/og-image.png',
+            url: 'https://rates.overx.ai/og-image.png',
             width: 1200,
             height: 630,
             alt: 'Exchange Rates Pro Chrome Extension'

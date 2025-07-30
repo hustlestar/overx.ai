@@ -30,7 +30,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
       '@type': 'BlogPosting',
       headline: post.title[currentLang],
       description: post.excerpt[currentLang],
-      image: `https://converter.overx.ai${post.image.url}`,
+      image: `https://rates.overx.ai${post.image.url}`,
       datePublished: post.publishedAt,
       dateModified: post.updatedAt || post.publishedAt,
       author: {
@@ -45,7 +45,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
       },
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': `https://converter.overx.ai/blog/${post.slug}`,
+        '@id': `https://rates.overx.ai/blog/${post.slug}`,
       },
     },
     {

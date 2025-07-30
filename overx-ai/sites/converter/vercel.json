@@ -1,6 +1,6 @@
 {
   "name": "overx-ai-converter",
-  "alias": ["converter.overx.ai"],
+  "alias": ["rates.overx.ai"],
   "installCommand": "./vercel-install.sh",
   "buildCommand": "./vercel-build-standalone.sh",
   "outputDirectory": ".next",

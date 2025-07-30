@@ -97,14 +97,14 @@ export default function HomePage() {
       <BaseSEO
         title={t('title')}
         description={t('description')}
-        canonical="https://converter.overx.ai"
+        canonical="https://rates.overx.ai"
         openGraph={{
           type: 'website',
           title: t('title'),
           description: t('description'),
           siteName: 'Exchange Rates Pro - OverX AI',
           locale: 'en_US',
-          url: 'https://converter.overx.ai',
+          url: 'https://rates.overx.ai',
         }}
         structuredData={[structuredData]}
       />

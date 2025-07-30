@@ -17,9 +17,9 @@ export default function BlogPage() {
   const structuredData = {
     '@context': 'https://schema.org' as const,
     '@type': 'Blog',
-    name: 'Currency Converter PRO Blog',
+    name: 'Exchange Rates Pro Blog',
     description: 'Expert insights on currency exchange, international business, and financial technology',
-    url: 'https://converter.overx.ai/blog',
+    url: 'https://rates.overx.ai/blog',
     publisher: {
       '@type': 'Organization',
       name: 'OverX AI',
@@ -30,11 +30,11 @@ export default function BlogPage() {
   return (
     <>
       <BaseSEO
-        title="Blog - Currency Exchange Insights & International Business Tips | Currency Converter PRO"
+        title="Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro"
         description="Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
-        canonical="https://converter.overx.ai/blog"
+        canonical="https://rates.overx.ai/blog"
         openGraph={{
-          title: 'Currency Converter PRO Blog - Expert Currency Exchange Insights',
+          title: 'Exchange Rates Pro Blog - Expert Currency Exchange Insights',
           description: 'Learn how to save money on international transactions with transparent exchange rates',
           type: 'website',
         }}

@@ -20,7 +20,7 @@ export default function SourcesPage() {
     '@type': 'WebPage',
     name: 'Currency Data Sources',
     description: 'List of exchange rate data providers and their features',
-    url: 'https://converter.overx.ai/sources',
+    url: 'https://rates.overx.ai/sources',
   }
 
   return (
@@ -28,7 +28,7 @@ export default function SourcesPage() {
       <BaseSEO
         title="Currency Data Sources - Exchange Rates Pro"
         description="Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
-        canonical="https://converter.overx.ai/sources"
+        canonical="https://rates.overx.ai/sources"
         structuredData={[structuredData]}
       />
       

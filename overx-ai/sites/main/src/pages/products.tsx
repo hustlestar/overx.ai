@@ -32,7 +32,7 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.currencies100Plus', 'productFeatures.complexCalculations', 'productFeatures.privacyFirst', 'productFeatures.languages9'],
-    href: 'https://converter.overx.ai'
+    href: 'https://rates.overx.ai'
   },
   {
     id: 'blockWebsite',

@@ -40,7 +40,7 @@ export function Layout({ children }: LayoutProps) {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-8">
               <Link href="/" className="text-xl font-bold gradient-text light:text-gray-900">
-                Currency Converter Pro
+                Exchange Rates Pro
               </Link>
               <div className="hidden md:flex space-x-6">
                 {navigation.map((item) => (

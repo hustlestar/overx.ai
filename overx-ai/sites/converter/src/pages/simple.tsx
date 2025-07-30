@@ -26,14 +26,14 @@ export default function SimpleConverterPage() {
       <BaseSEO
         title={t('title')}
         description={t('description')}
-        canonical="https://converter.overx.ai/simple"
+        canonical="https://rates.overx.ai/simple"
         openGraph={{
           type: 'website',
           title: t('title'),
           description: t('description'),
           siteName: 'Exchange Rates Pro - OverX AI',
           locale: 'en_US',
-          url: 'https://converter.overx.ai/simple',
+          url: 'https://rates.overx.ai/simple',
         }}
         structuredData={[structuredData]}
       />

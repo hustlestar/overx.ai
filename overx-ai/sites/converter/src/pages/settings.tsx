@@ -53,7 +53,7 @@ export default function SettingsPage() {
     '@type': 'WebPage',
     name: 'Settings - Exchange Rates Pro',
     description: 'Customize your currency converter preferences',
-    url: 'https://converter.overx.ai/settings',
+    url: 'https://rates.overx.ai/settings',
   }
 
   return (
@@ -61,7 +61,7 @@ export default function SettingsPage() {
       <BaseSEO
         title={`${t('settings.title')} - Exchange Rates Pro`}
         description="Customize your currency converter preferences, default currencies, and display options."
-        canonical="https://converter.overx.ai/settings"
+        canonical="https://rates.overx.ai/settings"
         structuredData={[structuredData]}
       />
       

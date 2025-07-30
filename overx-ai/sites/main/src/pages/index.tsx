@@ -366,18 +366,18 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   </div>
                 </SmartLink>
                 {/* AI Assistants */}
-                <SmartLink href="/products#communication" className="block group">
+                <SmartLink href="https://rates.overx.ai" target="_blank" className="block group">
                   <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg hover:shadow-xl" style={{ willChange: 'transform' }}>
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-100/50 to-teal-100/50 dark:from-cyan-600/10 dark:to-teal-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative z-10">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                      <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
                         <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                       </div>
-                      <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">{t('productList.claudeCodeBot.title')}</h3>
+                      <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-teal-400 transition-all duration-300">{t('productList.currencyConverter.title')}</h3>
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {t('productList.claudeCodeBot.description')}
+                        {t('productList.currencyConverter.description')}
                       </p>
                     </div>
                   </div>
