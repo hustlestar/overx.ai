@@ -3,7 +3,9 @@ const RUNTIME_CACHE = 'runtime-cache'
 
 // URLs to cache on install
 const urlsToCache = [
-  '/',
+  '/en',
+  '/es',
+  '/ru',
   '/manifest.json',
   '/favicon.ico',
   '/locales/en/common.json',
@@ -56,7 +58,7 @@ self.addEventListener('fetch', (event) => {
   // Handle API requests with network-first strategy
   if (url.pathname.startsWith('/api/')) {
     event.respondWith(
-      fetch(request)
+      fetch(request, { redirect: 'follow' })
         .then((response) => {
           // Cache successful responses
           if (response.status === 200) {
@@ -80,7 +82,7 @@ self.addEventListener('fetch', (event) => {
     caches.match(request).then((response) => {
       if (response) {
         // Update cache in the background
-        fetch(request).then((fetchResponse) => {
+        fetch(request, { redirect: 'follow' }).then((fetchResponse) => {
           if (fetchResponse.status === 200) {
             caches.open(RUNTIME_CACHE).then((cache) => {
               cache.put(request, fetchResponse)
@@ -91,7 +93,7 @@ self.addEventListener('fetch', (event) => {
       }
 
       // Fallback to network
-      return fetch(request).then((fetchResponse) => {
+      return fetch(request, { redirect: 'follow' }).then((fetchResponse) => {
         // Cache successful responses
         if (fetchResponse.status === 200) {
           const responseClone = fetchResponse.clone()

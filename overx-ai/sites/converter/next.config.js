@@ -2,7 +2,10 @@ const { i18n } = require('./next-i18next.config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n,
+  i18n: {
+    ...i18n,
+    localeDetection: false, // We handle this in middleware
+  },
   reactStrictMode: true,
   swcMinify: true,
   poweredByHeader: false,
@@ -59,6 +62,7 @@ const nextConfig = {
       }
     ]
   },
+  
   
   // Rewrites for better URLs
   async rewrites() {

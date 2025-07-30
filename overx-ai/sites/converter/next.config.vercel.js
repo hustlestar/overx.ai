@@ -3,7 +3,10 @@ const path = require('path')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  i18n,
+  i18n: {
+    ...i18n,
+    localeDetection: false, // We handle this in middleware
+  },
   reactStrictMode: true,
   swcMinify: true,
   poweredByHeader: false,
