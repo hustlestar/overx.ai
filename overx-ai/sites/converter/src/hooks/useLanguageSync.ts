@@ -5,12 +5,23 @@ import { useRouter } from 'next/router'
 export function useLanguageSync() {
   const router = useRouter()
   const { locale } = router
+  
+  console.log('[Converter useLanguageSync] Hook called, current locale:', locale)
+  console.log('[Converter useLanguageSync] Current domain:', typeof window !== 'undefined' ? window.location.hostname : 'SSR')
 
   // Set cookie on language change
   useEffect(() => {
+    console.log('[Converter useLanguageSync] Language change effect triggered, locale:', locale)
     if (locale) {
       // Set cookie that works across all subdomains
-      document.cookie = `overx-locale=${locale}; domain=.overx.ai; path=/; max-age=31536000; SameSite=Lax`
+      const cookieString = `overx-locale=${locale}; domain=.overx.ai; path=/; max-age=31536000; SameSite=Lax`
+      console.log('[Converter useLanguageSync] Setting cookie:', cookieString)
+      document.cookie = cookieString
+      
+      // Verify cookie was set
+      setTimeout(() => {
+        console.log('[Converter useLanguageSync] Cookies after set:', document.cookie)
+      }, 100)
     }
   }, [locale])
 

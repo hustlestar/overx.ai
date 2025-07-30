@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
-import { useTheme } from '@/hooks/useTheme'
+import { useThemeSync } from '@/hooks/useThemeSync'
 
 interface LayoutProps {
   children: ReactNode
@@ -13,7 +13,9 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
-  const { theme } = useTheme()
+  const { theme } = useThemeSync()
+  
+  console.log('[Converter Layout] Theme from hook:', theme)
 
   useEffect(() => {
     // Apply theme class to document root

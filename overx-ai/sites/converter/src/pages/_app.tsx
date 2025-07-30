@@ -8,6 +8,7 @@ import { useLanguageSync } from '@/hooks/useLanguageSync'
 import { debugSyncStatus } from '@/utils/debugSync'
 
 function MyApp({ Component, pageProps }: AppProps) {
+  console.log('[Converter _app.tsx] App initializing...')
   const [queryClient] = useState(
     () =>
       new QueryClient({
