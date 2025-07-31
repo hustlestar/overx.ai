@@ -64,7 +64,7 @@ export function Layout({ children }: LayoutProps) {
               <ThemeToggle />
               <LanguageSwitcher />
               <Link
-                href="https://overx.ai"
+                href="https://www.overx.ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-semibold animated-gradient-text"

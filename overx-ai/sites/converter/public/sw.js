@@ -19,10 +19,18 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME).then((cache) => {
       return Promise.all(
         urlsToCache.map((url) => {
-          return cache.add(url).catch((error) => {
-            console.warn(`Failed to cache ${url}:`, error)
-            // Continue with other URLs even if one fails
-          })
+          return fetch(url, { redirect: 'follow' })
+            .then((response) => {
+              // Only cache successful responses
+              if (response.ok) {
+                return cache.put(url, response)
+              }
+              console.warn(`Failed to cache ${url}: Response not ok`)
+            })
+            .catch((error) => {
+              console.warn(`Failed to cache ${url}:`, error)
+              // Continue with other URLs even if one fails
+            })
         })
       )
     })

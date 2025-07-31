@@ -5,7 +5,10 @@ const locales = ['en', 'es', 'ru']
 const defaultLocale = 'en'
 
 function getLocaleFromCookie(request: NextRequest): string | null {
-  const cookieLocale = request.cookies.get('overx-locale')?.value
+  const cookieValue = request.cookies.get('overx-locale')
+  console.log('[Main Middleware] Cookie object:', cookieValue)
+  const cookieLocale = cookieValue?.value
+  console.log('[Main Middleware] Cookie locale value:', cookieLocale)
   if (cookieLocale && locales.includes(cookieLocale)) {
     return cookieLocale
   }
@@ -33,7 +36,8 @@ export function middleware(request: NextRequest) {
   
   // Debug logging
   console.log('[Main Middleware] pathname:', pathname)
-  console.log('[Main Middleware] cookies:', request.cookies.getAll())
+  console.log('[Main Middleware] all cookies:', request.cookies.getAll())
+  console.log('[Main Middleware] cookie header:', request.headers.get('cookie'))
   
   // Check if the pathname already includes a locale
   const pathnameHasLocale = locales.some(
