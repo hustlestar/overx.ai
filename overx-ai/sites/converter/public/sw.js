@@ -6,7 +6,6 @@ const urlsToCache = [
   '/en',
   '/es',
   '/ru',
-  '/manifest.json',
   '/favicon.ico',
   '/locales/en/common.json',
   '/locales/es/common.json',
@@ -96,6 +95,8 @@ self.addEventListener('fetch', (event) => {
               cache.put(request, fetchResponse)
             })
           }
+        }).catch(() => {
+          // Ignore background update errors
         })
         return response
       }
@@ -110,6 +111,15 @@ self.addEventListener('fetch', (event) => {
           })
         }
         return fetchResponse
+      }).catch((error) => {
+        console.error('Fetch failed:', error)
+        // Return cached version if available
+        return caches.match(request).then((cachedResponse) => {
+          if (cachedResponse) {
+            return cachedResponse
+          }
+          throw error
+        })
       })
     })
   )
