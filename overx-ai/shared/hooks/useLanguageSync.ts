@@ -55,28 +55,8 @@ export function useLanguageSync() {
     }
   }
 
-  // Check on mount
+  // Check only on mount
   useEffect(() => {
     checkAndSyncLanguage()
   }, [])
-
-  // Poll for cookie changes every 2 seconds to detect cross-subdomain changes
-  useEffect(() => {
-    const interval = setInterval(() => {
-      checkAndSyncLanguage()
-    }, 2000)
-
-    // Also check on window focus
-    const handleFocus = () => {
-      console.log('[useLanguageSync] Window focused, checking for language sync...')
-      checkAndSyncLanguage()
-    }
-    
-    window.addEventListener('focus', handleFocus)
-    
-    return () => {
-      clearInterval(interval)
-      window.removeEventListener('focus', handleFocus)
-    }
-  }, [locale, router])
 }
