@@ -31,6 +31,10 @@ function getLocaleFromBrowser(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   
+  // Debug logging
+  console.log('[Main Middleware] pathname:', pathname)
+  console.log('[Main Middleware] cookies:', request.cookies.getAll())
+  
   // Check if the pathname already includes a locale
   const pathnameHasLocale = locales.some(
     locale => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
@@ -38,7 +42,11 @@ export function middleware(request: NextRequest) {
   
   if (!pathnameHasLocale) {
     // First check cookie, then browser preference
-    const locale = getLocaleFromCookie(request) || getLocaleFromBrowser(request)
+    const cookieLocale = getLocaleFromCookie(request)
+    const browserLocale = getLocaleFromBrowser(request)
+    const locale = cookieLocale || browserLocale
+    
+    console.log('[Main Middleware] cookieLocale:', cookieLocale, 'browserLocale:', browserLocale, 'chosen:', locale)
     
     // Redirect to the locale-prefixed path
     const newUrl = new URL(`/${locale}${pathname}`, request.url)

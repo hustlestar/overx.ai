@@ -5,9 +5,9 @@ import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
+  { code: 'en', name: 'English', flag: 'EN' },
+  { code: 'es', name: 'Español', flag: 'ES' },
+  { code: 'ru', name: 'Русский', flag: 'RU' },
 ]
 
 export function LanguageSwitcher() {
@@ -53,7 +53,7 @@ export function LanguageSwitcher() {
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm text-gray-700 dark:text-white transition-colors`}
                     onClick={() => handleLanguageChange(language.code)}
                   >
-                    <span className="mr-3">{language.flag}</span>
+                    <span className="mr-3 text-xs font-bold w-6 text-center">{language.flag}</span>
                     {language.name}
                   </button>
                 )}
