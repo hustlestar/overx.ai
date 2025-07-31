@@ -25,14 +25,21 @@ export function useLanguageSync() {
     }
   }, [locale])
 
-  // Read cookie on mount and sync language
-  useEffect(() => {
-    console.log('[Converter useLanguageSync] Reading cookies on mount...')
+  // Function to check and sync language from cookie
+  const checkAndSyncLanguage = () => {
+    console.log('[Converter useLanguageSync] Checking cookie for language sync...')
     console.log('[Converter useLanguageSync] Raw cookie string:', document.cookie)
     
     const cookies = document.cookie.split(';').reduce((acc, cookie) => {
-      const [key, value] = cookie.trim().split('=')
-      acc[key] = value
+      const trimmedCookie = cookie.trim()
+      const eqIndex = trimmedCookie.indexOf('=')
+      if (eqIndex > 0) {
+        const key = trimmedCookie.substring(0, eqIndex).trim()
+        const value = trimmedCookie.substring(eqIndex + 1).trim()
+        if (key && value) {
+          acc[key] = value
+        }
+      }
       return acc
     }, {} as Record<string, string>)
     
@@ -49,5 +56,30 @@ export function useLanguageSync() {
     } else {
       console.log('[Converter useLanguageSync] No sync needed')
     }
+  }
+
+  // Check on mount
+  useEffect(() => {
+    checkAndSyncLanguage()
   }, [])
+
+  // Poll for cookie changes every 2 seconds to detect cross-subdomain changes
+  useEffect(() => {
+    const interval = setInterval(() => {
+      checkAndSyncLanguage()
+    }, 2000)
+
+    // Also check on window focus
+    const handleFocus = () => {
+      console.log('[Converter useLanguageSync] Window focused, checking for language sync...')
+      checkAndSyncLanguage()
+    }
+    
+    window.addEventListener('focus', handleFocus)
+    
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('focus', handleFocus)
+    }
+  }, [locale, router])
 }

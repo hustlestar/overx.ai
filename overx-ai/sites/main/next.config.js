@@ -2,7 +2,10 @@
 const { i18n } = require('./next-i18next.config')
 
 const nextConfig = {
-  i18n,
+  i18n: {
+    ...i18n,
+    localeDetection: false, // We handle this in middleware
+  },
   reactStrictMode: true,
   swcMinify: true,
   poweredByHeader: false,
