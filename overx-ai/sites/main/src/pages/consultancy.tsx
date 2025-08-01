@@ -1,11 +1,11 @@
 import { GetStaticProps } from 'next'
-import { useState } from 'react'
 import { BaseSEO, SmartLink } from '../components/NextSEO'
 import { createOrganizationSchema, Breadcrumbs, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { ContactForm } from '../components/ContactForm'
 
 interface ConsultancyService {
   id: string
@@ -85,25 +85,6 @@ const services: ConsultancyService[] = [
 export default function ConsultancyPage() {
   const { t } = useTranslation('common')
   const { theme } = useTheme()
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
-  })
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
 
   const structuredData = [
     createOrganizationSchema({
@@ -227,15 +208,15 @@ export default function ConsultancyPage() {
           </section>
           
           {/* Process Section */}
-          <section className="py-24 bg-gradient-to-b from-gray-900/50 to-black">
+          <section className="py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900/50 dark:to-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
                     {t('consultancy.process.title')}
                   </span>
                 </h2>
-                <p className="text-xl text-gray-500">{t('consultancy.process.subtitle')}</p>
+                <p className="text-xl text-gray-600 dark:text-gray-500">{t('consultancy.process.subtitle')}</p>
               </div>
               
               <div className="grid md:grid-cols-4 gap-8">
@@ -249,8 +230,8 @@ export default function ConsultancyPage() {
                     <div className="text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-4">
                       {item.step}
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">{t(`consultancy.process.steps.${item.key}.title`)}</h3>
-                    <p className="text-gray-400">{t(`consultancy.process.steps.${item.key}.description`)}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{t(`consultancy.process.steps.${item.key}.title`)}</h3>
+                    <p className="text-gray-600 dark:text-gray-400">{t(`consultancy.process.steps.${item.key}.description`)}</p>
                   </div>
                 ))}
               </div>
@@ -270,80 +251,7 @@ export default function ConsultancyPage() {
               </div>
               
               <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-10 rounded-2xl border border-gray-200 dark:border-white/10 shadow-xl dark:shadow-none">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        {t('consultancy.form.name')}
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        {t('consultancy.form.email')}
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      {t('consultancy.form.company')}
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors"
-                    />
-                  </div>
-                  
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      {t('consultancy.form.message')}
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      required
-                      className="w-full px-4 py-3 bg-black/50 border border-white/10 rounded-lg focus:outline-none focus:border-blue-500 transition-colors resize-none"
-                    />
-                  </div>
-                  
-                  <div className="text-center">
-                    <button
-                      type="submit"
-                      className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/30"
-                    >
-                      <span>{t('consultancy.form.submit')}</span>
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                      </svg>
-                    </button>
-                  </div>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </section>

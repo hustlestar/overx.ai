@@ -6,6 +6,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Navigation } from '../components/Navigation'
 import { Footer } from '../components/Footer'
+import { ContactForm } from '../components/ContactForm'
 
 interface HomePageProps {
   lastModified: string
@@ -474,9 +475,9 @@ export default function HomePage({ lastModified }: HomePageProps) {
                           </div>
                         </div>
                         <div className="flex justify-start">
-                          <div className="bg-gray-800 rounded-2xl rounded-bl-none px-6 py-4 max-w-md">
-                            <p className="text-white mb-2">🇪🇸 despertar → 🇬🇧 to wake up</p>
-                            <p className="text-gray-600 dark:text-gray-400 text-sm">Wake up, awaken, rouse from sleep</p>
+                          <div className="bg-gray-800 light:bg-gray-100 rounded-2xl rounded-bl-none px-6 py-4 max-w-md">
+                            <p className="text-white light:text-gray-900 mb-2">🇪🇸 despertar → 🇬🇧 to wake up</p>
+                            <p className="text-gray-400 light:text-gray-600 text-sm">Wake up, awaken, rouse from sleep</p>
                           </div>
                         </div>
                       </div>
@@ -627,7 +628,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                       name="message"
                       rows={4}
                       required
-                      className="w-full px-4 py-3 bg-black/50 light:bg-white border border-white/10 light:border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 light:focus:border-blue-400 transition-colors resize-none text-white light:text-gray-900"
+                      className="w-full px-4 py-3 bg-white dark:bg-black/50 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-blue-400 dark:focus:border-blue-500 transition-colors resize-none text-gray-900 dark:text-white"
                     />
                   </div>
                   

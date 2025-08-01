@@ -7,16 +7,24 @@ const THEME_STORAGE_KEY = 'theme-storage';
 function useTheme() {
     const [theme, setThemeState] = (0, react_1.useState)('dark');
     const [mounted, setMounted] = (0, react_1.useState)(false);
+    // Debug logging
+    (0, react_1.useEffect)(() => {
+        console.log('[useTheme] Current domain:', window.location.hostname);
+        console.log('[useTheme] Theme state:', theme);
+    }, [theme]);
     (0, react_1.useEffect)(() => {
         setMounted(true);
         // Clean up any existing classes on mount
         document.documentElement.classList.remove('light', 'dark');
         // Load theme from localStorage
         const loadTheme = () => {
+            console.log('[useTheme] Loading theme from localStorage...');
             try {
                 const stored = localStorage.getItem(THEME_STORAGE_KEY);
+                console.log('[useTheme] Raw localStorage value:', stored);
                 if (stored) {
                     const parsed = JSON.parse(stored);
+                    console.log('[useTheme] Parsed theme storage:', parsed);
                     setThemeState(parsed.state.theme);
                     // Apply theme class to document
                     document.documentElement.classList.remove('light', 'dark');
@@ -48,6 +56,7 @@ function useTheme() {
         loadTheme();
         // Listen for storage changes (from other tabs/windows)
         const handleStorageChange = (e) => {
+            console.log('[useTheme] Storage event detected:', e.key, e.newValue, 'from:', e.url);
             if (e.key === THEME_STORAGE_KEY) {
                 loadTheme();
             }
@@ -64,6 +73,7 @@ function useTheme() {
         };
     }, []);
     const setTheme = (newTheme) => {
+        console.log('[useTheme] Setting theme to:', newTheme);
         setThemeState(newTheme);
         // Update localStorage in zustand format for compatibility
         const storage = {

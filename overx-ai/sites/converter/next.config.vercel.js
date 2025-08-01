@@ -85,6 +85,12 @@ const nextConfig = {
         destination: '/api/robots',
       }
     ]
+  },
+  
+  // Ensure all locale pages are generated during build
+  experimental: {
+    // This helps with i18n static generation
+    isrMemoryCacheSize: 0
   }
 }
 

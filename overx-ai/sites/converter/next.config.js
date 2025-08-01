@@ -11,6 +11,7 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   
+  
   // Optimize for performance
   compiler: {
     // Temporarily disable console removal for debugging
@@ -76,6 +77,12 @@ const nextConfig = {
         destination: '/api/robots',
       }
     ]
+  },
+  
+  // Ensure all locale pages are generated during build
+  experimental: {
+    // This helps with i18n static generation
+    isrMemoryCacheSize: 0
   }
 }
 
