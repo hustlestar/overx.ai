@@ -414,7 +414,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
       {/* Table */}
       <div className="w-full" ref={tableRef}>
         <div className="overflow-x-auto" ref={scrollContainerRef}>
-          <table className="w-full rounded-lg glass-effect">
+          <table className="w-full rounded-lg glass-effect table-vertical-lines">
             <thead ref={headerRef}>
               {/* Update time row */}
               {getLastUpdateTime() && (
@@ -429,7 +429,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
                   <th
                     key={header.id}
                     className={`px-4 py-4 text-left text-sm font-medium text-gray-400 light:text-gray-600 bg-black/95 light:bg-white ${
-                      index === 0 ? 'sticky left-0 z-20 after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-white/10 light:after:bg-gray-200' : ''
+                      index === 0 ? 'sticky left-0 z-20' : ''
                     }`}
                   >
                     {flexRender(
@@ -489,7 +489,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
                 >
                   {row.getVisibleCells().map((cell, index) => (
                     <td key={cell.id} className={`px-4 py-4 ${
-                      index === 0 ? 'sticky left-0 z-20 bg-black light:bg-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-white/10 light:after:bg-gray-200' : ''
+                      index === 0 ? 'sticky left-0 z-20 bg-black light:bg-white' : ''
                     } ${rowData.isUserCurrency && index === 0 ? 'bg-blue-900/20 light:bg-blue-50' : ''}`}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </td>

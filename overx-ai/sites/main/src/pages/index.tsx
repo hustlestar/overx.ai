@@ -106,13 +106,13 @@ export default function HomePage({ lastModified }: HomePageProps) {
   return (
     <>
       <BaseSEO
-        title="OverX AI - Get Your Time Back with Smart AI Solutions"
-        description="OverX AI creates intelligent solutions that automate repetitive tasks and give you more free time. From productivity tools to AI assistants, we make life better through smart automation."
+        title="OverX AI - Custom AI Agents & Automation Solutions | Save 10+ Hours/Week"
+        description="Build custom AI agents, Chrome extensions & automation tools with OverX AI. Free currency converter, AI consultancy, and SaaS solutions. Transform your workflow today."
         canonical="https://overx.ai"
         openGraph={{
           type: 'website',
-          title: 'OverX AI - Pioneering AI Solutions',
-          description: 'Transform your business with cutting-edge AI solutions',
+          title: 'OverX AI - Custom AI Agents & Automation Solutions',
+          description: 'Build custom AI agents & automation tools. Save 10+ hours/week with our AI consultancy, Chrome extensions, and SaaS solutions.',
           image: {
             url: 'https://overx.ai/og-image.jpg',
             width: 1200,

@@ -121,4 +121,26 @@
   .light .table-row-hover {
     @apply hover:bg-gray-100;
   }
+
+  /* Table vertical lines */
+  .table-vertical-lines td:not(:last-child),
+  .table-vertical-lines th:not(:last-child) {
+    @apply border-r border-white/10;
+  }
+
+  .light .table-vertical-lines td:not(:last-child),
+  .light .table-vertical-lines th:not(:last-child) {
+    @apply border-r border-gray-200;
+  }
+
+  /* Stronger lines for section columns */
+  .table-vertical-lines th:first-child,
+  .table-vertical-lines td:first-child {
+    @apply border-r-2 border-white/20;
+  }
+
+  .light .table-vertical-lines th:first-child,
+  .light .table-vertical-lines td:first-child {
+    @apply border-r-2 border-gray-300;
+  }
 }
