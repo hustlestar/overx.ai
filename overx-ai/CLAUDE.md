@@ -10,6 +10,8 @@ overx-ai/
 │   ├── main/               # Next.js - overx.ai (port 3000)
 │   ├── blog/               # Next.js - blog.overx.ai (port 3001)
 │   ├── cv/                 # Static HTML - cv.overx.ai (port 3002)
+│   ├── converter/          # Next.js - converter.overx.ai (port 3003)
+│   ├── learn-words/        # Next.js - learn.overx.ai (port 3002)
 │   └── products/
 │       ├── product-a/      # Existing Jekyll
 │       ├── product-b/      # Static HTML/CSS
@@ -23,6 +25,8 @@ overx-ai/
 - **Main**: http://localhost:3000 - Company homepage
 - **Blog**: http://localhost:3001 - Blog platform
 - **CV**: http://localhost:3002 - Professional CV/Resume (AI & Agent Development focus)
+- **Converter**: http://localhost:3003 - Currency converter with Chrome extension
+- **Learn Words**: http://localhost:3002 - Language learning platform
 
 ## Development Commands
 ```bash
@@ -30,13 +34,21 @@ overx-ai/
 npm run dev                 # Start all sites in development mode
 
 # Building
-npm run build              # Build all sites
-npm run generate-sitemap   # Generate XML sitemaps
+npm run build              # Build main site only
+npm run build:all          # Build all sites
+npm run build:converter    # Build converter site
+npm run build:learn        # Build learn-words site
+npm run generate-sitemap   # Generate XML sitemaps for all sites
 npm run check-seo         # Run SEO health audit
 
 # Testing
 npm run lint              # Run ESLint
 npm run type-check        # Run TypeScript checks
+
+# Known Issues & Fixes
+# If you encounter "workspace:*" dependency errors:
+# - Check package.json files for "workspace:*" and replace with "*"
+# - Run npm install from root directory
 ```
 
 ## SEO-First Development Rules
@@ -251,3 +263,71 @@ export default function Page() {
 - **Monitor regularly** - SEO is an ongoing process
 
 Remember: Every decision should improve SEO performance. When in doubt, choose the option that provides better search visibility and user experience.
+
+## Recent Updates & Known Issues
+
+### Theme System (Light/Dark Mode)
+- **Configuration**: Tailwind must have `darkMode: 'class'` in config
+- **Theme Classes**: Use `dark:` prefix for dark mode, `light:` for light mode overrides
+- **Common Issues**:
+  - Missing `darkMode: 'class'` in tailwind.config.js causes light: variants to not work
+  - Hydration errors with client-only components (wrap in mounted check)
+  - Theme persistence across subdomains using cookies with domain `.overx.ai`
+
+### Cross-Subdomain Synchronization
+- **Language Sync**: Implemented via cookies with `.overx.ai` domain
+- **Theme Sync**: Uses localStorage + cookies for persistence
+- **Implementation**: See `useLanguageSync` and `useTheme` hooks
+
+### Converter Site Blog System
+- **Structure**: Blog content separated into individual files for maintainability
+  - Metadata: `/sites/converter/src/content/blog/metadata.ts`
+  - Content: `/sites/converter/src/content/blog/[slug].ts`
+- **Features**:
+  - Full localization (en, es, ru)
+  - Cross-linking based on tags
+  - SEO optimized with structured data
+  - Dynamic sitemap generation
+- **Blog Posts** (6 total):
+  1. Why Transparent Exchange Rates Matter for International Business
+  2. Save Money While Traveling: Currency Converter Chrome Extension Guide
+  3. Compare Currency Exchange APIs 2024: Complete Developer Guide
+  4. Real-time Currency Alerts: Maximize Your Exchange Rates
+  5. Cryptocurrency vs Traditional Currency Exchange: What's Best in 2024?
+  6. Avoid Dynamic Currency Conversion Scams: Complete Guide
+
+### Sitemap Generation
+- **Custom Script**: `scripts/generate-converter-sitemap.js` for dynamic blog routes
+- **Coverage**: Main, Blog, and Converter sites
+- **Localization**: Generates URLs for all locales (en, es, ru)
+
+### Build & Deployment
+- **Shared Package**: Must be built before site builds
+- **Monorepo Structure**: Uses npm workspaces with Turbo
+- **Dependencies**: Use "*" instead of "workspace:*" for shared dependencies
+
+### Service Worker
+- **Cache Management**: Remove non-existent resources from cache list
+- **Redirect Handling**: Use `redirect: 'follow'` in fetch options
+
+### Common Fixes Applied
+1. **Tailwind Light Mode**: Added `darkMode: 'class'` configuration
+2. **Form Reusability**: Created shared `ContactForm` component
+3. **Blog Content**: Escaped backticks in markdown code blocks
+4. **Dependencies**: Fixed @tanstack/react-table installation
+5. **Workspace Protocol**: Replaced "workspace:*" with "*"
+
+### Testing Checklist
+- [ ] Test light/dark mode switching on all pages
+- [ ] Verify cross-subdomain language sync
+- [ ] Check all blog posts render correctly in all languages
+- [ ] Validate sitemap includes all pages and locales
+- [ ] Run build for all sites to ensure no errors
+
+### Post-Development Checklist
+When completing any task, always run:
+1. `npm run lint` - Check for linting errors
+2. `npm run type-check` - Verify TypeScript types
+3. `npm run build:converter` (or relevant build command) - Ensure build succeeds
+
+**Important**: If lint/typecheck commands are not found, ask the user for the correct commands and suggest adding them to this document for future reference.

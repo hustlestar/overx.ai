@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { Layout } from '@/components/Layout'
 import { BlogImage } from '@/components/BlogImage'
 import { BaseSEO, Breadcrumbs } from '@overx-ai/shared'
-import { getBlogPost, getAllBlogPosts } from '@/lib/blog/posts'
+import { getBlogPost, getAllBlogPosts, getRelatedPosts } from '@/lib/blog/posts'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -262,25 +262,37 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           {/* Related Articles */}
           <section className="mt-16">
             <h2 className="text-2xl font-bold mb-8">Related Articles</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {getAllBlogPosts()
-                .filter((p) => p.slug !== post.slug)
-                .slice(0, 2)
-                .map((relatedPost) => (
-                  <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
-                    <article className="glass-effect rounded-lg p-6 hover-glow cursor-pointer group">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors">
-                        {relatedPost.title[currentLang]}
-                      </h3>
-                      <p className="text-sm text-gray-400 light:text-gray-600 mb-4 line-clamp-2">
-                        {relatedPost.excerpt[currentLang]}
-                      </p>
-                      <span className="text-blue-400 light:text-blue-600 text-sm">
-                        Read more →
+            <div className="grid md:grid-cols-3 gap-6">
+              {getRelatedPosts(post.slug, 3).map((relatedPost) => (
+                <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`}>
+                  <article className="glass-effect rounded-lg p-6 hover-glow cursor-pointer group h-full flex flex-col">
+                    <div className="flex items-center gap-2 mb-3">
+                      {relatedPost.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs px-2 py-1 rounded-full bg-blue-600/20 text-blue-400 light:bg-blue-100 light:text-blue-700"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-400 transition-colors line-clamp-2">
+                      {relatedPost.title[currentLang]}
+                    </h3>
+                    <p className="text-sm text-gray-400 light:text-gray-600 mb-4 line-clamp-2 flex-grow">
+                      {relatedPost.excerpt[currentLang]}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500 light:text-gray-500">
+                        {relatedPost.readingTime} min read
                       </span>
-                    </article>
-                  </Link>
-                ))}
+                      <span className="text-blue-400 light:text-blue-600 text-sm group-hover:translate-x-1 transition-transform">
+                        →
+                      </span>
+                    </div>
+                  </article>
+                </Link>
+              ))}
             </div>
           </section>
         </article>

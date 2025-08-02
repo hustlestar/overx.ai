@@ -11,10 +11,14 @@
     "start": "next start",
     "start:static": "npx serve out -p 3003",
     "lint": "next lint",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "test:screenshots": "playwright test screenshots.spec.ts",
+    "test:screenshots:headed": "playwright test screenshots.spec.ts --headed",
+    "screenshots:generate": "npm run test:screenshots && node scripts/add-screenshot-overlays.js",
+    "screenshots:overlay": "node scripts/add-screenshot-overlays.js"
   },
   "dependencies": {
-    "@overx-ai/shared": "file:../../shared",
+    "@overx-ai/shared": "*",
     "@tanstack/react-query": "^5.17.0",
     "@tanstack/react-table": "^8.11.0",
     "axios": "^1.6.5",
@@ -28,13 +32,16 @@
     "zustand": "^4.5.7"
   },
   "devDependencies": {
+    "@playwright/test": "^1.54.2",
     "@tanstack/react-query-devtools": "^5.83.0",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",
+    "canvas": "^3.1.2",
     "eslint": "^8.54.0",
     "eslint-config-next": "^14.0.4",
+    "playwright": "^1.54.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.3.0"

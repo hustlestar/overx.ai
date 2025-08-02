@@ -10,7 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@overx-ai/shared": "workspace:*",
+    "@overx-ai/shared": "*",
     "next": "14.0.4",
     "next-i18next": "^15.2.0",
     "react": "^18.2.0",

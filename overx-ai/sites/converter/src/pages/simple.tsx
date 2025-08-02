@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
-import { CurrencyConverter } from '@/components/CurrencyConverter'
+import { SimpleCurrencyConverter } from '@/components/SimpleCurrencyConverter'
 import { BaseSEO } from '@overx-ai/shared'
 
 export default function SimpleConverterPage() {
@@ -48,7 +48,7 @@ export default function SimpleConverterPage() {
               {t('hero.subtitle')}
             </p>
 
-            <CurrencyConverter />
+            <SimpleCurrencyConverter />
           </section>
 
           {/* Background Elements */}

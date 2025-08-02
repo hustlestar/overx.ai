@@ -1,4 +1,5 @@
 const { SitemapGenerator } = require('../shared/dist/lib/sitemap/generator')
+const { generateConverterSitemap } = require('./generate-converter-sitemap')
 const path = require('path')
 
 async function generateSitemaps() {
@@ -53,6 +54,10 @@ async function generateSitemaps() {
   
   console.log('✅ Blog sitemap generated')
 
+  // Converter sitemap with dynamic blog routes
+  await generateConverterSitemap()
+  console.log('✅ Converter site sitemap generated')
+
   // Generate sitemap index
   const indexGenerator = new SitemapGenerator({
     hostname: 'https://overx.ai'
@@ -61,6 +66,7 @@ async function generateSitemaps() {
   const sitemapIndex = indexGenerator.generateIndex([
     { loc: 'https://overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://blog.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
+    { loc: 'https://converter.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://producta.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://productb.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://productc.overx.ai/sitemap.xml', lastmod: new Date().toISOString() }

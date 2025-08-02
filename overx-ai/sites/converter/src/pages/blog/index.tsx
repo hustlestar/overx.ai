@@ -54,7 +54,7 @@ export default function BlogPage() {
           </section>
 
           {/* Featured Post */}
-          {posts.length > 0 && posts[0].featured && (
+          {posts.length > 0 && (
             <section className="mb-16">
               <h2 className="text-2xl font-bold mb-8 text-gray-300 light:text-gray-700">Featured Article</h2>
               <Link href={`/blog/${posts[0].slug}`}>
@@ -108,11 +108,11 @@ export default function BlogPage() {
             </section>
           )}
 
-          {/* Recent Posts */}
+          {/* All Posts */}
           <section>
-            <h2 className="text-2xl font-bold mb-8 text-gray-300 light:text-gray-700">Recent Articles</h2>
+            <h2 className="text-2xl font-bold mb-8 text-gray-300 light:text-gray-700">All Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.slice(1).map((post) => (
+              {posts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group h-full">
                     <div className="relative h-48">
