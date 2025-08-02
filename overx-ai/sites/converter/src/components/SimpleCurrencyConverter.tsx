@@ -176,10 +176,7 @@ export function SimpleCurrencyConverter() {
         {/* Provider Information */}
         {selectedProvider && typedRatesData?.providers[selectedProvider] && (
           <div className="mt-4 text-center text-xs text-gray-500">
-            <p>
-              Using {selectedProvider} API • 
-              Response time: {typedRatesData.providers[selectedProvider].response_time}ms
-            </p>
+            <p>Using {selectedProvider} API</p>
           </div>
         )}
       </div>
