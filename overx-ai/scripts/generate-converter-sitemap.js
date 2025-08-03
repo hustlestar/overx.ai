@@ -47,7 +47,7 @@ async function generateConverterSitemap() {
   // Generate XML
   const urlElements = allUrls.map(url => {
     return `  <url>
-    <loc>https://converter.overx.ai${url.path}</loc>
+    <loc>https://rates.overx.ai${url.path}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>
@@ -67,3 +67,8 @@ ${urlElements}
 }
 
 module.exports = { generateConverterSitemap }
+
+// Execute if run directly
+if (require.main === module) {
+  generateConverterSitemap()
+}

@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://rates.overx.ai/sitemap.xml
-Sitemap: https://converter.overx.ai/sitemap.xml

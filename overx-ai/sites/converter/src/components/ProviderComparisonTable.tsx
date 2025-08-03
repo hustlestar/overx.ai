@@ -371,13 +371,36 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
       
       {/* Search */}
       <div className="mb-6 container mx-auto px-4">
-        <input
-          type="text"
-          value={globalFilter}
-          onChange={(e) => setGlobalFilter(e.target.value)}
-          placeholder={t('rates.searchPlaceholder')}
-          className="w-full px-4 py-3 rounded-lg glass-effect bg-white/5 light:bg-white border border-white/10 light:border-gray-300 focus:border-blue-500 light:focus:border-blue-600 focus:outline-none transition-colors"
-        />
+        <div className="relative">
+          <input
+            type="text"
+            value={globalFilter}
+            onChange={(e) => setGlobalFilter(e.target.value)}
+            placeholder={t('rates.searchPlaceholder')}
+            className="w-full px-4 py-3 pr-12 rounded-lg glass-effect bg-white/5 light:bg-white border border-white/10 light:border-gray-300 focus:border-blue-500 light:focus:border-blue-600 focus:outline-none transition-colors"
+          />
+          {globalFilter && (
+            <button
+              onClick={() => setGlobalFilter('')}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 light:hover:bg-gray-200 transition-colors"
+              title={t('common.clearSearch', 'Clear search')}
+            >
+              <svg
+                className="w-5 h-5 text-gray-400 light:text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
 
       {/* Sticky Header (Fixed) */}
@@ -390,7 +413,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
                   {table.getHeaderGroups()[0]?.headers.map((header, index) => (
                     <th
                       key={header.id}
-                      className={`px-4 py-4 text-left text-sm font-medium text-gray-400 light:text-gray-600 ${
+                      className={`px-2 sm:px-4 py-2 sm:py-4 text-left text-xs sm:text-sm font-medium text-gray-400 light:text-gray-600 ${
                         index === 0 ? 'sticky left-0 z-50 bg-black light:bg-white after:absolute after:right-0 after:top-0 after:bottom-0 after:w-px after:bg-white/10 light:after:bg-gray-200' : ''
                       }`}
                       style={{ 
@@ -428,7 +451,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
                 {table.getHeaderGroups()[0]?.headers.map((header, index) => (
                   <th
                     key={header.id}
-                    className={`px-4 py-4 text-left text-sm font-medium text-gray-400 light:text-gray-600 bg-black/95 light:bg-white ${
+                    className={`px-2 sm:px-4 py-2 sm:py-4 text-left text-xs sm:text-sm font-medium text-gray-400 light:text-gray-600 bg-black/95 light:bg-white ${
                       index === 0 ? 'sticky left-0 z-20' : ''
                     }`}
                   >
@@ -469,7 +492,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
 
                 return (
                   <tr key={row.id} className="bg-white/5 light:bg-gray-100">
-                    <td colSpan={providers.length + 1} className="px-4 py-3 font-semibold text-gray-300 light:text-gray-700 bg-white/5 light:bg-gray-100">
+                    <td colSpan={providers.length + 1} className="px-2 sm:px-4 py-2 sm:py-3 font-semibold text-gray-300 light:text-gray-700 bg-white/5 light:bg-gray-100">
                       {rowData.sectionHeader}
                     </td>
                   </tr>
@@ -488,7 +511,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
                   onClick={() => handleToggleCurrency(rowData.currency.code)}
                 >
                   {row.getVisibleCells().map((cell, index) => (
-                    <td key={cell.id} className={`px-4 py-4 ${
+                    <td key={cell.id} className={`px-2 sm:px-4 py-2 sm:py-4 ${
                       index === 0 ? 'sticky left-0 z-20 bg-black light:bg-white' : ''
                     } ${rowData.isUserCurrency && index === 0 ? 'bg-blue-900/20 light:bg-blue-50' : ''}`}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
