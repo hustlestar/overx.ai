@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useRef } from 'react'
+import { useState, useMemo, useEffect, useRef, useLayoutEffect } from 'react'
 import { useTranslation } from 'next-i18next'
 import {
   createColumnHelper,
@@ -50,11 +50,14 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
   const [columnWidths, setColumnWidths] = useState<number[]>([])
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [hoveredCurrency, setHoveredCurrency] = useState<string | null>(null)
+  const [searchButtonPosition, setSearchButtonPosition] = useState<number>(0)
   const tableRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLTableSectionElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const stickyScrollRef = useRef<HTMLDivElement>(null)
   const mainTableRef = useRef<HTMLDivElement>(null)
+  const searchInputRef = useRef<HTMLInputElement>(null)
+  const hiddenTextRef = useRef<HTMLSpanElement>(null)
   
   const { defaultTargets, updateDefaultTargets, isPremium, canAddMoreCurrencies } = useUserPreferences()
   const [showLimitMessage, setShowLimitMessage] = useState(false)
@@ -345,6 +348,15 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
     }
   }, [data, columnWidths.length]) // Re-run when data changes
 
+  // Calculate button position based on text width
+  useLayoutEffect(() => {
+    if (hiddenTextRef.current && searchInputRef.current) {
+      const textWidth = hiddenTextRef.current.offsetWidth
+      const inputPaddingLeft = 16 // px-4 = 1rem = 16px
+      setSearchButtonPosition(inputPaddingLeft + textWidth + 8) // 8px gap after text
+    }
+  }, [globalFilter])
+
   if (!ratesData || !providersData || !currenciesData) {
     return (
       <div className="w-full">
@@ -371,22 +383,40 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
       
       {/* Search */}
       <div className="mb-6 container mx-auto px-4">
-        <div className="relative">
+        <div className="relative inline-flex items-center w-full">
+          {/* Hidden span to measure text width */}
+          <span
+            ref={hiddenTextRef}
+            className="absolute invisible whitespace-pre"
+            style={{
+              fontFamily: 'inherit',
+              fontSize: 'inherit',
+              letterSpacing: 'inherit',
+            }}
+          >
+            {globalFilter}
+          </span>
+          
           <input
+            ref={searchInputRef}
             type="text"
             value={globalFilter}
             onChange={(e) => setGlobalFilter(e.target.value)}
             placeholder={t('rates.searchPlaceholder')}
-            className="w-full px-4 py-3 pr-12 rounded-lg glass-effect bg-white/5 light:bg-white border border-white/10 light:border-gray-300 focus:border-blue-500 light:focus:border-blue-600 focus:outline-none transition-colors"
+            className="w-full px-4 py-3 rounded-lg glass-effect bg-white/5 light:bg-white border border-white/10 light:border-gray-300 focus:border-blue-500 light:focus:border-blue-600 focus:outline-none transition-colors"
           />
+          
           {globalFilter && (
             <button
               onClick={() => setGlobalFilter('')}
-              className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 light:hover:bg-gray-200 transition-colors"
+              className="absolute top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-white/10 light:hover:bg-gray-200 transition-all duration-200"
+              style={{ 
+                left: `${searchButtonPosition}px`,
+              }}
               title={t('common.clearSearch', 'Clear search')}
             >
               <svg
-                className="w-5 h-5 text-gray-400 light:text-gray-600"
+                className="w-4 h-4 text-gray-400 light:text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
