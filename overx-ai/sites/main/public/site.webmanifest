@@ -1,14 +1,16 @@
 {
-  "name": "OverX.ai",
+  "name": "OverX - Over the Xorizon",
   "short_name": "OverX",
+  "description": "OverX AI - Technology solutions that go beyond the horizon",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
     }
   ],
-  "theme_color": "#2563eb",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#0891b2",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/"
 }

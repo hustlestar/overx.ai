@@ -1,7 +1,7 @@
 {
-  "name": "OverX - Over the Xorizon",
-  "short_name": "OverX",
-  "description": "OverX AI - Technology solutions that go beyond the horizon",
+  "name": "Exchange Rates Pro - OverX",
+  "short_name": "OverX Rates",
+  "description": "Free currency converter with live exchange rates from 12+ providers",
   "icons": [
     {
       "src": "/favicon.svg",
