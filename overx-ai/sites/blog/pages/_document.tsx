@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
-import { Favicon } from '@overx-ai/shared/components/Favicon'
+import { Favicon } from '@overx-ai/shared'
 
 export default function Document() {
   return (
