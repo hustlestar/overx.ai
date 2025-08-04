@@ -7,9 +7,6 @@ export * from './components/Performance'
 // UI Components
 export * from './components/UI'
 
-// Favicon Component
-export { Favicon } from './components/Favicon'
-
 // Hooks
 export { useTheme } from './hooks/useTheme'
 export { useLanguageSync } from './hooks/useLanguageSync'

@@ -1,7 +1,6 @@
 export * from './components/SEO';
 export * from './components/Performance';
 export * from './components/UI';
-export { Favicon } from './components/Favicon';
 export { useTheme } from './hooks/useTheme';
 export { useLanguageSync } from './hooks/useLanguageSync';
 export { debugSyncStatus } from './hooks/debugSync';
