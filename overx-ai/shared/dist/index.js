@@ -14,13 +14,16 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.debugSyncStatus = exports.useLanguageSync = exports.useTheme = void 0;
+exports.getKeywordsForPage = exports.keywordMap = exports.ContentOptimizer = exports.debugSyncStatus = exports.useLanguageSync = exports.useTheme = exports.Favicon = void 0;
 // SEO Components
 __exportStar(require("./components/SEO"), exports);
 // Performance Components
 __exportStar(require("./components/Performance"), exports);
 // UI Components
 __exportStar(require("./components/UI"), exports);
+// Favicon Component
+var Favicon_1 = require("./components/Favicon");
+Object.defineProperty(exports, "Favicon", { enumerable: true, get: function () { return Favicon_1.Favicon; } });
 // Hooks
 var useTheme_1 = require("./hooks/useTheme");
 Object.defineProperty(exports, "useTheme", { enumerable: true, get: function () { return useTheme_1.useTheme; } });

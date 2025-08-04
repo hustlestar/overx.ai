@@ -26,6 +26,16 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://overx.ai',
   },
+  
+  // Serve shared favicon files
+  async rewrites() {
+    return [
+      {
+        source: '/shared/favicon/:path*',
+        destination: '/api/favicon/:path*',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

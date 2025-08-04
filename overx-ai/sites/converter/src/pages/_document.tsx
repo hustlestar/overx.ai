@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { Favicon } from '@overx-ai/shared/components/Favicon'
 
 export default function Document() {
   return (
@@ -15,8 +16,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#000000" />
+        {/* Shared Favicon for all OverX subdomains */}
+        <Favicon />
         
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="Ss_vYawt-4eUxrOy8j_LBWYOynIY7kseugeq8L9mcBs" />

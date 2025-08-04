@@ -20,6 +20,10 @@
     "./lib/schema": {
       "types": "./dist/lib/schema/index.d.ts",
       "default": "./dist/lib/schema/index.js"
+    },
+    "./components/Favicon": {
+      "types": "./dist/components/Favicon.d.ts",
+      "default": "./dist/components/Favicon.js"
     }
   },
   "scripts": {
