@@ -22,10 +22,10 @@ export function Favicon() {
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Theme color for mobile browsers */}
-      <meta name="theme-color" content="#111827" />
+      <meta name="theme-color" content="#000000" />
       
       {/* Microsoft Tiles (optional) */}
-      <meta name="msapplication-TileColor" content="#111827" />
+      <meta name="msapplication-TileColor" content="#000000" />
     </>
   )
 }
