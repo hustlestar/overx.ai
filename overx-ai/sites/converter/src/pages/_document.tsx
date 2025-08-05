@@ -4,6 +4,19 @@ export default function Document() {
   return (
     <Html>
       <Head>
+        {/* Google Analytics - rates.overx.ai */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8K44JF1RW"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-X8K44JF1RW');
+            `,
+          }}
+        />
+        
         {/* Preconnect to API for faster data fetching */}
         <link rel="preconnect" href="https://api.overx.ai" />
         <link rel="dns-prefetch" href="https://api.overx.ai" />
