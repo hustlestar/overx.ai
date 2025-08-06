@@ -1,5 +1,3 @@
-import { getCurrencyFlag } from './currencyFlags'
-
 // Common currency codes that we'll extract from the API response
 export const CURRENCY_NAMES: Record<string, string> = {
   USD: 'US Dollar',
@@ -225,6 +223,5 @@ export function extractCurrenciesFromRates(ratesData: any): any[] {
   return Array.from(currencySet).map(code => ({
     code,
     name: CURRENCY_NAMES[code] || code,
-    symbol: getCurrencyFlag(code),
   })).sort((a, b) => a.code.localeCompare(b.code))
 }

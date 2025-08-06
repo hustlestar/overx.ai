@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
-import { useThemeSync } from '@/hooks/useThemeSync'
+import { useTheme } from '@/hooks/useTheme'
 
 interface LayoutProps {
   children: ReactNode
@@ -13,18 +13,9 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
-  const { theme } = useThemeSync()
+  const { theme } = useTheme()
   
   console.log('[Converter Layout] Theme from hook:', theme)
-
-  useEffect(() => {
-    // Apply theme class to document root
-    if (theme === 'light') {
-      document.documentElement.classList.add('light')
-    } else {
-      document.documentElement.classList.remove('light')
-    }
-  }, [theme])
 
   const navigation = [
     { name: t('navigation.home'), href: '/' },

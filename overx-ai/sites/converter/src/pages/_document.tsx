@@ -40,6 +40,26 @@ export default function Document() {
         
         {/* Google Search Console verification */}
         <meta name="google-site-verification" content="Ss_vYawt-4eUxrOy8j_LBWYOynIY7kseugeq8L9mcBs" />
+        
+        {/* Prevent theme flash by applying theme class early */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                function getCookie(name) {
+                  const value = '; ' + document.cookie;
+                  const parts = value.split('; ' + name + '=');
+                  if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+                
+                const theme = getCookie('overx-theme') || 'dark';
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                }
+              })();
+            `,
+          }}
+        />
       </Head>
       <body>
         <Main />

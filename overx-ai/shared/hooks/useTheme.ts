@@ -3,15 +3,33 @@ import { useEffect, useState } from 'react'
 // Theme type
 export type Theme = 'light' | 'dark'
 
-// Storage key - same across all domains for consistent UX
-const THEME_STORAGE_KEY = 'theme-storage'
+// Cookie name for theme - same across all domains
+const THEME_COOKIE_NAME = 'overx-theme'
 
-// Theme storage structure to match zustand's persist format
-interface ThemeStorage {
-  state: {
-    theme: Theme
+// Cookie utilities
+function getCookie(name: string): string | null {
+  if (typeof document === 'undefined') return null
+  
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) {
+    return parts.pop()?.split(';').shift() || null
   }
-  version: number
+  return null
+}
+
+function setCookie(name: string, value: string, days: number = 365) {
+  if (typeof document === 'undefined') return
+  
+  const expires = new Date()
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000)
+  
+  // Set cookie with domain .overx.ai for cross-subdomain access
+  const domain = window.location.hostname.includes('overx.ai') ? '.overx.ai' : ''
+  const cookieString = `${name}=${value}; expires=${expires.toUTCString()}; path=/; ${domain ? `domain=${domain}; ` : ''}SameSite=Lax`
+  
+  document.cookie = cookieString
+  console.log(`[useTheme] Setting cookie: ${cookieString}`)
 }
 
 export function useTheme() {
@@ -20,76 +38,80 @@ export function useTheme() {
   
   // Debug logging
   useEffect(() => {
-    console.log('[useTheme] Current domain:', window.location.hostname)
-    console.log('[useTheme] Theme state:', theme)
-  }, [theme])
+    if (mounted) {
+      console.log('[useTheme] Current domain:', window.location.hostname)
+      console.log('[useTheme] Theme state:', theme)
+    }
+  }, [theme, mounted])
 
   useEffect(() => {
     setMounted(true)
     
-    // Clean up any existing classes on mount
-    document.documentElement.classList.remove('light', 'dark')
-    
-    // Load theme from localStorage
+    // Load theme from cookie or system preference
     const loadTheme = () => {
-      console.log('[useTheme] Loading theme from localStorage...')
-      try {
-        const stored = localStorage.getItem(THEME_STORAGE_KEY)
-        console.log('[useTheme] Raw localStorage value:', stored)
-        if (stored) {
-          const parsed: ThemeStorage = JSON.parse(stored)
-          console.log('[useTheme] Parsed theme storage:', parsed)
-          setThemeState(parsed.state.theme)
-          
-          // Apply theme class to document
-          document.documentElement.classList.remove('light', 'dark')
-          if (parsed.state.theme === 'dark') {
-            document.documentElement.classList.add('dark')
-          }
-        } else {
-          // Check system preference
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-          const defaultTheme = prefersDark ? 'dark' : 'light'
-          setThemeState(defaultTheme)
-          
-          // Save default to localStorage
-          const storage: ThemeStorage = {
-            state: { theme: defaultTheme },
-            version: 0
-          }
-          localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(storage))
-          
-          document.documentElement.classList.remove('light', 'dark')
-          if (defaultTheme === 'dark') {
-            document.documentElement.classList.add('dark')
-          }
-        }
-      } catch (error) {
-        console.error('Failed to load theme:', error)
+      console.log('[useTheme] Loading theme...')
+      
+      // First try to get theme from cookie
+      const cookieTheme = getCookie(THEME_COOKIE_NAME) as Theme | null
+      console.log('[useTheme] Cookie theme:', cookieTheme)
+      
+      if (cookieTheme && (cookieTheme === 'light' || cookieTheme === 'dark')) {
+        setThemeState(cookieTheme)
+        applyTheme(cookieTheme)
+      } else {
+        // No cookie, check system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        const defaultTheme = prefersDark ? 'dark' : 'light'
+        console.log('[useTheme] No cookie found, using system preference:', defaultTheme)
+        
+        setThemeState(defaultTheme)
+        applyTheme(defaultTheme)
+        
+        // Save to cookie
+        setCookie(THEME_COOKIE_NAME, defaultTheme)
       }
+    }
+
+    const applyTheme = (themeToApply: Theme) => {
+      // Clean up any existing classes
+      document.documentElement.classList.remove('light', 'dark')
+      
+      // Apply theme class to document
+      if (themeToApply === 'dark') {
+        document.documentElement.classList.add('dark')
+      }
+      
+      console.log('[useTheme] Applied theme class:', themeToApply)
     }
 
     loadTheme()
 
-    // Listen for storage changes (from other tabs/windows)
-    const handleStorageChange = (e: StorageEvent) => {
-      console.log('[useTheme] Storage event detected:', e.key, e.newValue, 'from:', e.url)
-      if (e.key === THEME_STORAGE_KEY) {
-        loadTheme()
+    // Poll for cookie changes (since storage events don't work for cookies)
+    let lastCookieValue = getCookie(THEME_COOKIE_NAME)
+    const pollInterval = setInterval(() => {
+      const currentCookieValue = getCookie(THEME_COOKIE_NAME)
+      if (currentCookieValue !== lastCookieValue) {
+        console.log('[useTheme] Cookie changed from', lastCookieValue, 'to', currentCookieValue)
+        lastCookieValue = currentCookieValue
+        if (currentCookieValue && (currentCookieValue === 'light' || currentCookieValue === 'dark')) {
+          setThemeState(currentCookieValue)
+          applyTheme(currentCookieValue)
+        }
       }
-    }
+    }, 1000) // Check every second
 
-    window.addEventListener('storage', handleStorageChange)
-    
     // Listen for theme changes in the same tab
     const handleThemeChange = (e: CustomEvent) => {
-      setThemeState(e.detail as Theme)
+      const newTheme = e.detail as Theme
+      console.log('[useTheme] Theme change event received:', newTheme)
+      setThemeState(newTheme)
+      applyTheme(newTheme)
     }
     
     window.addEventListener('theme-change', handleThemeChange as EventListener)
     
     return () => {
-      window.removeEventListener('storage', handleStorageChange)
+      clearInterval(pollInterval)
       window.removeEventListener('theme-change', handleThemeChange as EventListener)
     }
   }, [])
@@ -98,12 +120,8 @@ export function useTheme() {
     console.log('[useTheme] Setting theme to:', newTheme)
     setThemeState(newTheme)
     
-    // Update localStorage in zustand format for compatibility
-    const storage: ThemeStorage = {
-      state: { theme: newTheme },
-      version: 0
-    }
-    localStorage.setItem(THEME_STORAGE_KEY, JSON.stringify(storage))
+    // Update cookie
+    setCookie(THEME_COOKIE_NAME, newTheme)
     
     // Update document class
     document.documentElement.classList.remove('light', 'dark')

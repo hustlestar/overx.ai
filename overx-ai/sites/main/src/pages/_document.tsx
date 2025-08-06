@@ -44,37 +44,16 @@ export default function Document() {
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
-                try {
-                  // Check for theme in cookie first (cross-subdomain)
-                  const cookieTheme = document.cookie.split(';').find(c => c.trim().startsWith('overx-theme='));
-                  if (cookieTheme) {
-                    const theme = cookieTheme.split('=')[1];
-                    if (theme === 'light') {
-                      document.documentElement.classList.add('light');
-                      document.documentElement.classList.remove('dark');
-                    } else {
-                      document.documentElement.classList.add('dark');
-                      document.documentElement.classList.remove('light');
-                    }
-                    return;
-                  }
-                  
-                  // Fallback to localStorage
-                  const stored = localStorage.getItem('theme-storage');
-                  if (stored) {
-                    const parsed = JSON.parse(stored);
-                    if (parsed.state.theme === 'light') {
-                      document.documentElement.classList.add('light');
-                      document.documentElement.classList.remove('dark');
-                    } else {
-                      document.documentElement.classList.add('dark');
-                      document.documentElement.classList.remove('light');
-                    }
-                  } else {
-                    // Default to dark theme
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch (e) {}
+                function getCookie(name) {
+                  const value = '; ' + document.cookie;
+                  const parts = value.split('; ' + name + '=');
+                  if (parts.length === 2) return parts.pop().split(';').shift();
+                }
+                
+                const theme = getCookie('overx-theme') || 'dark';
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                }
               })();
             `,
           }}
