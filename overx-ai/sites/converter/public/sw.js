@@ -1,4 +1,4 @@
-const CACHE_NAME = 'converter-v1'
+const CACHE_NAME = 'converter-v2'
 const RUNTIME_CACHE = 'runtime-cache'
 
 // URLs to cache on install
@@ -62,6 +62,28 @@ self.addEventListener('fetch', (event) => {
   // Skip chrome-extension and other non-http(s) URLs
   if (!url.protocol.startsWith('http')) return
 
+  // Handle navigation requests (HTML pages) with network-first strategy
+  if (request.mode === 'navigate' || request.destination === 'document') {
+    event.respondWith(
+      fetch(request, { redirect: 'follow' })
+        .then((response) => {
+          // Cache successful responses
+          if (response.status === 200) {
+            const responseClone = response.clone()
+            caches.open(RUNTIME_CACHE).then((cache) => {
+              cache.put(request, responseClone)
+            })
+          }
+          return response
+        })
+        .catch(() => {
+          // Fallback to cache on network failure
+          return caches.match(request)
+        })
+    )
+    return
+  }
+
   // Handle API requests with network-first strategy
   if (url.pathname.startsWith('/api/')) {
     event.respondWith(
@@ -84,7 +106,7 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
-  // Handle other requests with cache-first strategy
+  // Handle other requests (static assets) with cache-first strategy
   event.respondWith(
     caches.match(request).then((response) => {
       if (response) {

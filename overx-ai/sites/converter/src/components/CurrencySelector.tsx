@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom'
 import { useTranslation } from 'next-i18next'
 import { Currency } from '@/types/api'
 import { localizeCurrencyName } from '@/utils/localizeProviders'
+import { CurrencyFlag } from './CurrencyFlag'
 
 interface CurrencySelectorProps {
   label: string
@@ -72,6 +73,7 @@ export function CurrencySelector({ label, value, onChange, currencies = [] }: Cu
         disabled={!selectedCurrency}
       >
         <div className="flex items-center space-x-2">
+          {selectedCurrency && <CurrencyFlag currencyCode={selectedCurrency.code} className="text-lg" />}
           <span className="font-semibold">{selectedCurrency?.code || value}</span>
           <span className="text-sm text-gray-400 light:text-gray-600">{selectedCurrencyName || 'Loading...'}</span>
         </div>
@@ -127,7 +129,7 @@ export function CurrencySelector({ label, value, onChange, currencies = [] }: Cu
                       <span className="font-semibold">{currency.code}</span>
                       <span className="text-sm text-gray-400 light:text-gray-600 ml-2">{localizedName}</span>
                     </div>
-                    {currency.symbol && <span className="text-lg">{currency.symbol}</span>}
+                    <CurrencyFlag currencyCode={currency.code} className="text-lg" />
                   </button>
                 )
               })}

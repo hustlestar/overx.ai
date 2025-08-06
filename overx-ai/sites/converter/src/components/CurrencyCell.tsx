@@ -1,4 +1,5 @@
 import { TFunction } from 'next-i18next'
+import { CurrencyFlag } from './CurrencyFlag'
 
 interface CurrencyCellProps {
   currencyCode: string
@@ -25,7 +26,7 @@ export function CurrencyCell({
             {isSelected ? '−' : '+'}
           </span>
         ) : (
-          symbol || <span className="text-xs sm:text-sm font-mono">{currencyCode}</span>
+          <CurrencyFlag currencyCode={currencyCode} className="text-xl sm:text-2xl" />
         )}
       </div>
       <div>
