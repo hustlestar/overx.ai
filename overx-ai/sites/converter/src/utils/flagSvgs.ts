@@ -363,6 +363,174 @@ export const FLAG_SVGS: Record<string, string> = {
       <path d="M5 -2l1 3h3l-2.5 2 1 3-2.5-2-2.5 2 1-3-2.5-2h3z" transform="rotate(-20)"/>
     </g>
   </svg>`,
+  
+  // European currencies (continued)
+  HU: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#CD212A"/>
+    <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+    <rect y="26.66" width="60" height="13.34" fill="#436F4D"/>
+  </svg>`,
+  
+  RO: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="40" fill="#002B7F"/>
+    <rect x="20" width="20" height="40" fill="#FCD116"/>
+    <rect x="40" width="20" height="40" fill="#CE1126"/>
+  </svg>`,
+  
+  BG: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#fff"/>
+    <rect y="13.33" width="60" height="13.33" fill="#00966E"/>
+    <rect y="26.66" width="60" height="13.34" fill="#D62612"/>
+  </svg>`,
+  
+  // Asian currencies (continued)
+  VN: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#DA020E"/>
+    <g fill="#FFFF00" transform="translate(30 20)">
+      <path d="M0-8l2.5 7.5L-6-5h12l-8.5 5z"/>
+    </g>
+  </svg>`,
+  
+  BD: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#006A4E"/>
+    <circle cx="24" cy="20" r="10" fill="#F42A41"/>
+  </svg>`,
+  
+  LK: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#FFB300"/>
+    <rect width="15" height="40" fill="#00534E"/>
+    <rect x="15" width="5" height="40" fill="#FF7900"/>
+    <rect x="20" width="40" height="40" fill="#8D153A"/>
+  </svg>`,
+  
+  NP: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#DC143C"/>
+    <path d="M0 0v20l30-10zM0 20v20l30-10z" fill="#003893"/>
+    <g fill="#fff" transform="translate(15 15)">
+      <circle r="2"/>
+      <path d="M0 10l1 3h3l-2.5 2 1 3-2.5-2-2.5 2 1-3-2.5-2h3z"/>
+    </g>
+  </svg>`,
+  
+  // Middle Eastern currencies
+  IR: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#22b14c"/>
+    <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+    <rect y="26.66" width="60" height="13.34" fill="#ed2939"/>
+    <g fill="#c8102e" transform="translate(30 20)">
+      <circle r="4" fill="none" stroke="#c8102e" stroke-width="1"/>
+      <path d="M0-2l1 1-1 1-1-1z"/>
+    </g>
+  </svg>`,
+  
+  IQ: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#ce1126"/>
+    <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+    <rect y="26.66" width="60" height="13.34" fill="#000"/>
+    <g fill="#007a33" transform="translate(30 20)">
+      <path d="M-8-2h16c0 2-4 4-8 4s-8-2-8-4"/>
+    </g>
+  </svg>`,
+  
+  // African currencies
+  ET: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#078930"/>
+    <rect y="13.33" width="60" height="13.33" fill="#FCDD09"/>
+    <rect y="26.66" width="60" height="13.34" fill="#DA020E"/>
+    <g fill="#0F47AF" transform="translate(30 20)">
+      <circle r="8"/>
+      <path d="M0-6l2 4-2 4-2-4z" fill="#FCDD09"/>
+    </g>
+  </svg>`,
+  
+  KE: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#fff"/>
+    <rect width="60" height="8" fill="#000"/>
+    <rect y="12" width="60" height="16" fill="#CE1126"/>
+    <rect y="32" width="60" height="8" fill="#000"/>
+    <g fill="#fff" transform="translate(30 20)">
+      <ellipse rx="8" ry="6" fill="#CE1126"/>
+      <ellipse rx="6" ry="4" fill="#fff"/>
+      <ellipse rx="4" ry="2" fill="#000"/>
+    </g>
+  </svg>`,
+  
+  TZ: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#00A550"/>
+    <path d="M0 40l60-40v8L8 40z" fill="#000"/>
+    <path d="M0 40l60-40v16L16 40z" fill="#FCD116"/>
+    <path d="M60 0L0 40h8L60 8z" fill="#000"/>
+    <path d="M60 0L0 40h16L60 16z" fill="#1E90FF"/>
+  </svg>`,
+  
+  UG: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="6.67" fill="#000"/>
+    <rect y="6.67" width="60" height="6.67" fill="#FCDC04"/>
+    <rect y="13.33" width="60" height="6.67" fill="#D90000"/>
+    <rect y="20" width="60" height="6.67" fill="#FCDC04"/>
+    <rect y="26.67" width="60" height="6.67" fill="#000"/>
+    <rect y="33.33" width="60" height="6.67" fill="#FCDC04"/>
+    <circle cx="30" cy="20" r="8" fill="#fff"/>
+    <g fill="#000" transform="translate(30 20)">
+      <circle r="4"/>
+    </g>
+  </svg>`,
+  
+  GH: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#CE1126"/>
+    <rect y="13.33" width="60" height="13.33" fill="#FCD116"/>
+    <rect y="26.66" width="60" height="13.34" fill="#006B3F"/>
+    <g fill="#000" transform="translate(30 20)">
+      <path d="M0-6l1.5 4.5h4.7l-3.8 2.8 1.5 4.5-3.9-2.8-3.8 2.8 1.5-4.5-3.9-2.8h4.7z"/>
+    </g>
+  </svg>`,
+  
+  NG: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="20" height="40" fill="#008751"/>
+    <rect x="20" width="20" height="40" fill="#fff"/>
+    <rect x="40" width="20" height="40" fill="#008751"/>
+  </svg>`,
+  
+  // Central Asian currencies
+  KZ: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#00AFCA"/>
+    <g fill="#FEC20C" transform="translate(30 20)">
+      <circle r="8"/>
+      <path d="M0-5l-2 4 2 4 2-4z"/>
+    </g>
+  </svg>`,
+  
+  UZ: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="13.33" fill="#1EB53A"/>
+    <rect y="13.33" width="60" height="13.33" fill="#fff"/>
+    <rect y="26.66" width="60" height="13.34" fill="#0099B5"/>
+    <g fill="#fff" transform="translate(15 10)">
+      <circle r="4"/>
+      <circle cx="2" r="3.2" fill="#CE1126"/>
+    </g>
+    <g fill="#fff" transform="translate(35 10)">
+      <path d="M0 0l.5 1.5h1.5l-1.2 1 .5 1.5-1.3-1-1.2 1 .5-1.5-1.3-1h1.5z"/>
+      <path d="M5 0l.5 1.5h1.5l-1.2 1 .5 1.5-1.3-1-1.2 1 .5-1.5-1.3-1h1.5z"/>
+      <path d="M10 0l.5 1.5h1.5l-1.2 1 .5 1.5-1.3-1-1.2 1 .5-1.5-1.3-1h1.5z"/>
+    </g>
+  </svg>`,
+  
+  // Additional Pacific currencies
+  FJ: `<svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg">
+    <rect width="60" height="40" fill="#68BFE5"/>
+    <g stroke="#fff" stroke-width="4" fill="none">
+      <path d="M0 0l30 20M30 0L0 20"/>
+    </g>
+    <g stroke="#CF142B" stroke-width="2.4" fill="none">
+      <path d="M0 0l30 20M30 0L0 20"/>
+    </g>
+    <g stroke="#fff" stroke-width="6.67">
+      <path d="M15 0v20M0 10h30"/>
+    </g>
+    <g stroke="#CF142B" stroke-width="4">
+      <path d="M15 0v20M0 10h30"/>
+    </g>
+  </svg>`,
 }
 
 // Function to get flag SVG as data URL
