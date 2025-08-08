@@ -2,6 +2,11 @@
 User-agent: *
 Allow: /
 
+# Block CV and API endpoints from indexing
+Disallow: /cv
+Disallow: /api/
+Disallow: /*/api/
+
 # Sitemap
 Sitemap: https://overx.ai/sitemap.xml
 Sitemap: https://overx.ai/sitemap-index.xml

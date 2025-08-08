@@ -8,6 +8,7 @@ async function generateSitemaps() {
   // Main site sitemap
   const mainGenerator = new SitemapGenerator({
     hostname: 'https://overx.ai',
+    exclude: ['cv.tsx'], // Exclude CV from sitemap
     priority: {
       '^/$': 1.0,
       '^/products': 0.9,
@@ -22,7 +23,8 @@ async function generateSitemaps() {
   })
 
   const mainPages = await mainGenerator.generateFromPages(
-    path.join(__dirname, '../sites/main/src/pages')
+    path.join(__dirname, '../sites/main/src/pages'),
+    ['en', 'es', 'ru'] // Include all locales
   )
   
   const mainSitemap = mainGenerator.generateXml(mainPages)

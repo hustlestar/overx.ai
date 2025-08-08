@@ -36,6 +36,23 @@ const nextConfig = {
       },
     ]
   },
+  
+  // Redirect www to non-www
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.overx.ai',
+          },
+        ],
+        destination: 'https://overx.ai/:path*',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig

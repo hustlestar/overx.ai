@@ -22,7 +22,7 @@ interface SitemapConfig {
 export declare class SitemapGenerator {
     private config;
     constructor(config: SitemapConfig);
-    generateFromPages(pagesDir: string): Promise<SitemapUrl[]>;
+    generateFromPages(pagesDir: string, locales?: string[]): Promise<SitemapUrl[]>;
     private pageToRoute;
     private getPriority;
     private getChangefreq;

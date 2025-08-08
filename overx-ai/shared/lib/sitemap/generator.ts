@@ -32,7 +32,7 @@ export class SitemapGenerator {
     this.config = config
   }
 
-  async generateFromPages(pagesDir: string): Promise<SitemapUrl[]> {
+  async generateFromPages(pagesDir: string, locales?: string[]): Promise<SitemapUrl[]> {
     const pages = await glob('**/*.{ts,tsx,js,jsx}', {
       cwd: pagesDir,
       ignore: [
@@ -44,15 +44,40 @@ export class SitemapGenerator {
       ]
     })
 
-    return pages.map(page => {
+    const urls: SitemapUrl[] = []
+
+    for (const page of pages) {
       const route = this.pageToRoute(page)
-      return {
-        loc: route,
-        lastmod: new Date().toISOString(),
-        changefreq: this.getChangefreq(route),
-        priority: this.getPriority(route)
+      
+      if (locales && locales.length > 0) {
+        // Generate URLs for each locale
+        for (const locale of locales) {
+          const localizedRoute = locale === 'en' ? route : `/${locale}${route}`
+          const alternates = locales.map(loc => ({
+            hreflang: loc,
+            href: `${this.config.hostname}${loc === 'en' ? route : `/${loc}${route}`}`
+          }))
+
+          urls.push({
+            loc: localizedRoute,
+            lastmod: new Date().toISOString(),
+            changefreq: this.getChangefreq(route),
+            priority: this.getPriority(route),
+            alternates
+          })
+        }
+      } else {
+        // Single language site
+        urls.push({
+          loc: route,
+          lastmod: new Date().toISOString(),
+          changefreq: this.getChangefreq(route),
+          priority: this.getPriority(route)
+        })
       }
-    })
+    }
+
+    return urls
   }
 
   private pageToRoute(page: string): string {

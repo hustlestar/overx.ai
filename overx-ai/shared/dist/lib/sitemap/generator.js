@@ -11,7 +11,7 @@ class SitemapGenerator {
     constructor(config) {
         this.config = config;
     }
-    async generateFromPages(pagesDir) {
+    async generateFromPages(pagesDir, locales) {
         const pages = await (0, glob_1.glob)('**/*.{ts,tsx,js,jsx}', {
             cwd: pagesDir,
             ignore: [
@@ -22,15 +22,37 @@ class SitemapGenerator {
                 ...(this.config.exclude || [])
             ]
         });
-        return pages.map(page => {
+        const urls = [];
+        for (const page of pages) {
             const route = this.pageToRoute(page);
-            return {
-                loc: route,
-                lastmod: new Date().toISOString(),
-                changefreq: this.getChangefreq(route),
-                priority: this.getPriority(route)
-            };
-        });
+            if (locales && locales.length > 0) {
+                // Generate URLs for each locale
+                for (const locale of locales) {
+                    const localizedRoute = locale === 'en' ? route : `/${locale}${route}`;
+                    const alternates = locales.map(loc => ({
+                        hreflang: loc,
+                        href: `${this.config.hostname}${loc === 'en' ? route : `/${loc}${route}`}`
+                    }));
+                    urls.push({
+                        loc: localizedRoute,
+                        lastmod: new Date().toISOString(),
+                        changefreq: this.getChangefreq(route),
+                        priority: this.getPriority(route),
+                        alternates
+                    });
+                }
+            }
+            else {
+                // Single language site
+                urls.push({
+                    loc: route,
+                    lastmod: new Date().toISOString(),
+                    changefreq: this.getChangefreq(route),
+                    priority: this.getPriority(route)
+                });
+            }
+        }
+        return urls;
     }
     pageToRoute(page) {
         let route = page
