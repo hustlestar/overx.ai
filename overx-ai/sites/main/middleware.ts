@@ -34,6 +34,13 @@ function getLocaleFromBrowser(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
   
+  // Handle www redirect first
+  if (request.nextUrl.hostname === 'www.overx.ai') {
+    const newUrl = new URL(request.url)
+    newUrl.hostname = 'overx.ai'
+    return NextResponse.redirect(newUrl, 301)
+  }
+  
   // Debug logging
   console.log('[Main Middleware] pathname:', pathname)
   console.log('[Main Middleware] all cookies:', request.cookies.getAll())
