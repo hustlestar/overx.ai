@@ -158,7 +158,7 @@ export default function PricingPage() {
                   </ul>
                   
                   <a
-                    href="https://t.me/learn_words_bot"
+                    href="https://t.me/world_word_war_bot"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block w-full text-center py-3 rounded-full font-medium transition-all duration-300 ${
@@ -180,7 +180,7 @@ export default function PricingPage() {
                 Get lifetime Plus access for early adopters - only $29.99!
               </p>
               <a
-                href="https://t.me/learn_words_bot"
+                href="https://t.me/world_word_war_bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-medium transition-all duration-300 hover:scale-105"
@@ -277,7 +277,7 @@ export default function PricingPage() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a 
-                href="https://t.me/learn_words_bot" 
+                href="https://t.me/world_word_war_bot" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30"
@@ -288,7 +288,7 @@ export default function PricingPage() {
                 </svg>
               </a>
               <a 
-                href="https://t.me/learn_words_bot" 
+                href="https://t.me/world_word_war_bot" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 border border-white/20 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:border-white/40"

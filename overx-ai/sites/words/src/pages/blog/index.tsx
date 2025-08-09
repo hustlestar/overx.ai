@@ -159,7 +159,7 @@ export default function BlogPage({ posts }: BlogPageProps) {
               Get the latest language learning tips and product updates delivered to your Telegram
             </p>
             <a 
-              href="https://t.me/learn_words_bot" 
+              href="https://t.me/world_word_war_bot" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"

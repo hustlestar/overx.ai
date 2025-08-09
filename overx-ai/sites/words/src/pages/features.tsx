@@ -257,7 +257,7 @@ export default function FeaturesPage() {
                 
                 <div className="flex justify-start">
                   <div className="bg-gray-800 rounded-2xl rounded-bl-none px-6 py-4 max-w-md">
-                    <p className="text-white mb-3">🎯 Translate: "to wake up"</p>
+                    <p className="text-white mb-3">🎯 Translate: &ldquo;to wake up&rdquo;</p>
                     <div className="space-y-2">
                       <button className="w-full text-left px-4 py-2 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors">
                         A) dormir
@@ -292,7 +292,7 @@ export default function FeaturesPage() {
               Start learning with the most advanced language bot on Telegram
             </p>
             <a 
-              href="https://t.me/learn_words_bot" 
+              href="https://t.me/world_word_war_bot" 
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30"

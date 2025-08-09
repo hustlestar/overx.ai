@@ -1,10 +1,10 @@
+import React, { useState } from 'react'
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
 import { BaseSEO } from '@overx-ai/shared'
 import Link from 'next/link'
-import { useState } from 'react'
 
 export default function HomePage() {
   const { t } = useTranslation('common')
@@ -94,7 +94,12 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Animation */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20 light:from-blue-50 light:via-purple-50 light:to-cyan-50" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23ffffff" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="m0 40l40-40h-40z"/%3E%3C/g%3E%3C/svg%3E')] light:bg-[url('data:image/svg+xml,%3Csvg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%23000000" fill-opacity="0.03" fill-rule="evenodd"%3E%3Cpath d="m0 40l40-40h-40z"/%3E%3C/g%3E%3C/svg%3E')]" />
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='m0 40l40-40h-40z'/%3E%3C/g%3E%3C/svg%3E")`
+          }}
+        />
         
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="mb-8 animate-bounce">
@@ -115,7 +120,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <a 
-              href="https://t.me/learn_words_bot" 
+              href="https://t.me/world_word_war_bot" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3 min-w-[200px] justify-center"
@@ -310,7 +315,7 @@ export default function HomePage() {
               <div key={index} className="glass-card p-8 rounded-xl border border-gray-700 light:border-gray-200">
                 <div className="text-3xl mb-4">{testimonial.flag}</div>
                 <blockquote className="text-gray-300 light:text-gray-600 mb-6 italic leading-relaxed">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <div>
                   <div className="font-semibold text-blue-400 light:text-blue-600">
@@ -430,7 +435,7 @@ export default function HomePage() {
               <div className="w-12 h-12 bg-blue-600 light:bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mb-3 mx-auto">
                 2
               </div>
-              <p className="text-sm text-gray-400 light:text-gray-500">Find @learn_words_bot</p>
+              <p className="text-sm text-gray-400 light:text-gray-500">Find @world_word_war_bot</p>
             </div>
             <div className="hidden sm:block text-blue-400 light:text-blue-600">→</div>
             <div className="text-center">
@@ -443,7 +448,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://t.me/learn_words_bot" 
+              href="https://t.me/world_word_war_bot" 
               target="_blank" 
               rel="noopener noreferrer"
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"

@@ -7,6 +7,9 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: true,
   
+  // Transpile the shared package
+  transpilePackages: ['@overx-ai/shared'],
+  
   async headers() {
     return [
       {

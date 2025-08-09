@@ -1,4 +1,4 @@
-import { ReactNode, useEffect } from 'react'
+import React, { ReactNode, useEffect } from 'react'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -54,7 +54,7 @@ export function Layout({ children }: LayoutProps) {
             
             <div className="flex items-center space-x-4">
               <a
-                href="https://t.me/learn_words_bot"
+                href="https://t.me/world_word_war_bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 transform hover:scale-105"
@@ -95,7 +95,7 @@ export function Layout({ children }: LayoutProps) {
               </p>
               <div className="flex space-x-4">
                 <a 
-                  href="https://t.me/learn_words_bot"
+                  href="https://t.me/world_word_war_bot"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 light:text-gray-600 light:hover:text-blue-600 transition-colors"
@@ -120,7 +120,7 @@ export function Layout({ children }: LayoutProps) {
               <ul className="space-y-2">
                 <li><Link href="/features" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Features</Link></li>
                 <li><Link href="/pricing" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Pricing</Link></li>
-                <li><a href="https://t.me/learn_words_bot" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Try Bot</a></li>
+                <li><a href="https://t.me/world_word_war_bot" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Try Bot</a></li>
               </ul>
             </div>
             

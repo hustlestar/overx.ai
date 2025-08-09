@@ -146,7 +146,7 @@ export default function BlogPostPage({ post }: BlogPostPageProps) {
                 Start your language learning journey today with Learn Words Bot
               </p>
               <a 
-                href="https://t.me/learn_words_bot" 
+                href="https://t.me/world_word_war_bot" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full font-medium transition-all duration-300 hover:scale-105"
