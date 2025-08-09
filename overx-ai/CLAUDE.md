@@ -10,12 +10,8 @@ overx-ai/
 │   ├── main/               # Next.js - overx.ai (port 3000)
 │   ├── blog/               # Next.js - blog.overx.ai (port 3001)
 │   ├── cv/                 # Static HTML - cv.overx.ai (port 3002)
-│   ├── converter/          # Next.js - converter.overx.ai (port 3003)
-│   ├── learn-words/        # Next.js - learn.overx.ai (port 3002)
-│   └── products/
-│       ├── product-a/      # Existing Jekyll
-│       ├── product-b/      # Static HTML/CSS
-│       └── product-c/      # Next.js with SSG
+│   ├── converter/          # Next.js - rates.overx.ai (port 3003)
+│   └── words/              # Next.js - words.overx.ai (port 3004)
 ├── shared/                 # Shared components and utilities
 ├── seo-tools/             # SEO monitoring and health checks
 └── scripts/               # Build and maintenance scripts
@@ -26,7 +22,7 @@ overx-ai/
 - **Blog**: http://localhost:3001 - Blog platform
 - **CV**: http://localhost:3002 - Professional CV/Resume (AI & Agent Development focus)
 - **Converter**: http://localhost:3003 - Currency converter with Chrome extension
-- **Learn Words**: http://localhost:3002 - Language learning platform
+- **Words**: http://localhost:3004 - Learn Words Telegram bot landing page
 
 ## Development Commands
 ```bash
@@ -37,7 +33,7 @@ npm run dev                 # Start all sites in development mode
 npm run build              # Build main site only
 npm run build:all          # Build all sites
 npm run build:converter    # Build converter site
-npm run build:learn        # Build learn-words site
+npm run build:words        # Build words site
 npm run generate-sitemap   # Generate XML sitemaps for all sites
 npm run check-seo         # Run SEO health audit
 

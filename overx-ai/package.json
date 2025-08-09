@@ -10,7 +10,7 @@
     "dev": "turbo run dev",
     "build": "npm run build:shared && turbo run build --filter=@overx-ai/main",
     "build:all": "npm run build:shared && turbo run build",
-    "build:learn": "npm run build:shared && turbo run build --filter=@overx-ai/learn-words",
+    "build:words": "npm run build:shared && turbo run build --filter=@overx-ai/words",
     "build:converter": "npm run build:shared && turbo run build --filter=@overx-ai/converter",
     "build:shared": "cd shared && npm run build",
     "postbuild": "npm run generate-sitemap",

@@ -60,6 +60,29 @@ async function generateSitemaps() {
   await generateConverterSitemap()
   console.log('✅ Converter site sitemap generated')
 
+  // Words site sitemap
+  const wordsGenerator = new SitemapGenerator({
+    hostname: 'https://words.overx.ai',
+    changefreq: {
+      '^/$': 'daily',
+      '^/features': 'weekly',
+      '^/pricing': 'monthly',
+      '^/blog': 'weekly'
+    }
+  })
+
+  const wordsPages = await wordsGenerator.generateFromPages(
+    path.join(__dirname, '../sites/words/src/pages')
+  )
+  
+  const wordsSitemap = wordsGenerator.generateXml(wordsPages)
+  await wordsGenerator.writeToFile(
+    wordsSitemap,
+    path.join(__dirname, '../sites/words/public/sitemap.xml')
+  )
+  
+  console.log('✅ Words site sitemap generated')
+
   // Generate sitemap index
   const indexGenerator = new SitemapGenerator({
     hostname: 'https://overx.ai'
@@ -69,6 +92,7 @@ async function generateSitemaps() {
     { loc: 'https://overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://blog.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://rates.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
+    { loc: 'https://words.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://producta.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://productb.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://productc.overx.ai/sitemap.xml', lastmod: new Date().toISOString() }
