@@ -24,6 +24,10 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
     return <div>Post not found</div>
   }
 
+  // ARCHITECTURE NOTE: Hero image auto-displays, other images need markdown references
+  // If content is empty, check for duplicate slugs in metadata.ts and complete posts
+
+
   // Get primary image for SEO - either legacy image or first from images array
   const primaryImage = post.image || (post.images && post.images[0]) || {
     url: '/images/blog/default-hero.jpg',

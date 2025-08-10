@@ -1,18 +1,33 @@
 import { BlogPost } from './types'
 import { blogMetadata } from '@/content/blog/metadata'
 
-// Import content for each blog post
+/**
+ * BLOG SYSTEM ARCHITECTURE DOCUMENTATION
+ * 
+ * CRITICAL: Never create duplicate slugs between legacy and complete posts!
+ * 
+ * Two post types:
+ * 1. LEGACY POSTS: metadata.ts + separate content files → legacyPosts
+ * 2. COMPLETE POSTS: individual files with full objects → added directly to blogPosts
+ * 
+ * getBlogPost() returns FIRST match - duplicates cause empty content display!
+ */
+
+// Import content for legacy blog posts (metadata + separate content)
 import { content as transparentRatesContent } from '@/content/blog/why-transparent-exchange-rates-matter-international-business'
 import { content as saveTravelingContent } from '@/content/blog/save-money-traveling-currency-converter-chrome-extension'
 import { content as compareApisContent } from '@/content/blog/compare-currency-exchange-apis-2024-complete-guide'
 import { content as currencyAlertsContent } from '@/content/blog/real-time-currency-alerts-maximize-exchange-rates'
 import { content as cryptoVsTraditionalContent } from '@/content/blog/cryptocurrency-vs-traditional-currency-exchange-2024'
 import { content as avoidDccContent } from '@/content/blog/avoid-dynamic-currency-conversion-scams-complete-guide'
+
+// Import complete post objects (self-contained with metadata + content)
 import { completeGuideToMathematicalCurrencyConversion } from '@/content/blog/complete-guide-currency-conversion-mathematical-expressions'
 import { howToConvertCurrencyWithMathematicalExpressions } from '@/content/blog/how-to-convert-currency-mathematical-expressions-tutorial'
 import { advancedCurrencyMathComplexExpressions } from '@/content/blog/advanced-currency-math-complex-multi-currency-expressions'
 
-// Map content to metadata (legacy posts only)
+// Map content to metadata for legacy posts only
+// WARNING: Only add slugs here that exist in metadata.ts, never complete posts!
 const contentMap: Record<string, typeof transparentRatesContent> = {
   'why-transparent-exchange-rates-matter-international-business': transparentRatesContent,
   'save-money-traveling-currency-converter-chrome-extension': saveTravelingContent,
@@ -22,20 +37,24 @@ const contentMap: Record<string, typeof transparentRatesContent> = {
   'avoid-dynamic-currency-conversion-scams-complete-guide': avoidDccContent,
 }
 
-// Combine metadata with content for legacy posts
+// Combine metadata with content for legacy posts (6 total)
 const legacyPosts: BlogPost[] = blogMetadata.map(post => ({
   ...post,
   content: contentMap[post.slug] || { en: '', es: '', ru: '' }
 }))
 
-// Add new posts directly
+// Combine legacy posts with complete posts (order matters for getBlogPost!)
 export const blogPosts: BlogPost[] = [
-  ...legacyPosts,
-  completeGuideToMathematicalCurrencyConversion,
-  howToConvertCurrencyWithMathematicalExpressions,
-  advancedCurrencyMathComplexExpressions,
+  ...legacyPosts, // 6 legacy posts with metadata.ts + separate content
+  completeGuideToMathematicalCurrencyConversion,    // Complete post object
+  howToConvertCurrencyWithMathematicalExpressions, // Complete post object  
+  advancedCurrencyMathComplexExpressions,          // Complete post object
 ]
 
+/**
+ * Get blog post by slug
+ * CRITICAL: Returns FIRST match - ensure no duplicate slugs exist!
+ */
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug)
 }

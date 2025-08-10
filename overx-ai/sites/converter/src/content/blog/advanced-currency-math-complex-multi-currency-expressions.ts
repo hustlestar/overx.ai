@@ -91,6 +91,8 @@ In the world of quantitative finance, international business, and sophisticated 
 
 This comprehensive guide will transform you from a basic currency converter user into someone who can confidently handle the most complex multi-currency mathematical scenarios that professionals face daily.
 
+![Advanced Currency Math](/blog/advanced-currency-math-infographic.png)
+
 ## Who This Guide Is For
 
 ### Professional Audiences
@@ -166,6 +168,8 @@ Primary Container
 - **Risk Dimension**: Volatility adjustments, hedge ratios, exposure calculations
 
 ## Master Class: Complex Expression Examples
+
+![Complex Expression Screen](/blog/complex-expression-screen.png)
 
 ### Example 1: Advanced E-commerce Profit Optimization
 
@@ -358,6 +362,8 @@ Primary Rate Provider → Validation Layer → Fallback Providers → Calculatio
 
 ## Building Professional Workflows
 
+![Progression Flowchart](/blog/progression-flowchart.png)
+
 ### Expression Library Development
 
 **Reusable Expression Templates**:
@@ -462,6 +468,8 @@ En el mundo de las finanzas cuantitativas, los negocios internacionales y el mod
 
 Esta guía completa te transformará de un usuario básico de convertidores de divisas en alguien que puede manejar con confianza los escenarios matemáticos multi-divisa más complejos que los profesionales enfrentan diariamente.
 
+![Matemáticas Avanzadas de Divisas](/blog/advanced-currency-math-infographic.png)
+
 ## Para Quién es Esta Guía
 
 ### Audiencias Profesionales
@@ -528,6 +536,8 @@ Contenedor Primario
 - **Dimensión de Riesgo**: Ajustes de volatilidad, ratios de cobertura, cálculos de exposición
 
 ## Clase Magistral: Ejemplos de Expresiones Complejas
+
+![Pantalla de Expresiones Complejas](/blog/complex-expression-screen.png)
 
 ### Ejemplo 1: Optimización de Ganancias de Comercio Electrónico Avanzado
 
@@ -692,6 +702,8 @@ Las matemáticas avanzadas de divisas representan el pináculo de la sofisticaci
 В мире количественных финансов, международного бизнеса и сложного финансового моделирования базовой конверсии валют просто недостаточно. Профессиональные трейдеры, многонациональные корпорации и финансовые аналитики требуют продвинутых математических валютных инструментов, которые могут обрабатывать сложные, вложенные выражения с множественными валютами, сложной бизнес-логикой и корпоративной точностью.
 
 Это всеобъемлющее руководство преобразует вас из базового пользователя конвертеров валют в того, кто может уверенно обрабатывать самые сложные мульти-валютные математические сценарии, с которыми профессионалы сталкиваются ежедневно.
+
+![Продвинутая Валютная Математика](/blog/advanced-currency-math-infographic.png)
 
 ## Для Кого Это Руководство
 

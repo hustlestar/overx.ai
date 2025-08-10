@@ -1,6 +1,17 @@
 import { BlogPost } from '@/lib/blog/types'
 
-// Blog post metadata without content
+/**
+ * LEGACY BLOG POSTS METADATA
+ * 
+ * CRITICAL: Only add posts here that use separate content files!
+ * Complete posts (with inline content) should NOT be added here.
+ * 
+ * Adding a slug here that also exists as a complete post will cause
+ * empty content display due to duplicate slug resolution.
+ * 
+ * Current legacy posts: 6 total (with separate content files)
+ * Complete posts: 3 total (in individual files with full content)
+ */
 export const blogMetadata: Omit<BlogPost, 'content'>[] = [
   {
     slug: 'why-transparent-exchange-rates-matter-international-business',
@@ -287,150 +298,6 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
         metaTitle: 'Избегайте Мошенничества DCC: Полное Руководство | Exchange Rates Pro',
         metaDescription: 'DCC обходится путешественникам в миллионы. Узнайте, как распознать и избежать махинаций, экономя 3-12% на международных транзакциях.',
         keywords: ['динамическая конверсия валют', 'мошенничество DCC', 'избежать валютных махинаций', 'мошенничество деньги путешествия', 'комиссии международные транзакции', 'кредитная карта заграницей', 'мошенничество банкоматы', 'туристические ловушки валюта']
-      }
-    }
-  },
-  {
-    slug: 'complete-guide-currency-conversion-mathematical-expressions',
-    publishedAt: '2024-02-15T10:00:00Z',
-    author: {
-      name: 'Dr. Sarah Martinez',
-      role: 'Financial Technology Researcher & Currency Expert',
-    },
-    tags: ['mathematical-expressions', 'currency-converter', 'advanced-calculations', 'tutorial', 'fintech'],
-    readingTime: 12,
-    featured: true,
-    image: {
-      url: '/blog/mathematical-currency-conversion-hero.png',
-      alt: {
-        en: 'Professional business scene showing mathematical currency conversion with financial professionals using computers, currency symbols, and mathematical equations visible on screens',
-        es: 'Escena empresarial profesional mostrando conversión matemática de divisas con profesionales financieros usando computadoras, símbolos de divisas y ecuaciones matemáticas visibles en pantallas',
-        ru: 'Профессиональная бизнес-сцена, показывающая математическую конверсию валют с финансовыми профессионалами, использующими компьютеры, символы валют и математические уравнения на экранах'
-      },
-      width: 1344,
-      height: 768,
-    },
-    title: {
-      en: 'Complete Guide to Currency Conversion: From Basic Exchange to Complex Mathematical Expressions',
-      es: 'Guía Completa de Conversión de Divisas: Del Cambio Básico a Expresiones Matemáticas Complejas',
-      ru: 'Полное Руководство по Конверсии Валют: От Базового Обмена к Сложным Математическим Выражениям',
-    },
-    excerpt: {
-      en: 'Master advanced currency conversion with mathematical expressions. Learn how to calculate "(100 USD + 50 EUR) × 2 in GBP" and save hours on complex international financial calculations.',
-      es: 'Domina la conversión avanzada de divisas con expresiones matemáticas. Aprende a calcular "(100 USD + 50 EUR) × 2 en GBP" y ahorra horas en cálculos financieros internacionales complejos.',
-      ru: 'Освойте продвинутую конверсию валют с математическими выражениями. Изучите, как рассчитать "(100 USD + 50 EUR) × 2 в GBP" и экономьте часы на сложных международных финансовых расчетах.',
-    },
-    seo: {
-      en: {
-        metaTitle: 'Mathematical Currency Conversion Guide: Advanced Expression Calculator | Exchange Rates Pro',
-        metaDescription: 'Master complex currency calculations with mathematical expressions. Learn "(100 USD + 50 EUR) × 2 in GBP" and advanced techniques. Save hours on international finance.',
-        keywords: ['mathematical currency conversion', 'currency expression calculator', 'complex currency calculations', 'advanced exchange rates', 'mathematical expressions currency', 'multi-currency math', 'currency converter with expressions', 'financial calculation tools']
-      },
-      es: {
-        metaTitle: 'Guía Conversión Matemática de Divisas: Calculadora Expresiones | Exchange Rates Pro',
-        metaDescription: 'Domina cálculos complejos de divisas con expresiones matemáticas. Aprende "(100 USD + 50 EUR) × 2 en GBP" y técnicas avanzadas.',
-        keywords: ['conversión matemática divisas', 'calculadora expresiones divisas', 'cálculos complejos divisas', 'tipos cambio avanzados', 'expresiones matemáticas divisas', 'matemáticas multi-divisas', 'convertidor divisas expresiones', 'herramientas cálculo financiero']
-      },
-      ru: {
-        metaTitle: 'Руководство Математической Конверсии Валют: Калькулятор Выражений | Exchange Rates Pro',
-        metaDescription: 'Освойте сложные расчеты валют с математическими выражениями. Изучите "(100 USD + 50 EUR) × 2 в GBP" и продвинутые техники.',
-        keywords: ['математическая конверсия валют', 'калькулятор выражений валют', 'сложные расчеты валют', 'продвинутые курсы обмена', 'математические выражения валют', 'мульти-валютная математика', 'конвертер валют выражения', 'инструменты финансовых расчетов']
-      }
-    }
-  },
-  {
-    slug: 'how-to-convert-currency-mathematical-expressions-tutorial',
-    publishedAt: '2024-02-20T10:00:00Z',
-    author: {
-      name: 'Michael Rodriguez',
-      role: 'Tutorial Creator & UX Specialist',
-    },
-    tags: ['tutorial', 'mathematical-expressions', 'how-to', 'step-by-step', 'currency-calculator'],
-    readingTime: 8,
-    featured: true,
-    image: {
-      url: '/blog/tutorial-workspace-hero.png',
-      alt: {
-        en: 'Professional tutorial workspace showing laptop with Exchange Rates Pro interface, educational materials, and step-by-step learning setup',
-        es: 'Espacio de trabajo tutorial profesional mostrando laptop con interfaz de Exchange Rates Pro, materiales educativos y configuración de aprendizaje paso a paso',
-        ru: 'Профессиональное рабочее место для обучения с ноутбуком с интерфейсом Exchange Rates Pro, учебными материалами и пошаговой настройкой обучения'
-      },
-      width: 1344,
-      height: 768,
-    },
-    title: {
-      en: 'How to Convert Currency Using Mathematical Expressions: Complete Tutorial with Examples',
-      es: 'Cómo Convertir Divisas Usando Expresiones Matemáticas: Tutorial Completo con Ejemplos',
-      ru: 'Как Конвертировать Валюты Используя Математические Выражения: Полный Учебник с Примерами',
-    },
-    excerpt: {
-      en: 'Learn step-by-step how to use mathematical expressions for currency conversion. Master "(100 USD + 50 EUR) × 2 in GBP" and save hours on complex calculations with our practical tutorial.',
-      es: 'Aprende paso a paso cómo usar expresiones matemáticas para conversión de divisas. Domina "(100 USD + 50 EUR) × 2 en GBP" y ahorra horas en cálculos complejos con nuestro tutorial práctico.',
-      ru: 'Изучите пошагово, как использовать математические выражения для конверсии валют. Освойте "(100 USD + 50 EUR) × 2 в GBP" и экономьте часы на сложных расчетах с нашим практическим учебником.',
-    },
-    seo: {
-      en: {
-        metaTitle: 'Currency Math Expression Tutorial: Step-by-Step Guide | Exchange Rates Pro',
-        metaDescription: 'Learn step-by-step how to use mathematical expressions for currency conversion. Master complex calculations with practical examples and screenshots.',
-        keywords: ['currency expression tutorial', 'mathematical currency conversion', 'how to use currency expressions', 'currency calculator tutorial', 'step-by-step currency guide', 'currency math examples', 'exchange rates tutorial', 'multi-currency calculations']
-      },
-      es: {
-        metaTitle: 'Tutorial Expresiones Matemáticas de Divisas: Guía Paso a Paso | Exchange Rates Pro',
-        metaDescription: 'Aprende paso a paso cómo usar expresiones matemáticas para conversión de divisas. Domina cálculos complejos con ejemplos prácticos.',
-        keywords: ['tutorial expresiones divisas', 'conversión matemática divisas', 'cómo usar expresiones divisas', 'tutorial calculadora divisas', 'guía paso a paso divisas', 'ejemplos matemáticas divisas', 'tutorial tipos cambio', 'cálculos multi-divisas']
-      },
-      ru: {
-        metaTitle: 'Учебник Математических Выражений Валют: Пошаговое Руководство | Exchange Rates Pro',
-        metaDescription: 'Изучите пошагово, как использовать математические выражения для конверсии валют. Освойте сложные расчеты с практическими примерами.',
-        keywords: ['учебник выражений валют', 'математическая конверсия валют', 'как использовать выражения валют', 'учебник калькулятор валют', 'пошаговое руководство валюты', 'примеры математики валют', 'учебник курсы обмена', 'мульти-валютные расчеты']
-      }
-    }
-  },
-  {
-    slug: 'advanced-currency-math-complex-multi-currency-expressions',
-    publishedAt: '2024-02-25T10:00:00Z',
-    author: {
-      name: 'Dr. Jennifer Chang',
-      role: 'Quantitative Finance Expert & Advanced Systems Architect',
-    },
-    tags: ['advanced-calculations', 'mathematical-expressions', 'complex-formulas', 'professional-finance', 'quantitative-analysis'],
-    readingTime: 15,
-    featured: true,
-    image: {
-      url: '/blog/advanced-currency-math-hero.png',
-      alt: {
-        en: 'Advanced financial technology scene with multiple monitors showing complex mathematical expressions, currency trading floor with professionals analyzing multi-currency calculations',
-        es: 'Escena avanzada de tecnología financiera con múltiples monitores mostrando expresiones matemáticas complejas, piso de operaciones de divisas con profesionales analizando cálculos multi-divisa',
-        ru: 'Продвинутая сцена финансовых технологий с множественными мониторами, показывающими сложные математические выражения, валютный торговый зал с профессионалами, анализирующими мульти-валютные расчеты'
-      },
-      width: 1344,
-      height: 768,
-    },
-    title: {
-      en: 'Advanced Currency Math: How to Calculate Complex Multi-Currency Expressions Like a Pro',
-      es: 'Matemáticas Avanzadas de Divisas: Cómo Calcular Expresiones Complejas Multi-Divisa Como un Profesional',
-      ru: 'Продвинутая Валютная Математика: Как Рассчитывать Сложные Мульти-Валютные Выражения Как Профессионал',
-    },
-    excerpt: {
-      en: 'Master advanced multi-currency mathematical expressions with nested parentheses, complex business logic, and professional-grade precision. Learn enterprise-level currency calculation techniques used by quantitative analysts.',
-      es: 'Domina expresiones matemáticas multi-divisa avanzadas con paréntesis anidados, lógica empresarial compleja y precisión de grado profesional. Aprende técnicas de cálculo de divisas de nivel empresarial usadas por analistas cuantitativos.',
-      ru: 'Освойте продвинутые мульти-валютные математические выражения с вложенными скобками, сложной бизнес-логикой и профессиональной точностью. Изучите техники валютных расчетов корпоративного уровня, используемые количественными аналитиками.',
-    },
-    seo: {
-      en: {
-        metaTitle: 'Advanced Multi-Currency Math: Complex Expression Calculator | Exchange Rates Pro',
-        metaDescription: 'Master advanced multi-currency mathematical expressions with nested parentheses and complex business logic. Professional-grade precision for quantitative analysts.',
-        keywords: ['advanced currency math', 'complex multi-currency expressions', 'nested currency calculations', 'quantitative currency analysis', 'professional currency calculator', 'enterprise currency expressions', 'advanced exchange rate calculations', 'multi-currency business logic']
-      },
-      es: {
-        metaTitle: 'Matemáticas Multi-Divisa Avanzadas: Calculadora Expresiones Complejas | Exchange Rates Pro',
-        metaDescription: 'Domina expresiones matemáticas multi-divisa avanzadas con paréntesis anidados y lógica empresarial compleja. Precisión profesional para analistas cuantitativos.',
-        keywords: ['matemáticas avanzadas divisas', 'expresiones complejas multi-divisa', 'cálculos divisas anidados', 'análisis cuantitativo divisas', 'calculadora profesional divisas', 'expresiones empresariales divisas', 'cálculos avanzados tipo cambio', 'lógica empresarial multi-divisa']
-      },
-      ru: {
-        metaTitle: 'Продвинутая Мульти-Валютная Математика: Калькулятор Сложных Выражений | Exchange Rates Pro',
-        metaDescription: 'Освойте продвинутые мульти-валютные математические выражения с вложенными скобками и сложной бизнес-логикой. Профессиональная точность для количественных аналитиков.',
-        keywords: ['продвинутая математика валют', 'сложные мульти-валютные выражения', 'вложенные валютные расчеты', 'количественный анализ валют', 'профессиональный калькулятор валют', 'корпоративные выражения валют', 'продвинутые расчеты курсов', 'мульти-валютная бизнес-логика']
       }
     }
   }
