@@ -7,6 +7,9 @@ export * from './components/Performance'
 // UI Components
 export * from './components/UI'
 
+// Blog Components
+export * from './components/Blog'
+
 // Hooks
 export { useTheme } from './hooks/useTheme'
 export { useLanguageSync } from './hooks/useLanguageSync'
@@ -17,6 +20,9 @@ export * from './lib/schema'
 
 // SEO utilities
 export { ContentOptimizer } from './lib/seo/contentOptimizer'
+
+// Blog utilities
+export * from './lib/blog'
 
 // Content utilities
 export { keywordMap, getKeywordsForPage } from './content/keywords/keywordMap'

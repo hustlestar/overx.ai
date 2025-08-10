@@ -167,7 +167,7 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.languages13', 'productFeatures.spacedRepetition', 'productFeatures.voiceSupport', 'productFeatures.exerciseTypes4'],
-    href: 'https://learn.overx.ai'
+    href: 'https://words.overx.ai'
   },
   {
     id: 'yourLearner',
