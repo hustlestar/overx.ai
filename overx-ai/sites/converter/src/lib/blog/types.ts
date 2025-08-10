@@ -16,6 +16,15 @@ export interface BlogPost {
     width: number
     height: number
   }
+  // Multi-image system for enhanced blog posts
+  images?: Array<{
+    url: string
+    alt: Record<string, string>
+    width: number
+    height: number
+    type: 'hero' | 'featured' | 'content'
+    caption?: Record<string, string>
+  }>
   // Localized content
   title: Record<string, string>
   excerpt: Record<string, string>
