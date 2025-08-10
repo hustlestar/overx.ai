@@ -14,6 +14,16 @@ export default function BlogPage() {
   const posts = getAllBlogPosts()
   const currentLang = i18n.language as 'en' | 'es' | 'ru'
 
+  // Helper function to get primary image
+  const getPrimaryImage = (post: any) => {
+    return post.image || (post.images && post.images[0]) || {
+      url: '/images/blog/default-hero.jpg',
+      alt: { en: 'Blog post image', es: 'Imagen del artículo', ru: 'Изображение статьи' },
+      width: 1200,
+      height: 630
+    }
+  }
+
   const structuredData = {
     '@context': 'https://schema.org' as const,
     '@type': 'Blog',
@@ -61,13 +71,18 @@ export default function BlogPage() {
                 <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="relative h-64 md:h-80">
-                      <img 
-                        src={posts[0].image.url}
-                        alt={posts[0].image.alt[currentLang]}
-                        className="w-full h-full object-cover rounded-lg"
-                        width={posts[0].image.width}
-                        height={posts[0].image.height}
-                      />
+                      {(() => {
+                        const primaryImage = getPrimaryImage(posts[0])
+                        return (
+                          <img 
+                            src={primaryImage.url}
+                            alt={primaryImage.alt[currentLang] || primaryImage.alt.en}
+                            className="w-full h-full object-cover rounded-lg"
+                            width={primaryImage.width}
+                            height={primaryImage.height}
+                          />
+                        )
+                      })()}
                     </div>
                     <div className="p-8">
                       <div className="flex items-center gap-4 mb-4">
@@ -118,13 +133,18 @@ export default function BlogPage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group h-full">
                     <div className="relative h-48">
-                      <img 
-                        src={post.image.url}
-                        alt={post.image.alt[currentLang]}
-                        className="w-full h-full object-cover"
-                        width={post.image.width}
-                        height={post.image.height}
-                      />
+                      {(() => {
+                        const primaryImage = getPrimaryImage(post)
+                        return (
+                          <img 
+                            src={primaryImage.url}
+                            alt={primaryImage.alt[currentLang] || primaryImage.alt.en}
+                            className="w-full h-full object-cover"
+                            width={primaryImage.width}
+                            height={primaryImage.height}
+                          />
+                        )
+                      })()}
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-3 text-xs">
