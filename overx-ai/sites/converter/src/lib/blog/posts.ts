@@ -8,6 +8,9 @@ import { content as compareApisContent } from '@/content/blog/compare-currency-e
 import { content as currencyAlertsContent } from '@/content/blog/real-time-currency-alerts-maximize-exchange-rates'
 import { content as cryptoVsTraditionalContent } from '@/content/blog/cryptocurrency-vs-traditional-currency-exchange-2024'
 import { content as avoidDccContent } from '@/content/blog/avoid-dynamic-currency-conversion-scams-complete-guide'
+import { completeGuideToMathematicalCurrencyConversion } from '@/content/blog/complete-guide-currency-conversion-mathematical-expressions'
+import { howToConvertCurrencyTutorial } from '@/content/blog/how-to-convert-currency-mathematical-expressions-tutorial'
+import { advancedCurrencyMathComplexExpressions } from '@/content/blog/advanced-currency-math-complex-multi-currency-expressions'
 
 // Map content to metadata
 const contentMap: Record<string, typeof transparentRatesContent> = {
@@ -17,13 +20,24 @@ const contentMap: Record<string, typeof transparentRatesContent> = {
   'real-time-currency-alerts-maximize-exchange-rates': currencyAlertsContent,
   'cryptocurrency-vs-traditional-currency-exchange-2024': cryptoVsTraditionalContent,
   'avoid-dynamic-currency-conversion-scams-complete-guide': avoidDccContent,
+  'complete-guide-currency-conversion-mathematical-expressions': completeGuideToMathematicalCurrencyConversion.content,
+  'how-to-convert-currency-mathematical-expressions-tutorial': howToConvertCurrencyTutorial.content,
+  'advanced-currency-math-complex-multi-currency-expressions': advancedCurrencyMathComplexExpressions.content,
 }
 
-// Combine metadata with content
-export const blogPosts: BlogPost[] = blogMetadata.map(post => ({
+// Combine metadata with content for legacy posts
+const legacyPosts: BlogPost[] = blogMetadata.map(post => ({
   ...post,
   content: contentMap[post.slug] || { en: '', es: '', ru: '' }
 }))
+
+// Add new posts directly
+export const blogPosts: BlogPost[] = [
+  ...legacyPosts,
+  completeGuideToMathematicalCurrencyConversion,
+  howToConvertCurrencyTutorial,
+  advancedCurrencyMathComplexExpressions,
+]
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug)
