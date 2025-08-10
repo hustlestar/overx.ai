@@ -43,48 +43,48 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: "Passed my Spanish exam after just 3 months! The AI explanations made everything click.",
-      author: "Maria",
-      role: "University Student",
+      quote: t('testimonials.items.1.text'),
+      author: t('testimonials.items.1.author'),
+      role: t('testimonials.items.1.role'),
       flag: "🎓"
     },
     {
-      quote: "Landed my dream job in Berlin. Daily practice made German vocabulary second nature.",
-      author: "Alex", 
-      role: "Software Developer",
+      quote: t('testimonials.items.2.text'),
+      author: t('testimonials.items.2.author'), 
+      role: t('testimonials.items.2.role'),
       flag: "💼"
     },
     {
-      quote: "Traveled through 5 countries speaking local languages. This bot was my secret weapon!",
-      author: "Sarah",
-      role: "Digital Nomad", 
+      quote: t('testimonials.items.3.text'),
+      author: t('testimonials.items.3.author'),
+      role: t('testimonials.items.3.role'), 
       flag: "✈️"
     }
   ]
 
   const stats = [
-    { number: '50,000+', label: 'Active Learners' },
-    { number: '100+', label: 'Countries' },
-    { number: '2M+', label: 'Words Learned Monthly' },
-    { number: '4.8/5', label: 'Average Rating' }
+    { number: '50,000+', label: t('hero.stats.labels.users') },
+    { number: '100+', label: t('hero.stats.labels.countries') },
+    { number: '2M+', label: t('hero.stats.labels.words') },
+    { number: '13', label: t('hero.stats.labels.languages') }
   ]
 
   return (
     <Layout>
       {/* <BaseSEO
-        title="Learn Words Bot - AI-Powered Language Learning on Telegram"
+        title="World Word War Bot - AI-Powered Language Learning on Telegram"
         description="Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
         canonical="https://words.overx.ai"
         openGraph={{
           type: 'website',
           locale: 'en_US',
-          siteName: 'Learn Words Bot',
+          siteName: 'World Word War Bot',
           images: [
             {
               url: 'https://words.overx.ai/og-image.jpg',
               width: 1200,
               height: 630,
-              alt: 'Learn Words Bot - AI Language Learning'
+              alt: 'World Word War Bot - AI Language Learning'
             }
           ]
         }}
@@ -107,11 +107,11 @@ export default function HomePage() {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 gradient-text light:text-gray-900 leading-tight">
-            Learn Words Bot
+            {t('site.title')}
           </h1>
           
           <p className="text-xl md:text-2xl mb-4 text-gray-300 light:text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Your AI Language Learning Companion
+            {t('site.tagline')}
           </p>
           
           <p className="text-lg md:text-xl mb-12 text-gray-400 light:text-gray-500 max-w-3xl mx-auto">

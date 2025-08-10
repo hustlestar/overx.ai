@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Learn Words Bot",
+    "title": "World Word War Bot",
     "tagline": "Your AI Language Learning Companion",
     "description": "Master vocabulary in 13 languages with AI-powered learning"
   },
@@ -21,7 +21,16 @@
     "stats": {
       "users": "50,000+ Active Learners",
       "words": "2M+ Words Learned Monthly",
-      "languages": "13 Languages Supported"
+      "languages": "13 Languages Supported",
+      "countries": "100+ Countries",
+      "rating": "4.8/5 Average Rating",
+      "labels": {
+        "users": "Active Learners",
+        "words": "Words Learned Monthly",
+        "languages": "Languages Supported",
+        "countries": "Countries",
+        "rating": "Average Rating"
+      }
     }
   },
   "features": {

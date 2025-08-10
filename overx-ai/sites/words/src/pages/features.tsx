@@ -134,7 +134,7 @@ export default function FeaturesPage() {
     <>
       {/* <BaseSEO
         title={`Features - ${t('site.title')}`}
-        description="Explore all the powerful features of Learn Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning."
+        description="Explore all the powerful features of World Word War Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning."
         canonical="https://learn.overx.ai/features"
       /> */}
       

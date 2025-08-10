@@ -1,6 +1,6 @@
 {
   "site": {
-    "title": "Learn Words Bot",
+    "title": "World Word War Bot",
     "tagline": "Tu Compañero de Aprendizaje de Idiomas con IA",
     "description": "Domina el vocabulario en 13 idiomas con aprendizaje potenciado por IA"
   },
@@ -21,7 +21,16 @@
     "stats": {
       "users": "50,000+ Estudiantes Activos",
       "words": "2M+ Palabras Aprendidas Mensualmente",
-      "languages": "13 Idiomas Soportados"
+      "languages": "13 Idiomas Soportados",
+      "countries": "100+ Países",
+      "rating": "4.8/5 Valoración Promedio",
+      "labels": {
+        "users": "Estudiantes Activos",
+        "words": "Palabras Aprendidas Mensualmente",
+        "languages": "Idiomas Soportados",
+        "countries": "Países",
+        "rating": "Valoración Promedio"
+      }
     }
   },
   "features": {

@@ -9,7 +9,7 @@ readTime: "5 min read"
 
 # Mastering Spaced Repetition: The Science Behind Effective Vocabulary Learning
 
-Have you ever wondered why you forget new words just days after learning them? The answer lies in how our brains process and store information. Today, we'll explore the science of spaced repetition and how Learn Words Bot uses this powerful technique to help you achieve lasting vocabulary retention.
+Have you ever wondered why you forget new words just days after learning them? The answer lies in how our brains process and store information. Today, we'll explore the science of spaced repetition and how World Word War Bot uses this powerful technique to help you achieve lasting vocabulary retention.
 
 ## What is Spaced Repetition?
 
@@ -23,7 +23,7 @@ German psychologist Hermann Ebbinghaus discovered that we forget information exp
 - After 1 day: 74% forgotten
 - After 1 week: 79% forgotten
 
-## How Learn Words Bot Implements Spaced Repetition
+## How World Word War Bot Implements Spaced Repetition
 
 Our AI-powered algorithm tracks your performance on each word and calculates the optimal review time. Here's how it works:
 
@@ -38,7 +38,7 @@ Our AI-powered algorithm tracks your performance on each word and calculates the
 Practice daily, even if just for 5-10 minutes. Regular short sessions beat occasional long ones.
 
 ### 2. Focus on Context
-Don't just memorize translations. Pay attention to the example sentences Learn Words Bot provides.
+Don't just memorize translations. Pay attention to the example sentences World Word War Bot provides.
 
 ### 3. Use All Exercise Types
 Our 4 exercise types (direct translation, multiple choice, reverse translation, synonym differentiation) engage different aspects of memory.
@@ -48,7 +48,7 @@ Don't waste time on words you already know. Use the "mark as known" feature to o
 
 ## The Science Behind Success
 
-Studies show that spaced repetition can improve long-term retention by up to 200% compared to massed practice. Combined with AI-powered personalization, Learn Words Bot users report:
+Studies show that spaced repetition can improve long-term retention by up to 200% compared to massed practice. Combined with AI-powered personalization, World Word War Bot users report:
 - 85% better retention after 3 months
 - 70% faster vocabulary acquisition
 - 90% higher engagement rates

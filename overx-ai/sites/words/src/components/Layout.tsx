@@ -21,8 +21,7 @@ export function Layout({ children }: LayoutProps) {
     { name: 'Home', href: '/' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
-    // { name: 'Blog', href: '/blog' },
-    // { name: 'About', href: '/about' },
+    { name: 'Blog', href: '/blog' },
   ]
 
   return (
@@ -34,7 +33,7 @@ export function Layout({ children }: LayoutProps) {
             <div className="flex items-center space-x-8">
               <Link href="/" className="text-xl font-bold gradient-text light:text-gray-900 flex items-center gap-2">
                 <span className="text-2xl">🤖</span>
-                Learn Words Bot
+                {t('site.title')}
               </Link>
               <div className="hidden md:flex space-x-6">
                 {navigation.map((item) => (
@@ -88,7 +87,7 @@ export function Layout({ children }: LayoutProps) {
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">🤖</span>
                 <h3 className="text-xl font-bold gradient-text light:text-gray-900">
-                  Learn Words Bot
+                  World Word War Bot
                 </h3>
               </div>
               <p className="text-gray-400 light:text-gray-600 mb-6 max-w-md">

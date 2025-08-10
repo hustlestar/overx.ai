@@ -1,5 +1,5 @@
 ---
-title: "New Features in Learn Words Bot: January 2024 Update"
+title: "New Features in World Word War Bot: January 2024 Update"
 date: "2024-01-05"
 author: "Learn Words Team"
 category: "updates"
@@ -7,7 +7,7 @@ excerpt: "Voice support, enhanced AI explanations, and 3 new languages added! Se
 readTime: "3 min read"
 ---
 
-# New Features in Learn Words Bot: January 2024 Update
+# New Features in World Word War Bot: January 2024 Update
 
 We're excited to announce our biggest update yet! Based on your feedback and requests, we've added powerful new features to make your language learning journey even more effective.
 
@@ -85,7 +85,7 @@ These updates were inspired by your suggestions. Keep them coming! Contact us th
 ## 🚀 Update Now
 
 To access these new features:
-1. Open Learn Words Bot in Telegram
+1. Open World Word War Bot in Telegram
 2. Type `/update` to refresh
 3. Enjoy the enhanced experience!
 

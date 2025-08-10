@@ -53,7 +53,7 @@ export function getPostBySlug(slug: string): PostData | null {
       content: content || '',
       title: data.title || 'Untitled',
       date: data.date || new Date().toISOString(),
-      author: data.author || 'Learn Words Bot',
+      author: data.author || 'World Word War Bot',
       category: data.category || 'General',
       excerpt: data.excerpt || content?.substring(0, 150) + '...' || '',
       readTime: data.readTime || '5 min read',
