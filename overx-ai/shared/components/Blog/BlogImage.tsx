@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { cn } from '@overx-ai/shared/lib/utils'
 
 export interface BlogImageProps {
   src: string
@@ -36,34 +35,37 @@ export function BlogImage({
   const currentAlt = alt[locale as keyof typeof alt] || alt.en
   const currentCaption = caption?.[locale as keyof typeof caption] || caption?.en
 
-  const imageClasses = cn(
-    'rounded-lg object-cover',
-    {
-      'w-full h-[400px] md:h-[500px]': type === 'hero',
-      'w-full h-[250px] md:h-[300px] my-6': type === 'content',
-      'w-full h-[200px] md:h-[250px] my-4': type === 'featured',
-    },
-    className
-  )
+  const getImageClasses = () => {
+    let classes = 'rounded-lg object-cover'
+    
+    if (type === 'hero') classes += ' w-full h-[400px] md:h-[500px]'
+    else if (type === 'content') classes += ' w-full h-[250px] md:h-[300px] my-6'
+    else if (type === 'featured') classes += ' w-full h-[200px] md:h-[250px] my-4'
+    
+    if (className) classes += ` ${className}`
+    
+    return classes
+  }
 
-  const containerClasses = cn(
-    'overflow-hidden',
-    {
-      'mb-8': type === 'hero',
-      'my-6 max-w-4xl mx-auto': type === 'content',
-      'my-4 max-w-3xl mx-auto': type === 'featured',
-    }
-  )
+  const getContainerClasses = () => {
+    let classes = 'overflow-hidden'
+    
+    if (type === 'hero') classes += ' mb-8'
+    else if (type === 'content') classes += ' my-6 max-w-4xl mx-auto'
+    else if (type === 'featured') classes += ' my-4 max-w-3xl mx-auto'
+    
+    return classes
+  }
 
   return (
-    <figure className={containerClasses}>
+    <figure className={getContainerClasses()}>
       <div className="relative overflow-hidden rounded-lg">
         <Image
           src={src}
           alt={currentAlt}
           width={width}
           height={height}
-          className={imageClasses}
+          className={getImageClasses()}
           priority={priority}
           sizes={
             type === 'hero' 

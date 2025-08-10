@@ -568,7 +568,233 @@ Al final de esta guía paso a paso, serás capaz de:
 - **Evitar Errores de Cálculo**: Eliminar errores que ocurren al convertir manualmente entre pasos
 - **Construir Flujos de Trabajo Profesionales**: Crear procesos eficientes para uso empresarial y personal
 
-[El contenido continúa con traducciones al español de todas las secciones...]
+## Prerequisitos: Lo Que Necesitas Para Comenzar
+
+**Requisitos Técnicos**:
+- Navegador Chrome, Firefox, Safari, o Edge
+- Extensión Exchange Rates Pro (instalación gratuita)
+- Comprensión básica de operadores matemáticos (+, -, ×, ÷)
+
+**Conocimiento Matemático**:
+- Operaciones aritméticas elementales
+- Comprensión de paréntesis para orden de operaciones
+- Familiaridad con códigos de divisas (USD, EUR, GBP, etc.)
+
+**No Se Requieren Habilidades Avanzadas**: Este tutorial está diseñado para todos, desde estudiantes hasta profesionales de negocios, independientemente del trasfondo matemático.
+
+## Paso 1: Instalación de la Extensión Exchange Rates Pro
+
+### Proceso de Instalación
+
+1. **Visita la Chrome Web Store** (o la tienda de extensiones de tu navegador)
+2. **Busca "Exchange Rates Pro"**
+3. **Haz clic en "Agregar a Chrome"** (o equivalente para tu navegador)
+4. **Confirma la Instalación** cuando se te solicite
+5. **Busca el Ícono de la Extensión** en la barra de herramientas de tu navegador
+
+### Configuración Inicial
+
+Una vez instalada, verás el ícono de Exchange Rates Pro en tu navegador. Haz clic para abrir la interfaz por primera vez:
+
+- **Configuración de Divisa Predeterminada**: Elige tu divisa principal para resultados
+- **Selección de Proveedor de Tasas**: Elige tus fuentes de datos preferidas
+- **Frecuencia de Actualización**: Establece qué tan seguido se actualizan las tasas (recomendado: cada 30 minutos)
+
+## Paso 2: Entendiendo la Interfaz
+
+### Componentes Principales
+
+**Campo de Entrada**: Aquí es donde escribirás tus expresiones matemáticas
+- Área de texto grande y prominente
+- Soporta copiar/pegar para expresiones complejas
+- Auto-completado para códigos de divisas
+
+**Pantalla de Resultados**: Muestra tu respuesta calculada
+- Números grandes y fáciles de leer
+- Formateado con decimales apropiados y símbolos de divisa
+- Haz clic para copiar resultado al portapapeles
+
+**Panel de Configuración**: Accede a configuración avanzada
+- Preferencias de divisas
+- Configuraciones de precisión (lugares decimales)
+- Preferencias de fuente de tasas
+- Selección de idioma
+
+## Paso 3: Tu Primera Expresión Matemática
+
+Comencemos con el ejemplo más básico que demuestra el poder de las expresiones matemáticas.
+
+### Método Tradicional (La Forma Antigua)
+Si quisieras conocer el valor total de 100 USD y 50 EUR en libras británicas, típicamente:
+
+1. Convertir 100 USD a GBP: 100 × 0.79 = 79 GBP
+2. Convertir 50 EUR a GBP: 50 × 0.87 = 43.50 GBP  
+3. Sumar los resultados: 79 + 43.50 = 122.50 GBP
+
+**Problemas con este enfoque**:
+- Múltiples pasos propensos a errores
+- Necesidad de buscar múltiples tipos de cambio
+- El redondeo intermedio puede agravar errores
+- Consume tiempo para escenarios complejos
+
+### Método de Expresiones Matemáticas (La Nueva Forma)
+Con Exchange Rates Pro, simplemente escribe:
+\`\`\`
+(100 USD + 50 EUR) en GBP
+\`\`\`
+
+**¡Eso es todo!** Obtienes el resultado preciso instantáneamente: **122.47 GBP**
+
+### Desglosando la Sintaxis
+
+Entendamos cada parte de esta expresión:
+
+- **Paréntesis ( )**: Agrupa operaciones que deben calcularse juntas
+- **100 USD**: Cantidad seguida por código de divisa (el espacio es opcional)
+- **Signo más (+)**: Operador de suma (también soporta -, ×, ÷)
+- **50 EUR**: Segunda cantidad y divisa
+- **"en GBP"**: Palabra clave "en" seguida por divisa objetivo
+- **Resultado**: Automáticamente calculado usando tipos de cambio actuales
+
+## Paso 4: Operadores Matemáticos y Orden de Operaciones
+
+### Operadores Soportados
+
+**Suma (+)**:
+\`\`\`
+(100 USD + 50 EUR + 25 GBP) en CAD
+\`\`\`
+*Caso de uso*: Sumar gastos en múltiples divisas
+
+**Resta (-)**:
+\`\`\`
+(500 USD - 100 EUR) en JPY
+\`\`\`
+*Caso de uso*: Calcular ganancias después de deducir costos
+
+**Multiplicación (× o *)**:
+\`\`\`
+(150 USD × 3) en EUR
+\`\`\`
+*Caso de uso*: Escalar cantidades o calcular precios al por mayor
+
+**División (÷ o /)**:
+\`\`\`
+(1000 USD ÷ 4) en GBP
+\`\`\`
+*Caso de uso*: Dividir costos o calcular precios por unidad
+
+### Orden de Operaciones (PEMDAS)
+
+Las expresiones matemáticas siguen el orden estándar de operaciones:
+1. **Paréntesis** primero
+2. **Exponentes** (no soportado en contexto de divisas)
+3. **Multiplicación y División** (de izquierda a derecha)
+4. **Suma y Resta** (de izquierda a derecha)
+
+### Ejemplo Práctico: Orden de Operaciones Complejo
+
+**Expresión**: \`((100 USD + 50 EUR) × 2 - 25 GBP) en CAD\`
+
+**Cálculo paso a paso**:
+1. **Paréntesis primero**: 100 USD + 50 EUR = 150.85 USD (después de conversión)
+2. **Multiplicación**: 150.85 × 2 = 301.70 USD
+3. **Resta**: 301.70 USD - 25 GBP = 301.70 - 31.75 = 269.95 USD
+4. **Conversión final**: 269.95 USD en CAD = 364.43 CAD
+
+## Paso 5: Ejemplos del Mundo Real y Casos de Uso
+
+### Ejemplo 1: Planificación de Presupuesto de Viaje
+
+**Escenario**: Estás planeando un viaje europeo con gastos en diferentes divisas.
+
+**Enfoque tradicional**: 
+- Hotel: 200 USD por noche × 5 noches = 1000 USD → Convertir a EUR
+- Comidas: 50 EUR por día × 5 días = 250 EUR
+- Actividades: 100 GBP total → Convertir a EUR
+- Sumar todo en EUR
+
+**Enfoque de expresión matemática**:
+\`\`\`
+((hotel 200 USD × 5) + (comidas 50 EUR × 5) + actividades 100 GBP) en EUR
+\`\`\`
+
+**Resultado**: 1,347.23 EUR presupuesto total
+
+### Ejemplo 2: Cálculo de Ganancia de Comercio Electrónico
+
+**Escenario**: Negocio en línea calculando márgenes de ganancia con proveedores internacionales.
+
+**Expresión**:
+\`\`\`
+((costo_producto 25 USD + envío 8 EUR) × cantidad 100 - gastos_generales 150 GBP) × margen 1.3 en CAD
+\`\`\`
+
+**Lo que esto calcula**:
+- Costo del producto en USD más envío en EUR
+- Multiplicar por cantidad (100 unidades)
+- Restar costos generales en GBP
+- Aplicar 30% de margen de ganancia
+- Convertir resultado final a dólares canadienses
+
+**Resultado**: 4,521.67 CAD objetivo de ingresos
+
+## Ejercicios de Práctica
+
+### Ejercicios para Principiantes
+
+**Ejercicio 1**: Calcula el costo total de un carrito de compras con artículos en diferentes divisas:
+\`\`\`
+(artículo1 25.99 USD + artículo2 19.50 EUR + artículo3 12.75 GBP) en tu_divisa
+\`\`\`
+
+**Ejercicio 2**: Encuentra el precio promedio entre tres cotizaciones de diferentes divisas:
+\`\`\`
+(cotización1 100 USD + cotización2 85 EUR + cotización3 78 GBP) ÷ 3 en USD
+\`\`\`
+
+### Ejercicios Intermedios
+
+**Ejercicio 3**: Calcula ganancia neta después de impuestos y gastos:
+\`\`\`
+((ingresos 5000 USD + bonificación 500 EUR) - (impuestos 800 USD + gastos 200 GBP)) en CAD
+\`\`\`
+
+**Ejercicio 4**: Determina punto de equilibrio para negocio multi-divisa:
+\`\`\`
+(costos_fijos 2000 USD + costos_variables 15 EUR) ÷ (precio 50 USD - costo 30 EUR) en unidades
+\`\`\`
+
+## Conclusión: Dominando la Conversión Matemática de Divisas
+
+¡Felicitaciones! Ahora tienes las habilidades para manejar conversiones de divisas complejas con expresiones matemáticas. Has aprendido:
+
+✅ **Sintaxis Básica de Expresiones**: Cómo estructurar expresiones matemáticas de divisas  
+✅ **Cálculos Avanzados**: Operaciones complejas con múltiples divisas y operadores  
+✅ **Aplicaciones del Mundo Real**: Ejemplos prácticos para negocios, viajes y finanzas personales  
+✅ **Habilidades de Resolución de Problemas**: Cómo depurar y optimizar tus expresiones  
+✅ **Flujos de Trabajo Profesionales**: Mejores prácticas para precisión y eficiencia  
+
+### Tus Próximos Pasos
+
+1. **Comienza Simple**: Comienza con expresiones básicas y gradualmente aumenta la complejidad
+2. **Practica Diariamente**: Usa expresiones matemáticas para tus cálculos regulares de divisas
+3. **Construye Plantillas**: Crea expresiones reutilizables para tus escenarios más comunes
+4. **Comparte Conocimiento**: Enseña a otros en tu organización para multiplicar los beneficios de productividad
+
+### Beneficios de Tiempo y Precisión
+
+Al dominar la conversión matemática de divisas, podrás:
+
+- **Ahorrar 75% del tiempo de cálculo** comparado con métodos tradicionales
+- **Eliminar errores de conversión manual** que cuestan a las empresas millones anualmente  
+- **Manejar escenarios complejos** que anteriormente eran demasiado consumidores de tiempo para calcular con precisión
+- **Tomar mejores decisiones financieras** con análisis instantáneo y preciso de múltiples divisas
+- **Aumentar credibilidad profesional** con cálculos financieros precisos y rápidos
+
+**¿Listo para poner en práctica tus nuevas habilidades?** Comienza con el ejercicio que coincida con tus necesidades actuales, ya sea planificar tu próximo viaje internacional, analizar tu cartera de inversiones, o optimizar los cálculos de divisas de tu negocio.
+
+Recuerda: Todo experto fue alguna vez principiante. Mientras más practiques la conversión matemática de divisas, más natural y poderosa se vuelve. ¡Bienvenido al futuro del cálculo de divisas!
 `,
     ru: `
 # Как Конвертировать Валюты Используя Математические Выражения: Полный Учебник с Примерами
@@ -585,7 +811,233 @@ Al final de esta guía paso a paso, serás capaz de:
 - **Избегать Ошибок Расчета**: Устранить ошибки, которые происходят при ручной конверсии между шагами
 - **Строить Профессиональные Рабочие Процессы**: Создать эффективные процессы для бизнеса и личного использования
 
-[Содержание продолжается с русскими переводами всех разделов...]
+## Предварительные Требования: Что Вам Нужно для Начала
+
+**Технические Требования**:
+- Браузер Chrome, Firefox, Safari или Edge
+- Расширение Exchange Rates Pro (бесплатная установка)
+- Базовое понимание математических операторов (+, -, ×, ÷)
+
+**Математические Знания**:
+- Элементарные арифметические операции
+- Понимание скобок для порядка операций
+- Знакомство с кодами валют (USD, EUR, GBP и т.д.)
+
+**Продвинутые Навыки Не Требуются**: Этот учебник разработан для всех, от студентов до бизнес-профессионалов, независимо от математического фона.
+
+## Шаг 1: Установка Расширения Exchange Rates Pro
+
+### Процесс Установки
+
+1. **Посетите Chrome Web Store** (или магазин расширений вашего браузера)
+2. **Найдите "Exchange Rates Pro"**
+3. **Нажмите "Добавить в Chrome"** (или эквивалент для вашего браузера)
+4. **Подтвердите Установку** когда попросят
+5. **Найдите Иконку Расширения** в панели инструментов браузера
+
+### Начальная Настройка
+
+После установки вы увидите иконку Exchange Rates Pro в вашем браузере. Нажмите, чтобы открыть интерфейс впервые:
+
+- **Настройка Валюты По Умолчанию**: Выберите вашу основную валюту для результатов
+- **Выбор Поставщика Курсов**: Выберите предпочтительные источники данных
+- **Частота Обновления**: Установите как часто обновляются курсы (рекомендуется: каждые 30 минут)
+
+## Шаг 2: Понимание Интерфейса
+
+### Основные Компоненты
+
+**Поле Ввода**: Здесь вы будете вводить ваши математические выражения
+- Большая, заметная текстовая область
+- Поддерживает копирование/вставку для сложных выражений
+- Автозаполнение для кодов валют
+
+**Отображение Результатов**: Показывает ваш рассчитанный ответ
+- Большие, легко читаемые числа
+- Отформатированы с подходящими десятичными знаками и символами валют
+- Нажмите, чтобы скопировать результат в буфер обмена
+
+**Панель Настроек**: Доступ к продвинутой конфигурации
+- Предпочтения валют
+- Настройки точности (десятичные места)
+- Предпочтения источников курсов
+- Выбор языка
+
+## Шаг 3: Ваше Первое Математическое Выражение
+
+Давайте начнем с самого базового примера, который демонстрирует силу математических выражений.
+
+### Традиционный Метод (Старый Способ)
+Если бы вы хотели узнать общую стоимость 100 USD и 50 EUR в британских фунтах, вы бы обычно:
+
+1. Конвертировать 100 USD в GBP: 100 × 0.79 = 79 GBP
+2. Конвертировать 50 EUR в GBP: 50 × 0.87 = 43.50 GBP  
+3. Сложить результаты: 79 + 43.50 = 122.50 GBP
+
+**Проблемы с этим подходом**:
+- Множественные шаги, подверженные ошибкам
+- Необходимость искать множественные обменные курсы
+- Промежуточное округление может усугубить ошибки
+- Отнимает время для сложных сценариев
+
+### Метод Математических Выражений (Новый Способ)
+С Exchange Rates Pro просто введите:
+\`\`\`
+(100 USD + 50 EUR) в GBP
+\`\`\`
+
+**Вот и все!** Вы получаете точный результат мгновенно: **122.47 GBP**
+
+### Разборка Синтаксиса
+
+Давайте поймем каждую часть этого выражения:
+
+- **Скобки ( )**: Группируют операции, которые должны быть вычислены вместе
+- **100 USD**: Сумма, за которой следует код валюты (пробел опционален)
+- **Знак плюс (+)**: Оператор сложения (также поддерживает -, ×, ÷)
+- **50 EUR**: Вторая сумма и валюта
+- **"в GBP"**: Ключевое слово "в", за которым следует целевая валюта
+- **Результат**: Автоматически рассчитан с использованием текущих обменных курсов
+
+## Шаг 4: Математические Операторы и Порядок Операций
+
+### Поддерживаемые Операторы
+
+**Сложение (+)**:
+\`\`\`
+(100 USD + 50 EUR + 25 GBP) в CAD
+\`\`\`
+*Случай использования*: Сложение расходов в нескольких валютах
+
+**Вычитание (-)**:
+\`\`\`
+(500 USD - 100 EUR) в JPY
+\`\`\`
+*Случай использования*: Расчет прибыли после вычета затрат
+
+**Умножение (× или *)**:
+\`\`\`
+(150 USD × 3) в EUR
+\`\`\`
+*Случай использования*: Масштабирование количеств или расчет оптовых цен
+
+**Деление (÷ или /)**:
+\`\`\`
+(1000 USD ÷ 4) в GBP
+\`\`\`
+*Случай использования*: Разделение затрат или расчет цен за единицу
+
+### Порядок Операций (PEMDAS)
+
+Математические выражения следуют стандартному порядку операций:
+1. **Скобки** сначала
+2. **Степени** (не поддерживается в валютном контексте)
+3. **Умножение и Деление** (слева направо)
+4. **Сложение и Вычитание** (слева направо)
+
+### Практический Пример: Сложный Порядок Операций
+
+**Выражение**: \`((100 USD + 50 EUR) × 2 - 25 GBP) в CAD\`
+
+**Пошаговое вычисление**:
+1. **Скобки сначала**: 100 USD + 50 EUR = 150.85 USD (после конверсии)
+2. **Умножение**: 150.85 × 2 = 301.70 USD
+3. **Вычитание**: 301.70 USD - 25 GBP = 301.70 - 31.75 = 269.95 USD
+4. **Финальная конверсия**: 269.95 USD в CAD = 364.43 CAD
+
+## Шаг 5: Примеры Реального Мира и Случаи Использования
+
+### Пример 1: Планирование Бюджета Путешествий
+
+**Сценарий**: Вы планируете европейскую поездку с расходами в разных валютах.
+
+**Традиционный подход**: 
+- Отель: 200 USD за ночь × 5 ночей = 1000 USD → Конвертировать в EUR
+- Еда: 50 EUR в день × 5 дней = 250 EUR
+- Активности: 100 GBP всего → Конвертировать в EUR
+- Сложить все в EUR
+
+**Подход математических выражений**:
+\`\`\`
+((отель 200 USD × 5) + (еда 50 EUR × 5) + активности 100 GBP) в EUR
+\`\`\`
+
+**Результат**: 1,347.23 EUR общий бюджет
+
+### Пример 2: Расчет Прибыли Электронной Коммерции
+
+**Сценарий**: Онлайн бизнес, рассчитывающий маржи прибыли с международными поставщиками.
+
+**Выражение**:
+\`\`\`
+((стоимость_товара 25 USD + доставка 8 EUR) × количество 100 - накладные_расходы 150 GBP) × маржа 1.3 в CAD
+\`\`\`
+
+**Что это вычисляет**:
+- Стоимость товара в USD плюс доставка в EUR
+- Умножить на количество (100 единиц)
+- Вычесть накладные расходы в GBP
+- Применить 30% маржу прибыли
+- Конвертировать финальный результат в канадские доллары
+
+**Результат**: 4,521.67 CAD целевой доход
+
+## Упражнения для Практики
+
+### Упражнения для Начинающих
+
+**Упражнение 1**: Рассчитайте общую стоимость корзины покупок с товарами в разных валютах:
+\`\`\`
+(товар1 25.99 USD + товар2 19.50 EUR + товар3 12.75 GBP) в вашей_валюте
+\`\`\`
+
+**Упражнение 2**: Найдите среднюю цену между тремя котировками разных валют:
+\`\`\`
+(котировка1 100 USD + котировка2 85 EUR + котировка3 78 GBP) ÷ 3 в USD
+\`\`\`
+
+### Промежуточные Упражнения
+
+**Упражнение 3**: Рассчитайте чистую прибыль после налогов и расходов:
+\`\`\`
+((доходы 5000 USD + бонус 500 EUR) - (налоги 800 USD + расходы 200 GBP)) в CAD
+\`\`\`
+
+**Упражнение 4**: Определите точку безубыточности для мульти-валютного бизнеса:
+\`\`\`
+(фиксированные_затраты 2000 USD + переменные_затраты 15 EUR) ÷ (цена 50 USD - себестоимость 30 EUR) в единицы
+\`\`\`
+
+## Заключение: Освоение Математической Конверсии Валют
+
+Поздравляем! Теперь у вас есть навыки для обработки сложных валютных конверсий с математическими выражениями. Вы изучили:
+
+✅ **Базовый Синтаксис Выражений**: Как структурировать математические валютные выражения  
+✅ **Продвинутые Вычисления**: Сложные операции с несколькими валютами и операторами  
+✅ **Приложения Реального Мира**: Практические примеры для бизнеса, путешествий и личных финансов  
+✅ **Навыки Решения Проблем**: Как отлаживать и оптимизировать ваши выражения  
+✅ **Профессиональные Рабочие Процессы**: Лучшие практики для точности и эффективности  
+
+### Ваши Следующие Шаги
+
+1. **Начните Просто**: Начните с базовых выражений и постепенно увеличивайте сложность
+2. **Практикуйтесь Ежедневно**: Используйте математические выражения для ваших регулярных валютных расчетов
+3. **Создавайте Шаблоны**: Создайте переиспользуемые выражения для ваших самых частых сценариев
+4. **Делитесь Знаниями**: Обучите других в вашей организации, чтобы умножить преимущества продуктивности
+
+### Преимущества Времени и Точности
+
+Освоив математическую конверсию валют, вы сможете:
+
+- **Сэкономить 75% времени вычислений** по сравнению с традиционными методами
+- **Устранить ошибки ручной конверсии**, которые обходятся бизнесу в миллионы ежегодно  
+- **Обрабатывать сложные сценарии**, которые ранее были слишком трудоемкими для точного расчета
+- **Принимать лучшие финансовые решения** с мгновенным и точным мульти-валютным анализом
+- **Повысить профессиональную репутацию** точными и быстрыми финансовыми расчетами
+
+**Готовы применить ваши новые навыки на практике?** Начните с упражнения, которое соответствует вашим текущим потребностям, планируете ли вы следующую международную поездку, анализируете ваш инвестиционный портфель или оптимизируете валютные расчеты вашего бизнеса.
+
+Помните: Каждый эксперт когда-то был новичком. Чем больше вы практикуете математическую конверсию валют, тем более естественной и мощной она становится. Добро пожаловать в будущее валютных расчетов!
 `
   }
 }
