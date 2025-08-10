@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
-import { BaseSEO } from '@overx-ai/shared'
+// import { BaseSEO } from '@overx-ai/shared'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -71,7 +71,7 @@ export default function HomePage() {
 
   return (
     <Layout>
-      <BaseSEO
+      {/* <BaseSEO
         title="Learn Words Bot - AI-Powered Language Learning on Telegram"
         description="Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
         canonical="https://words.overx.ai"
@@ -88,7 +88,7 @@ export default function HomePage() {
             }
           ]
         }}
-      />
+      /> */}
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

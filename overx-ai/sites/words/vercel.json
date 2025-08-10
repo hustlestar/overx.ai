@@ -1,8 +1,11 @@
 {
-  "buildCommand": "cd ../.. && npm run build:words",
+  "name": "overx-ai-words",
+  "alias": ["words.overx.ai"],
+  "buildCommand": "./vercel-build-standalone.sh",
   "outputDirectory": ".next",
   "installCommand": "./vercel-install.sh",
   "framework": "nextjs",
+  "regions": ["iad1"],
   "headers": [
     {
       "source": "/(.*)",
@@ -30,16 +33,16 @@
       ]
     }
   ],
-  "redirects": [
+  "rewrites": [
     {
       "source": "/sitemap.xml",
-      "destination": "/api/sitemap",
-      "permanent": false
+      "destination": "/api/sitemap"
     },
     {
       "source": "/robots.txt",
-      "destination": "/api/robots",
-      "permanent": false
+      "destination": "/api/robots"
     }
-  ]
+  ],
+  "trailingSlash": true,
+  "cleanUrls": true
 }

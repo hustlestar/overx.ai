@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { useTheme } from '@overx-ai/shared'
+// import { useTheme } from '@overx-ai/shared'
 
 interface LayoutProps {
   children: ReactNode
@@ -12,7 +12,8 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
-  const { theme } = useTheme()
+  // const { theme } = useTheme()
+  const theme = 'dark' // Fallback for Vercel build
   
   console.log('[Words Layout] Theme from hook:', theme)
 
