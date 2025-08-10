@@ -10,12 +10,30 @@ export interface Author {
   }
 }
 
+export interface BlogImage {
+  url: string
+  alt: {
+    en: string
+    es?: string
+    ru?: string
+  }
+  width: number
+  height: number
+  type?: 'hero' | 'content' | 'featured'
+  caption?: {
+    en: string
+    es?: string
+    ru?: string
+  }
+}
+
 export interface BlogPost {
   slug: string
   title: string
   excerpt: string
   content: string
-  coverImage: string
+  coverImage: string // Legacy support
+  images: BlogImage[] // New multi-image system
   date: string
   lastModified?: string
   author: Author

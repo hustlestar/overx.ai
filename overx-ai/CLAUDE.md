@@ -327,3 +327,219 @@ When completing any task, always run:
 3. `npm run build:converter` (or relevant build command) - Ensure build succeeds
 
 **Important**: If lint/typecheck commands are not found, ask the user for the correct commands and suggest adding them to this document for future reference.
+
+## Blog Post Content Generation Guidelines
+
+### Multi-Image System Requirements
+Every blog post MUST now include 3-4 high-quality images with proper localization:
+
+1. **Hero Image** (type: "hero") - Main post image using premium MCP generation
+2. **Featured/Infographic Image** (type: "featured") - Text-based visual using ideogram model
+3. **Content Images** (type: "content") - 1-2 supporting images using standard generation
+
+### Image Generation Using MCP Tools
+
+**⚠️ CRITICAL SEO RULE: For images with text overlays, ALWAYS use the text generation tool with ideogram model**
+
+#### 1. Text-Based Images (SEO PRIORITY)
+```typescript
+// MANDATORY for infographics, titles, or any text overlays
+// This tool ensures text is readable and SEO-optimized
+mcp__image-gen-mcp__generate_text_image({
+  prompt: "Professional infographic with 'Key Title Text' prominently displayed. Include relevant visual elements and clear, readable typography.",
+  aspect_ratio: "16:9", // Standard for blog headers
+  style: "photorealistic_with_text", // Automatically uses ideogram model
+  model: "ideogram-ai/ideogram-v3-turbo" // Best text rendering
+})
+```
+
+#### 2. Premium Hero Images (REQUIRED)
+```typescript
+// Use for main post image - highest quality
+mcp__image-gen-mcp__generate_premium_image({
+  prompt: "Detailed, professional scene relevant to post topic",
+  aspect_ratio: "16:9", // Hero images should be landscape
+  model: "black-forest-labs/flux-dev", // Default premium model
+  style: "photorealistic"
+})
+```
+
+#### 3. Supporting Content Images
+```typescript
+// Standard quality for additional context images
+mcp__image-gen-mcp__generate_blog_image({
+  prompt: "Supporting scene or concept illustration",
+  aspect_ratio: "4:3", "21:9", or "3:2", // Vary for visual interest
+  style: "photorealistic"
+})
+```
+
+### SEO-Critical Text Image Guidelines
+
+#### When to Use Text Generation Tool
+**MANDATORY for:**
+- Blog post titles or headlines in images
+- Infographics with key statistics or data
+- Step-by-step process diagrams with text
+- Comparison charts with labels
+- Call-to-action graphics with text buttons
+- Warning or alert graphics with text messages
+
+#### Text Image SEO Best Practices
+1. **Include target keywords in the image text** - helps with image SEO
+2. **Make text large and readable** - improves user experience signals
+3. **Use consistent branding colors** - builds brand recognition
+4. **Keep text concise** - 3-7 words maximum for headlines
+5. **Ensure high contrast** - text must be easily readable
+6. **Test on mobile** - text should be legible on small screens
+
+#### Example Text Image Prompts
+```typescript
+// For converter blog posts
+"Professional fintech infographic showing 'Save 3-7% on Exchange Rates' with currency symbols, charts, and modern design"
+
+// For API comparison posts  
+"Technical comparison chart titled 'Best Currency APIs 2024' with API names, performance metrics, and developer-focused design"
+
+// For travel money guides
+"Travel-themed infographic with 'Travel Money Tips' and '5 Smart Strategies' text, passport, world map, savings icons"
+```
+
+### Blog Post Structure Requirements
+
+#### Frontmatter Schema
+```yaml
+---
+title: "Post Title"
+excerpt: "Brief description"
+coverImage: "/images/posts/legacy-image.jpg" # Legacy support
+images: # NEW MULTI-IMAGE SYSTEM
+  - url: "/images/posts/hero-image.png"
+    alt:
+      en: "English description"
+      es: "Spanish description" # Optional but recommended
+      ru: "Russian description" # Optional but recommended
+    width: 1344
+    height: 768
+    type: "hero" # hero, featured, or content
+    caption: # Optional
+      en: "English caption"
+      es: "Spanish caption"
+      ru: "Russian caption"
+  - url: "/images/posts/infographic.png"
+    alt:
+      en: "Infographic description"
+    width: 1024
+    height: 1024
+    type: "featured"
+  # ... additional content images
+date: "2024-01-15T09:00:00.000Z"
+# ... other metadata
+---
+```
+
+### Image Requirements
+
+#### Alt Text Standards
+- **Primary (en)**: Always required, descriptive and keyword-optimized
+- **Secondary (es, ru)**: Optional but highly recommended for international SEO
+- Must describe the image content and context, not just keywords
+- Include relevant terms naturally without keyword stuffing
+
+#### Image Dimensions and Types
+- **Hero**: 16:9 ratio (1344×768), premium quality, covers main topic
+- **Featured**: 1:1 or 4:3 ratio (1024×1024), often text-heavy or infographic
+- **Content**: Various ratios (4:3, 21:9, 3:2), supporting the narrative
+
+#### File Naming Convention
+```
+/images/posts/[descriptive-name-with-dashes].png
+```
+Examples:
+- `overx-ai-workspace-hero.png`
+- `productivity-tools-infographic.png`
+- `before-after-comparison.png`
+
+### Content Integration Guidelines
+
+#### Image Placement Strategy
+1. **Hero image**: Immediately after title, sets the scene
+2. **Featured image**: After introduction, supports main value proposition
+3. **Content images**: Throughout article, break up text sections
+4. **Comparison images**: Use 21:9 ratio for before/after scenarios
+
+#### Responsive Sizing
+- Images automatically resize using BlogImage component
+- Hero images: Full width, 400-500px height
+- Content images: Max 896px width, centered
+- Featured images: Max 768px width, centered
+
+### Localization Best Practices
+
+#### Multi-Language Alt Text
+```yaml
+alt:
+  en: "Primary English description with target keywords"
+  es: "Descripción en español con palabras clave objetivo"
+  ru: "Русское описание с целевыми ключевыми словами"
+```
+
+#### Caption Guidelines
+- Use captions to provide context or call-to-action
+- Keep captions concise (under 100 characters)
+- Localize for international audiences when possible
+
+### Quality Standards
+
+#### Visual Consistency
+- Use consistent color scheme (blues, purples, tech aesthetic)
+- Maintain professional, modern styling across all images
+- Ensure high resolution and crisp details
+
+#### SEO Optimization
+- Include target keywords naturally in alt text
+- Use descriptive file names
+- Optimize file sizes (aim for under 1MB per image)
+- Provide proper aspect ratios for different usage contexts
+
+### Blog Post Workflow
+
+#### Required Steps for New Blog Posts
+1. **Content Planning**: Outline 3-4 image concepts
+2. **Image Generation** (SEO-Critical):
+   - **MANDATORY**: Generate text/infographic images using `mcp__image-gen-mcp__generate_text_image`
+   - Generate hero image using premium MCP
+   - Generate 1-2 supporting images using standard MCP
+3. **Image Processing**:
+   - Copy images to `/sites/blog/public/images/posts/`
+   - Use descriptive, SEO-friendly filenames
+4. **Frontmatter Setup**:
+   - Add all images to `images` array
+   - Include localized alt text for each
+   - Set appropriate `type` for each image
+5. **Content Integration**:
+   - Reference images naturally in content flow
+   - Use BlogImage component for proper display
+6. **Quality Check**:
+   - Verify all images load correctly
+   - Check responsive behavior
+   - Validate alt text quality
+
+#### Post-Generation Checklist
+- [ ] 3-4 high-quality images generated and optimized
+- [ ] All images have English alt text (minimum requirement)
+- [ ] **MANDATORY**: At least one text/infographic image using `mcp__image-gen-mcp__generate_text_image`
+- [ ] Hero image uses premium generation method
+- [ ] Images properly sized and formatted (1312x736 for 16:9)
+- [ ] Localized alt text for Spanish and Russian (when applicable)
+- [ ] Images integrate naturally with content flow
+- [ ] File names are descriptive and SEO-friendly
+- [ ] All image files copied to correct public directory
+- [ ] **SEO CHECK**: Text in images is readable and includes target keywords
+
+### Example Implementation
+See `/sites/blog/content/posts/en/introducing-overx-ai.md` for complete implementation example with:
+- 4 diverse images (hero, infographic, 2 content)
+- Full localization (en, es, ru)
+- Proper aspect ratios and sizing
+- Integrated captions and context
