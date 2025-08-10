@@ -9,7 +9,7 @@ import { content as currencyAlertsContent } from '@/content/blog/real-time-curre
 import { content as cryptoVsTraditionalContent } from '@/content/blog/cryptocurrency-vs-traditional-currency-exchange-2024'
 import { content as avoidDccContent } from '@/content/blog/avoid-dynamic-currency-conversion-scams-complete-guide'
 import { completeGuideToMathematicalCurrencyConversion } from '@/content/blog/complete-guide-currency-conversion-mathematical-expressions'
-import { howToConvertCurrencyTutorial } from '@/content/blog/how-to-convert-currency-mathematical-expressions-tutorial'
+import { howToConvertCurrencyWithMathematicalExpressions } from '@/content/blog/how-to-convert-currency-mathematical-expressions-tutorial'
 import { advancedCurrencyMathComplexExpressions } from '@/content/blog/advanced-currency-math-complex-multi-currency-expressions'
 
 // Map content to metadata
@@ -21,7 +21,7 @@ const contentMap: Record<string, typeof transparentRatesContent> = {
   'cryptocurrency-vs-traditional-currency-exchange-2024': cryptoVsTraditionalContent,
   'avoid-dynamic-currency-conversion-scams-complete-guide': avoidDccContent,
   'complete-guide-currency-conversion-mathematical-expressions': completeGuideToMathematicalCurrencyConversion.content,
-  'how-to-convert-currency-mathematical-expressions-tutorial': howToConvertCurrencyTutorial.content,
+  'how-to-convert-currency-mathematical-expressions-tutorial': howToConvertCurrencyWithMathematicalExpressions.content,
   'advanced-currency-math-complex-multi-currency-expressions': advancedCurrencyMathComplexExpressions.content,
 }
 
@@ -35,7 +35,7 @@ const legacyPosts: BlogPost[] = blogMetadata.map(post => ({
 export const blogPosts: BlogPost[] = [
   ...legacyPosts,
   completeGuideToMathematicalCurrencyConversion,
-  howToConvertCurrencyTutorial,
+  howToConvertCurrencyWithMathematicalExpressions,
   advancedCurrencyMathComplexExpressions,
 ]
 
