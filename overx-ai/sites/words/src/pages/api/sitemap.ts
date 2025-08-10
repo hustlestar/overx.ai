@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getAllPosts } from '@/lib/blog'
 
-const SITE_URL = 'https://learn.overx.ai'
+const SITE_URL = 'https://words.overx.ai'
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const posts = getAllPosts()

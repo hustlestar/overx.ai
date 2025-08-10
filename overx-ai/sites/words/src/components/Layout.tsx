@@ -62,6 +62,14 @@ export function Layout({ children }: LayoutProps) {
                 <span className="mr-2">📱</span>
                 Start Learning
               </a>
+              <Link
+                href="https://overx.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold animated-gradient-text"
+              >
+                OverX AI
+              </Link>
               <LanguageSwitcher />
               <button 
                 className="md:hidden text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900"
