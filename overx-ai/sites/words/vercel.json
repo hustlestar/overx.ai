@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd ../.. && npm run build:shared && cd sites/learn-words && npm run build",
+  "buildCommand": "cd ../.. && npm run build:words",
   "outputDirectory": ".next",
-  "installCommand": "cd ../.. && npm install && cd sites/learn-words && npm install",
+  "installCommand": "./vercel-install.sh",
   "framework": "nextjs",
   "headers": [
     {
@@ -22,8 +22,24 @@
         {
           "key": "Referrer-Policy",
           "value": "origin-when-cross-origin"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
         }
       ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/api/sitemap",
+      "permanent": false
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/api/robots",
+      "permanent": false
     }
   ]
 }
