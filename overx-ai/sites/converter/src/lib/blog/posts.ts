@@ -12,7 +12,7 @@ import { completeGuideToMathematicalCurrencyConversion } from '@/content/blog/co
 import { howToConvertCurrencyWithMathematicalExpressions } from '@/content/blog/how-to-convert-currency-mathematical-expressions-tutorial'
 import { advancedCurrencyMathComplexExpressions } from '@/content/blog/advanced-currency-math-complex-multi-currency-expressions'
 
-// Map content to metadata
+// Map content to metadata (legacy posts only)
 const contentMap: Record<string, typeof transparentRatesContent> = {
   'why-transparent-exchange-rates-matter-international-business': transparentRatesContent,
   'save-money-traveling-currency-converter-chrome-extension': saveTravelingContent,
@@ -20,9 +20,6 @@ const contentMap: Record<string, typeof transparentRatesContent> = {
   'real-time-currency-alerts-maximize-exchange-rates': currencyAlertsContent,
   'cryptocurrency-vs-traditional-currency-exchange-2024': cryptoVsTraditionalContent,
   'avoid-dynamic-currency-conversion-scams-complete-guide': avoidDccContent,
-  'complete-guide-currency-conversion-mathematical-expressions': completeGuideToMathematicalCurrencyConversion.content,
-  'how-to-convert-currency-mathematical-expressions-tutorial': howToConvertCurrencyWithMathematicalExpressions.content,
-  'advanced-currency-math-complex-multi-currency-expressions': advancedCurrencyMathComplexExpressions.content,
 }
 
 // Combine metadata with content for legacy posts
