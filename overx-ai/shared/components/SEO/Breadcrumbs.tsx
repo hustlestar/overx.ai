@@ -35,19 +35,19 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
           {items.map((item, index) => (
             <li key={index} className="flex items-center">
               {index > 0 && (
-                <span className="mx-2 text-gray-500" aria-hidden="true">
+                <span className="mx-2 text-gray-500 light:text-gray-400" aria-hidden="true">
                   {separator}
                 </span>
               )}
               {item.url && index < items.length - 1 ? (
                 <Link 
                   href={item.url}
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 transition-colors"
+                  className="text-blue-600 dark:text-blue-400 light:text-blue-600 hover:text-blue-500 dark:hover:text-blue-300 light:hover:text-blue-500 transition-colors"
                 >
                   {item.name}
                 </Link>
               ) : (
-                <span className="text-gray-900 dark:text-white" aria-current={index === items.length - 1 ? 'page' : undefined}>
+                <span className="text-gray-900 dark:text-white light:text-gray-900" aria-current={index === items.length - 1 ? 'page' : undefined}>
                   {item.name}
                 </span>
               )}

@@ -149,11 +149,13 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           </header>
 
           {/* Featured Image */}
-          <div className="relative h-96 mb-12">
-            <BlogImage 
-              title={post.title[currentLang]} 
-              icon="📊" 
-              gradient="from-blue-600/20 to-cyan-600/20" 
+          <div className="relative h-96 mb-12 rounded-lg overflow-hidden">
+            <img 
+              src={post.image.url}
+              alt={post.image.alt[currentLang]}
+              className="w-full h-full object-cover"
+              width={post.image.width}
+              height={post.image.height}
             />
           </div>
 

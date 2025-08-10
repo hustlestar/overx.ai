@@ -13,14 +13,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 8,
     featured: true,
     image: {
-      url: '/blog/transparent-rates-hero.jpg',
+      url: '/blog/transparent-rates-hero.webp',
       alt: {
         en: 'Business professionals analyzing transparent currency exchange rates on multiple computer screens in modern office',
         es: 'Profesionales de negocios analizando tipos de cambio transparentes de divisas en múltiples pantallas de computadora en oficina moderna',
         ru: 'Бизнес-профессионалы анализируют прозрачные курсы валют на нескольких компьютерных экранах в современном офисе'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Why Transparent Exchange Rates Matter for International Business in 2024',
@@ -61,14 +61,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 6,
     featured: true,
     image: {
-      url: '/blog/travel-money-tips.jpg',
+      url: '/blog/travel-money-tips.webp',
       alt: {
         en: 'Happy traveler using smartphone currency converter app at modern international airport terminal with luggage and departure boards',
         es: 'Viajero feliz usando aplicación convertidor de divisas en smartphone en terminal de aeropuerto internacional moderno con equipaje y paneles de salidas',
         ru: 'Счастливый путешественник использует приложение конвертера валют на смартфоне в современном терминале международного аэропорта с багажом и табло вылетов'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Save Money While Traveling: 5 Ways Our Chrome Extension Helps',
@@ -109,14 +109,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 12,
     featured: false,
     image: {
-      url: '/blog/api-comparison-guide.jpg',
+      url: '/blog/api-comparison-guide.webp',
       alt: {
         en: 'Software developer working on multiple currency exchange API integrations dashboard with documentation, code editor, and comparison charts',
         es: 'Desarrollador de software trabajando en panel de múltiples integraciones de API de cambio de divisas con documentación, editor de código y gráficos de comparación',
         ru: 'Разработчик программного обеспечения работает с панелью интеграций нескольких API обмена валют с документацией, редактором кода и сравнительными диаграммами'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Compare Currency Exchange APIs 2024: Developer\'s Complete Guide',
@@ -157,14 +157,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 7,
     featured: false,
     image: {
-      url: '/blog/currency-alerts-dashboard.jpg',
+      url: '/blog/currency-alerts-dashboard.webp',
       alt: {
         en: 'Modern financial dashboard displaying real-time currency alerts, exchange rate movements, notification badges, and colorful fluctuation charts',
         es: 'Panel financiero moderno mostrando alertas de divisas en tiempo real, movimientos de tipos de cambio, insignias de notificación y gráficos coloridos de fluctuaciones',
         ru: 'Современная финансовая панель, отображающая уведомления о курсах валют в реальном времени, движения обменных курсов, значки уведомлений и цветные диаграммы колебаний'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Real-Time Currency Alerts: How to Maximize Your Exchange Rates',
@@ -205,14 +205,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 10,
     featured: true,
     image: {
-      url: '/blog/crypto-vs-forex.jpg',
+      url: '/blog/crypto-vs-forex.webp',
       alt: {
         en: 'Split screen comparison showing cryptocurrency exchange interface with Bitcoin and digital currencies versus traditional forex trading platform with EUR/USD charts',
         es: 'Comparación de pantalla dividida mostrando interfaz de intercambio de criptomonedas con Bitcoin y monedas digitales versus plataforma de comercio forex tradicional con gráficos EUR/USD',
         ru: 'Сравнение разделенного экрана, показывающее интерфейс обмена криптовалют с Биткоином и цифровыми валютами против традиционной торговой платформы форекс с графиками EUR/USD'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Cryptocurrency vs Traditional Currency Exchange: What\'s Best in 2024?',
@@ -253,14 +253,14 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     readingTime: 9,
     featured: false,
     image: {
-      url: '/blog/dcc-scam-warning.jpg',
+      url: '/blog/dcc-scam-warning.webp',
       alt: {
         en: 'Warning illustration about dynamic currency conversion scams at point of sale terminal with credit card reader, DCC warning message, and confused tourist',
         es: 'Ilustración de advertencia sobre estafas de conversión dinámica de divisas en terminal punto de venta con lector de tarjetas de crédito, mensaje de advertencia DCC y turista confundido',
         ru: 'Предупреждающая иллюстрация о мошенничестве с динамической конверсией валют в терминале торговой точки с считывателем кредитных карт, предупреждающим сообщением DCC и смущенным туристом'
       },
-      width: 1200,
-      height: 630,
+      width: 1024,
+      height: 1024,
     },
     title: {
       en: 'Avoid Dynamic Currency Conversion Scams: Complete Protection Guide',

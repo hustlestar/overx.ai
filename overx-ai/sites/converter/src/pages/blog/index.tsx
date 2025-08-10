@@ -61,10 +61,12 @@ export default function BlogPage() {
                 <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="relative h-64 md:h-auto">
-                      <BlogImage 
-                        title="" 
-                        icon="📊" 
-                        gradient="from-blue-600/20 to-cyan-600/20" 
+                      <img 
+                        src={posts[0].image.url}
+                        alt={posts[0].image.alt[currentLang]}
+                        className="w-full h-full object-cover rounded-lg"
+                        width={posts[0].image.width}
+                        height={posts[0].image.height}
                       />
                     </div>
                     <div className="p-8">
@@ -116,10 +118,12 @@ export default function BlogPage() {
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
                   <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group h-full">
                     <div className="relative h-48">
-                      <BlogImage 
-                        title="" 
-                        icon="💱" 
-                        gradient="from-gray-800/40 to-gray-900/40 light:from-gray-200/40 light:to-gray-300/40" 
+                      <img 
+                        src={post.image.url}
+                        alt={post.image.alt[currentLang]}
+                        className="w-full h-full object-cover"
+                        width={post.image.width}
+                        height={post.image.height}
                       />
                     </div>
                     <div className="p-6">
