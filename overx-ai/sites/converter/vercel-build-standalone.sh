@@ -30,9 +30,22 @@ fi
 
 if [ -n "$SHARED_PATH" ] && [ -d "$SHARED_PATH/dist" ]; then
   echo "Found shared package at: $SHARED_PATH"
-  # Copy only the necessary files from shared package
-  echo "Copying shared package dist files..."
-  cp -r $SHARED_PATH/dist/* node_modules/@overx-ai/shared/
+  # Copy only the compiled JS/d.ts files from shared package
+  echo "Copying shared package dist files (JS and d.ts only)..."
+  # Copy all JS files and d.ts files, but exclude source TS files
+  find $SHARED_PATH/dist -name "*.js" -o -name "*.d.ts" -o -name "*.js.map" -o -name "*.d.ts.map" -o -name "*.mjs" -o -name "*.mjs.map" -o -name "*.d.mts" | while read file; do
+    # Get relative path from dist folder
+    rel_path=${file#$SHARED_PATH/dist/}
+    # Create directory structure
+    mkdir -p "node_modules/@overx-ai/shared/$(dirname "$rel_path")"
+    # Copy file
+    cp "$file" "node_modules/@overx-ai/shared/$rel_path"
+  done
+  
+  # Also copy any non-TypeScript source files that might be needed
+  find $SHARED_PATH -maxdepth 1 -name "*.json" -o -name "*.md" | while read file; do
+    cp "$file" "node_modules/@overx-ai/shared/"
+  done
   cp $SHARED_PATH/package.json node_modules/@overx-ai/shared/temp-package.json || true
 else
   echo "ERROR: Could not copy shared package files"
