@@ -60,7 +60,7 @@ export default function BlogPage() {
               <Link href={`/blog/${posts[0].slug}`}>
                 <article className="glass-effect rounded-lg overflow-hidden hover-glow cursor-pointer group">
                   <div className="grid md:grid-cols-2 gap-8">
-                    <div className="relative h-64 md:h-auto">
+                    <div className="relative h-64 md:h-80">
                       <img 
                         src={posts[0].image.url}
                         alt={posts[0].image.alt[currentLang]}
