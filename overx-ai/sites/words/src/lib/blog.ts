@@ -14,14 +14,18 @@ export interface PostData {
   category: string
   excerpt: string
   readTime: string
-  image?: string
+  image?: string | null
   content?: string
   contentHtml?: string
 }
 
 export function getPostSlugs() {
   try {
-    return fs.readdirSync(postsDirectory)
+    if (!fs.existsSync(postsDirectory)) {
+      return []
+    }
+    const files = fs.readdirSync(postsDirectory)
+    return files.filter(file => file.endsWith('.md'))
   } catch (error) {
     return []
   }
@@ -31,14 +35,29 @@ export function getPostBySlug(slug: string): PostData | null {
   try {
     const realSlug = slug.replace(/\.md$/, '')
     const fullPath = path.join(postsDirectory, `${realSlug}.md`)
+    
+    if (!fs.existsSync(fullPath)) {
+      return null
+    }
+    
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
     const { data, content } = matter(fileContents)
+
+    // Return null if essential fields are missing
+    if (!data.title || !data.date) {
+      return null
+    }
 
     return {
       slug: realSlug,
-      content,
-      ...(data as Omit<PostData, 'slug' | 'content'>)
+      content: content || '',
+      title: data.title || 'Untitled',
+      date: data.date || new Date().toISOString(),
+      author: data.author || 'Learn Words Bot',
+      category: data.category || 'General',
+      excerpt: data.excerpt || content?.substring(0, 150) + '...' || '',
+      readTime: data.readTime || '5 min read',
+      image: data.image || null
     }
   } catch (error) {
     return null

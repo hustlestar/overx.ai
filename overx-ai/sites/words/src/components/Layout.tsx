@@ -20,8 +20,8 @@ export function Layout({ children }: LayoutProps) {
     { name: 'Home', href: '/' },
     { name: 'Features', href: '/features' },
     { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'About', href: '/about' },
+    // { name: 'Blog', href: '/blog' },
+    // { name: 'About', href: '/about' },
   ]
 
   return (
