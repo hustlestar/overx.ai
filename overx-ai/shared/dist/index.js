@@ -21,6 +21,8 @@ __exportStar(require("./components/SEO"), exports);
 __exportStar(require("./components/Performance"), exports);
 // UI Components
 __exportStar(require("./components/UI"), exports);
+// Blog Components
+__exportStar(require("./components/Blog"), exports);
 // Hooks
 var useTheme_1 = require("./hooks/useTheme");
 Object.defineProperty(exports, "useTheme", { enumerable: true, get: function () { return useTheme_1.useTheme; } });
@@ -33,6 +35,8 @@ __exportStar(require("./lib/schema"), exports);
 // SEO utilities
 var contentOptimizer_1 = require("./lib/seo/contentOptimizer");
 Object.defineProperty(exports, "ContentOptimizer", { enumerable: true, get: function () { return contentOptimizer_1.ContentOptimizer; } });
+// Blog utilities
+__exportStar(require("./lib/blog"), exports);
 // Content utilities
 var keywordMap_1 = require("./content/keywords/keywordMap");
 Object.defineProperty(exports, "keywordMap", { enumerable: true, get: function () { return keywordMap_1.keywordMap; } });

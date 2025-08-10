@@ -13,19 +13,22 @@ const nextConfig = {
   compress: true,
   trailingSlash: true,
   
+  // Don't transpile modules, use compiled JS from node_modules only
+  transpilePackages: [],
+  
   // Webpack configuration to resolve shared package (compiled JS files only)
   webpack: (config) => {
+    // Force resolve to node_modules version only, not source files
     config.resolve.alias = {
       ...config.resolve.alias,
       '@overx-ai/shared': path.resolve(__dirname, 'node_modules/@overx-ai/shared'),
     }
     
-    // Don't try to compile TypeScript files from shared package
-    config.module.rules.push({
-      test: /\.tsx?$/,
-      include: path.resolve(__dirname, 'node_modules/@overx-ai/shared'),
-      use: 'ignore-loader'
-    })
+    // Ensure node_modules is checked first for module resolution
+    config.resolve.modules = [
+      path.resolve(__dirname, 'node_modules'),
+      'node_modules'
+    ]
     
     return config
   },

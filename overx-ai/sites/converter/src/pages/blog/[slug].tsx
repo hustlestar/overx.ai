@@ -87,7 +87,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
             url: `https://converter.overx.ai${post.image.url}`,
             width: post.image.width,
             height: post.image.height,
-            alt: post.image.alt,
+            alt: post.image.alt[currentLang],
           },
         }}
         additionalMetaTags={[

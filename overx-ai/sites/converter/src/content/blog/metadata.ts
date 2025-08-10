@@ -14,7 +14,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: true,
     image: {
       url: '/blog/transparent-rates-hero.jpg',
-      alt: 'Business professionals analyzing currency exchange rates on multiple screens',
+      alt: {
+        en: 'Business professionals analyzing transparent currency exchange rates on multiple computer screens in modern office',
+        es: 'Profesionales de negocios analizando tipos de cambio transparentes de divisas en múltiples pantallas de computadora en oficina moderna',
+        ru: 'Бизнес-профессионалы анализируют прозрачные курсы валют на нескольких компьютерных экранах в современном офисе'
+      },
       width: 1200,
       height: 630,
     },
@@ -58,7 +62,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: true,
     image: {
       url: '/blog/travel-money-tips.jpg',
-      alt: 'Traveler using smartphone for currency conversion at international airport',
+      alt: {
+        en: 'Happy traveler using smartphone currency converter app at modern international airport terminal with luggage and departure boards',
+        es: 'Viajero feliz usando aplicación convertidor de divisas en smartphone en terminal de aeropuerto internacional moderno con equipaje y paneles de salidas',
+        ru: 'Счастливый путешественник использует приложение конвертера валют на смартфоне в современном терминале международного аэропорта с багажом и табло вылетов'
+      },
       width: 1200,
       height: 630,
     },
@@ -102,7 +110,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: false,
     image: {
       url: '/blog/api-comparison-guide.jpg',
-      alt: 'Developer dashboard showing multiple currency exchange API integrations',
+      alt: {
+        en: 'Software developer working on multiple currency exchange API integrations dashboard with documentation, code editor, and comparison charts',
+        es: 'Desarrollador de software trabajando en panel de múltiples integraciones de API de cambio de divisas con documentación, editor de código y gráficos de comparación',
+        ru: 'Разработчик программного обеспечения работает с панелью интеграций нескольких API обмена валют с документацией, редактором кода и сравнительными диаграммами'
+      },
       width: 1200,
       height: 630,
     },
@@ -146,7 +158,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: false,
     image: {
       url: '/blog/currency-alerts-dashboard.jpg',
-      alt: 'Dashboard showing real-time currency alerts and exchange rate movements',
+      alt: {
+        en: 'Modern financial dashboard displaying real-time currency alerts, exchange rate movements, notification badges, and colorful fluctuation charts',
+        es: 'Panel financiero moderno mostrando alertas de divisas en tiempo real, movimientos de tipos de cambio, insignias de notificación y gráficos coloridos de fluctuaciones',
+        ru: 'Современная финансовая панель, отображающая уведомления о курсах валют в реальном времени, движения обменных курсов, значки уведомлений и цветные диаграммы колебаний'
+      },
       width: 1200,
       height: 630,
     },
@@ -190,7 +206,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: true,
     image: {
       url: '/blog/crypto-vs-forex.jpg',
-      alt: 'Split screen showing cryptocurrency and traditional currency exchange interfaces',
+      alt: {
+        en: 'Split screen comparison showing cryptocurrency exchange interface with Bitcoin and digital currencies versus traditional forex trading platform with EUR/USD charts',
+        es: 'Comparación de pantalla dividida mostrando interfaz de intercambio de criptomonedas con Bitcoin y monedas digitales versus plataforma de comercio forex tradicional con gráficos EUR/USD',
+        ru: 'Сравнение разделенного экрана, показывающее интерфейс обмена криптовалют с Биткоином и цифровыми валютами против традиционной торговой платформы форекс с графиками EUR/USD'
+      },
       width: 1200,
       height: 630,
     },
@@ -234,7 +254,11 @@ export const blogMetadata: Omit<BlogPost, 'content'>[] = [
     featured: false,
     image: {
       url: '/blog/dcc-scam-warning.jpg',
-      alt: 'Warning sign about dynamic currency conversion at point of sale terminal',
+      alt: {
+        en: 'Warning illustration about dynamic currency conversion scams at point of sale terminal with credit card reader, DCC warning message, and confused tourist',
+        es: 'Ilustración de advertencia sobre estafas de conversión dinámica de divisas en terminal punto de venta con lector de tarjetas de crédito, mensaje de advertencia DCC y turista confundido',
+        ru: 'Предупреждающая иллюстрация о мошенничестве с динамической конверсией валют в терминале торговой точки с считывателем кредитных карт, предупреждающим сообщением DCC и смущенным туристом'
+      },
       width: 1200,
       height: 630,
     },

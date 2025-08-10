@@ -12,7 +12,7 @@ export interface BlogPost {
   featured: boolean
   image: {
     url: string
-    alt: string
+    alt: Record<string, string>
     width: number
     height: number
   }
