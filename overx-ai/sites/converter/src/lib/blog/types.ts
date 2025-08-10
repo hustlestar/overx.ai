@@ -10,7 +10,7 @@ export interface BlogPost {
   tags: string[]
   readingTime: number
   featured: boolean
-  image: {
+  image?: {
     url: string
     alt: Record<string, string>
     width: number

@@ -24,13 +24,21 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
     return <div>Post not found</div>
   }
 
+  // Get primary image for SEO - either legacy image or first from images array
+  const primaryImage = post.image || (post.images && post.images[0]) || {
+    url: '/images/blog/default-hero.jpg',
+    alt: { en: 'Blog post image', es: 'Imagen del artículo', ru: 'Изображение статьи' },
+    width: 1200,
+    height: 630
+  }
+
   const structuredData = [
     {
       '@context': 'https://schema.org' as const,
       '@type': 'BlogPosting',
       headline: post.title[currentLang],
       description: post.excerpt[currentLang],
-      image: `https://rates.overx.ai${post.image.url}`,
+      image: `https://rates.overx.ai${primaryImage.url}`,
       datePublished: post.publishedAt,
       dateModified: post.updatedAt || post.publishedAt,
       author: {
@@ -84,10 +92,10 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           description: post.excerpt[currentLang],
           type: 'article',
           image: {
-            url: `https://converter.overx.ai${post.image.url}`,
-            width: post.image.width,
-            height: post.image.height,
-            alt: post.image.alt[currentLang],
+            url: `https://converter.overx.ai${primaryImage.url}`,
+            width: primaryImage.width,
+            height: primaryImage.height,
+            alt: primaryImage.alt[currentLang] || primaryImage.alt.en,
           },
         }}
         additionalMetaTags={[
@@ -151,11 +159,11 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           {/* Featured Image */}
           <div className="relative h-96 mb-12 rounded-lg overflow-hidden">
             <img 
-              src={post.image.url}
-              alt={post.image.alt[currentLang]}
+              src={primaryImage.url}
+              alt={primaryImage.alt[currentLang] || primaryImage.alt.en}
               className="w-full h-full object-cover"
-              width={post.image.width}
-              height={post.image.height}
+              width={primaryImage.width}
+              height={primaryImage.height}
             />
           </div>
 
