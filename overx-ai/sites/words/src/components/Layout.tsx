@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -14,6 +14,7 @@ export function Layout({ children }: LayoutProps) {
   const router = useRouter()
   // const { theme } = useTheme()
   const theme = 'dark' // Fallback for Vercel build
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   
   console.log('[Words Layout] Theme from hook:', theme)
 
@@ -72,16 +73,69 @@ export function Layout({ children }: LayoutProps) {
               </Link>
               <LanguageSwitcher />
               <button 
-                className="md:hidden text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900"
-                aria-label="Menu"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden p-2 rounded-md text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 hover:bg-white/10 light:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+                aria-expanded="false"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <span className="sr-only">Open main menu</span>
+                {mobileMenuOpen ? (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
         </div>
+        
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-black light:bg-white border-t border-gray-800 light:border-gray-200">
+              {navigation.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    router.pathname === item.href
+                      ? 'text-blue-500 light:text-blue-600 bg-blue-500/10 light:bg-blue-50'
+                      : 'text-gray-400 light:text-gray-600 hover:text-white light:hover:text-gray-900 hover:bg-white/10 light:hover:bg-gray-100'
+                  }`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <div className="px-3 py-2 flex items-center justify-between">
+                <LanguageSwitcher />
+                <a
+                  href="https://t.me/world_word_war_bot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Start Learning
+                </a>
+              </div>
+              <div className="px-3 py-2">
+                <Link
+                  href="https://overx.ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-sm font-semibold animated-gradient-text"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  OverX AI
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Main Content */}

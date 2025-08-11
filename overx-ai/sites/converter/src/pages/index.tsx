@@ -105,40 +105,24 @@ export default function HomePage() {
           siteName: 'Exchange Rates Pro - OverX AI',
           locale: 'en_US',
           url: 'https://rates.overx.ai',
+          image: {
+            url: 'https://rates.overx.ai/og-image.png',
+            width: 1312,
+            height: 736,
+            alt: 'Exchange Rates Pro - Transparent Currency Conversion'
+          }
+        }}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: 'Exchange Rates Pro - Currency Converter',
+          description: 'Compare real exchange rates across multiple providers',
+          image: 'https://rates.overx.ai/twitter-card.png'
         }}
         structuredData={[structuredData]}
       />
       
       <Layout>
-        <div className="container mx-auto px-4 py-6">
-          {/* Header */}
-          <div className="glass-effect rounded-xl p-4 mb-6">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="text-2xl font-bold gradient-text">
-                Exchange Rates Pro
-              </div>
-              
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-3">
-                  <span className="text-sm text-gray-400">{t('home.baseCurrency')}:</span>
-                  <CurrencySelector
-                    label=""
-                    value={baseCurrency}
-                    onChange={setBaseCurrency}
-                    currencies={currencies}
-                  />
-                </div>
-                
-                <div className="text-sm text-gray-400">
-                  {t('home.lastUpdate')}: <span className="text-white">{getTimeSinceUpdate()}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-        </div>
-        
         {/* Provider Comparison Table - Full Width */}
         <div>
           <div className="container mx-auto px-4 mb-6">
@@ -149,6 +133,8 @@ export default function HomePage() {
               baseCurrency={baseCurrency}
               targetCurrencies={targetCurrencies}
               userCurrencies={defaultTargets}
+              onBaseCurrencyChange={setBaseCurrency}
+              availableCurrencies={currencies}
             />
           </div>
         </div>

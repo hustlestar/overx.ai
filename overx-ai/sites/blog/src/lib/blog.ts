@@ -90,6 +90,7 @@ export async function getPostBySlug(slug: string, locale: string = 'en'): Promis
       excerpt: data.excerpt || '',
       content: contentHtml,
       coverImage: data.coverImage || '/images/default-cover.jpg',
+      images: data.images || [],
       date: data.date || new Date().toISOString(),
       lastModified: data.lastModified,
       author,

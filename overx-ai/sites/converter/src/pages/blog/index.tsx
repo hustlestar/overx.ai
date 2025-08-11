@@ -47,6 +47,22 @@ export default function BlogPage() {
           title: 'Exchange Rates Pro Blog - Expert Currency Exchange Insights',
           description: 'Learn how to save money on international transactions with transparent exchange rates',
           type: 'website',
+          url: 'https://rates.overx.ai/blog',
+          siteName: 'Exchange Rates Pro',
+          locale: 'en_US',
+          image: {
+            url: 'https://rates.overx.ai/og-image.png',
+            width: 1312,
+            height: 736,
+            alt: 'Exchange Rates Pro Blog - Currency Exchange Insights'
+          }
+        }}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: 'Exchange Rates Pro Blog',
+          description: 'Expert insights on transparent currency exchange',
+          image: 'https://rates.overx.ai/twitter-card.png'
         }}
         structuredData={[structuredData]}
       />

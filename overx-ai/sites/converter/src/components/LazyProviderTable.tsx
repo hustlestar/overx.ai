@@ -5,6 +5,8 @@ interface LazyProviderTableProps {
   baseCurrency: string
   targetCurrencies: string[]
   userCurrencies?: string[]
+  onBaseCurrencyChange?: (currency: string) => void
+  availableCurrencies?: any[]
 }
 
 // Skeleton loader component

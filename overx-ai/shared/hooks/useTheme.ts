@@ -59,10 +59,9 @@ export function useTheme() {
         setThemeState(cookieTheme)
         applyTheme(cookieTheme)
       } else {
-        // No cookie, check system preference
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-        const defaultTheme = prefersDark ? 'dark' : 'light'
-        console.log('[useTheme] No cookie found, using system preference:', defaultTheme)
+        // No cookie, default to dark theme (OverX AI brand preference)
+        const defaultTheme: Theme = 'dark'
+        console.log('[useTheme] No cookie found, using default:', defaultTheme)
         
         setThemeState(defaultTheme)
         applyTheme(defaultTheme)

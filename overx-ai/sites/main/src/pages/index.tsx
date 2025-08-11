@@ -416,7 +416,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
             </div>
           </section>
 
-          {/* Featured Product - Learn Words Bot */}
+          {/* Featured Product - WWW Words */}
           <section className="py-24 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-green-600/10 via-emerald-600/10 to-teal-600/10"></div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -454,7 +454,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </div>
                   </div>
                   <SmartLink 
-                    href="https://learn.overx.ai" 
+                    href="https://words.overx.ai" 
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full text-lg font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/30"
                     external
                   >

@@ -4,14 +4,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.overx.ai/</loc>
-    <lastmod>2025-08-08T20:50:25.473Z</lastmod>
+    <lastmod>2025-08-10T21:15:52.285Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
     
   </url>
   <url>
     <loc>https://blog.overx.ai/post/:slug</loc>
-    <lastmod>2025-08-08T20:50:25.473Z</lastmod>
+    <lastmod>2025-08-10T21:15:52.285Z</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     

@@ -17,12 +17,15 @@ import { searchCurrencies } from '@/utils/currencySearch'
 import { localizeProviderName, localizeUpdateFrequency, localizeCurrencyName } from '@/utils/localizeProviders'
 import { useUserPreferences } from '@/hooks/useUserPreferences'
 import { CurrencyCell } from './CurrencyCell'
+import { CurrencySelector } from './CurrencySelector'
 import { AllRatesResponse } from '@/types/api'
 
 interface ProviderComparisonTableProps {
   baseCurrency: string
   targetCurrencies: string[]
   userCurrencies?: string[]
+  onBaseCurrencyChange?: (currency: string) => void
+  availableCurrencies?: any[]
 }
 
 interface TableRow {
@@ -41,7 +44,7 @@ interface TableRow {
 
 const columnHelper = createColumnHelper<TableRow>()
 
-export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCurrencies = [] }: ProviderComparisonTableProps) {
+export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCurrencies = [], onBaseCurrencyChange, availableCurrencies = [] }: ProviderComparisonTableProps) {
   const { t, i18n } = useTranslation('common')
   const [sorting, setSorting] = useState<SortingState>([])
   const [globalFilter, setGlobalFilter] = useState('')
@@ -370,16 +373,27 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
 
   return (
     <div className="w-full" ref={mainTableRef}>
-      {/* Empty state message when no currencies selected */}
-      {defaultTargets.length === 0 && (
-        <div className="container mx-auto px-4 mb-6">
-          <div className="glass-effect rounded-lg p-6 text-center bg-blue-600/10 light:bg-blue-50 border-blue-600/20 light:border-blue-200">
-            <p className="text-sm text-gray-300 light:text-gray-700">
+      {/* Tip section with base currency selector */}
+      <div className="container mx-auto px-4 mb-6">
+        <div className="glass-effect rounded-lg p-6 bg-blue-600/10 light:bg-blue-50 border-blue-600/20 light:border-blue-200">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-gray-300 light:text-gray-700 flex-shrink-0">
               <span className="text-blue-400 light:text-blue-600">💡</span> {t('providers.selectCurrenciesToCompare', 'Select currencies from the table below to compare exchange rates across providers')}
             </p>
+            {onBaseCurrencyChange && availableCurrencies.length > 0 && (
+              <div className="flex items-center gap-3 flex-shrink-0">
+                <span className="text-sm text-gray-400 light:text-gray-600">{t('home.baseCurrency')}:</span>
+                <CurrencySelector
+                  label=""
+                  value={baseCurrency}
+                  onChange={onBaseCurrencyChange}
+                  currencies={availableCurrencies}
+                />
+              </div>
+            )}
           </div>
         </div>
-      )}
+      </div>
       
       {/* Search */}
       <div className="mb-6 container mx-auto px-4">

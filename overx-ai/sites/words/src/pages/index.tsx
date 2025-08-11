@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
-// import { BaseSEO } from '@overx-ai/shared'
+import { BaseSEO } from '@overx-ai/shared'
 import Link from 'next/link'
 
 export default function HomePage() {
@@ -71,24 +71,32 @@ export default function HomePage() {
 
   return (
     <Layout>
-      {/* <BaseSEO
+      <BaseSEO
         title="World Word War Bot - AI-Powered Language Learning on Telegram"
         description="Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
         canonical="https://words.overx.ai"
         openGraph={{
           type: 'website',
-          locale: 'en_US',
+          title: 'World Word War Bot - AI Language Learning on Telegram',
+          description: 'Master vocabulary in 13 languages with AI-powered learning, spaced repetition, and personalized training. Join 50,000+ learners worldwide.',
+          url: 'https://words.overx.ai',
           siteName: 'World Word War Bot',
-          images: [
-            {
-              url: 'https://words.overx.ai/og-image.jpg',
-              width: 1200,
-              height: 630,
-              alt: 'World Word War Bot - AI Language Learning'
-            }
-          ]
+          locale: 'en_US',
+          image: {
+            url: 'https://words.overx.ai/og-image.png',
+            width: 1312,
+            height: 736,
+            alt: 'World Word War Bot - AI Language Learning'
+          }
         }}
-      /> */}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: 'World Word War Bot - AI Language Learning',
+          description: 'Master vocabulary in 13 languages with AI-powered learning',
+          image: 'https://words.overx.ai/twitter-card.png'
+        }}
+      />
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
