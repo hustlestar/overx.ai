@@ -8,8 +8,11 @@ echo "Checking for shared package..."
 ls -la ../..
 ls -la ../../shared || echo "Shared directory not found at ../../shared"
 
-# Skip shared package build - use existing dist
-echo "Using pre-built shared package..."
+# Build shared package first
+echo "Building shared package..."
+cd ../../shared
+npm run build
+cd ../sites/words
 
 # Ensure node_modules exists
 mkdir -p node_modules/@overx-ai/shared
