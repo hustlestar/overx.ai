@@ -1,4 +1,5 @@
 export { BaseSEO } from './BaseSEO'
+export { EnhancedSEO } from './EnhancedSEO'
 export { Breadcrumbs } from './Breadcrumbs'
 export { FAQ } from './FAQ'
 export { SmartLink } from './SmartLink'

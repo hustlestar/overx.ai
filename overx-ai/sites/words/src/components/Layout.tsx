@@ -3,6 +3,7 @@ import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { GradientLink } from '@overx-ai/shared'
 // import { useTheme } from '@overx-ai/shared'
 
 interface LayoutProps {
@@ -63,15 +64,10 @@ export function Layout({ children }: LayoutProps) {
                 <span className="mr-2">📱</span>
                 Start Learning
               </a>
-              <Link
-                href="https://overx.ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold animated-gradient-text"
-              >
-                OverX AI
-              </Link>
               <LanguageSwitcher />
+              <GradientLink href="https://overx.ai" target="_blank">
+                OverX AI
+              </GradientLink>
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 rounded-md text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 hover:bg-white/10 light:hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -111,7 +107,6 @@ export function Layout({ children }: LayoutProps) {
                 </Link>
               ))}
               <div className="px-3 py-2 flex items-center justify-between">
-                <LanguageSwitcher />
                 <a
                   href="https://t.me/world_word_war_bot"
                   target="_blank"
@@ -122,16 +117,11 @@ export function Layout({ children }: LayoutProps) {
                   Start Learning
                 </a>
               </div>
-              <div className="px-3 py-2">
-                <Link
-                  href="https://overx.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-sm font-semibold animated-gradient-text"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+              <div className="px-3 py-2 flex items-center justify-between">
+                <LanguageSwitcher />
+                <GradientLink href="https://overx.ai" target="_blank">
                   OverX AI
-                </Link>
+                </GradientLink>
               </div>
             </div>
           </div>

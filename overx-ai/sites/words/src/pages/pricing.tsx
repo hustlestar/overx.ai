@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-// import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 import { Layout } from '@/components/Layout'
 import { useState } from 'react'
 
@@ -75,11 +75,11 @@ export default function PricingPage() {
 
   return (
     <>
-      {/* <BaseSEO
+      <EnhancedSEO
         title={`Pricing - ${t('site.title')}`}
-        description="Choose the perfect plan for your language learning journey. Start free or unlock unlimited learning with Plus."
-        canonical="https://learn.overx.ai/pricing"
-      /> */}
+        description="Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
+        canonical="https://words.overx.ai/pricing"
+      />
       
       <Layout>
         {/* Hero Section */}

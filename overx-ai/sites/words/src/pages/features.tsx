@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-// import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 import { Layout } from '@/components/Layout'
 
 export default function FeaturesPage() {
@@ -132,11 +132,11 @@ export default function FeaturesPage() {
 
   return (
     <>
-      {/* <BaseSEO
+      <EnhancedSEO
         title={`Features - ${t('site.title')}`}
-        description="Explore all the powerful features of World Word War Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning."
-        canonical="https://learn.overx.ai/features"
-      /> */}
+        description="Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
+        canonical="https://words.overx.ai/features"
+      />
       
       <Layout>
         {/* Hero Section */}

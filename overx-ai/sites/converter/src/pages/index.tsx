@@ -125,7 +125,7 @@ export default function HomePage() {
       <Layout>
         {/* Provider Comparison Table - Full Width */}
         <div>
-          <div className="container mx-auto px-4 mb-6">
+          <div className="container mx-auto px-4 mb-6 mt-8">
             <h2 className="text-2xl font-bold gradient-text">{t('providers.title')}</h2>
           </div>
           <div className="w-full">

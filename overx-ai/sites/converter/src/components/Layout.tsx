@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
+import { GradientLink } from '@overx-ai/shared'
 import { useTheme } from '@/hooks/useTheme'
 
 interface LayoutProps {
@@ -56,14 +57,9 @@ export function Layout({ children }: LayoutProps) {
               <div className="hidden md:flex items-center space-x-4">
                 <ThemeToggle />
                 <LanguageSwitcher />
-                <Link
-                  href="https://www.overx.ai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold animated-gradient-text"
-                >
+                <GradientLink href="https://www.overx.ai" target="_blank">
                   OverX AI
-                </Link>
+                </GradientLink>
               </div>
               
               {/* Mobile menu button */}
@@ -109,15 +105,13 @@ export function Layout({ children }: LayoutProps) {
                 ))}
                 <div className="px-3 py-2 flex items-center justify-between">
                   <LanguageSwitcher />
-                  <Link
-                    href="https://www.overx.ai"
+                  <GradientLink 
+                    href="https://www.overx.ai" 
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold animated-gradient-text"
-                    onClick={() => setMobileMenuOpen(false)}
+                    className="block px-3 py-2"
                   >
                     OverX AI
-                  </Link>
+                  </GradientLink>
                 </div>
               </div>
             </div>
