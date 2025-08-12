@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 
 interface GradientLinkProps {
   href: string
@@ -12,18 +11,18 @@ interface GradientLinkProps {
 export function GradientLink({ 
   href, 
   children, 
-  target,
-  rel = target === '_blank' ? 'noopener noreferrer' : undefined,
+  target = '_blank',
+  rel = 'noopener noreferrer',
   className = ''
 }: GradientLinkProps) {
   return (
-    <Link
+    <a
       href={href}
       target={target}
       rel={rel}
       className={`text-sm font-semibold animated-gradient-text ${className}`}
     >
       {children}
-    </Link>
+    </a>
   )
 }
