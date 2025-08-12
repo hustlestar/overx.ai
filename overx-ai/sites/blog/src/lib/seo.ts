@@ -57,7 +57,7 @@ export function generateAuthorSchema(author: Author, url: string) {
 
 export function generateBlogSchema() {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org' as const,
     '@type': 'Blog',
     name: 'OverX AI Blog',
     description: 'Insights, tutorials, and updates about AI technology and OverX AI products',

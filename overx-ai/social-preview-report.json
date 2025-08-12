@@ -1,0 +1,775 @@
+[
+  {
+    "name": "Main Site",
+    "url": "https://overx.ai",
+    "error": "HTTP 307: https://overx.ai/sitemap.xml"
+  },
+  {
+    "name": "Blog Site",
+    "url": "https://blog.overx.ai",
+    "error": "getaddrinfo ENOTFOUND blog.overx.ai"
+  },
+  {
+    "name": "Converter Site",
+    "url": "https://rates.overx.ai",
+    "total": 25,
+    "passed": 24,
+    "failed": 1,
+    "warnings": 0,
+    "pages": [
+      {
+        "url": "https://rates.overx.ai/",
+        "og": {
+          "og:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "og:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Currency Converter",
+          "twitter:description": "Compare real exchange rates across multiple providers",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai",
+        "title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+        "description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required."
+      },
+      {
+        "url": "https://rates.overx.ai/blog",
+        "og": {
+          "og:title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+          "og:description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/blog",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+          "twitter:description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy.",
+          "twitter:image": "https://rates.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/blog",
+        "title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+        "description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
+      },
+      {
+        "url": "https://rates.overx.ai/about",
+        "og": {
+          "og:title": "Exchange Rates Pro - Real-Time Exchange Rates at Your Fingertips",
+          "og:description": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/about",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Real-Time Exchange Rates at Your Fingertips",
+          "twitter:description": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money.",
+          "twitter:image": "https://rates.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/about",
+        "title": "Exchange Rates Pro - Real-Time Exchange Rates at Your Fingertips",
+        "description": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money."
+      },
+      {
+        "url": "https://rates.overx.ai/sources",
+        "og": {
+          "og:title": "Currency Data Sources - Exchange Rates Pro",
+          "og:description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/sources",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Currency Data Sources - Exchange Rates Pro",
+          "twitter:description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies.",
+          "twitter:image": "https://rates.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/sources",
+        "title": "Currency Data Sources - Exchange Rates Pro",
+        "description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
+      },
+      {
+        "url": "https://rates.overx.ai/apis",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing title tag",
+          "Missing meta description"
+        ]
+      },
+      {
+        "url": "https://rates.overx.ai/settings",
+        "og": {
+          "og:title": "Settings - Exchange Rates Pro",
+          "og:description": "Customize your currency converter preferences, default currencies, and display options.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/settings",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Settings - Exchange Rates Pro",
+          "twitter:description": "Customize your currency converter preferences, default currencies, and display options.",
+          "twitter:image": "https://rates.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/settings",
+        "title": "Settings - Exchange Rates Pro",
+        "description": "Customize your currency converter preferences, default currencies, and display options."
+      },
+      {
+        "url": "https://rates.overx.ai/simple",
+        "og": {
+          "og:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "og:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/simple",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "twitter:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "twitter:image": "https://rates.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/simple",
+        "title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+        "description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Why Transparent Exchange Rates Matter for Business | Exchange Rates Pro Blog",
+          "og:description": "Learn how hidden margins in currency conversion cost businesses billions. Transparent rates from multiple sources can save 2-5% on every transaction.",
+          "og:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp",
+          "og:url": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Professional business infographic showing transparent exchange rates with currency symbols and rate transparency graph"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Why Transparent Exchange Rates Matter for Business | Exchange Rates Pro Blog",
+          "twitter:description": "Learn how hidden margins in currency conversion cost businesses billions. Transparent rates from multiple sources can save 2-5% on every transaction.",
+          "twitter:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Why Transparent Exchange Rates Matter for Business | Exchange Rates Pro Blog",
+        "description": "Learn how hidden margins in currency conversion cost businesses billions. Transparent rates from multiple sources can save 2-5% on every transaction."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Por Qué los Tipos de Cambio Transparentes Importan | Exchange Rates Pro Blog",
+          "og:description": "Aprenda cómo los márgenes ocultos en conversión de divisas cuestan miles de millones. Los tipos transparentes pueden ahorrar 2-5% en cada transacción.",
+          "og:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp",
+          "og:url": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía empresarial profesional mostrando tipos de cambio transparentes con símbolos de divisas y gráfico de transparencia de tasas"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Por Qué los Tipos de Cambio Transparentes Importan | Exchange Rates Pro Blog",
+          "twitter:description": "Aprenda cómo los márgenes ocultos en conversión de divisas cuestan miles de millones. Los tipos transparentes pueden ahorrar 2-5% en cada transacción.",
+          "twitter:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Por Qué los Tipos de Cambio Transparentes Importan | Exchange Rates Pro Blog",
+        "description": "Aprenda cómo los márgenes ocultos en conversión de divisas cuestan miles de millones. Los tipos transparentes pueden ahorrar 2-5% en cada transacción."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Почему Прозрачные Курсы Валют Важны для Бизнеса | Exchange Rates Pro Блог",
+          "og:description": "Узнайте, как скрытые наценки при конвертации валют обходятся бизнесу в миллиарды. Прозрачные курсы из нескольких источников могут сэкономить 2-5% на каждой транзакции.",
+          "og:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp",
+          "og:url": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Профессиональная бизнес-инфографика, показывающая прозрачные обменные курсы с символами валют и графиком прозрачности курсов"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Почему Прозрачные Курсы Валют Важны для Бизнеса | Exchange Rates Pro Блог",
+          "twitter:description": "Узнайте, как скрытые наценки при конвертации валют обходятся бизнесу в миллиарды. Прозрачные курсы из нескольких источников могут сэкономить 2-5% на каждой транзакции.",
+          "twitter:image": "https://rates.overx.ai/blog/transparent-rates-hero.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Почему Прозрачные Курсы Валют Важны для Бизнеса | Exchange Rates Pro Блог",
+        "description": "Узнайте, как скрытые наценки при конвертации валют обходятся бизнесу в миллиарды. Прозрачные курсы из нескольких источников могут сэкономить 2-5% на каждой транзакции."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Save Money Traveling: Chrome Extension Guide | Exchange Rates Pro",
+          "og:description": "Learn 5 proven ways to save 3-7% on every transaction abroad with Exchange Rates Pro. Real examples and insider tips from frequent travelers.",
+          "og:image": "https://rates.overx.ai/blog/travel-money-tips.webp",
+          "og:url": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Travel-themed infographic with \"Save Money While Traveling\" and \"5 Smart Ways\" text, featuring passport, world map, and currency symbols"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Save Money Traveling: Chrome Extension Guide | Exchange Rates Pro",
+          "twitter:description": "Learn 5 proven ways to save 3-7% on every transaction abroad with Exchange Rates Pro. Real examples and insider tips from frequent travelers.",
+          "twitter:image": "https://rates.overx.ai/blog/travel-money-tips.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Save Money Traveling: Chrome Extension Guide | Exchange Rates Pro",
+        "description": "Learn 5 proven ways to save 3-7% on every transaction abroad with Exchange Rates Pro. Real examples and insider tips from frequent travelers."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Ahorra Dinero Viajando: Guía Extensión Chrome | Exchange Rates Pro",
+          "og:description": "Aprenda 5 formas probadas de ahorrar 3-7% en cada transacción en el extranjero con Exchange Rates Pro. Ejemplos reales y consejos.",
+          "og:image": "https://rates.overx.ai/blog/travel-money-tips.webp",
+          "og:url": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía de viajes con texto \"Ahorra Dinero Viajando\" y \"5 Formas Inteligentes\", con pasaporte, mapa mundial y símbolos de divisas"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Ahorra Dinero Viajando: Guía Extensión Chrome | Exchange Rates Pro",
+          "twitter:description": "Aprenda 5 formas probadas de ahorrar 3-7% en cada transacción en el extranjero con Exchange Rates Pro. Ejemplos reales y consejos.",
+          "twitter:image": "https://rates.overx.ai/blog/travel-money-tips.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Ahorra Dinero Viajando: Guía Extensión Chrome | Exchange Rates Pro",
+        "description": "Aprenda 5 formas probadas de ahorrar 3-7% en cada transacción en el extranjero con Exchange Rates Pro. Ejemplos reales y consejos."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Экономьте в Путешествиях: Гид по Расширению Chrome | Exchange Rates Pro",
+          "og:description": "Узнайте 5 проверенных способов экономить 3-7% на каждой транзакции за границей с Exchange Rates Pro. Реальные примеры и советы.",
+          "og:image": "https://rates.overx.ai/blog/travel-money-tips.webp",
+          "og:url": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Туристическая инфографика с текстом \"Экономьте Деньги в Путешествиях\" и \"5 Умных Способов\", с паспортом, картой мира и символами валют"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Экономьте в Путешествиях: Гид по Расширению Chrome | Exchange Rates Pro",
+          "twitter:description": "Узнайте 5 проверенных способов экономить 3-7% на каждой транзакции за границей с Exchange Rates Pro. Реальные примеры и советы.",
+          "twitter:image": "https://rates.overx.ai/blog/travel-money-tips.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Экономьте в Путешествиях: Гид по Расширению Chrome | Exchange Rates Pro",
+        "description": "Узнайте 5 проверенных способов экономить 3-7% на каждой транзакции за границей с Exchange Rates Pro. Реальные примеры и советы."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Compare Currency Exchange APIs 2024: Complete Guide | Exchange Rates Pro",
+          "og:description": "In-depth comparison of 12+ currency exchange APIs. Compare pricing, features, accuracy, and reliability to choose the best API for your project.",
+          "og:image": "https://rates.overx.ai/blog/api-comparison-guide.webp",
+          "og:url": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Technical comparison chart titled \"Currency Exchange APIs 2024\" with API names, comparison metrics, code elements, and performance indicators"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Compare Currency Exchange APIs 2024: Complete Guide | Exchange Rates Pro",
+          "twitter:description": "In-depth comparison of 12+ currency exchange APIs. Compare pricing, features, accuracy, and reliability to choose the best API for your project.",
+          "twitter:image": "https://rates.overx.ai/blog/api-comparison-guide.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Compare Currency Exchange APIs 2024: Complete Guide | Exchange Rates Pro",
+        "description": "In-depth comparison of 12+ currency exchange APIs. Compare pricing, features, accuracy, and reliability to choose the best API for your project."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Comparar APIs de Cambio de Divisas 2024: Guía Completa | Exchange Rates Pro",
+          "og:description": "Comparación detallada de más de 12 APIs de cambio de divisas. Compare precios, características, precisión y confiabilidad.",
+          "og:image": "https://rates.overx.ai/blog/api-comparison-guide.webp",
+          "og:url": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Gráfico de comparación técnica titulado \"APIs de Cambio de Divisas 2024\" con nombres de APIs, métricas de comparación, elementos de código e indicadores de rendimiento"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Comparar APIs de Cambio de Divisas 2024: Guía Completa | Exchange Rates Pro",
+          "twitter:description": "Comparación detallada de más de 12 APIs de cambio de divisas. Compare precios, características, precisión y confiabilidad.",
+          "twitter:image": "https://rates.overx.ai/blog/api-comparison-guide.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Comparar APIs de Cambio de Divisas 2024: Guía Completa | Exchange Rates Pro",
+        "description": "Comparación detallada de más de 12 APIs de cambio de divisas. Compare precios, características, precisión y confiabilidad."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Сравнение API Обмена Валют 2024: Полное Руководство | Exchange Rates Pro",
+          "og:description": "Подробное сравнение 12+ API обмена валют. Сравните цены, функции, точность и надежность для вашего проекта.",
+          "og:image": "https://rates.overx.ai/blog/api-comparison-guide.webp",
+          "og:url": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Техническая сравнительная диаграмма под названием \"API Обмена Валют 2024\" с названиями API, метриками сравнения, элементами кода и индикаторами производительности"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Сравнение API Обмена Валют 2024: Полное Руководство | Exchange Rates Pro",
+          "twitter:description": "Подробное сравнение 12+ API обмена валют. Сравните цены, функции, точность и надежность для вашего проекта.",
+          "twitter:image": "https://rates.overx.ai/blog/api-comparison-guide.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Сравнение API Обмена Валют 2024: Полное Руководство | Exchange Rates Pro",
+        "description": "Подробное сравнение 12+ API обмена валют. Сравните цены, функции, точность и надежность для вашего проекта."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Real-Time Currency Alerts: Maximize Exchange Rates | Exchange Rates Pro",
+          "og:description": "Learn how to use real-time currency alerts to catch the best exchange rates. Save up to 4% by timing your conversions with market movements.",
+          "og:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:url": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Real-time alert dashboard showing \"Currency Alerts\" and \"Maximize Exchange Rates\" text with notification bells, rate charts, and mobile alerts"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Real-Time Currency Alerts: Maximize Exchange Rates | Exchange Rates Pro",
+          "twitter:description": "Learn how to use real-time currency alerts to catch the best exchange rates. Save up to 4% by timing your conversions with market movements.",
+          "twitter:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Real-Time Currency Alerts: Maximize Exchange Rates | Exchange Rates Pro",
+        "description": "Learn how to use real-time currency alerts to catch the best exchange rates. Save up to 4% by timing your conversions with market movements."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Alertas de Divisas en Tiempo Real: Maximiza Tipos de Cambio | Exchange Rates Pro",
+          "og:description": "Aprenda a usar alertas de divisas en tiempo real para obtener los mejores tipos de cambio. Ahorre hasta 4% con movimientos del mercado.",
+          "og:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:url": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Panel de alertas en tiempo real mostrando texto \"Alertas de Divisas\" y \"Maximizar Tipos de Cambio\" con campanas de notificación, gráficos de tasas y alertas móviles"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Alertas de Divisas en Tiempo Real: Maximiza Tipos de Cambio | Exchange Rates Pro",
+          "twitter:description": "Aprenda a usar alertas de divisas en tiempo real para obtener los mejores tipos de cambio. Ahorre hasta 4% con movimientos del mercado.",
+          "twitter:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Alertas de Divisas en Tiempo Real: Maximiza Tipos de Cambio | Exchange Rates Pro",
+        "description": "Aprenda a usar alertas de divisas en tiempo real para obtener los mejores tipos de cambio. Ahorre hasta 4% con movimientos del mercado."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Уведомления о Курсах Валют: Максимизируйте Обменные Курсы | Exchange Rates Pro",
+          "og:description": "Узнайте, как использовать уведомления о курсах валют для получения лучших обменных курсов. Экономьте до 4% с движениями рынка.",
+          "og:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:url": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Панель оповещений в реальном времени, показывающая текст \"Валютные Оповещения\" и \"Максимизировать Обменные Курсы\" с колокольчиками уведомлений, графиками курсов и мобильными оповещениями"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Уведомления о Курсах Валют: Максимизируйте Обменные Курсы | Exchange Rates Pro",
+          "twitter:description": "Узнайте, как использовать уведомления о курсах валют для получения лучших обменных курсов. Экономьте до 4% с движениями рынка.",
+          "twitter:image": "https://rates.overx.ai/blog/currency-alerts-dashboard.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Уведомления о Курсах Валют: Максимизируйте Обменные Курсы | Exchange Rates Pro",
+        "description": "Узнайте, как использовать уведомления о курсах валют для получения лучших обменных курсов. Экономьте до 4% с движениями рынка."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Crypto vs Traditional Currency Exchange 2024: Complete Comparison | Exchange Rates Pro",
+          "og:description": "Compare cryptocurrency and traditional forex for international transfers. Analyze costs, speed, security, and regulations to make the best choice.",
+          "og:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp",
+          "og:url": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Split comparison showing \"Cryptocurrency vs Traditional Currency\" with Bitcoin and crypto symbols on one side, traditional banking on the other"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Crypto vs Traditional Currency Exchange 2024: Complete Comparison | Exchange Rates Pro",
+          "twitter:description": "Compare cryptocurrency and traditional forex for international transfers. Analyze costs, speed, security, and regulations to make the best choice.",
+          "twitter:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Crypto vs Traditional Currency Exchange 2024: Complete Comparison | Exchange Rates Pro",
+        "description": "Compare cryptocurrency and traditional forex for international transfers. Analyze costs, speed, security, and regulations to make the best choice."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Cripto vs Cambio de Divisas Tradicional 2024: Comparación | Exchange Rates Pro",
+          "og:description": "Compare criptomonedas y forex tradicional para transferencias internacionales. Analice costos, velocidad, seguridad y regulaciones.",
+          "og:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp",
+          "og:url": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Comparación dividida mostrando \"Criptomonedas vs Moneda Tradicional\" con Bitcoin y símbolos cripto en un lado, banca tradicional en el otro"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Cripto vs Cambio de Divisas Tradicional 2024: Comparación | Exchange Rates Pro",
+          "twitter:description": "Compare criptomonedas y forex tradicional para transferencias internacionales. Analice costos, velocidad, seguridad y regulaciones.",
+          "twitter:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Cripto vs Cambio de Divisas Tradicional 2024: Comparación | Exchange Rates Pro",
+        "description": "Compare criptomonedas y forex tradicional para transferencias internacionales. Analice costos, velocidad, seguridad y regulaciones."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Крипто vs Традиционный Обмен Валют 2024: Сравнение | Exchange Rates Pro",
+          "og:description": "Сравните криптовалюту и традиционный форекс для международных переводов. Анализ затрат, скорости, безопасности и регулирования.",
+          "og:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp",
+          "og:url": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Разделенное сравнение, показывающее \"Криптовалюта vs Традиционная Валюта\" с Биткоином и крипто символами с одной стороны, традиционным банкингом с другой"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Крипто vs Традиционный Обмен Валют 2024: Сравнение | Exchange Rates Pro",
+          "twitter:description": "Сравните криптовалюту и традиционный форекс для международных переводов. Анализ затрат, скорости, безопасности и регулирования.",
+          "twitter:image": "https://rates.overx.ai/blog/crypto-vs-forex.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Крипто vs Традиционный Обмен Валют 2024: Сравнение | Exchange Rates Pro",
+        "description": "Сравните криптовалюту и традиционный форекс для международных переводов. Анализ затрат, скорости, безопасности и регулирования."
+      },
+      {
+        "url": "https://rates.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Avoid Dynamic Currency Conversion (DCC) Scams: Complete Guide | Exchange Rates Pro",
+          "og:description": "DCC costs travelers millions yearly. Learn how to spot and avoid these scams, saving 3-12% on every international transaction. Expert tips included.",
+          "og:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp",
+          "og:url": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Warning-style infographic with \"Avoid DCC Scams\" and \"Dynamic Currency Conversion\" text, showing warning signs, credit card terminals, and protective shields"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Avoid Dynamic Currency Conversion (DCC) Scams: Complete Guide | Exchange Rates Pro",
+          "twitter:description": "DCC costs travelers millions yearly. Learn how to spot and avoid these scams, saving 3-12% on every international transaction. Expert tips included.",
+          "twitter:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Avoid Dynamic Currency Conversion (DCC) Scams: Complete Guide | Exchange Rates Pro",
+        "description": "DCC costs travelers millions yearly. Learn how to spot and avoid these scams, saving 3-12% on every international transaction. Expert tips included."
+      },
+      {
+        "url": "https://rates.overx.ai/es/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Evita Estafas de Conversión Dinámica (DCC): Guía Completa | Exchange Rates Pro",
+          "og:description": "DCC cuesta a viajeros millones anualmente. Aprenda a detectar y evitar estas estafas, ahorrando 3-12% en cada transacción internacional.",
+          "og:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp",
+          "og:url": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía de advertencia con texto \"Evitar Estafas DCC\" y \"Conversión Dinámica de Divisas\", mostrando señales de advertencia, terminales de tarjetas de crédito y escudos protectores"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Evita Estafas de Conversión Dinámica (DCC): Guía Completa | Exchange Rates Pro",
+          "twitter:description": "DCC cuesta a viajeros millones anualmente. Aprenda a detectar y evitar estas estafas, ahorrando 3-12% en cada transacción internacional.",
+          "twitter:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Evita Estafas de Conversión Dinámica (DCC): Guía Completa | Exchange Rates Pro",
+        "description": "DCC cuesta a viajeros millones anualmente. Aprenda a detectar y evitar estas estafas, ahorrando 3-12% en cada transacción internacional."
+      },
+      {
+        "url": "https://rates.overx.ai/ru/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Избегайте Мошенничества DCC: Полное Руководство | Exchange Rates Pro",
+          "og:description": "DCC обходится путешественникам в миллионы. Узнайте, как распознать и избежать махинаций, экономя 3-12% на международных транзакциях.",
+          "og:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp",
+          "og:url": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+          "og:type": "website",
+          "og:site_name": "OverX AI - AI Solutions",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Предупреждающая инфографика с текстом \"Избегайте Мошенничества DCC\" и \"Динамическая Конверсия Валют\", показывающая предупреждающие знаки, терминалы кредитных карт и защитные щиты"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Избегайте Мошенничества DCC: Полное Руководство | Exchange Rates Pro",
+          "twitter:description": "DCC обходится путешественникам в миллионы. Узнайте, как распознать и избежать махинаций, экономя 3-12% на международных транзакциях.",
+          "twitter:image": "https://rates.overx.ai/blog/dcc-scam-warning.webp"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Избегайте Мошенничества DCC: Полное Руководство | Exchange Rates Pro",
+        "description": "DCC обходится путешественникам в миллионы. Узнайте, как распознать и избежать махинаций, экономя 3-12% на международных транзакциях."
+      }
+    ]
+  },
+  {
+    "name": "Words Site",
+    "url": "https://words.overx.ai",
+    "total": 5,
+    "passed": 0,
+    "failed": 5,
+    "warnings": 0,
+    "pages": [
+      {
+        "url": "https://words.overx.ai/pricing",
+        "error": "HTTP 308: https://words.overx.ai/pricing"
+      },
+      {
+        "url": "https://words.overx.ai/",
+        "error": "HTTP 308: https://words.overx.ai/"
+      },
+      {
+        "url": "https://words.overx.ai/features",
+        "error": "HTTP 308: https://words.overx.ai/features"
+      },
+      {
+        "url": "https://words.overx.ai/blog",
+        "error": "HTTP 308: https://words.overx.ai/blog"
+      },
+      {
+        "url": "https://words.overx.ai/blog/:slug",
+        "error": "HTTP 308: https://words.overx.ai/blog/:slug"
+      }
+    ]
+  }
+]
