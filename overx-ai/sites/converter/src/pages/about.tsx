@@ -69,12 +69,21 @@ export default function AboutPage() {
           title: t('about.hero.title'),
           description: t('about.hero.subtitle'),
           type: 'website',
+          url: 'https://rates.overx.ai/about',
+          siteName: 'Exchange Rates Pro',
           image: {
             url: 'https://rates.overx.ai/og-image.png',
-            width: 1200,
-            height: 630,
+            width: 1312,
+            height: 736,
             alt: 'Exchange Rates Pro Chrome Extension'
           },
+        }}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: t('about.hero.title'),
+          description: t('about.hero.subtitle'),
+          image: 'https://rates.overx.ai/twitter-card.png'
         }}
         structuredData={structuredData}
       />

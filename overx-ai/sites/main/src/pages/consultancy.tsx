@@ -128,7 +128,21 @@ export default function ConsultancyPage() {
           type: 'website',
           title: 'OverX AI Consultancy - Expert AI Solutions',
           description: 'Professional AI consultancy services to transform your business',
-          url: 'https://overx.ai/consultancy'
+          url: 'https://overx.ai/consultancy',
+          siteName: 'OverX AI',
+          image: {
+            url: 'https://overx.ai/og-image.jpg',
+            width: 1312,
+            height: 736,
+            alt: 'OverX AI Consultancy Services'
+          }
+        }}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: 'AI Consultancy Services - OverX AI',
+          description: 'Transform your business with expert AI consultancy',
+          image: 'https://overx.ai/twitter-card.jpg'
         }}
         structuredData={structuredData}
       />

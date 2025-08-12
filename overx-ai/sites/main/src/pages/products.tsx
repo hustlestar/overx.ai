@@ -225,7 +225,21 @@ export default function ProductsPage() {
           type: 'website',
           title: 'OverX AI Products - Smart Solutions for Modern Life',
           description: 'Discover AI-powered tools that save time and boost productivity',
-          url: 'https://overx.ai/products'
+          url: 'https://overx.ai/products',
+          siteName: 'OverX AI',
+          image: {
+            url: 'https://overx.ai/og-image.jpg',
+            width: 1312,
+            height: 736,
+            alt: 'OverX AI Products - AI Solutions'
+          }
+        }}
+        twitter={{
+          card: 'summary_large_image',
+          site: '@overxai',
+          title: 'OverX AI Products - AI Solutions',
+          description: 'Discover AI-powered tools that save time and boost productivity',
+          image: 'https://overx.ai/twitter-card.jpg'
         }}
         structuredData={structuredData}
       />

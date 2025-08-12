@@ -1,0 +1,2766 @@
+[
+  {
+    "name": "Main Site",
+    "domain": "https://overx.ai",
+    "total": 18,
+    "passed": 3,
+    "failed": 15,
+    "warnings": 0,
+    "pages": [
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en/404.html",
+        "url": "https://overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en/500.html",
+        "url": "https://overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en/consultancy.html",
+        "url": "https://overx.ai/consultancy",
+        "og": {
+          "og:title": "OverX AI Consultancy - Expert AI Solutions",
+          "og:description": "Professional AI consultancy services to transform your business",
+          "og:url": "https://overx.ai/consultancy",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/consultancy",
+        "title": "AI Consultancy Services - OverX AI | Expert AI Implementation",
+        "description": "Transform your business with OverX AI's expert consultancy services. From AI strategy to implementation, we guide you through every step of your AI journey."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en/cv.html",
+        "url": "https://overx.ai/cv",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "Redirecting..."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en/products.html",
+        "url": "https://overx.ai/products",
+        "og": {
+          "og:title": "OverX AI Products - Smart Solutions for Modern Life",
+          "og:description": "Discover AI-powered tools that save time and boost productivity",
+          "og:url": "https://overx.ai/products",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/products",
+        "title": "Products - OverX AI | AI Solutions That Give You Time Back",
+        "description": "Explore OverX AI's suite of intelligent products designed to automate tasks and improve your life. From productivity tools to AI assistants, find the perfect solution for your needs."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/en.html",
+        "url": "https://overx.ai/en",
+        "og": {
+          "og:title": "OverX AI - Custom AI Agents & Automation Solutions",
+          "og:description": "Build custom AI agents & automation tools. Save 10+ hours/week with our AI consultancy, Chrome extensions, and SaaS solutions.",
+          "og:image": "https://overx.ai/og-image.jpg",
+          "og:url": "https://overx.ai",
+          "og:type": "website",
+          "og:site_name": "OverX AI",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "OverX.ai Platform Overview"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "OverX AI - Pioneering AI Solutions",
+          "twitter:description": "Transform your business with cutting-edge AI solutions",
+          "twitter:image": "https://overx.ai/twitter-card.jpg"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai",
+        "title": "OverX AI - Custom AI Agents & Automation Solutions | Save 10+ Hours/Week",
+        "description": "Build custom AI agents, Chrome extensions & automation tools with OverX AI. Free currency converter, AI consultancy, and SaaS solutions. Transform your workflow today."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es/404.html",
+        "url": "https://overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es/500.html",
+        "url": "https://overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es/consultancy.html",
+        "url": "https://overx.ai/consultancy",
+        "og": {
+          "og:title": "OverX AI Consultancy - Expert AI Solutions",
+          "og:description": "Professional AI consultancy services to transform your business",
+          "og:url": "https://overx.ai/consultancy",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/consultancy",
+        "title": "AI Consultancy Services - OverX AI | Expert AI Implementation",
+        "description": "Transform your business with OverX AI's expert consultancy services. From AI strategy to implementation, we guide you through every step of your AI journey."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es/cv.html",
+        "url": "https://overx.ai/cv",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "Redirecting..."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es/products.html",
+        "url": "https://overx.ai/products",
+        "og": {
+          "og:title": "OverX AI Products - Smart Solutions for Modern Life",
+          "og:description": "Discover AI-powered tools that save time and boost productivity",
+          "og:url": "https://overx.ai/products",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/products",
+        "title": "Products - OverX AI | AI Solutions That Give You Time Back",
+        "description": "Explore OverX AI's suite of intelligent products designed to automate tasks and improve your life. From productivity tools to AI assistants, find the perfect solution for your needs."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/es.html",
+        "url": "https://overx.ai/es",
+        "og": {
+          "og:title": "OverX AI - Custom AI Agents & Automation Solutions",
+          "og:description": "Build custom AI agents & automation tools. Save 10+ hours/week with our AI consultancy, Chrome extensions, and SaaS solutions.",
+          "og:image": "https://overx.ai/og-image.jpg",
+          "og:url": "https://overx.ai",
+          "og:type": "website",
+          "og:site_name": "OverX AI",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "OverX.ai Platform Overview"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "OverX AI - Pioneering AI Solutions",
+          "twitter:description": "Transform your business with cutting-edge AI solutions",
+          "twitter:image": "https://overx.ai/twitter-card.jpg"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai",
+        "title": "OverX AI - Custom AI Agents & Automation Solutions | Save 10+ Hours/Week",
+        "description": "Build custom AI agents, Chrome extensions & automation tools with OverX AI. Free currency converter, AI consultancy, and SaaS solutions. Transform your workflow today."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru/404.html",
+        "url": "https://overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru/500.html",
+        "url": "https://overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru/consultancy.html",
+        "url": "https://overx.ai/consultancy",
+        "og": {
+          "og:title": "OverX AI Consultancy - Expert AI Solutions",
+          "og:description": "Professional AI consultancy services to transform your business",
+          "og:url": "https://overx.ai/consultancy",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/consultancy",
+        "title": "AI Consultancy Services - OverX AI | Expert AI Implementation",
+        "description": "Transform your business with OverX AI's expert consultancy services. From AI strategy to implementation, we guide you through every step of your AI journey."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru/cv.html",
+        "url": "https://overx.ai/cv",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "Redirecting..."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru/products.html",
+        "url": "https://overx.ai/products",
+        "og": {
+          "og:title": "OverX AI Products - Smart Solutions for Modern Life",
+          "og:description": "Discover AI-powered tools that save time and boost productivity",
+          "og:url": "https://overx.ai/products",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai/products",
+        "title": "Products - OverX AI | AI Solutions That Give You Time Back",
+        "description": "Explore OverX AI's suite of intelligent products designed to automate tasks and improve your life. From productivity tools to AI assistants, find the perfect solution for your needs."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/main/.next/server/pages/ru.html",
+        "url": "https://overx.ai/ru",
+        "og": {
+          "og:title": "OverX AI - Custom AI Agents & Automation Solutions",
+          "og:description": "Build custom AI agents & automation tools. Save 10+ hours/week with our AI consultancy, Chrome extensions, and SaaS solutions.",
+          "og:image": "https://overx.ai/og-image.jpg",
+          "og:url": "https://overx.ai",
+          "og:type": "website",
+          "og:site_name": "OverX AI",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "OverX.ai Platform Overview"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "OverX AI - Pioneering AI Solutions",
+          "twitter:description": "Transform your business with cutting-edge AI solutions",
+          "twitter:image": "https://overx.ai/twitter-card.jpg"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://overx.ai",
+        "title": "OverX AI - Custom AI Agents & Automation Solutions | Save 10+ Hours/Week",
+        "description": "Build custom AI agents, Chrome extensions & automation tools with OverX AI. Free currency converter, AI consultancy, and SaaS solutions. Transform your workflow today."
+      }
+    ]
+  },
+  {
+    "name": "Blog Site",
+    "error": "Build directory not found"
+  },
+  {
+    "name": "Converter Site",
+    "domain": "https://rates.overx.ai",
+    "total": 54,
+    "passed": 9,
+    "failed": 45,
+    "warnings": 0,
+    "pages": [
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/404.html",
+        "url": "https://rates.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/500.html",
+        "url": "https://rates.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/about.html",
+        "url": "https://rates.overx.ai/about",
+        "og": {
+          "og:title": "Exchange Rates Pro",
+          "og:description": "The Smart Choice for Currency Conversion",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:type": "website",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "Exchange Rates Pro Chrome Extension"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/about",
+        "title": "Exchange Rates Pro - Real-Time Exchange Rates at Your Fingertips",
+        "description": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/apis.html",
+        "url": "https://rates.overx.ai/apis",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing title tag",
+          "Missing meta description"
+        ]
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/advanced-currency-math-complex-multi-currency-expressions.html",
+        "url": "https://rates.overx.ai/advanced-currency-math-complex-multi-currency-expressions",
+        "og": {
+          "og:title": "Advanced Currency Math: How to Calculate Complex Multi-Currency Expressions Like a Pro",
+          "og:description": "Master advanced multi-currency mathematical expressions with nested parentheses, complex business logic, and professional-grade precision. Learn enterprise-level currency calculation techniques used by quantitative analysts.",
+          "og:image": "https://converter.overx.ai/blog/advanced-currency-math-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Advanced financial technology scene with multiple monitors showing complex mathematical expressions, currency trading floor with professionals analyzing multi-currency calculations"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/advanced-currency-math-complex-multi-currency-expressions",
+        "title": "Advanced Multi-Currency Math: Complex Expression Calculator | Exchange Rates Pro",
+        "description": "Master advanced multi-currency mathematical expressions with nested parentheses and complex business logic. Professional-grade precision for quantitative analysts."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/avoid-dynamic-currency-conversion-scams-complete-guide.html",
+        "url": "https://rates.overx.ai/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Avoid Dynamic Currency Conversion Scams: Complete Protection Guide",
+          "og:description": "Dynamic Currency Conversion (DCC) costs travelers millions yearly. Learn how to spot and avoid these scams, saving 3-12% on every international transaction.",
+          "og:image": "https://converter.overx.ai/blog/dcc-scam-warning.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Warning-style infographic with \"Avoid DCC Scams\" and \"Dynamic Currency Conversion\" text, showing warning signs, credit card terminals, and protective shields"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Avoid Dynamic Currency Conversion (DCC) Scams: Complete Guide | Exchange Rates Pro",
+        "description": "DCC costs travelers millions yearly. Learn how to spot and avoid these scams, saving 3-12% on every international transaction. Expert tips included."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/compare-currency-exchange-apis-2024-complete-guide.html",
+        "url": "https://rates.overx.ai/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Compare Currency Exchange APIs 2024: Developer's Complete Guide",
+          "og:description": "In-depth comparison of 12+ currency exchange APIs. Compare pricing, features, accuracy, and reliability to choose the best API for your project.",
+          "og:image": "https://converter.overx.ai/blog/api-comparison-guide.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Technical comparison chart titled \"Currency Exchange APIs 2024\" with API names, comparison metrics, code elements, and performance indicators"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Compare Currency Exchange APIs 2024: Complete Guide | Exchange Rates Pro",
+        "description": "In-depth comparison of 12+ currency exchange APIs. Compare pricing, features, accuracy, and reliability to choose the best API for your project."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/complete-guide-currency-conversion-mathematical-expressions.html",
+        "url": "https://rates.overx.ai/complete-guide-currency-conversion-mathematical-expressions",
+        "og": {
+          "og:title": "Complete Guide to Currency Conversion: From Basic Exchange to Complex Mathematical Expressions",
+          "og:description": "Master advanced currency conversion with mathematical expressions. Learn how to calculate \"(100 USD + 50 EUR) × 2 in GBP\" and save hours on complex international financial calculations.",
+          "og:image": "https://converter.overx.ai/blog/mathematical-currency-conversion-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Professional business scene showing mathematical currency conversion with financial professionals using computers, currency symbols, and mathematical equations visible on screens"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/complete-guide-currency-conversion-mathematical-expressions",
+        "title": "Mathematical Currency Conversion Guide: Advanced Expression Calculator | Exchange Rates Pro",
+        "description": "Master complex currency calculations with mathematical expressions. Learn \"(100 USD + 50 EUR) × 2 in GBP\" and advanced techniques. Save hours on international finance."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/cryptocurrency-vs-traditional-currency-exchange-2024.html",
+        "url": "https://rates.overx.ai/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Cryptocurrency vs Traditional Currency Exchange: What's Best in 2024?",
+          "og:description": "Compare cryptocurrency and traditional forex for international transfers. Analyze costs, speed, security, and regulations to make the best choice for your needs.",
+          "og:image": "https://converter.overx.ai/blog/crypto-vs-forex.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Split comparison showing \"Cryptocurrency vs Traditional Currency\" with Bitcoin and crypto symbols on one side, traditional banking on the other"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Crypto vs Traditional Currency Exchange 2024: Complete Comparison | Exchange Rates Pro",
+        "description": "Compare cryptocurrency and traditional forex for international transfers. Analyze costs, speed, security, and regulations to make the best choice."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/how-to-convert-currency-mathematical-expressions-tutorial.html",
+        "url": "https://rates.overx.ai/how-to-convert-currency-mathematical-expressions-tutorial",
+        "og": {
+          "og:title": "How to Convert Currency Using Mathematical Expressions: Complete Tutorial with Examples",
+          "og:description": "Learn step-by-step how to use mathematical expressions for currency conversion. Master \"(100 USD + 50 EUR) × 2 in GBP\" and save hours on complex calculations with our practical tutorial.",
+          "og:image": "https://converter.overx.ai/blog/tutorial-workspace-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Professional tutorial workspace showing laptop with Exchange Rates Pro interface, educational materials, and step-by-step learning setup"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/how-to-convert-currency-mathematical-expressions-tutorial",
+        "title": "Currency Math Expression Tutorial: Step-by-Step Guide | Exchange Rates Pro",
+        "description": "Learn step-by-step how to use mathematical expressions for currency conversion. Master complex calculations with practical examples and screenshots."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/real-time-currency-alerts-maximize-exchange-rates.html",
+        "url": "https://rates.overx.ai/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Real-Time Currency Alerts: How to Maximize Your Exchange Rates",
+          "og:description": "Learn how to use real-time currency alerts to catch the best exchange rates. Save up to 4% by timing your conversions with market movements.",
+          "og:image": "https://converter.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Real-time alert dashboard showing \"Currency Alerts\" and \"Maximize Exchange Rates\" text with notification bells, rate charts, and mobile alerts"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Real-Time Currency Alerts: Maximize Exchange Rates | Exchange Rates Pro",
+        "description": "Learn how to use real-time currency alerts to catch the best exchange rates. Save up to 4% by timing your conversions with market movements."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/save-money-traveling-currency-converter-chrome-extension.html",
+        "url": "https://rates.overx.ai/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Save Money While Traveling: 5 Ways Our Chrome Extension Helps",
+          "og:description": "Discover how Exchange Rates Pro helps travelers save 3-7% on every transaction abroad. From avoiding DCC scams to finding the best ATM rates.",
+          "og:image": "https://converter.overx.ai/blog/travel-money-tips.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Travel-themed infographic with \"Save Money While Traveling\" and \"5 Smart Ways\" text, featuring passport, world map, and currency symbols"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Save Money Traveling: Chrome Extension Guide | Exchange Rates Pro",
+        "description": "Learn 5 proven ways to save 3-7% on every transaction abroad with Exchange Rates Pro. Real examples and insider tips from frequent travelers."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog/why-transparent-exchange-rates-matter-international-business.html",
+        "url": "https://rates.overx.ai/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Why Transparent Exchange Rates Matter for International Business in 2024",
+          "og:description": "Hidden margins in currency conversion cost businesses billions annually. Learn how transparent exchange rates from multiple sources can save your company 2-5% on every international transaction.",
+          "og:image": "https://converter.overx.ai/blog/transparent-rates-hero.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Professional business infographic showing transparent exchange rates with currency symbols and rate transparency graph"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Why Transparent Exchange Rates Matter for Business | Exchange Rates Pro Blog",
+        "description": "Learn how hidden margins in currency conversion cost businesses billions. Transparent rates from multiple sources can save 2-5% on every transaction."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/blog.html",
+        "url": "https://rates.overx.ai/blog",
+        "og": {
+          "og:title": "Exchange Rates Pro Blog - Expert Currency Exchange Insights",
+          "og:description": "Learn how to save money on international transactions with transparent exchange rates",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/blog",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro Blog - Currency Exchange Insights"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro Blog",
+          "twitter:description": "Expert insights on transparent currency exchange",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/blog",
+        "title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+        "description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/settings.html",
+        "url": "https://rates.overx.ai/settings",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/settings",
+        "title": "Settings - Exchange Rates Pro",
+        "description": "Customize your currency converter preferences, default currencies, and display options."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/simple.html",
+        "url": "https://rates.overx.ai/simple",
+        "og": {
+          "og:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "og:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/simple",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Simple Currency Converter - Exchange Rates Pro"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "twitter:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/simple",
+        "title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+        "description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en/sources.html",
+        "url": "https://rates.overx.ai/sources",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/sources",
+        "title": "Currency Data Sources - Exchange Rates Pro",
+        "description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/en.html",
+        "url": "https://rates.overx.ai/en",
+        "og": {
+          "og:title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+          "og:description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Currency Converter",
+          "twitter:description": "Compare real exchange rates across multiple providers",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai",
+        "title": "Exchange Rates Pro - Free Real-Time Currency Converter & Exchange Rate API Comparison",
+        "description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/404.html",
+        "url": "https://rates.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/500.html",
+        "url": "https://rates.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/about.html",
+        "url": "https://rates.overx.ai/about",
+        "og": {
+          "og:title": "Exchange Rates Pro",
+          "og:description": "La extensión de Chrome que revoluciona la conversión de divisas con total transparencia",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:type": "website",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "Exchange Rates Pro Chrome Extension"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/about",
+        "title": "Acerca de Exchange Rates Pro - Extensión de Chrome para Tipos de Cambio Transparentes",
+        "description": "La extensión Exchange Rates Pro para Chrome ofrece conversión de divisas en tiempo real con tipos transparentes de más de 12 fuentes confiables. Compare tipos de cambio, evite tarifas ocultas y tome decisiones informadas."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/apis.html",
+        "url": "https://rates.overx.ai/apis",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing title tag",
+          "Missing meta description"
+        ]
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/advanced-currency-math-complex-multi-currency-expressions.html",
+        "url": "https://rates.overx.ai/advanced-currency-math-complex-multi-currency-expressions",
+        "og": {
+          "og:title": "Matemáticas Avanzadas de Divisas: Cómo Calcular Expresiones Complejas Multi-Divisa Como un Profesional",
+          "og:description": "Domina expresiones matemáticas multi-divisa avanzadas con paréntesis anidados, lógica empresarial compleja y precisión de grado profesional. Aprende técnicas de cálculo de divisas de nivel empresarial usadas por analistas cuantitativos.",
+          "og:image": "https://converter.overx.ai/blog/advanced-currency-math-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Escena avanzada de tecnología financiera con múltiples monitores mostrando expresiones matemáticas complejas, piso de operaciones de divisas con profesionales analizando cálculos multi-divisa"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/advanced-currency-math-complex-multi-currency-expressions",
+        "title": "Matemáticas Multi-Divisa Avanzadas: Calculadora Expresiones Complejas | Exchange Rates Pro",
+        "description": "Domina expresiones matemáticas multi-divisa avanzadas con paréntesis anidados y lógica empresarial compleja. Precisión profesional para analistas cuantitativos."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/avoid-dynamic-currency-conversion-scams-complete-guide.html",
+        "url": "https://rates.overx.ai/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Evita las Estafas de Conversión Dinámica de Divisas: Guía de Protección",
+          "og:description": "La Conversión Dinámica de Divisas (DCC) cuesta a los viajeros millones anualmente. Aprenda a detectar y evitar estas estafas, ahorrando 3-12% en cada transacción.",
+          "og:image": "https://converter.overx.ai/blog/dcc-scam-warning.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía de advertencia con texto \"Evitar Estafas DCC\" y \"Conversión Dinámica de Divisas\", mostrando señales de advertencia, terminales de tarjetas de crédito y escudos protectores"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Evita Estafas de Conversión Dinámica (DCC): Guía Completa | Exchange Rates Pro",
+        "description": "DCC cuesta a viajeros millones anualmente. Aprenda a detectar y evitar estas estafas, ahorrando 3-12% en cada transacción internacional."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/compare-currency-exchange-apis-2024-complete-guide.html",
+        "url": "https://rates.overx.ai/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Comparar APIs de Cambio de Divisas 2024: Guía Completa para Desarrolladores",
+          "og:description": "Comparación detallada de más de 12 APIs de cambio de divisas. Compare precios, características, precisión y confiabilidad para elegir la mejor API para su proyecto.",
+          "og:image": "https://converter.overx.ai/blog/api-comparison-guide.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Gráfico de comparación técnica titulado \"APIs de Cambio de Divisas 2024\" con nombres de APIs, métricas de comparación, elementos de código e indicadores de rendimiento"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Comparar APIs de Cambio de Divisas 2024: Guía Completa | Exchange Rates Pro",
+        "description": "Comparación detallada de más de 12 APIs de cambio de divisas. Compare precios, características, precisión y confiabilidad."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/complete-guide-currency-conversion-mathematical-expressions.html",
+        "url": "https://rates.overx.ai/complete-guide-currency-conversion-mathematical-expressions",
+        "og": {
+          "og:title": "Guía Completa de Conversión de Divisas: Del Cambio Básico a Expresiones Matemáticas Complejas",
+          "og:description": "Domina la conversión avanzada de divisas con expresiones matemáticas. Aprende a calcular \"(100 USD + 50 EUR) × 2 en GBP\" y ahorra horas en cálculos financieros internacionales complejos.",
+          "og:image": "https://converter.overx.ai/blog/mathematical-currency-conversion-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Escena empresarial profesional mostrando conversión matemática de divisas con profesionales financieros usando computadoras, símbolos de divisas y ecuaciones matemáticas visibles en pantallas"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/complete-guide-currency-conversion-mathematical-expressions",
+        "title": "Guía Conversión Matemática de Divisas: Calculadora Expresiones | Exchange Rates Pro",
+        "description": "Domina cálculos complejos de divisas con expresiones matemáticas. Aprende \"(100 USD + 50 EUR) × 2 en GBP\" y técnicas avanzadas."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/cryptocurrency-vs-traditional-currency-exchange-2024.html",
+        "url": "https://rates.overx.ai/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Criptomonedas vs Cambio de Divisas Tradicional: ¿Qué es Mejor en 2024?",
+          "og:description": "Compare criptomonedas y forex tradicional para transferencias internacionales. Analice costos, velocidad, seguridad y regulaciones para tomar la mejor decisión.",
+          "og:image": "https://converter.overx.ai/blog/crypto-vs-forex.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Comparación dividida mostrando \"Criptomonedas vs Moneda Tradicional\" con Bitcoin y símbolos cripto en un lado, banca tradicional en el otro"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Cripto vs Cambio de Divisas Tradicional 2024: Comparación | Exchange Rates Pro",
+        "description": "Compare criptomonedas y forex tradicional para transferencias internacionales. Analice costos, velocidad, seguridad y regulaciones."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/how-to-convert-currency-mathematical-expressions-tutorial.html",
+        "url": "https://rates.overx.ai/how-to-convert-currency-mathematical-expressions-tutorial",
+        "og": {
+          "og:title": "Cómo Convertir Divisas Usando Expresiones Matemáticas: Tutorial Completo con Ejemplos",
+          "og:description": "Aprende paso a paso cómo usar expresiones matemáticas para conversión de divisas. Domina \"(100 USD + 50 EUR) × 2 en GBP\" y ahorra horas en cálculos complejos con nuestro tutorial práctico.",
+          "og:image": "https://converter.overx.ai/blog/tutorial-workspace-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Espacio de trabajo tutorial profesional mostrando laptop con interfaz de Exchange Rates Pro, materiales educativos y configuración de aprendizaje paso a paso"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/how-to-convert-currency-mathematical-expressions-tutorial",
+        "title": "Tutorial Expresiones Matemáticas de Divisas: Guía Paso a Paso | Exchange Rates Pro",
+        "description": "Aprende paso a paso cómo usar expresiones matemáticas para conversión de divisas. Domina cálculos complejos con ejemplos prácticos."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/real-time-currency-alerts-maximize-exchange-rates.html",
+        "url": "https://rates.overx.ai/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Alertas de Divisas en Tiempo Real: Cómo Maximizar tus Tipos de Cambio",
+          "og:description": "Aprenda a usar alertas de divisas en tiempo real para obtener los mejores tipos de cambio. Ahorre hasta un 4% sincronizando sus conversiones con movimientos del mercado.",
+          "og:image": "https://converter.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Panel de alertas en tiempo real mostrando texto \"Alertas de Divisas\" y \"Maximizar Tipos de Cambio\" con campanas de notificación, gráficos de tasas y alertas móviles"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Alertas de Divisas en Tiempo Real: Maximiza Tipos de Cambio | Exchange Rates Pro",
+        "description": "Aprenda a usar alertas de divisas en tiempo real para obtener los mejores tipos de cambio. Ahorre hasta 4% con movimientos del mercado."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/save-money-traveling-currency-converter-chrome-extension.html",
+        "url": "https://rates.overx.ai/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Ahorra Dinero Viajando: 5 Formas en que Nuestra Extensión Chrome Ayuda",
+          "og:description": "Descubra cómo Exchange Rates Pro ayuda a los viajeros a ahorrar 3-7% en cada transacción en el extranjero. Desde evitar estafas DCC hasta encontrar las mejores tarifas de cajeros.",
+          "og:image": "https://converter.overx.ai/blog/travel-money-tips.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía de viajes con texto \"Ahorra Dinero Viajando\" y \"5 Formas Inteligentes\", con pasaporte, mapa mundial y símbolos de divisas"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Ahorra Dinero Viajando: Guía Extensión Chrome | Exchange Rates Pro",
+        "description": "Aprenda 5 formas probadas de ahorrar 3-7% en cada transacción en el extranjero con Exchange Rates Pro. Ejemplos reales y consejos."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog/why-transparent-exchange-rates-matter-international-business.html",
+        "url": "https://rates.overx.ai/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Por Qué los Tipos de Cambio Transparentes Son Cruciales para los Negocios Internacionales en 2024",
+          "og:description": "Los márgenes ocultos en la conversión de divisas cuestan a las empresas miles de millones anualmente. Aprenda cómo los tipos de cambio transparentes de múltiples fuentes pueden ahorrar a su empresa entre 2-5% en cada transacción internacional.",
+          "og:image": "https://converter.overx.ai/blog/transparent-rates-hero.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Infografía empresarial profesional mostrando tipos de cambio transparentes con símbolos de divisas y gráfico de transparencia de tasas"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Por Qué los Tipos de Cambio Transparentes Importan | Exchange Rates Pro Blog",
+        "description": "Aprenda cómo los márgenes ocultos en conversión de divisas cuestan miles de millones. Los tipos transparentes pueden ahorrar 2-5% en cada transacción."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/blog.html",
+        "url": "https://rates.overx.ai/blog",
+        "og": {
+          "og:title": "Exchange Rates Pro Blog - Expert Currency Exchange Insights",
+          "og:description": "Learn how to save money on international transactions with transparent exchange rates",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/blog",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro Blog - Currency Exchange Insights"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro Blog",
+          "twitter:description": "Expert insights on transparent currency exchange",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/blog",
+        "title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+        "description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/settings.html",
+        "url": "https://rates.overx.ai/settings",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/settings",
+        "title": "Configuración - Exchange Rates Pro",
+        "description": "Customize your currency converter preferences, default currencies, and display options."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/simple.html",
+        "url": "https://rates.overx.ai/simple",
+        "og": {
+          "og:title": "Exchange Rates Pro - Conversor de Divisas Gratis con Comparador de APIs",
+          "og:description": "Conversor de divisas gratis con tipos de cambio en vivo de 12+ proveedores. Compara tasas forex, precios cripto y APIs. Ahorra 2-5% en transferencias internacionales.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/simple",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Simple Currency Converter - Exchange Rates Pro"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Conversor de Divisas Gratis con Comparador de APIs",
+          "twitter:description": "Conversor de divisas gratis con tipos de cambio en vivo de 12+ proveedores. Compara tasas forex, precios cripto y APIs. Ahorra 2-5% en transferencias internacionales.",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/simple",
+        "title": "Exchange Rates Pro - Conversor de Divisas Gratis con Comparador de APIs",
+        "description": "Conversor de divisas gratis con tipos de cambio en vivo de 12+ proveedores. Compara tasas forex, precios cripto y APIs. Ahorra 2-5% en transferencias internacionales."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es/sources.html",
+        "url": "https://rates.overx.ai/sources",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/sources",
+        "title": "Currency Data Sources - Exchange Rates Pro",
+        "description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/es.html",
+        "url": "https://rates.overx.ai/es",
+        "og": {
+          "og:title": "Exchange Rates Pro - Conversor de Divisas Gratis con Comparador de APIs",
+          "og:description": "Conversor de divisas gratis con tipos de cambio en vivo de 12+ proveedores. Compara tasas forex, precios cripto y APIs. Ahorra 2-5% en transferencias internacionales.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Currency Converter",
+          "twitter:description": "Compare real exchange rates across multiple providers",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai",
+        "title": "Exchange Rates Pro - Conversor de Divisas Gratis con Comparador de APIs",
+        "description": "Conversor de divisas gratis con tipos de cambio en vivo de 12+ proveedores. Compara tasas forex, precios cripto y APIs. Ahorra 2-5% en transferencias internacionales."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/404.html",
+        "url": "https://rates.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/500.html",
+        "url": "https://rates.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/about.html",
+        "url": "https://rates.overx.ai/about",
+        "og": {
+          "og:title": "Exchange Rates Pro",
+          "og:description": "Умный Выбор для Конвертации Валют",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:type": "website",
+          "og:image:width": "1200",
+          "og:image:height": "630",
+          "og:image:alt": "Exchange Rates Pro Chrome Extension"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/about",
+        "title": "Exchange Rates Pro - Курсы Валют в Реальном Времени на Кончиках Пальцев",
+        "description": "Преобразите способ работы с валютами. Наше мощное расширение Chrome предоставляет мгновенные, точные курсы обмена от 12+ надежных источников по всему миру, гарантируя, что вы всегда получаете лучший курс для ваших денег."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/apis.html",
+        "url": "https://rates.overx.ai/apis",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing title tag",
+          "Missing meta description"
+        ]
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/advanced-currency-math-complex-multi-currency-expressions.html",
+        "url": "https://rates.overx.ai/advanced-currency-math-complex-multi-currency-expressions",
+        "og": {
+          "og:title": "Продвинутая Валютная Математика: Как Рассчитывать Сложные Мульти-Валютные Выражения Как Профессионал",
+          "og:description": "Освойте продвинутые мульти-валютные математические выражения с вложенными скобками, сложной бизнес-логикой и профессиональной точностью. Изучите техники валютных расчетов корпоративного уровня, используемые количественными аналитиками.",
+          "og:image": "https://converter.overx.ai/blog/advanced-currency-math-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Продвинутая сцена финансовых технологий с множественными мониторами, показывающими сложные математические выражения, валютный торговый зал с профессионалами, анализирующими мульти-валютные расчеты"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/advanced-currency-math-complex-multi-currency-expressions",
+        "title": "Продвинутая Мульти-Валютная Математика: Калькулятор Сложных Выражений | Exchange Rates Pro",
+        "description": "Освойте продвинутые мульти-валютные математические выражения с вложенными скобками и сложной бизнес-логикой. Профессиональная точность для количественных аналитиков."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/avoid-dynamic-currency-conversion-scams-complete-guide.html",
+        "url": "https://rates.overx.ai/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "og": {
+          "og:title": "Избегайте Мошенничества с Динамической Конверсией Валют: Полное Руководство",
+          "og:description": "Динамическая конверсия валют (DCC) обходится путешественникам в миллионы ежегодно. Узнайте, как распознать и избежать этих махинаций, экономя 3-12% на каждой транзакции.",
+          "og:image": "https://converter.overx.ai/blog/dcc-scam-warning.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Предупреждающая инфографика с текстом \"Избегайте Мошенничества DCC\" и \"Динамическая Конверсия Валют\", показывающая предупреждающие знаки, терминалы кредитных карт и защитные щиты"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/avoid-dynamic-currency-conversion-scams-complete-guide",
+        "title": "Избегайте Мошенничества DCC: Полное Руководство | Exchange Rates Pro",
+        "description": "DCC обходится путешественникам в миллионы. Узнайте, как распознать и избежать махинаций, экономя 3-12% на международных транзакциях."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/compare-currency-exchange-apis-2024-complete-guide.html",
+        "url": "https://rates.overx.ai/compare-currency-exchange-apis-2024-complete-guide",
+        "og": {
+          "og:title": "Сравнение API Обмена Валют 2024: Полное Руководство Разработчика",
+          "og:description": "Подробное сравнение 12+ API обмена валют. Сравните цены, функции, точность и надежность, чтобы выбрать лучший API для вашего проекта.",
+          "og:image": "https://converter.overx.ai/blog/api-comparison-guide.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Техническая сравнительная диаграмма под названием \"API Обмена Валют 2024\" с названиями API, метриками сравнения, элементами кода и индикаторами производительности"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/compare-currency-exchange-apis-2024-complete-guide",
+        "title": "Сравнение API Обмена Валют 2024: Полное Руководство | Exchange Rates Pro",
+        "description": "Подробное сравнение 12+ API обмена валют. Сравните цены, функции, точность и надежность для вашего проекта."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/complete-guide-currency-conversion-mathematical-expressions.html",
+        "url": "https://rates.overx.ai/complete-guide-currency-conversion-mathematical-expressions",
+        "og": {
+          "og:title": "Полное Руководство по Конверсии Валют: От Базового Обмена к Сложным Математическим Выражениям",
+          "og:description": "Освойте продвинутую конверсию валют с математическими выражениями. Изучите, как рассчитать \"(100 USD + 50 EUR) × 2 в GBP\" и экономьте часы на сложных международных финансовых расчетах.",
+          "og:image": "https://converter.overx.ai/blog/mathematical-currency-conversion-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Профессиональная бизнес-сцена, показывающая математическую конверсию валют с финансовыми профессионалами, использующими компьютеры, символы валют и математические уравнения на экранах"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/complete-guide-currency-conversion-mathematical-expressions",
+        "title": "Руководство Математической Конверсии Валют: Калькулятор Выражений | Exchange Rates Pro",
+        "description": "Освойте сложные расчеты валют с математическими выражениями. Изучите \"(100 USD + 50 EUR) × 2 в GBP\" и продвинутые техники."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/cryptocurrency-vs-traditional-currency-exchange-2024.html",
+        "url": "https://rates.overx.ai/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "og": {
+          "og:title": "Криптовалюта vs Традиционный Обмен Валют: Что Лучше в 2024?",
+          "og:description": "Сравните криптовалюту и традиционный форекс для международных переводов. Анализ затрат, скорости, безопасности и регулирования для лучшего выбора.",
+          "og:image": "https://converter.overx.ai/blog/crypto-vs-forex.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Разделенное сравнение, показывающее \"Криптовалюта vs Традиционная Валюта\" с Биткоином и крипто символами с одной стороны, традиционным банкингом с другой"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/cryptocurrency-vs-traditional-currency-exchange-2024",
+        "title": "Крипто vs Традиционный Обмен Валют 2024: Сравнение | Exchange Rates Pro",
+        "description": "Сравните криптовалюту и традиционный форекс для международных переводов. Анализ затрат, скорости, безопасности и регулирования."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/how-to-convert-currency-mathematical-expressions-tutorial.html",
+        "url": "https://rates.overx.ai/how-to-convert-currency-mathematical-expressions-tutorial",
+        "og": {
+          "og:title": "Как Конвертировать Валюты Используя Математические Выражения: Полный Учебник с Примерами",
+          "og:description": "Изучите пошагово, как использовать математические выражения для конверсии валют. Освойте \"(100 USD + 50 EUR) × 2 в GBP\" и экономьте часы на сложных расчетах с нашим практическим учебником.",
+          "og:image": "https://converter.overx.ai/blog/tutorial-workspace-hero.png",
+          "og:type": "article",
+          "og:image:width": "1344",
+          "og:image:height": "768",
+          "og:image:alt": "Профессиональное рабочее место для обучения с ноутбуком с интерфейсом Exchange Rates Pro, учебными материалами и пошаговой настройкой обучения"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/how-to-convert-currency-mathematical-expressions-tutorial",
+        "title": "Учебник Математических Выражений Валют: Пошаговое Руководство | Exchange Rates Pro",
+        "description": "Изучите пошагово, как использовать математические выражения для конверсии валют. Освойте сложные расчеты с практическими примерами."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/real-time-currency-alerts-maximize-exchange-rates.html",
+        "url": "https://rates.overx.ai/real-time-currency-alerts-maximize-exchange-rates",
+        "og": {
+          "og:title": "Уведомления о Курсах Валют в Реальном Времени: Как Максимизировать Обменные Курсы",
+          "og:description": "Узнайте, как использовать уведомления о курсах валют в реальном времени для получения лучших обменных курсов. Экономьте до 4%, синхронизируя конверсии с движениями рынка.",
+          "og:image": "https://converter.overx.ai/blog/currency-alerts-dashboard.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Панель оповещений в реальном времени, показывающая текст \"Валютные Оповещения\" и \"Максимизировать Обменные Курсы\" с колокольчиками уведомлений, графиками курсов и мобильными оповещениями"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/real-time-currency-alerts-maximize-exchange-rates",
+        "title": "Уведомления о Курсах Валют: Максимизируйте Обменные Курсы | Exchange Rates Pro",
+        "description": "Узнайте, как использовать уведомления о курсах валют для получения лучших обменных курсов. Экономьте до 4% с движениями рынка."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/save-money-traveling-currency-converter-chrome-extension.html",
+        "url": "https://rates.overx.ai/save-money-traveling-currency-converter-chrome-extension",
+        "og": {
+          "og:title": "Экономьте Деньги в Путешествиях: 5 Способов с Нашим Расширением Chrome",
+          "og:description": "Узнайте, как Exchange Rates Pro помогает путешественникам экономить 3-7% на каждой транзакции за границей. От избежания DCC-мошенничества до поиска лучших курсов в банкоматах.",
+          "og:image": "https://converter.overx.ai/blog/travel-money-tips.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Туристическая инфографика с текстом \"Экономьте Деньги в Путешествиях\" и \"5 Умных Способов\", с паспортом, картой мира и символами валют"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/save-money-traveling-currency-converter-chrome-extension",
+        "title": "Экономьте в Путешествиях: Гид по Расширению Chrome | Exchange Rates Pro",
+        "description": "Узнайте 5 проверенных способов экономить 3-7% на каждой транзакции за границей с Exchange Rates Pro. Реальные примеры и советы."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog/why-transparent-exchange-rates-matter-international-business.html",
+        "url": "https://rates.overx.ai/why-transparent-exchange-rates-matter-international-business",
+        "og": {
+          "og:title": "Почему Прозрачные Курсы Валют Важны для Международного Бизнеса в 2024 году",
+          "og:description": "Скрытые наценки при конвертации валют обходятся бизнесу в миллиарды ежегодно. Узнайте, как прозрачные курсы валют из нескольких источников могут сэкономить вашей компании 2-5% на каждой международной транзакции.",
+          "og:image": "https://converter.overx.ai/blog/transparent-rates-hero.webp",
+          "og:type": "article",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Профессиональная бизнес-инфографика, показывающая прозрачные обменные курсы с символами валют и графиком прозрачности курсов"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:url",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://converter.overx.ai/blog/why-transparent-exchange-rates-matter-international-business",
+        "title": "Почему Прозрачные Курсы Валют Важны для Бизнеса | Exchange Rates Pro Блог",
+        "description": "Узнайте, как скрытые наценки при конвертации валют обходятся бизнесу в миллиарды. Прозрачные курсы из нескольких источников могут сэкономить 2-5% на каждой транзакции."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/blog.html",
+        "url": "https://rates.overx.ai/blog",
+        "og": {
+          "og:title": "Exchange Rates Pro Blog - Expert Currency Exchange Insights",
+          "og:description": "Learn how to save money on international transactions with transparent exchange rates",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/blog",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro Blog - Currency Exchange Insights"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro Blog",
+          "twitter:description": "Expert insights on transparent currency exchange",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/blog",
+        "title": "Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro",
+        "description": "Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/settings.html",
+        "url": "https://rates.overx.ai/settings",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/settings",
+        "title": "Настройки - Exchange Rates Pro",
+        "description": "Customize your currency converter preferences, default currencies, and display options."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/simple.html",
+        "url": "https://rates.overx.ai/simple",
+        "og": {
+          "og:title": "Exchange Rates Pro - Бесплатный Конвертер Валют и Сравнение API Курсов",
+          "og:description": "Бесплатный конвертер валют с курсами от 12+ провайдеров. Сравнивайте форекс, крипто и API. Экономьте 2-5% на международных переводах. Без регистрации.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai/simple",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Simple Currency Converter - Exchange Rates Pro"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Бесплатный Конвертер Валют и Сравнение API Курсов",
+          "twitter:description": "Бесплатный конвертер валют с курсами от 12+ провайдеров. Сравнивайте форекс, крипто и API. Экономьте 2-5% на международных переводах. Без регистрации.",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/simple",
+        "title": "Exchange Rates Pro - Бесплатный Конвертер Валют и Сравнение API Курсов",
+        "description": "Бесплатный конвертер валют с курсами от 12+ провайдеров. Сравнивайте форекс, крипто и API. Экономьте 2-5% на международных переводах. Без регистрации."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru/sources.html",
+        "url": "https://rates.overx.ai/sources",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai/sources",
+        "title": "Currency Data Sources - Exchange Rates Pro",
+        "description": "Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/converter/.next/server/pages/ru.html",
+        "url": "https://rates.overx.ai/ru",
+        "og": {
+          "og:title": "Exchange Rates Pro - Бесплатный Конвертер Валют и Сравнение API Курсов",
+          "og:description": "Бесплатный конвертер валют с курсами от 12+ провайдеров. Сравнивайте форекс, крипто и API. Экономьте 2-5% на международных переводах. Без регистрации.",
+          "og:image": "https://rates.overx.ai/og-image.png",
+          "og:url": "https://rates.overx.ai",
+          "og:type": "website",
+          "og:site_name": "Exchange Rates Pro - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "Exchange Rates Pro - Transparent Currency Conversion"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Exchange Rates Pro - Currency Converter",
+          "twitter:description": "Compare real exchange rates across multiple providers",
+          "twitter:image": "https://rates.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://rates.overx.ai",
+        "title": "Exchange Rates Pro - Бесплатный Конвертер Валют и Сравнение API Курсов",
+        "description": "Бесплатный конвертер валют с курсами от 12+ провайдеров. Сравнивайте форекс, крипто и API. Экономьте 2-5% на международных переводах. Без регистрации."
+      }
+    ]
+  },
+  {
+    "name": "Words Site",
+    "domain": "https://words.overx.ai",
+    "total": 21,
+    "passed": 9,
+    "failed": 12,
+    "warnings": 0,
+    "pages": [
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/404.html",
+        "url": "https://words.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/500.html",
+        "url": "https://words.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/blog/test-post.html",
+        "url": "https://words.overx.ai/test-post",
+        "og": {
+          "og:title": "Test Post: Blog System Implementation",
+          "og:description": "A test post to verify the blog system works correctly with all features.",
+          "og:url": "https://words.overx.ai/blog/test-post",
+          "og:type": "article"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Test Post: Blog System Implementation",
+          "twitter:description": "A test post to verify the blog system works correctly with all features.",
+          "twitter:image": "https://words.overx.ai/images/blog/test-post.jpg"
+        },
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog/test-post",
+        "title": "Test Post: Blog System Implementation | World Word War Bot",
+        "description": "Testing the new blog system implementation with multi-language support and SEO optimization."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/blog.html",
+        "url": "https://words.overx.ai/blog",
+        "og": {
+          "og:title": "Blog",
+          "og:description": "Latest articles and insights",
+          "og:url": "https://words.overx.ai/blog",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog",
+        "title": "Blog | words.overx.ai",
+        "description": "Latest articles and insights"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/features.html",
+        "url": "https://words.overx.ai/features",
+        "og": {
+          "og:title": "Features - World Word War Bot",
+          "og:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/features",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Features - World Word War Bot",
+          "twitter:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/features",
+        "title": "Features - World Word War Bot",
+        "description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en/pricing.html",
+        "url": "https://words.overx.ai/pricing",
+        "og": {
+          "og:title": "Pricing - World Word War Bot",
+          "og:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/pricing",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Pricing - World Word War Bot",
+          "twitter:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/pricing",
+        "title": "Pricing - World Word War Bot",
+        "description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/en.html",
+        "url": "https://words.overx.ai/en",
+        "og": {
+          "og:title": "World Word War Bot - AI Language Learning on Telegram",
+          "og:description": "Master vocabulary in 13 languages with AI-powered learning, spaced repetition, and personalized training. Join 50,000+ learners worldwide.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai",
+          "og:type": "website",
+          "og:site_name": "World Word War Bot",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "World Word War Bot - AI Language Learning"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "World Word War Bot - AI Language Learning",
+          "twitter:description": "Master vocabulary in 13 languages with AI-powered learning",
+          "twitter:image": "https://words.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai",
+        "title": "World Word War Bot - AI-Powered Language Learning on Telegram",
+        "description": "Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/404.html",
+        "url": "https://words.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/500.html",
+        "url": "https://words.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/blog/test-post.html",
+        "url": "https://words.overx.ai/test-post",
+        "og": {
+          "og:title": "Publicación de Prueba: Implementación del Sistema de Blog",
+          "og:description": "Una publicación de prueba para verificar que el sistema de blog funcione correctamente con todas las características.",
+          "og:url": "https://words.overx.ai/blog/test-post",
+          "og:type": "article"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Publicación de Prueba: Implementación del Sistema de Blog",
+          "twitter:description": "Una publicación de prueba para verificar que el sistema de blog funcione correctamente con todas las características.",
+          "twitter:image": "https://words.overx.ai/images/blog/test-post.jpg"
+        },
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog/test-post",
+        "title": "Publicación de Prueba: Implementación del Sistema de Blog | World Word War Bot",
+        "description": "Probando la implementación del nuevo sistema de blog con soporte multilingüe y optimización SEO."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/blog.html",
+        "url": "https://words.overx.ai/blog",
+        "og": {
+          "og:title": "Blog",
+          "og:description": "Latest articles and insights",
+          "og:url": "https://words.overx.ai/blog",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog",
+        "title": "Blog | words.overx.ai",
+        "description": "Latest articles and insights"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/features.html",
+        "url": "https://words.overx.ai/features",
+        "og": {
+          "og:title": "Features - World Word War Bot",
+          "og:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/features",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Features - World Word War Bot",
+          "twitter:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/features",
+        "title": "Features - World Word War Bot",
+        "description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es/pricing.html",
+        "url": "https://words.overx.ai/pricing",
+        "og": {
+          "og:title": "Pricing - World Word War Bot",
+          "og:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/pricing",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Pricing - World Word War Bot",
+          "twitter:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/pricing",
+        "title": "Pricing - World Word War Bot",
+        "description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/es.html",
+        "url": "https://words.overx.ai/es",
+        "og": {
+          "og:title": "World Word War Bot - AI Language Learning on Telegram",
+          "og:description": "Master vocabulary in 13 languages with AI-powered learning, spaced repetition, and personalized training. Join 50,000+ learners worldwide.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai",
+          "og:type": "website",
+          "og:site_name": "World Word War Bot",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "World Word War Bot - AI Language Learning"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "World Word War Bot - AI Language Learning",
+          "twitter:description": "Master vocabulary in 13 languages with AI-powered learning",
+          "twitter:image": "https://words.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai",
+        "title": "World Word War Bot - AI-Powered Language Learning on Telegram",
+        "description": "Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/404.html",
+        "url": "https://words.overx.ai/404",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "404: This page could not be found"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/500.html",
+        "url": "https://words.overx.ai/500",
+        "og": {},
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:title",
+            "og:description",
+            "og:image",
+            "og:url",
+            "og:type",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [
+          "Missing canonical URL",
+          "Missing meta description"
+        ],
+        "title": "500: Internal Server Error"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/blog/test-post.html",
+        "url": "https://words.overx.ai/test-post",
+        "og": {
+          "og:title": "Тестовая Публикация: Внедрение Системы Блога",
+          "og:description": "Тестовая публикация для проверки правильной работы системы блога со всеми функциями.",
+          "og:url": "https://words.overx.ai/blog/test-post",
+          "og:type": "article"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Тестовая Публикация: Внедрение Системы Блога",
+          "twitter:description": "Тестовая публикация для проверки правильной работы системы блога со всеми функциями.",
+          "twitter:image": "https://words.overx.ai/images/blog/test-post.jpg"
+        },
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog/test-post",
+        "title": "Тестовая Публикация: Внедрение Системы Блога | World Word War Bot",
+        "description": "Тестирование внедрения новой системы блога с многоязычной поддержкой и SEO оптимизацией."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/blog.html",
+        "url": "https://words.overx.ai/blog",
+        "og": {
+          "og:title": "Blog",
+          "og:description": "Latest articles and insights",
+          "og:url": "https://words.overx.ai/blog",
+          "og:type": "website"
+        },
+        "twitter": {},
+        "missing": {
+          "og": [
+            "og:image",
+            "og:site_name"
+          ],
+          "twitter": [
+            "twitter:card",
+            "twitter:title",
+            "twitter:description",
+            "twitter:image"
+          ],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/blog",
+        "title": "Blog | words.overx.ai",
+        "description": "Latest articles and insights"
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/features.html",
+        "url": "https://words.overx.ai/features",
+        "og": {
+          "og:title": "Features - World Word War Bot",
+          "og:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/features",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Features - World Word War Bot",
+          "twitter:description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/features",
+        "title": "Features - World Word War Bot",
+        "description": "Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru/pricing.html",
+        "url": "https://words.overx.ai/pricing",
+        "og": {
+          "og:title": "Pricing - World Word War Bot",
+          "og:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai/pricing",
+          "og:type": "website",
+          "og:site_name": "WWW Words Bot - OverX AI",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "WWW Words Bot - Learn Languages Through Daily Messaging"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "Pricing - World Word War Bot",
+          "twitter:description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus.",
+          "twitter:image": "https://words.overx.ai/og-image.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai/pricing",
+        "title": "Pricing - World Word War Bot",
+        "description": "Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
+      },
+      {
+        "file": "/Users/user/JACK/CLAUDE_SANDBOX/overx.ai/overx-ai/sites/words/.next/server/pages/ru.html",
+        "url": "https://words.overx.ai/ru",
+        "og": {
+          "og:title": "World Word War Bot - AI Language Learning on Telegram",
+          "og:description": "Master vocabulary in 13 languages with AI-powered learning, spaced repetition, and personalized training. Join 50,000+ learners worldwide.",
+          "og:image": "https://words.overx.ai/og-image.png",
+          "og:url": "https://words.overx.ai",
+          "og:type": "website",
+          "og:site_name": "World Word War Bot",
+          "og:image:width": "1312",
+          "og:image:height": "736",
+          "og:image:alt": "World Word War Bot - AI Language Learning"
+        },
+        "twitter": {
+          "twitter:card": "summary_large_image",
+          "twitter:title": "World Word War Bot - AI Language Learning",
+          "twitter:description": "Master vocabulary in 13 languages with AI-powered learning",
+          "twitter:image": "https://words.overx.ai/twitter-card.png"
+        },
+        "missing": {
+          "og": [],
+          "twitter": [],
+          "imageProps": []
+        },
+        "warnings": [],
+        "canonical": "https://words.overx.ai",
+        "title": "World Word War Bot - AI-Powered Language Learning on Telegram",
+        "description": "Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
+      }
+    ]
+  }
+]
