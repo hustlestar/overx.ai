@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
 import { 
-  BaseSEO,
+  EnhancedSEO,
   Breadcrumbs,
   BlogGrid,
   BlogCategoryFilter,
@@ -31,12 +31,10 @@ export default function BlogPage({ posts, categories }: BlogPageProps) {
 
   return (
     <Layout>
-      <BaseSEO
+      <EnhancedSEO
         title={seoData.title}
         description={seoData.description}
         canonical={seoData.canonical}
-        openGraph={seoData.openGraph}
-        structuredData={seoData.structuredData}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black light:from-gray-50 light:via-white light:to-gray-100">

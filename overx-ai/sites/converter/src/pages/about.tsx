@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Link from 'next/link'
 import { Layout } from '@/components/Layout'
-import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 
 export default function AboutPage() {
   const { t } = useTranslation('common')
@@ -61,30 +61,10 @@ export default function AboutPage() {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title={t('about.pageTitle')}
         description={t('about.pageDescription')}
         canonical="https://rates.overx.ai/about"
-        openGraph={{
-          title: t('about.hero.title'),
-          description: t('about.hero.subtitle'),
-          type: 'website',
-          url: 'https://rates.overx.ai/about',
-          siteName: 'Exchange Rates Pro',
-          image: {
-            url: 'https://rates.overx.ai/og-image.png',
-            width: 1312,
-            height: 736,
-            alt: 'Exchange Rates Pro Chrome Extension'
-          },
-        }}
-        twitter={{
-          card: 'summary_large_image',
-          site: '@overxai',
-          title: t('about.hero.title'),
-          description: t('about.hero.subtitle'),
-          image: 'https://rates.overx.ai/twitter-card.png'
-        }}
         structuredData={structuredData}
       />
       

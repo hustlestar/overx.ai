@@ -262,6 +262,39 @@ Remember: Every decision should improve SEO performance. When in doubt, choose t
 
 ## Recent Updates & Known Issues
 
+### 🔄 Latest Updates (December 2024)
+
+#### Social Media Previews & SEO Enhancements
+- **EnhancedSEO Component**: All sites now use shared `EnhancedSEO` component for consistent social media previews
+  - Automatic fallbacks for Open Graph and Twitter Card meta tags
+  - Site-specific defaults for overx.ai, blog.overx.ai, rates.overx.ai, words.overx.ai
+  - Simplified implementation - just pass title, description, and canonical URL
+- **Social Preview Crawler**: Created scripts to verify all pages have proper meta tags
+  - `scripts/check-social-previews.js` - Network-based crawler for production sites
+  - `scripts/check-social-previews-local.js` - Local build verification
+- **Preview Images**: Each site has dedicated og-image.png (1312x736) for social sharing
+
+#### Navigation & UI Updates
+- **Gradient Link Component**: Shared `GradientLink` component for consistent branding
+  - Animated gradient effect with CSS animation
+  - Fixed SSR compatibility issues by using standard anchor tags
+  - Added animated-gradient-text styles to all sites
+- **Navigation Consistency**: OverX AI links no longer open in new window
+- **UI Improvements**: 
+  - Removed "Exchange Rates Pro" header from converter homepage
+  - Moved base currency selector to tip section with 💡 icon
+  - Added spacing above provider comparison title
+
+#### Shared Code Architecture
+- **Maximum Code Reuse**: Centralized common components in shared package
+  - `EnhancedSEO` - Automatic SEO with site-specific defaults
+  - `GradientLink` - Consistent branded links across all sites
+  - `ContactForm` - Reusable form component
+  - `BlogImage` - Multi-image support with localization
+- **Build Optimization**: Fixed Vercel deployment issues with shared package
+  - Updated build scripts to compile shared package during deployment
+  - Resolved caching issues causing React errors in production
+
 ### Theme System (Light/Dark Mode)
 - **Configuration**: Tailwind must have `darkMode: 'class'` in config
 - **Theme Classes**: Use `dark:` prefix for dark mode, `light:` for light mode overrides
@@ -284,13 +317,16 @@ Remember: Every decision should improve SEO performance. When in doubt, choose t
   - Cross-linking based on tags
   - SEO optimized with structured data
   - Dynamic sitemap generation
-- **Blog Posts** (6 total):
+- **Blog Posts** (9 total):
   1. Why Transparent Exchange Rates Matter for International Business
   2. Save Money While Traveling: Currency Converter Chrome Extension Guide
   3. Compare Currency Exchange APIs 2024: Complete Developer Guide
   4. Real-time Currency Alerts: Maximize Your Exchange Rates
   5. Cryptocurrency vs Traditional Currency Exchange: What's Best in 2024?
   6. Avoid Dynamic Currency Conversion Scams: Complete Guide
+  7. Advanced Currency Math: Complex Multi-Currency Expressions
+  8. How to Convert Currency Mathematical Expressions: Step-by-Step Tutorial
+  9. Complete Guide to Currency Conversion with Mathematical Expressions
 
 ### Sitemap Generation
 - **Custom Script**: `scripts/generate-converter-sitemap.js` for dynamic blog routes

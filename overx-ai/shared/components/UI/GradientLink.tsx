@@ -11,8 +11,8 @@ interface GradientLinkProps {
 export function GradientLink({ 
   href, 
   children, 
-  target = '_blank',
-  rel = 'noopener noreferrer',
+  target,
+  rel = target === '_blank' ? 'noopener noreferrer' : undefined,
   className = ''
 }: GradientLinkProps) {
   return (

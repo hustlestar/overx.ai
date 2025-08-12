@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
-import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 import { PROVIDERS } from '@/utils/providers'
 import { 
   localizeProviderName, 
@@ -25,7 +25,7 @@ export default function SourcesPage() {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title="Currency Data Sources - Exchange Rates Pro"
         description="Comprehensive list of exchange rate data providers, their update frequencies, and supported currencies."
         canonical="https://rates.overx.ai/sources"

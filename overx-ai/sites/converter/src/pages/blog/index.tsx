@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import Link from 'next/link'
 import { Layout } from '@/components/Layout'
 import { BlogImage } from '@/components/BlogImage'
-import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 import { getAllBlogPosts } from '@/lib/blog/posts'
 import { useRouter } from 'next/router'
 
@@ -39,31 +39,10 @@ export default function BlogPage() {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title="Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro"
         description="Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
         canonical="https://rates.overx.ai/blog"
-        openGraph={{
-          title: 'Exchange Rates Pro Blog - Expert Currency Exchange Insights',
-          description: 'Learn how to save money on international transactions with transparent exchange rates',
-          type: 'website',
-          url: 'https://rates.overx.ai/blog',
-          siteName: 'Exchange Rates Pro',
-          locale: 'en_US',
-          image: {
-            url: 'https://rates.overx.ai/og-image.png',
-            width: 1312,
-            height: 736,
-            alt: 'Exchange Rates Pro Blog - Currency Exchange Insights'
-          }
-        }}
-        twitter={{
-          card: 'summary_large_image',
-          site: '@overxai',
-          title: 'Exchange Rates Pro Blog',
-          description: 'Expert insights on transparent currency exchange',
-          image: 'https://rates.overx.ai/twitter-card.png'
-        }}
         structuredData={[structuredData]}
       />
       

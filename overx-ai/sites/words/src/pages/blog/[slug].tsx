@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import ReactMarkdown from 'react-markdown'
 import { Layout } from '@/components/Layout'
 import { 
-  BaseSEO,
+  EnhancedSEO,
   Breadcrumbs,
   BlogCard,
   OptimizedImage,
@@ -38,13 +38,10 @@ export default function BlogPostPage({ post, relatedPosts }: BlogPostPageProps) 
 
   return (
     <Layout>
-      <BaseSEO
+      <EnhancedSEO
         title={seoData.title}
         description={seoData.description}
         canonical={seoData.canonical}
-        openGraph={seoData.openGraph}
-        twitter={seoData.twitter}
-        structuredData={seoData.structuredData}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black light:from-gray-50 light:via-white light:to-gray-100">

@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { Layout } from '@/components/Layout'
 import { BlogImage } from '@/components/BlogImage'
-import { BaseSEO, Breadcrumbs } from '@overx-ai/shared'
+import { EnhancedSEO, Breadcrumbs } from '@overx-ai/shared'
 import { getBlogPost, getAllBlogPosts, getRelatedPosts } from '@/lib/blog/posts'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
@@ -87,21 +87,10 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title={post.seo[currentLang].metaTitle}
         description={post.seo[currentLang].metaDescription}
         canonical={`https://converter.overx.ai/blog/${post.slug}`}
-        openGraph={{
-          title: post.title[currentLang],
-          description: post.excerpt[currentLang],
-          type: 'article',
-          image: {
-            url: `https://converter.overx.ai${primaryImage.url}`,
-            width: primaryImage.width,
-            height: primaryImage.height,
-            alt: primaryImage.alt[currentLang] || primaryImage.alt.en,
-          },
-        }}
         additionalMetaTags={[
           { property: 'article:published_time', content: post.publishedAt },
           ...(post.updatedAt ? [{ property: 'article:modified_time', content: post.updatedAt }] : []),
@@ -109,6 +98,12 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           ...post.tags.map(tag => ({ property: 'article:tag', content: tag }))
         ]}
         structuredData={structuredData}
+        defaultImage={{
+          url: `https://rates.overx.ai${primaryImage.url}`,
+          width: primaryImage.width,
+          height: primaryImage.height,
+          alt: primaryImage.alt[currentLang] || primaryImage.alt.en,
+        }}
       />
       
       <Layout>

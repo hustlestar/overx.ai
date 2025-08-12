@@ -65,7 +65,7 @@ export function Layout({ children }: LayoutProps) {
                 Start Learning
               </a>
               <LanguageSwitcher />
-              <GradientLink href="https://overx.ai" target="_blank">
+              <GradientLink href="https://overx.ai">
                 OverX AI
               </GradientLink>
               <button 
@@ -119,7 +119,7 @@ export function Layout({ children }: LayoutProps) {
               </div>
               <div className="px-3 py-2 flex items-center justify-between">
                 <LanguageSwitcher />
-                <GradientLink href="https://overx.ai" target="_blank">
+                <GradientLink href="https://overx.ai">
                   OverX AI
                 </GradientLink>
               </div>

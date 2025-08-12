@@ -57,7 +57,7 @@ export function Layout({ children }: LayoutProps) {
               <div className="hidden md:flex items-center space-x-4">
                 <ThemeToggle />
                 <LanguageSwitcher />
-                <GradientLink href="https://www.overx.ai" target="_blank">
+                <GradientLink href="https://www.overx.ai">
                   OverX AI
                 </GradientLink>
               </div>
@@ -107,7 +107,6 @@ export function Layout({ children }: LayoutProps) {
                   <LanguageSwitcher />
                   <GradientLink 
                     href="https://www.overx.ai" 
-                    target="_blank"
                     className="block px-3 py-2"
                   >
                     OverX AI

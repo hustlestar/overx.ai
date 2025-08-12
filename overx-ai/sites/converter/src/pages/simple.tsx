@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
 import { SimpleCurrencyConverter } from '@/components/SimpleCurrencyConverter'
-import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 
 export default function SimpleConverterPage() {
   const { t } = useTranslation('common')
@@ -23,31 +23,10 @@ export default function SimpleConverterPage() {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title={t('title')}
         description={t('description')}
         canonical="https://rates.overx.ai/simple"
-        openGraph={{
-          type: 'website',
-          title: t('title'),
-          description: t('description'),
-          siteName: 'Exchange Rates Pro - OverX AI',
-          locale: 'en_US',
-          url: 'https://rates.overx.ai/simple',
-          image: {
-            url: 'https://rates.overx.ai/og-image.png',
-            width: 1312,
-            height: 736,
-            alt: 'Simple Currency Converter - Exchange Rates Pro'
-          }
-        }}
-        twitter={{
-          card: 'summary_large_image',
-          site: '@overxai',
-          title: t('title'),
-          description: t('description'),
-          image: 'https://rates.overx.ai/twitter-card.png'
-        }}
         structuredData={[structuredData]}
       />
       

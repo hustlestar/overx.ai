@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useState, useEffect } from 'react'
 import { Layout } from '@/components/Layout'
-import { BaseSEO } from '@overx-ai/shared'
+import { EnhancedSEO } from '@overx-ai/shared'
 import { CurrencySelector } from '@/components/CurrencySelector'
 import { useUserPreferences } from '@/hooks/useUserPreferences'
 import { useCurrencies } from '@/hooks/useExchangeRates'
@@ -58,7 +58,7 @@ export default function SettingsPage() {
 
   return (
     <>
-      <BaseSEO
+      <EnhancedSEO
         title={`${t('settings.title')} - Exchange Rates Pro`}
         description="Customize your currency converter preferences, default currencies, and display options."
         canonical="https://rates.overx.ai/settings"

@@ -128,6 +128,7 @@ export function EnhancedSEO({
       openGraph={enhancedOpenGraph}
       twitter={enhancedTwitter}
       structuredData={structuredData}
+      HeadComponent={Head}
       {...otherProps}
     />
   )
