@@ -8,9 +8,15 @@ echo "Checking for shared package..."
 ls -la ../..
 ls -la ../../shared || echo "Shared directory not found at ../../shared"
 
+# Clean old build artifacts
+echo "Cleaning old build artifacts..."
+rm -rf node_modules/@overx-ai/shared
+rm -rf .next
+
 # Build shared package first
 echo "Building shared package..."
 cd ../../shared
+rm -rf dist
 npm run build
 cd ../sites/converter
 
