@@ -90,12 +90,10 @@ async function generateSitemaps() {
 
   const sitemapIndex = indexGenerator.generateIndex([
     { loc: 'https://overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
-    { loc: 'https://blog.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
     { loc: 'https://rates.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
-    { loc: 'https://words.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
-    { loc: 'https://producta.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
-    { loc: 'https://productb.overx.ai/sitemap.xml', lastmod: new Date().toISOString() },
-    { loc: 'https://productc.overx.ai/sitemap.xml', lastmod: new Date().toISOString() }
+    { loc: 'https://words.overx.ai/sitemap.xml', lastmod: new Date().toISOString() }
+    // Note: blog.overx.ai is not deployed yet, will add when DNS is configured
+    // Removed producta/b/c.overx.ai as these subdomains don't exist
   ])
 
   await indexGenerator.writeToFile(
