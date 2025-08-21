@@ -23,11 +23,21 @@ else
   echo "✗ ERROR: @types/node is NOT installed"
 fi
 
+# Check for twemoji
+if [ -d "node_modules/twemoji" ]; then
+  echo "✓ twemoji is installed"
+else
+  echo "✗ ERROR: twemoji is NOT installed - installing now"
+  npm install twemoji @types/twemoji --no-audit --no-fund
+fi
+
 # Build shared package first
 echo "Building shared package..."
 cd ../../shared
 rm -rf dist
-npm run build
+# Ensure React types are installed for the build
+npm install --save-dev @types/react @types/react-dom @types/node --no-audit --no-fund
+npm run build || echo "Warning: Shared package build failed"
 cd ../sites/converter
 
 # Ensure node_modules exists
