@@ -13,9 +13,11 @@ echo "Cleaning old build artifacts..."
 rm -rf node_modules/@overx-ai/shared
 rm -rf .next
 
-# Ensure all dependencies are installed (including flag-icons)
-echo "Installing converter dependencies..."
-npm install --no-audit --no-fund
+# Check if flag-icons is installed, if not install it
+if [ ! -d "node_modules/flag-icons" ]; then
+  echo "Installing missing flag-icons dependency..."
+  npm install flag-icons --no-save --no-audit --no-fund
+fi
 
 # Build shared package first
 echo "Building shared package..."
