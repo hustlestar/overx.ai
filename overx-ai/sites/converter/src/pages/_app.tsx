@@ -1,11 +1,16 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { appWithTranslation } from 'next-i18next'
 import { useState, useEffect } from 'react'
 import { useLanguageSync } from '@/hooks/useLanguageSync'
 import { debugSyncStatus } from '@/utils/debugSync'
+
+// Conditionally import ReactQueryDevtools only in development
+let ReactQueryDevtools: any = () => null
+if (process.env.NODE_ENV === 'development') {
+  ReactQueryDevtools = require('@tanstack/react-query-devtools').ReactQueryDevtools
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
   console.log('[Converter _app.tsx] App initializing...')
