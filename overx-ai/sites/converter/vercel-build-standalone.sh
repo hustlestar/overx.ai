@@ -19,8 +19,15 @@ echo "Checking installed dependencies..."
 ls -la node_modules/ | head -20
 if [ -d "node_modules/flag-icons" ]; then
   echo "✓ flag-icons is installed"
+  ls -la node_modules/flag-icons/ | head -10
 else
-  echo "✗ flag-icons is NOT installed"
+  echo "✗ flag-icons is NOT installed - attempting to install..."
+  npm install flag-icons --no-audit --no-fund
+  if [ -d "node_modules/flag-icons" ]; then
+    echo "✓ Successfully installed flag-icons"
+  else
+    echo "✗ Failed to install flag-icons"
+  fi
 fi
 
 # Build shared package first

@@ -17,6 +17,11 @@ cd ..
 echo "Installing converter site dependencies..."
 cd sites/converter
 npm install --no-audit --no-fund
+# Verify flag-icons is installed
+if [ ! -d "node_modules/flag-icons" ]; then
+  echo "WARNING: flag-icons not installed, installing separately..."
+  npm install flag-icons --no-audit --no-fund
+fi
 cd ../..
 
 # Install main site dependencies
