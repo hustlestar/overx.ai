@@ -260,6 +260,30 @@ export default function Page() {
 
 Remember: Every decision should improve SEO performance. When in doubt, choose the option that provides better search visibility and user experience.
 
+## Vercel Deployment Configuration
+
+### Converter Site (rates.overx.ai)
+- **Root Directory**: `overx-ai/sites/converter`
+- **Build Command**: `cd ../.. && npm run build:converter`
+- **Install Command**: `cd ../.. && npm install`
+- **Output Directory**: Leave blank (Next.js default)
+
+### Main Site (overx.ai)
+- **Root Directory**: `overx-ai`
+- **Build Command**: `npm run build`
+- **Output Directory**: `sites/main/.next`
+
+### Words Site (words.overx.ai)
+- **Root Directory**: `overx-ai/sites/words`
+- **Build Command**: Default
+- **Output Directory**: Default
+
+### Important Build Notes
+- The monorepo structure requires navigating to the root for installs
+- Each site has its own build configuration
+- Shared package must be built before site builds
+- Dev dependencies must be preserved during production installs
+
 ## Recent Updates & Known Issues
 
 ### 🔄 Latest Updates (December 2024)

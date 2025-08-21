@@ -28,7 +28,15 @@ if [ -d "node_modules/twemoji" ]; then
   echo "✓ twemoji is installed"
 else
   echo "✗ ERROR: twemoji is NOT installed - installing now"
-  npm install twemoji @types/twemoji --no-audit --no-fund
+  # Use --save to add to dependencies without removing devDependencies
+  npm install --save twemoji --no-audit --no-fund
+  npm install --save-dev @types/twemoji --no-audit --no-fund
+fi
+
+# Ensure dev dependencies are still installed
+if [ ! -d "node_modules/eslint" ]; then
+  echo "✗ Dev dependencies were removed - reinstalling..."
+  npm install --save-dev @types/node @types/react @types/react-dom eslint eslint-config-next typescript --no-audit --no-fund
 fi
 
 # Build shared package first
