@@ -15,21 +15,21 @@ This is a monorepo containing multiple Next.js applications for the OverX.ai eco
 Each site needs to be deployed as a **separate Vercel project** with specific configurations:
 
 ### ⚠️ IMPORTANT: NO ROOT vercel.json
-**Never create a vercel.json file at the repository root** - it will override individual project settings and cause sites to display wrong content.
+**Never create a vercel.json file at the repository root** - it will override ALL project settings and cause sites to display wrong content. Each Vercel project MUST use dashboard settings only.
 
 ### Converter Site (rates.overx.ai) ✅ WORKING
 Configure in Vercel Dashboard:
-- **Root Directory**: Leave empty (build from monorepo root)
+- **Root Directory**: Leave empty (monorepo root)
 - **Build Command**: `npm install && npm run build:converter`
 - **Output Directory**: `sites/converter/.next`
 - **Install Command**: `npm install`
 - **Framework Preset**: Next.js
 
-### Main Site (overx.ai) 
+### Main Site (overx.ai) ⚠️ NEEDS DASHBOARD CONFIG
 Configure in Vercel Dashboard:
-- **Root Directory**: `sites/main`
-- **Build Command**: `npm run build`
-- **Output Directory**: `.next`
+- **Root Directory**: Leave empty (monorepo root)  
+- **Build Command**: `npm install && cd sites/main && npm run build`
+- **Output Directory**: `sites/main/.next`
 - **Install Command**: `npm install`
 - **Framework Preset**: Next.js
 
