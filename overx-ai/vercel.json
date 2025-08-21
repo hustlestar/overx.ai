@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm install && npm run build:$VERCEL_SITE",
-  "outputDirectory": "sites/$VERCEL_SITE/.next",
+  "buildCommand": "npm install && npm run build:converter",
+  "outputDirectory": "sites/converter/.next",
   "installCommand": "npm install",
   "framework": "nextjs"
 }
