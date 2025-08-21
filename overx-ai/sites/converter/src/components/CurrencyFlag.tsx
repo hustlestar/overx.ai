@@ -1,57 +1,149 @@
-import { useEffect, useState } from 'react'
 import { getCurrencyFlag } from '../utils/currencyFlags'
-import { isWindows, getCountryCode } from '../utils/windowsDetection'
-import { getFlagDataUrl } from '../utils/flagSvgs'
 
 interface CurrencyFlagProps {
   currencyCode: string
   className?: string
 }
 
+// Map currency codes to country codes for flag-icons library
+const currencyToCountry: Record<string, string> = {
+  USD: 'us',
+  EUR: 'eu',
+  GBP: 'gb',
+  JPY: 'jp',
+  CHF: 'ch',
+  CAD: 'ca',
+  AUD: 'au',
+  NZD: 'nz',
+  CNY: 'cn',
+  HKD: 'hk',
+  SGD: 'sg',
+  SEK: 'se',
+  NOK: 'no',
+  DKK: 'dk',
+  PLN: 'pl',
+  CZK: 'cz',
+  HUF: 'hu',
+  RON: 'ro',
+  BGN: 'bg',
+  HRK: 'hr',
+  RUB: 'ru',
+  TRY: 'tr',
+  KRW: 'kr',
+  INR: 'in',
+  BRL: 'br',
+  MXN: 'mx',
+  ZAR: 'za',
+  THB: 'th',
+  MYR: 'my',
+  PHP: 'ph',
+  IDR: 'id',
+  ILS: 'il',
+  AED: 'ae',
+  SAR: 'sa',
+  EGP: 'eg',
+  PKR: 'pk',
+  CLP: 'cl',
+  COP: 'co',
+  PEN: 'pe',
+  ARS: 'ar',
+  VND: 'vn',
+  TWD: 'tw',
+  ISK: 'is',
+  BAM: 'ba',
+  ALL: 'al',
+  RSD: 'rs',
+  MKD: 'mk',
+  BYN: 'by',
+  UAH: 'ua',
+  GEL: 'ge',
+  AMD: 'am',
+  AZN: 'az',
+  MDL: 'md',
+  TMT: 'tm',
+  UZS: 'uz',
+  KZT: 'kz',
+  KGS: 'kg',
+  TJS: 'tj',
+  BDT: 'bd',
+  LKR: 'lk',
+  NPR: 'np',
+  AFN: 'af',
+  MMK: 'mm',
+  KHR: 'kh',
+  LAK: 'la',
+  MNT: 'mn',
+  BTN: 'bt',
+  MVR: 'mv',
+  BND: 'bn',
+  MOP: 'mo',
+  QAR: 'qa',
+  KWD: 'kw',
+  BHD: 'bh',
+  OMR: 'om',
+  JOD: 'jo',
+  LBP: 'lb',
+  SYP: 'sy',
+  YER: 'ye',
+  IQD: 'iq',
+  IRR: 'ir',
+  LYD: 'ly',
+  TND: 'tn',
+  DZD: 'dz',
+  MAD: 'ma',
+  NGN: 'ng',
+  GHS: 'gh',
+  KES: 'ke',
+  UGX: 'ug',
+  TZS: 'tz',
+  ETB: 'et',
+  SDG: 'sd',
+  ZMW: 'zm',
+  ZWL: 'zw',
+  BWP: 'bw',
+  NAD: 'na',
+  SZL: 'sz',
+  LSL: 'ls',
+  MUR: 'mu',
+  SCR: 'sc',
+  MWK: 'mw',
+  MZN: 'mz',
+  AOA: 'ao',
+  FJD: 'fj',
+  PGK: 'pg',
+  SBD: 'sb',
+  TON: 'to',
+  VUV: 'vu',
+  WST: 'ws',
+  // Multi-country currencies
+  XAF: 'cm', // Central African CFA Franc (Cameroon)
+  XOF: 'sn', // West African CFA Franc (Senegal)
+  XPF: 'pf', // CFP Franc (French Polynesia)
+  XCD: 'ag', // East Caribbean Dollar (Antigua)
+}
+
 export function CurrencyFlag({ currencyCode, className = '' }: CurrencyFlagProps) {
-  const [isWindowsOS, setIsWindowsOS] = useState(false)
+  const countryCode = currencyToCountry[currencyCode]
   
-  useEffect(() => {
-    setIsWindowsOS(isWindows())
-  }, [])
-  
-  // For Windows, show SVG flag or styled country code
-  if (isWindowsOS) {
-    const countryCode = getCountryCode(currencyCode)
-    
-    if (countryCode) {
-      const flagUrl = getFlagDataUrl(countryCode)
-      
-      // If we have an SVG flag, use it
-      if (flagUrl) {
-        return (
-          <span className={`inline-flex items-center justify-center ${className}`}>
-            <img 
-              src={flagUrl} 
-              alt={`${currencyCode} flag`}
-              className="w-6 h-4 rounded-sm shadow-sm"
-              style={{ minWidth: '24px' }}
-            />
-          </span>
-        )
-      }
-      
-      // Otherwise show country code in a styled box
-      return (
-        <span className={`inline-flex items-center justify-center w-8 h-6 text-xs font-bold bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 text-blue-900 dark:text-blue-100 rounded border border-blue-300 dark:border-blue-700 ${className}`}>
-          {countryCode}
-        </span>
-      )
-    }
-    
-    // Fallback to currency code
+  // Use flag-icons library for consistent display across all platforms including Windows
+  if (countryCode) {
     return (
-      <span className={`inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded ${className}`}>
-        {currencyCode}
+      <span className={`inline-flex items-center justify-center ${className}`}>
+        <span className={`fi fi-${countryCode} text-lg`} style={{ lineHeight: 1 }} />
       </span>
     )
   }
   
-  // For non-Windows, use emoji flags
-  return <span className={className}>{getCurrencyFlag(currencyCode)}</span>
+  // Fallback to emoji flag if available (for currencies not in flag-icons)
+  const emojiFlag = getCurrencyFlag(currencyCode)
+  if (emojiFlag !== currencyCode) {
+    return <span className={className}>{emojiFlag}</span>
+  }
+  
+  // Final fallback to styled currency code
+  return (
+    <span className={`inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-semibold bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded ${className}`}>
+      {currencyCode}
+    </span>
+  )
 }
