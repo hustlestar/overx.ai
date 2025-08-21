@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "cd ../../shared && npm run build && cd ../sites/main && next build",
+    "postbuild": "cd ../.. && npm run generate-main-sitemap",
     "build:static": "cd ../../shared && npm run build && cd ../sites/main && cp next.config.static.js next.config.js && next build && cp next.config.js.backup next.config.js 2>/dev/null || true",
     "prebuild:static": "cp next.config.js next.config.js.backup",
     "export": "next export",
