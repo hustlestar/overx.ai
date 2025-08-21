@@ -16,11 +16,14 @@ cd ..
 # Install converter site dependencies
 echo "Installing converter site dependencies..."
 cd sites/converter
+# Clean install to ensure all dependencies are properly installed
+rm -rf node_modules package-lock.json
 npm install --no-audit --no-fund
 # Verify flag-icons is installed
-if [ ! -d "node_modules/flag-icons" ]; then
-  echo "WARNING: flag-icons not installed, installing separately..."
-  npm install flag-icons --no-audit --no-fund
+if [ -d "node_modules/flag-icons" ]; then
+  echo "✓ flag-icons installed successfully"
+else
+  echo "✗ ERROR: flag-icons not installed!"
 fi
 cd ../..
 

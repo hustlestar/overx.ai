@@ -14,20 +14,20 @@ rm -rf node_modules/@overx-ai/shared
 rm -rf .next
 
 # Dependencies should already be installed by vercel-install.sh
-# List installed packages for debugging
+# DO NOT run npm install here as it breaks the dependency tree
 echo "Checking installed dependencies..."
-ls -la node_modules/ | head -20
 if [ -d "node_modules/flag-icons" ]; then
   echo "✓ flag-icons is installed"
-  ls -la node_modules/flag-icons/ | head -10
 else
-  echo "✗ flag-icons is NOT installed - attempting to install..."
-  npm install flag-icons --no-audit --no-fund
-  if [ -d "node_modules/flag-icons" ]; then
-    echo "✓ Successfully installed flag-icons"
-  else
-    echo "✗ Failed to install flag-icons"
-  fi
+  echo "✗ ERROR: flag-icons is NOT installed"
+  echo "This should have been installed by vercel-install.sh"
+  echo "Continuing anyway, but build may fail..."
+fi
+# Check for TypeScript types
+if [ -d "node_modules/@types/node" ]; then
+  echo "✓ @types/node is installed"
+else
+  echo "✗ ERROR: @types/node is NOT installed"
 fi
 
 # Build shared package first
