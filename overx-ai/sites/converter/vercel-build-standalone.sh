@@ -13,6 +13,10 @@ echo "Cleaning old build artifacts..."
 rm -rf node_modules/@overx-ai/shared
 rm -rf .next
 
+# Ensure all dependencies are installed (including flag-icons)
+echo "Installing converter dependencies..."
+npm install --no-audit --no-fund
+
 # Build shared package first
 echo "Building shared package..."
 cd ../../shared
