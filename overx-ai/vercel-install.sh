@@ -19,12 +19,6 @@ cd sites/converter
 # Clean install to ensure all dependencies are properly installed
 rm -rf node_modules package-lock.json
 npm install --no-audit --no-fund
-# Verify flag-icons is installed
-if [ -d "node_modules/flag-icons" ]; then
-  echo "✓ flag-icons installed successfully"
-else
-  echo "✗ ERROR: flag-icons not installed!"
-fi
 cd ../..
 
 # Install main site dependencies
