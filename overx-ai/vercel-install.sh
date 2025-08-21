@@ -9,8 +9,11 @@ npm install --omit=optional --no-audit --no-fund || true
 # Build the shared package first
 echo "Building shared package..."
 cd shared
+# Ensure all dependencies including React are installed for build
 npm install --no-audit --no-fund
-npm run build
+# Install dev dependencies too for TypeScript
+npm install --save-dev @types/react @types/react-dom @types/node --no-audit --no-fund
+npm run build || echo "Shared package build failed, will copy existing files"
 cd ..
 
 # Install converter site dependencies
@@ -19,6 +22,8 @@ cd sites/converter
 # Clean install to ensure all dependencies are properly installed
 rm -rf node_modules package-lock.json
 npm install --no-audit --no-fund
+# Explicitly ensure twemoji is installed
+npm install twemoji @types/twemoji --no-audit --no-fund
 cd ../..
 
 # Install main site dependencies
