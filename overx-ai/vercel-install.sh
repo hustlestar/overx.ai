@@ -2,8 +2,7 @@
 
 echo "Installing dependencies for Vercel deployment..."
 
-# Install ALL dependencies at root level
-echo "Installing all dependencies from root..."
+# Install all dependencies including workspaces
 npm install
 
 echo "Installation complete!"

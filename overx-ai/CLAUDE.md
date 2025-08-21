@@ -263,26 +263,28 @@ Remember: Every decision should improve SEO performance. When in doubt, choose t
 ## Vercel Deployment Configuration
 
 ### Converter Site (rates.overx.ai)
-- **Root Directory**: `overx-ai/sites/converter`
-- **Build Command**: `cd ../.. && npm run build:converter`
-- **Install Command**: `cd ../.. && npm install`
-- **Output Directory**: Leave blank (Next.js default)
+- **Root Directory**: `/` (repository root)
+- **Build Command**: `npm install && npm run build:converter`
+- **Output Directory**: `sites/converter/.next`
+- **Install Command**: `npm install`
 
 ### Main Site (overx.ai)
-- **Root Directory**: `overx-ai`
-- **Build Command**: `npm run build`
+- **Root Directory**: `/` (repository root)
+- **Build Command**: `npm install && npm run build`
 - **Output Directory**: `sites/main/.next`
+- **Install Command**: `npm install`
 
 ### Words Site (words.overx.ai)
-- **Root Directory**: `overx-ai/sites/words`
-- **Build Command**: Default
-- **Output Directory**: Default
+- **Root Directory**: `/` (repository root)
+- **Build Command**: `npm install && npm run build:words`
+- **Output Directory**: `sites/words/.next`
+- **Install Command**: `npm install`
 
 ### Important Build Notes
-- The monorepo structure requires navigating to the root for installs
-- Each site has its own build configuration
-- Shared package must be built before site builds
-- Dev dependencies must be preserved during production installs
+- All sites build from the repository root to respect npm workspaces
+- The shared package is automatically built by the build scripts
+- npm install at root installs all workspace dependencies
+- Each site's build command is defined in root package.json
 
 ## Recent Updates & Known Issues
 

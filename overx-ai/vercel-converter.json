@@ -1,0 +1,6 @@
+{
+  "buildCommand": "npm install && npm run build:converter",
+  "outputDirectory": "sites/converter/.next",
+  "installCommand": "npm install",
+  "framework": "nextjs"
+}
