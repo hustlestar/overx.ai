@@ -13,38 +13,55 @@ echo "Cleaning old build artifacts..."
 rm -rf node_modules/@overx-ai/shared
 rm -rf .next
 
-# Dependencies should already be installed by vercel-install.sh
-# DO NOT run npm install here as it breaks the dependency tree
-echo "Checking installed dependencies..."
-# Check for TypeScript types
+# Save the current package.json to restore dev dependencies
+cp package.json package.json.backup
+
+# Check and install twemoji if needed
+if [ ! -d "node_modules/twemoji" ]; then
+  echo "Installing twemoji..."
+  npm install --save twemoji --no-audit --no-fund
+fi
+
+# Restore dev dependencies from backup package.json
+echo "Ensuring all dependencies are installed..."
+npm install --no-audit --no-fund
+
+# Additional check for critical dev dependencies
+if [ ! -d "node_modules/@types/node" ] || [ ! -d "node_modules/typescript" ] || [ ! -d "node_modules/eslint" ]; then
+  echo "Critical dev dependencies missing - reinstalling all dependencies..."
+  rm -rf node_modules package-lock.json
+  npm install --no-audit --no-fund
+fi
+
+# Verify installation
+echo "Verifying dependencies..."
 if [ -d "node_modules/@types/node" ]; then
   echo "✓ @types/node is installed"
 else
   echo "✗ ERROR: @types/node is NOT installed"
+  exit 1
 fi
 
-# Check for twemoji
 if [ -d "node_modules/twemoji" ]; then
   echo "✓ twemoji is installed"
 else
-  echo "✗ ERROR: twemoji is NOT installed - installing now"
-  # Use --save to add to dependencies without removing devDependencies
-  npm install --save twemoji --no-audit --no-fund
-  npm install --save-dev @types/twemoji --no-audit --no-fund
+  echo "✗ ERROR: twemoji is NOT installed"
+  exit 1
 fi
 
-# Ensure dev dependencies are still installed
-if [ ! -d "node_modules/eslint" ]; then
-  echo "✗ Dev dependencies were removed - reinstalling..."
-  npm install --save-dev @types/node @types/react @types/react-dom eslint eslint-config-next typescript --no-audit --no-fund
+if [ -d "node_modules/typescript" ]; then
+  echo "✓ typescript is installed"
+else
+  echo "✗ ERROR: typescript is NOT installed"
+  exit 1
 fi
 
 # Build shared package first
 echo "Building shared package..."
 cd ../../shared
 rm -rf dist
-# Ensure React types are installed for the build
-npm install --save-dev @types/react @types/react-dom @types/node --no-audit --no-fund
+# Ensure @types/node is available for shared package build
+npm install --save-dev @types/node --no-audit --no-fund
 npm run build || echo "Warning: Shared package build failed"
 cd ../sites/converter
 

@@ -21,9 +21,14 @@ echo "Installing converter site dependencies..."
 cd sites/converter
 # Clean install to ensure all dependencies are properly installed
 rm -rf node_modules package-lock.json
+# Install all dependencies including twemoji
 npm install --no-audit --no-fund
-# Explicitly ensure twemoji is installed
-npm install twemoji @types/twemoji --no-audit --no-fund
+# Double-check twemoji is installed (it should be in package.json now)
+if [ ! -d "node_modules/twemoji" ]; then
+  echo "Installing twemoji separately..."
+  npm install --save twemoji --no-audit --no-fund
+  npm install --save-dev @types/twemoji --no-audit --no-fund
+fi
 cd ../..
 
 # Install main site dependencies
