@@ -13,10 +13,14 @@ echo "Cleaning old build artifacts..."
 rm -rf node_modules/@overx-ai/shared
 rm -rf .next
 
-# Check if flag-icons is installed, if not install it
-if [ ! -d "node_modules/flag-icons" ]; then
-  echo "Installing missing flag-icons dependency..."
-  npm install flag-icons --no-save --no-audit --no-fund
+# Dependencies should already be installed by vercel-install.sh
+# List installed packages for debugging
+echo "Checking installed dependencies..."
+ls -la node_modules/ | head -20
+if [ -d "node_modules/flag-icons" ]; then
+  echo "✓ flag-icons is installed"
+else
+  echo "✗ flag-icons is NOT installed"
 fi
 
 # Build shared package first
