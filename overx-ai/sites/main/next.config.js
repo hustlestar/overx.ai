@@ -13,7 +13,7 @@ const nextConfig = {
   
   // Image optimization for Vercel
   images: {
-    domains: ['overx.ai'],
+    domains: ['overx.ai', 'cdn.jsdelivr.net'], // Added cdn.jsdelivr.net for Twemoji
   },
   
   // Optimize for performance
