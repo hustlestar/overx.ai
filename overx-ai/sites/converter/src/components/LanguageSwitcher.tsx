@@ -37,7 +37,7 @@ export function LanguageSwitcher() {
     <div className="relative z-[90]" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-1.5 rounded-lg glass-effect hover:bg-white/10 light:hover:bg-gray-100 transition-colors"
+        className="flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-gray-900/50 light:bg-white border border-gray-800 light:border-gray-200 hover:bg-gray-800 light:hover:bg-gray-50 transition-colors"
       >
         <FlagImage
           emoji={currentLanguage.flag}
@@ -56,15 +56,15 @@ export function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 rounded-lg glass-effect overflow-hidden z-[100] shadow-2xl border border-white/20 light:border-gray-200 light:bg-white">
+        <div className="absolute right-0 mt-2 w-48 rounded-lg bg-gray-900 light:bg-white overflow-hidden z-[100] shadow-2xl border border-gray-800 light:border-gray-200">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
               className={`w-full text-left px-4 py-2 text-sm transition-colors flex items-center space-x-2 ${
                 lang.code === i18n.language
-                  ? 'bg-blue-600/20 text-blue-400 light:bg-blue-100 light:text-blue-700'
-                  : 'hover:bg-white/10 light:hover:bg-gray-100'
+                  ? 'bg-blue-600 text-white light:bg-blue-500 light:text-white'
+                  : 'hover:bg-gray-800 light:hover:bg-gray-100 text-gray-300 light:text-gray-700'
               }`}
             >
               <FlagImage
