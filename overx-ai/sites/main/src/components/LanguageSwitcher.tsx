@@ -3,11 +3,12 @@ import { useTranslation } from 'next-i18next'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { FlagImage } from '@overx-ai/shared/components/UI'
 
 const languages = [
-  { code: 'en', name: 'English', flag: 'EN' },
-  { code: 'es', name: 'Español', flag: 'ES' },
-  { code: 'ru', name: 'Русский', flag: 'RU' },
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
 ]
 
 export function LanguageSwitcher() {
@@ -24,7 +25,8 @@ export function LanguageSwitcher() {
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 dark:text-white bg-gray-100 dark:bg-white/10 border border-gray-200 dark:border-white/20 rounded-md hover:bg-gray-200 dark:hover:bg-white/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:focus-visible:ring-white focus-visible:ring-opacity-75 transition-colors">
-          <span>{currentLanguage.name}</span>
+          <FlagImage emoji={currentLanguage.flag} alt={currentLanguage.name} size={20} />
+          <span className="ml-2">{currentLanguage.name}</span>
           <ChevronDownIcon
             className="w-5 h-5 ml-2 -mr-1 text-gray-400"
             aria-hidden="true"
@@ -53,7 +55,7 @@ export function LanguageSwitcher() {
                     } group flex rounded-md items-center w-full px-2 py-2 text-sm text-gray-700 dark:text-white transition-colors`}
                     onClick={() => handleLanguageChange(language.code)}
                   >
-                    <span className="mr-3 text-xs font-bold w-6 text-center">{language.flag}</span>
+                    <FlagImage emoji={language.flag} alt={language.name} size={20} className="mr-3" />
                     {language.name}
                   </button>
                 )}
