@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { useState, useRef, useEffect } from 'react'
+import { FlagImage } from '@overx-ai/shared/components/UI'
 
 const languages = [
-  { code: 'en', name: 'English' },
-  { code: 'es', name: 'Español' },
-  { code: 'ru', name: 'Русский' },
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' },
 ]
 
 export function LanguageSwitcher() {
@@ -38,6 +39,11 @@ export function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 px-3 py-1.5 rounded-lg glass-effect hover:bg-white/10 light:hover:bg-gray-100 transition-colors"
       >
+        <FlagImage
+          emoji={currentLanguage.flag}
+          alt={currentLanguage.name}
+          size={20}
+        />
         <span className="text-sm">{currentLanguage.name}</span>
         <svg
           className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -50,18 +56,23 @@ export function LanguageSwitcher() {
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-40 rounded-lg glass-effect overflow-hidden z-[100] shadow-2xl border border-white/20 light:border-gray-200 light:bg-white">
+        <div className="absolute right-0 mt-2 w-48 rounded-lg glass-effect overflow-hidden z-[100] shadow-2xl border border-white/20 light:border-gray-200 light:bg-white">
           {languages.map((lang) => (
             <button
               key={lang.code}
               onClick={() => handleLanguageChange(lang.code)}
-              className={`w-full text-left px-4 py-2 text-sm transition-colors ${
+              className={`w-full text-left px-4 py-2 text-sm transition-colors flex items-center space-x-2 ${
                 lang.code === i18n.language
                   ? 'bg-blue-600/20 text-blue-400 light:bg-blue-100 light:text-blue-700'
                   : 'hover:bg-white/10 light:hover:bg-gray-100'
               }`}
             >
-              {lang.name}
+              <FlagImage
+                emoji={lang.flag}
+                alt={lang.name}
+                size={20}
+              />
+              <span>{lang.name}</span>
             </button>
           ))}
         </div>

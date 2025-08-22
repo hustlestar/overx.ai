@@ -26,8 +26,9 @@ Configure in Vercel Dashboard:
 
 ### Main Site (overx.ai) ✅ WORKING
 Configure in Vercel Dashboard:
-- **Root Directory**: `sites/main`
-- The site will use `sites/main/vercel.json` for build configuration
+- **Root Directory**: Leave empty (builds from monorepo root)
+- **Build Command**: Override with `npm install && cd sites/main && npm run build`
+- **Output Directory**: Override with `sites/main/.next`
 - **Framework Preset**: Next.js
 
 ### Words Site (words.overx.ai)
