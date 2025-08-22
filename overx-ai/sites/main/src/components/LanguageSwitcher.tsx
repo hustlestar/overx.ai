@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { FlagImage } from '@overx-ai/shared/components/UI'
+import { FlagImage } from '@overx-ai/shared'
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
