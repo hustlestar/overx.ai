@@ -19,8 +19,9 @@ Each site needs to be deployed as a **separate Vercel project** with specific co
 
 ### Converter Site (rates.overx.ai) ✅ WORKING
 Configure in Vercel Dashboard:
-- **Root Directory**: `sites/converter`
-- The site will use `sites/converter/vercel.json` for build configuration
+- **Root Directory**: Leave empty (builds from monorepo root)
+- **Build Command**: Override with `npm install && npm run build:converter`
+- **Output Directory**: Override with `sites/converter/.next`
 - **Framework Preset**: Next.js
 
 ### Main Site (overx.ai) ✅ WORKING
