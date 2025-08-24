@@ -104,17 +104,48 @@ export const ratesApi = {
     // Check localStorage cache first (12-hour cache)
     const cachedData = getCachedData<ComparisonResponse>(COMPARISON_CACHE_PREFIX, cacheKey, COMPARISON_CACHE_TTL)
     if (cachedData) {
+      console.log('[API] Returning cached comparison data for', base, date)
       return cachedData
     }
     
+    console.log('[API] Fetching comparison data from API for', base, date)
+    
     // Fetch from API
-    const { data } = await apiClient.get<ComparisonResponse>(`/history/compare/${date}`, {
+    const { data } = await apiClient.get<any>(`/history/compare/${date}`, {
       params: { base },
     })
     
-    // Cache the response with 12-hour TTL
-    setCachedData(COMPARISON_CACHE_PREFIX, cacheKey, data)
+    console.log('[API] Raw API response:', data)
     
-    return data
+    // Transform the API response to match our expected format
+    const transformedData: ComparisonResponse = {
+      base: data.base,
+      historical_date: data.historical_date,
+      comparison: {}
+    }
+    
+    // Transform each provider's data
+    if (data.comparison) {
+      Object.entries(data.comparison).forEach(([provider, providerData]: [string, any]) => {
+        transformedData.comparison[provider] = {
+          historical_date: providerData.historical_date,
+          current_date: providerData.current_date,
+          base: providerData.base,
+          changes: {}
+        }
+        
+        // Extract just the change_percent values
+        if (providerData.changes) {
+          transformedData.comparison[provider].changes = providerData.changes
+        }
+      })
+    }
+    
+    console.log('[API] Transformed comparison data:', transformedData)
+    
+    // Cache the transformed response with 12-hour TTL
+    setCachedData(COMPARISON_CACHE_PREFIX, cacheKey, transformedData)
+    
+    return transformedData
   },
 }

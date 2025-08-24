@@ -70,10 +70,19 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
   const { data: providersData } = useProviders()
   const { data: currenciesData } = useCurrencies()
   const { data: ratesData } = useAllRates(baseCurrency)
-  const { data: comparisonData } = useHistoricalComparison(baseCurrency, comparisonPeriod)
+  const { data: comparisonData, isLoading: comparisonLoading, error: comparisonError } = useHistoricalComparison(baseCurrency, comparisonPeriod)
 
   const providers = providersData || []
   const currencies = currenciesData || []
+  
+  // Debug logging
+  useEffect(() => {
+    console.log('[ProviderComparisonTable] Comparison data:', comparisonData)
+    console.log('[ProviderComparisonTable] Comparison loading:', comparisonLoading)
+    console.log('[ProviderComparisonTable] Comparison error:', comparisonError)
+    console.log('[ProviderComparisonTable] Period:', comparisonPeriod)
+    console.log('[ProviderComparisonTable] Providers:', providers.map(p => p.id))
+  }, [comparisonData, comparisonLoading, comparisonError, comparisonPeriod, providers])
   
   // Get the most recent update time from all providers
   const getLastUpdateTime = () => {
@@ -255,16 +264,36 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
           // Get the percentage change from comparison data
           const currencyCode = info.row.original.currency.code
           const providerComparison = comparisonData?.comparison?.[provider.id]
-          const change = providerComparison?.changes?.[currencyCode]
-          const hasChange = change !== undefined && change !== null
+          const changeValue = providerComparison?.changes?.[currencyCode]
+          
+          // Debug specific currency changes
+          if (currencyCode === 'EUR' || currencyCode === 'GBP') {
+            console.log(`[Provider ${provider.id}] ${currencyCode} change value:`, changeValue, 'Provider comparison:', providerComparison)
+          }
+          
+          // Extract change_percent from the nested object structure
+          let change: number | null = null
+          if (changeValue) {
+            if (typeof changeValue === 'number') {
+              change = changeValue
+            } else if (typeof changeValue === 'object' && changeValue !== null && 'change_percent' in changeValue) {
+              // Handle nested object with change_percent field
+              const percentValue = (changeValue as any).change_percent
+              change = typeof percentValue === 'number' ? percentValue : parseFloat(percentValue)
+            } else if (typeof changeValue === 'string') {
+              change = parseFloat(changeValue)
+            }
+          }
+          
+          const hasChange = change !== null && !isNaN(change) && Math.abs(change) > 0.001 // Don't show if effectively 0
           const isPositive = hasChange && change > 0
           
           return (
             <div className="text-center">
-              <div className="font-mono font-semibold text-green-400 light:text-green-600">
+              <div className="font-mono font-semibold text-blue-400 light:text-blue-600">
                 {data.rate?.toFixed(4) || '-'}
               </div>
-              {hasChange && (
+              {hasChange && change !== null && (
                 <div className={`text-xs mt-1 font-medium ${
                   isPositive ? 'text-green-400' : 'text-red-400'
                 }`}>

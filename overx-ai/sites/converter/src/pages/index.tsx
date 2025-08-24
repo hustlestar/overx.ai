@@ -13,7 +13,7 @@ import { STATIC_CURRENCIES } from '@/data/static-currencies'
 
 export default function HomePage() {
   const { t } = useTranslation('common')
-  const { defaultBase, defaultTargets } = useUserPreferences()
+  const { defaultBase, defaultTargets, updateDefaultBase } = useUserPreferences()
   const [baseCurrency, setBaseCurrency] = useState(defaultBase)
   const [lastUpdate, setLastUpdate] = useState<Date>(new Date())
   
@@ -21,6 +21,12 @@ export default function HomePage() {
   useEffect(() => {
     setBaseCurrency(defaultBase)
   }, [defaultBase])
+  
+  // Handle base currency change and save to preferences
+  const handleBaseCurrencyChange = (currency: string) => {
+    setBaseCurrency(currency)
+    updateDefaultBase(currency)
+  }
   
   const { data: ratesData, isLoading } = useAllRates(baseCurrency)
   const { data: currenciesData } = useCurrencies()
@@ -119,7 +125,7 @@ export default function HomePage() {
               baseCurrency={baseCurrency}
               targetCurrencies={targetCurrencies}
               userCurrencies={defaultTargets}
-              onBaseCurrencyChange={setBaseCurrency}
+              onBaseCurrencyChange={handleBaseCurrencyChange}
               availableCurrencies={currencies}
             />
           </div>
