@@ -1,10 +1,12 @@
 import axios from 'axios'
-import { AllRatesResponse, ProviderRate } from '@/types/api'
+import { AllRatesResponse, ProviderRate, ComparisonResponse } from '@/types/api'
 
 const API_BASE_URL = 'https://api.overx.ai/api/v1'
 
 const CACHE_TTL = 2 * 60 * 60 * 1000 // 2 hours in milliseconds
+const COMPARISON_CACHE_TTL = 12 * 60 * 60 * 1000 // 12 hours in milliseconds
 const CACHE_PREFIX = 'rates_cache_'
+const COMPARISON_CACHE_PREFIX = 'comparison_cache_'
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
@@ -14,24 +16,24 @@ const apiClient = axios.create({
   },
 })
 
-// LocalStorage cache helpers
-const getCachedData = (key: string): AllRatesResponse | null => {
+// Generic LocalStorage cache helpers
+const getCachedData = <T>(prefix: string, key: string, ttl: number): T | null => {
   if (typeof window === 'undefined') return null
   
   try {
-    const cached = localStorage.getItem(CACHE_PREFIX + key)
+    const cached = localStorage.getItem(prefix + key)
     if (!cached) return null
     
     const { data, timestamp } = JSON.parse(cached)
     const now = Date.now()
     
-    // Check if cache is still valid (2 hours)
-    if (now - timestamp < CACHE_TTL) {
+    // Check if cache is still valid
+    if (now - timestamp < ttl) {
       return data
     }
     
     // Remove expired cache
-    localStorage.removeItem(CACHE_PREFIX + key)
+    localStorage.removeItem(prefix + key)
     return null
   } catch (error) {
     console.error('Cache read error:', error)
@@ -39,7 +41,7 @@ const getCachedData = (key: string): AllRatesResponse | null => {
   }
 }
 
-const setCachedData = (key: string, data: AllRatesResponse): void => {
+const setCachedData = <T>(prefix: string, key: string, data: T): void => {
   if (typeof window === 'undefined') return
   
   try {
@@ -47,14 +49,14 @@ const setCachedData = (key: string, data: AllRatesResponse): void => {
       data,
       timestamp: Date.now(),
     }
-    localStorage.setItem(CACHE_PREFIX + key, JSON.stringify(cacheData))
+    localStorage.setItem(prefix + key, JSON.stringify(cacheData))
   } catch (error) {
     console.error('Cache write error:', error)
     // Clear old cache entries if storage is full
     try {
       const keys = Object.keys(localStorage)
       keys.forEach(k => {
-        if (k.startsWith(CACHE_PREFIX)) {
+        if (k.startsWith(prefix)) {
           localStorage.removeItem(k)
         }
       })
@@ -70,7 +72,7 @@ export const ratesApi = {
     const cacheKey = `all_${base}`
     
     // Check localStorage cache first
-    const cachedData = getCachedData(cacheKey)
+    const cachedData = getCachedData<AllRatesResponse>(CACHE_PREFIX, cacheKey, CACHE_TTL)
     if (cachedData) {
       return cachedData
     }
@@ -81,7 +83,7 @@ export const ratesApi = {
     })
     
     // Cache the response
-    setCachedData(cacheKey, data)
+    setCachedData(CACHE_PREFIX, cacheKey, data)
     
     return data
   },
@@ -93,5 +95,26 @@ export const ratesApi = {
     })
     // The API returns the same structure, extract the specific provider
     return data.providers[provider]
+  },
+
+  // Get historical comparison data
+  getComparison: async (base: string, date: string): Promise<ComparisonResponse> => {
+    const cacheKey = `${base}_${date}`
+    
+    // Check localStorage cache first (12-hour cache)
+    const cachedData = getCachedData<ComparisonResponse>(COMPARISON_CACHE_PREFIX, cacheKey, COMPARISON_CACHE_TTL)
+    if (cachedData) {
+      return cachedData
+    }
+    
+    // Fetch from API
+    const { data } = await apiClient.get<ComparisonResponse>(`/history/compare/${date}`, {
+      params: { base },
+    })
+    
+    // Cache the response with 12-hour TTL
+    setCachedData(COMPARISON_CACHE_PREFIX, cacheKey, data)
+    
+    return data
   },
 }

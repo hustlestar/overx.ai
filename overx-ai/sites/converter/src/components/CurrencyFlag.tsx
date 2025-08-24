@@ -1,4 +1,4 @@
-import { FlagImage } from '@overx-ai/shared/components/UI'
+import { FlagImage } from '@overx-ai/shared'
 import { getCurrencyFlag } from '../utils/currencyFlags'
 
 interface CurrencyFlagProps {

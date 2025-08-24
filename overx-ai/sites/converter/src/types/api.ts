@@ -24,3 +24,24 @@ export interface Currency {
   name: string
   symbol?: string
 }
+
+export interface HistoricalComparison {
+  historical_date: string
+  current_date: string
+  base: string
+  changes: Record<string, number>
+}
+
+export interface ComparisonResponse {
+  base: string
+  historical_date: string
+  comparison: {
+    [provider: string]: HistoricalComparison
+  }
+}
+
+export interface RateWithChange {
+  currency: Currency
+  rate: number
+  change?: number
+}

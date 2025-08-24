@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { useState, useRef, useEffect } from 'react'
-import { FlagImage } from '@overx-ai/shared/components/UI'
+import { FlagImage } from '@overx-ai/shared'
 
 const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },

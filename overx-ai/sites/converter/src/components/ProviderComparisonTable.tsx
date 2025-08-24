@@ -11,6 +11,7 @@ import {
   FilterFn,
 } from '@tanstack/react-table'
 import { useAllRates, useProviders, useCurrencies } from '@/hooks/useExchangeRates'
+import { useHistoricalComparison } from '@/hooks/useHistoricalComparison'
 import { formatCurrency } from '@/utils/currencies'
 import { CURRENCY_REGIONS } from '@/utils/regions'
 import { searchCurrencies } from '@/utils/currencySearch'
@@ -54,6 +55,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [hoveredCurrency, setHoveredCurrency] = useState<string | null>(null)
   const [searchButtonPosition, setSearchButtonPosition] = useState<number>(0)
+  const [comparisonPeriod, setComparisonPeriod] = useState<7 | 30>(7)
   const tableRef = useRef<HTMLDivElement>(null)
   const headerRef = useRef<HTMLTableSectionElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -68,6 +70,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
   const { data: providersData } = useProviders()
   const { data: currenciesData } = useCurrencies()
   const { data: ratesData } = useAllRates(baseCurrency)
+  const { data: comparisonData } = useHistoricalComparison(baseCurrency, comparisonPeriod)
 
   const providers = providersData || []
   const currencies = currenciesData || []
@@ -248,11 +251,27 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
               </div>
             )
           }
+          
+          // Get the percentage change from comparison data
+          const currencyCode = info.row.original.currency.code
+          const providerComparison = comparisonData?.comparison?.[provider.id]
+          const change = providerComparison?.changes?.[currencyCode]
+          const hasChange = change !== undefined && change !== null
+          const isPositive = hasChange && change > 0
+          
           return (
             <div className="text-center">
               <div className="font-mono font-semibold text-green-400 light:text-green-600">
                 {data.rate?.toFixed(4) || '-'}
               </div>
+              {hasChange && (
+                <div className={`text-xs mt-1 font-medium ${
+                  isPositive ? 'text-green-400' : 'text-red-400'
+                }`}>
+                  <span>{isPositive ? '↑' : '↓'}</span>
+                  <span className="ml-0.5">{isPositive ? '+' : ''}{change.toFixed(2)}%</span>
+                </div>
+              )}
             </div>
           )
         },
@@ -260,7 +279,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
     )
 
     return [...baseColumns, ...providerColumns]
-  }, [t, providers, defaultTargets, hoveredCurrency])
+  }, [t, providers, defaultTargets, hoveredCurrency, comparisonData])
 
   // Custom filter function for multi-language search
   const globalFilterFn: FilterFn<TableRow> = (row, columnId, filterValue) => {
@@ -395,9 +414,10 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
         </div>
       </div>
       
-      {/* Search */}
+      {/* Search and Period Selector */}
       <div className="mb-6 container mx-auto px-4">
-        <div className="relative inline-flex items-center w-full">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="relative inline-flex items-center flex-1">
           {/* Hidden span to measure text width */}
           <span
             ref={hiddenTextRef}
@@ -444,6 +464,32 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
               </svg>
             </button>
           )}
+          </div>
+          
+          {/* Period Selector */}
+          <div className="flex items-center gap-2 glass-effect rounded-lg p-1">
+            <span className="text-sm text-gray-400 light:text-gray-600 px-2">{t('rates.compare')}:</span>
+            <button
+              onClick={() => setComparisonPeriod(7)}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                comparisonPeriod === 7
+                  ? 'bg-blue-600 text-white'
+                  : 'hover:bg-white/10 light:hover:bg-gray-200 text-gray-300 light:text-gray-700'
+              }`}
+            >
+              7d
+            </button>
+            <button
+              onClick={() => setComparisonPeriod(30)}
+              className={`px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                comparisonPeriod === 30
+                  ? 'bg-blue-600 text-white'
+                  : 'hover:bg-white/10 light:hover:bg-gray-200 text-gray-300 light:text-gray-700'
+              }`}
+            >
+              30d
+            </button>
+          </div>
         </div>
       </div>
 

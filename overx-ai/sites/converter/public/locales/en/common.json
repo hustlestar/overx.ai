@@ -51,6 +51,7 @@
     "currency": "Currency",
     "rate": "Rate",
     "change": "24h Change",
+    "compare": "Compare",
     "triangulation": "Triangulation",
     "providers": "Rate Providers",
     "showMore": "Show more currencies",

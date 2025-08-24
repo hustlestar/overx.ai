@@ -9,7 +9,7 @@ import {
   useReactTable,
   SortingState,
 } from '@tanstack/react-table'
-import { Currency } from '@/types/api'
+import { Currency, RateWithChange, HistoricalComparison } from '@/types/api'
 import { formatCurrency } from '@/utils/currencies'
 
 interface ExchangeRatesTableProps {
@@ -17,15 +17,20 @@ interface ExchangeRatesTableProps {
   baseCurrency: string
   currencies: Currency[]
   providerId?: string
+  historicalComparison?: HistoricalComparison | null
+  comparisonPeriod?: 7 | 30
 }
 
-const columnHelper = createColumnHelper<{
-  currency: Currency
-  rate: number
-  change?: number
-}>()
+const columnHelper = createColumnHelper<RateWithChange>()
 
-export function ExchangeRatesTable({ rates, baseCurrency, currencies, providerId }: ExchangeRatesTableProps) {
+export function ExchangeRatesTable({ 
+  rates, 
+  baseCurrency, 
+  currencies, 
+  providerId,
+  historicalComparison,
+  comparisonPeriod = 7
+}: ExchangeRatesTableProps) {
   const { t } = useTranslation('common')
   const [sorting, setSorting] = useState<SortingState>([])
   const [globalFilter, setGlobalFilter] = useState('')
@@ -36,9 +41,8 @@ export function ExchangeRatesTable({ rates, baseCurrency, currencies, providerId
         const currency = currencies.find(c => c.code === code)
         if (!currency) return null
         
-        // TODO: Implement real 24h change calculation with historical data
-        // For now, using deterministic mock data based on currency code
-        const change = ((code.charCodeAt(0) + code.charCodeAt(1)) % 10 - 5) * 0.8
+        // Get the historical change percentage if available
+        const change = historicalComparison?.changes?.[code] || undefined
         
         return {
           currency,
@@ -46,12 +50,8 @@ export function ExchangeRatesTable({ rates, baseCurrency, currencies, providerId
           change,
         }
       })
-      .filter(Boolean) as Array<{
-        currency: Currency
-        rate: number
-        change: number
-      }>
-  }, [rates, currencies])
+      .filter(Boolean) as RateWithChange[]
+  }, [rates, currencies, historicalComparison])
 
   const columns = useMemo(
     () => [
@@ -71,16 +71,36 @@ export function ExchangeRatesTable({ rates, baseCurrency, currencies, providerId
       }),
       columnHelper.accessor('rate', {
         header: t('rates.rate'),
-        cell: (info) => (
-          <div className="font-mono font-semibold">
-            {info.getValue().toFixed(4)}
-          </div>
-        ),
+        cell: (info) => {
+          const change = info.row.original.change
+          const hasChange = change !== undefined && change !== null
+          const isPositive = hasChange && change > 0
+          
+          return (
+            <div className="flex items-center space-x-2">
+              <div className="font-mono font-semibold">
+                {info.getValue().toFixed(4)}
+              </div>
+              {hasChange && (
+                <span className={`text-xs font-medium px-1.5 py-0.5 rounded ${
+                  isPositive 
+                    ? 'bg-green-500/20 text-green-400' 
+                    : 'bg-red-500/20 text-red-400'
+                }`}>
+                  {isPositive ? '+' : ''}{change.toFixed(2)}%
+                </span>
+              )}
+            </div>
+          )
+        },
       }),
       columnHelper.accessor('change', {
-        header: t('rates.change'),
+        header: `${comparisonPeriod}d ${t('rates.change')}`,
         cell: (info) => {
-          const change = info.getValue() || 0
+          const change = info.getValue()
+          if (change === undefined || change === null) {
+            return <span className="text-gray-500">-</span>
+          }
           const isPositive = change > 0
           return (
             <div className={`flex items-center space-x-1 ${
@@ -166,11 +186,6 @@ export function ExchangeRatesTable({ rates, baseCurrency, currencies, providerId
             ))}
           </tbody>
         </table>
-      </div>
-      
-      {/* Footer note about percentage changes */}
-      <div className="mt-4 text-xs text-gray-500 text-center">
-        * 24h change percentages are demo data. Historical data integration coming soon.
       </div>
     </div>
   )
