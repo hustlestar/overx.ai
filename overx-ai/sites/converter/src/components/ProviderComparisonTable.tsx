@@ -19,7 +19,7 @@ import { localizeProviderName, localizeUpdateFrequency, localizeCurrencyName } f
 import { useUserPreferences } from '@/hooks/useUserPreferences'
 import { CurrencyCell } from './CurrencyCell'
 import { CurrencySelector } from './CurrencySelector'
-import { AllRatesResponse } from '@/types/api'
+import { AllRatesResponse, ComparisonResponse } from '@/types/api'
 
 interface ProviderComparisonTableProps {
   baseCurrency: string
@@ -263,7 +263,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
           
           // Get the percentage change from comparison data
           const currencyCode = info.row.original.currency.code
-          const providerComparison = comparisonData?.comparison?.[provider.id]
+          const providerComparison = (comparisonData as ComparisonResponse)?.comparison?.[provider.id]
           const changeValue = providerComparison?.changes?.[currencyCode]
           
           // Debug specific currency changes
@@ -286,7 +286,7 @@ export function ProviderComparisonTable({ baseCurrency, targetCurrencies, userCu
           }
           
           const hasChange = change !== null && !isNaN(change) && Math.abs(change) > 0.001 // Don't show if effectively 0
-          const isPositive = hasChange && change > 0
+          const isPositive = hasChange && change !== null && change > 0
           
           return (
             <div className="text-center">

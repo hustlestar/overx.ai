@@ -25,8 +25,5 @@ export function useHistoricalComparison(base: string, period: 7 | 30) {
     refetchInterval: false, // Don't refetch automatically
     retry: 2,
     retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
-    onError: (error) => {
-      console.error('[Comparison] Error fetching comparison data:', error)
-    },
   })
 }
