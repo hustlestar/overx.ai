@@ -8,9 +8,10 @@ import { debugSyncStatus } from '@/utils/debugSync'
 import dynamic from 'next/dynamic'
 
 // Dynamically import ReactQueryDevtools only in development
-const ReactQueryDevtools = process.env.NODE_ENV === 'development' 
+// Use any type to avoid TypeScript errors when the module is not available
+const ReactQueryDevtools: any = process.env.NODE_ENV === 'development' 
   ? dynamic(
-      () => import('@tanstack/react-query-devtools').then(mod => mod.ReactQueryDevtools),
+      () => import('@tanstack/react-query-devtools' as any).then(mod => mod.ReactQueryDevtools).catch(() => () => null),
       { ssr: false }
     )
   : () => null
