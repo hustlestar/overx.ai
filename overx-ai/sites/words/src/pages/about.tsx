@@ -16,7 +16,7 @@ const AboutPage: NextPage = () => {
       <EnhancedSEO
         title="About World Word War Bot - AI Language Learning Revolution"
         description="Learn how World Word War Bot is revolutionizing language learning with AI. Our mission to make language learning accessible, effective, and enjoyable for everyone worldwide."
-        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/about`}
+        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/about/`}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">

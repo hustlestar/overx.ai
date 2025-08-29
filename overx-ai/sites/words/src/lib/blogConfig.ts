@@ -6,6 +6,7 @@ export const wordsBlogConfig: BlogConfig = {
   supportedLocales: ['en', 'es', 'ru'],
   defaultLocale: 'en',
   postsPerPage: 6,
+  trailingSlash: true,
   categories: {
     'spaced-repetition': {
       slug: 'spaced-repetition',

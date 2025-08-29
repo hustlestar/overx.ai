@@ -39,6 +39,7 @@ export interface BlogConfig {
   supportedLocales: string[]
   defaultLocale: string
   postsPerPage: number
+  trailingSlash?: boolean // Whether URLs should end with trailing slash
   categories: Record<string, {
     slug: string
     name: Record<string, string> // Multi-language category names

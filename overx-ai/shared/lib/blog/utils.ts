@@ -173,7 +173,8 @@ export function generateBlogListSEO(
 ): BlogSEO {
   const baseUrl = `https://${config.domain}`
   const localePrefix = locale === 'en' ? '' : `/${locale}`
-  const blogUrl = `${baseUrl}${localePrefix}${config.basePath}`
+  const trailingSlash = config.trailingSlash ? '/' : ''
+  const blogUrl = `${baseUrl}${localePrefix}${config.basePath}${trailingSlash}`
   
   let title = 'Blog'
   let description = 'Latest articles and insights'
@@ -214,7 +215,8 @@ export function generateBlogPostSEO(
 ): BlogSEO {
   const baseUrl = `https://${config.domain}`
   const localePrefix = locale === 'en' ? '' : `/${locale}`
-  const postUrl = `${baseUrl}${localePrefix}${config.basePath}/${post.slug}`
+  const trailingSlash = config.trailingSlash ? '/' : ''
+  const postUrl = `${baseUrl}${localePrefix}${config.basePath}/${post.slug}${trailingSlash}`
   
   const seoData = post.seo[locale] || post.seo[config.defaultLocale]
   const title = post.title[locale] || post.title[config.defaultLocale]

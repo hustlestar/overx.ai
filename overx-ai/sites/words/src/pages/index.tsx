@@ -77,7 +77,7 @@ export default function HomePage() {
       <EnhancedSEO
         title="World Word War Bot - AI-Powered Language Learning on Telegram"
         description="Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
-        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}`}
+        canonical={`https://words.overx.ai${locale === 'en' ? '/' : `/${locale}/`}`}
       />
 
       {/* Hero Section */}
