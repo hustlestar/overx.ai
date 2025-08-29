@@ -40,7 +40,7 @@ export default function BlogPage() {
   return (
     <>
       <EnhancedSEO
-        title="Blog - Currency Exchange Insights & International Business Tips | Exchange Rates Pro"
+        title="Currency Exchange Blog - Tips & Insights | Rates Pro"
         description="Expert articles on transparent currency exchange, saving money on international transactions, and optimizing your business's foreign exchange strategy."
         canonical="https://rates.overx.ai/blog"
         structuredData={[structuredData]}
