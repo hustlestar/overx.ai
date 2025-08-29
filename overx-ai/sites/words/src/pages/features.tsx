@@ -138,7 +138,7 @@ export default function FeaturesPage() {
       <EnhancedSEO
         title="AI Language Learning Features | 13 Languages | WWW Words"
         description="Explore WWW Words Bot features: AI translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
-        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/features/`}
+        canonical={`https://words.overx.ai${locale === 'en' ? '/' : `/${locale}/`}features/`}
       />
       
       <Layout>
