@@ -79,7 +79,7 @@ export default function PricingPage() {
   return (
     <>
       <EnhancedSEO
-        title={`Pricing - ${t('site.title')}`}
+        title="Pricing - Language Learning Bot Plans | World Word War"
         description="Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
         canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/pricing/`}
       />
