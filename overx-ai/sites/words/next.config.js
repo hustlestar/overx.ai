@@ -22,6 +22,32 @@ const nextConfig = {
   
   async redirects() {
     return [
+      // Redirect /en/ to / for default English locale (non-blog pages)
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/en/',
+        destination: '/',
+        permanent: true,
+        locale: false,
+      },
+      // Redirect specific /en/ pages to root (avoiding blog conflicts)
+      {
+        source: '/en/(about|features|pricing)',
+        destination: '/$1',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/en/(about|features|pricing)/',
+        destination: '/$1/',
+        permanent: true,
+        locale: false,
+      },
       // Redirect non-locale blog URLs to English version
       {
         source: '/blog/:path*',
