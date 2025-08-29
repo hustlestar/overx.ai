@@ -1,5 +1,6 @@
 import React from 'react'
 import { NextPage } from 'next'
+import Link from 'next/link'
 import { EnhancedSEO } from '@overx-ai/shared'
 
 const PrivacyPage: NextPage = () => {
@@ -12,6 +13,31 @@ const PrivacyPage: NextPage = () => {
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Simple Navigation */}
+        <nav className="border-b border-white/10 backdrop-blur-sm">
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <Link href="/" className="text-2xl font-bold gradient-text">
+                OverX AI
+              </Link>
+              <div className="flex gap-6">
+                <Link href="/" className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </Link>
+                <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About
+                </Link>
+                <Link href="/products" className="text-gray-300 hover:text-white transition-colors">
+                  Products
+                </Link>
+                <Link href="/terms" className="text-gray-300 hover:text-white transition-colors">
+                  Terms
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
+
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-8">
@@ -169,9 +195,39 @@ const PrivacyPage: NextPage = () => {
                 </p>
                 <p className="text-gray-200 mt-4">
                   Email: privacy@overx.ai<br />
-                  Website: https://overx.ai/contact
+                  Website: <Link href="/contact" className="text-blue-400 hover:text-blue-300">https://overx.ai/contact</Link>
                 </p>
               </section>
+            </div>
+
+            {/* Footer Links */}
+            <div className="mt-12 pt-8 border-t border-white/20">
+              <div className="flex flex-wrap justify-center gap-6 text-sm">
+                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                  Home
+                </Link>
+                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </Link>
+                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
+                  Products
+                </Link>
+                <Link href="/consultancy" className="text-gray-400 hover:text-white transition-colors">
+                  Consultancy
+                </Link>
+                <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+                  Terms of Service
+                </Link>
+                <a href="https://rates.overx.ai" className="text-gray-400 hover:text-white transition-colors">
+                  Currency Converter
+                </a>
+                <a href="https://words.overx.ai" className="text-gray-400 hover:text-white transition-colors">
+                  Word Learning Bot
+                </a>
+              </div>
+              <p className="text-center text-gray-500 mt-6">
+                © 2024 OverX AI. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
