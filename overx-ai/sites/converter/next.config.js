@@ -26,13 +26,19 @@ const nextConfig = {
     domains: ['cdn.jsdelivr.net'], // Allow Twemoji CDN
   },
   
-  // Redirects for blog URLs to rates.overx.ai
+  // Redirects
   async redirects() {
     return [
       // Redirect all converter.overx.ai/blog URLs to rates.overx.ai/blog
       {
         source: '/blog/:path*',
         destination: 'https://rates.overx.ai/blog/:path*',
+        permanent: true,
+      },
+      // Redirect contact page to main site consultancy
+      {
+        source: '/contact',
+        destination: 'https://www.overx.ai/consultancy',
         permanent: true,
       },
     ]
