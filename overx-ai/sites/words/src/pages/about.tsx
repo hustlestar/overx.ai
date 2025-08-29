@@ -15,7 +15,7 @@ const AboutPage: NextPage = () => {
     <>
       <EnhancedSEO
         title="About World Word War Bot - AI Language Learning Revolution"
-        description="Learn how World Word War Bot is revolutionizing language learning with AI. Our mission to make language learning accessible, effective, and enjoyable for everyone worldwide."
+        description="World Word War Bot revolutionizes language learning with AI. Making vocabulary learning accessible and effective for everyone worldwide."
         canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/about/`}
       />
 

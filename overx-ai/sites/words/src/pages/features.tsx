@@ -137,7 +137,7 @@ export default function FeaturesPage() {
     <>
       <EnhancedSEO
         title={`Features - ${t('site.title')}`}
-        description="Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
+        description="Explore WWW Words Bot features: AI translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
         canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/features/`}
       />
       
