@@ -1,4 +1,25 @@
+# Exchange Rates Pro - Currency Converter
+# https://rates.overx.ai
+
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /404
+Crawl-delay: 1
 
+# Major search engines
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Allow blog content
+User-agent: *
+Allow: /blog/
+
+# Sitemap
 Sitemap: https://rates.overx.ai/sitemap.xml

@@ -26,6 +26,18 @@ const nextConfig = {
     domains: ['cdn.jsdelivr.net'], // Allow Twemoji CDN
   },
   
+  // Redirects for blog URLs to rates.overx.ai
+  async redirects() {
+    return [
+      // Redirect all converter.overx.ai/blog URLs to rates.overx.ai/blog
+      {
+        source: '/blog/:path*',
+        destination: 'https://rates.overx.ai/blog/:path*',
+        permanent: true,
+      },
+    ]
+  },
+
   // Headers for caching and security
   async headers() {
     return [

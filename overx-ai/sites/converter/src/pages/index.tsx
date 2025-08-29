@@ -118,7 +118,8 @@ export default function HomePage() {
         {/* Provider Comparison Table - Full Width */}
         <div>
           <div className="container mx-auto px-4 mb-6 mt-8">
-            <h2 className="text-2xl font-bold gradient-text">{t('providers.title')}</h2>
+            <h1 className="text-3xl font-bold gradient-text mb-2">Real-Time Currency Converter</h1>
+            <h2 className="text-xl font-semibold text-gray-600 dark:text-gray-400">{t('providers.title')}</h2>
           </div>
           <div className="w-full">
             <LazyProviderTable 
