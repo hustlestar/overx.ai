@@ -176,13 +176,20 @@ export function generateBlogListSEO(
   const trailingSlash = config.trailingSlash ? '/' : ''
   const blogUrl = `${baseUrl}${localePrefix}${config.basePath}${trailingSlash}`
   
-  let title = 'Blog'
-  let description = 'Latest articles and insights'
+  let title = config.domain === 'words.overx.ai' 
+    ? 'Language Learning Blog - AI Tips & Strategies | WWW Words'
+    : 'Blog'
+  let description = config.domain === 'words.overx.ai'
+    ? 'Expert language learning tips, AI-powered strategies, and vocabulary mastery techniques. Learn faster with proven methods and cutting-edge technology.'
+    : 'Latest articles and insights'
   let url = blogUrl
   
   if (category && config.categories[category]) {
     const categoryConfig = config.categories[category]
-    title = categoryConfig.name[locale] || categoryConfig.name[config.defaultLocale] || title
+    const categoryName = categoryConfig.name[locale] || categoryConfig.name[config.defaultLocale]
+    title = config.domain === 'words.overx.ai'
+      ? `${categoryName} - Language Learning Blog | WWW Words`
+      : categoryName || title
     description = categoryConfig.description?.[locale] || categoryConfig.description?.[config.defaultLocale] || description
     url = `${blogUrl}/category/${categoryConfig.slug}`
   }

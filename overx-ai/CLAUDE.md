@@ -10,6 +10,138 @@ This is a monorepo containing multiple Next.js applications for the OverX.ai eco
 - **sites/blog**: Blog platform (blog.overx.ai)
 - **shared**: Shared components and utilities
 
+## SEO Optimization Lessons Learned
+
+### Critical SEO Issues and Solutions (December 2024)
+
+#### 1. Canonicalization and Redirect Loop Issues
+
+**Problem**: www.overx.ai was causing ERR_TOO_MANY_REDIRECTS due to conflicting redirect handling.
+
+**Root Cause**: Next.js middleware was handling www→non-www redirects while external DNS/CDN was also attempting redirects.
+
+**Solution**:
+- Disable middleware-based redirects for www subdomain
+- Let Vercel/DNS handle www canonicalization at infrastructure level
+- Use canonical tags in HTML head for proper SEO signals
+
+**Key Learning**: Avoid duplicate redirect handling at multiple levels (middleware + DNS + CDN).
+
+#### 2. i18n Route Canonicalization
+
+**Problem**: words.overx.ai/en/ was being indexed as duplicate content instead of redirecting to words.overx.ai/
+
+**Root Cause**: Next.js i18n automatically generates /en/ routes for default locale but doesn't redirect them.
+
+**Solution**:
+```javascript
+// In next.config.js
+async redirects() {
+  return [
+    // Redirect /en/ to / for default English locale
+    {
+      source: '/en',
+      destination: '/',
+      permanent: true,
+      locale: false,
+    },
+    // Redirect specific pages
+    {
+      source: '/en/(about|features|pricing)',
+      destination: '/$1',
+      permanent: true,
+      locale: false,
+    },
+  ]
+}
+```
+
+**Key Learning**: Always add redirects for default locale routes in i18n setups to prevent duplicate content.
+
+#### 3. Page Title Optimization for SEO
+
+**Problem**: Short page titles (21-29 chars) were missing keyword opportunities.
+
+**Original Titles**:
+- "Pricing - World Word War Bot" (28 chars)
+- "Features - World Word War Bot" (29 chars)
+- "Blog | words.overx.ai" (21 chars)
+
+**Optimized Titles**:
+- "Pricing - Language Learning Bot Plans | World Word War" (55 chars)
+- "AI Language Learning Features | 13 Languages | WWW Words" (57 chars)
+- "Language Learning Blog - AI Tips & Strategies | WWW Words" (58 chars)
+
+**Key Learning**: Optimize titles to 50-60 characters, include target keywords and USPs while maintaining readability.
+
+#### 4. Security Headers for SEO and Trust
+
+**Issues Found**:
+- Missing Content-Security-Policy headers
+- Suboptimal Referrer-Policy (origin-when-cross-origin vs strict-origin-when-cross-origin)
+
+**Solutions Applied**:
+```javascript
+// Enhanced security headers
+headers: [
+  {
+    key: 'Content-Security-Policy',
+    value: "default-src 'self'; script-src 'self' 'unsafe-eval'..."
+  },
+  {
+    key: 'Referrer-Policy',
+    value: 'strict-origin-when-cross-origin' // Enhanced privacy
+  }
+]
+```
+
+**Key Learning**: Security headers improve user trust and search engine confidence.
+
+#### 5. Heading Hierarchy Review
+
+**Audit Finding**: Multiple H2 tags on pages flagged for review.
+
+**Analysis Result**: Current structure is CORRECT:
+- H1: Main page title (one per page)
+- H2: Major sections (multiple allowed)
+- H3: Subsections within H2 areas
+- H4-H6: Further subdivisions
+
+**Key Learning**: Multiple H2s are not only allowed but recommended for semantic content structure.
+
+#### 6. Meta Description Length Optimization
+
+**Problem**: Meta descriptions exceeding 160 characters were being truncated in search results.
+
+**Solution**: Shortened descriptions while maintaining keyword inclusion and compelling copy.
+
+**Key Learning**: Keep meta descriptions between 150-160 characters for optimal display.
+
+### SEO Best Practices Implemented
+
+1. **Canonical URL Consistency**: All pages use consistent canonical URL patterns
+2. **Proper Redirects**: 301 redirects for duplicate content prevention
+3. **Security Headers**: Full CSP and referrer policy implementation
+4. **Title Optimization**: Keywords and USPs within 50-60 character limit
+5. **Heading Structure**: Semantic HTML hierarchy (H1→H2→H3→etc.)
+6. **International SEO**: Proper hreflang and locale handling
+7. **Technical SEO**: Sitemap generation, robots.txt, proper meta tags
+
+### Tools and Monitoring
+
+- **SEO Audits**: Regular crawl analysis for canonicalization issues
+- **Build Testing**: Always test builds after SEO changes
+- **Redirect Testing**: Verify redirect chains don't create loops
+- **Header Validation**: Check security and SEO headers are properly set
+
+### Key Metrics Improved
+
+- ✅ Eliminated redirect loops (ERR_TOO_MANY_REDIRECTS)
+- ✅ Fixed duplicate content issues (/en/ routes)
+- ✅ Improved title keyword targeting (28→57 characters average)
+- ✅ Enhanced security posture (CSP, referrer policy)
+- ✅ Streamlined canonicalization (proper SEO signal consolidation)
+
 ## Vercel Deployment Configuration ⚠️ CRITICAL
 
 Each site needs to be deployed as a **separate Vercel project** with specific configurations:
