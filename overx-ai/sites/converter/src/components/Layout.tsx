@@ -135,9 +135,6 @@ export function Layout({ children }: LayoutProps) {
               <Link href="/about" className="text-sm text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 block mb-2">
                 {t('footer.about')}
               </Link>
-              <Link href="/api" className="text-sm text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 block mb-2">
-                {t('footer.api')}
-              </Link>
             </div>
             <div>
               <Link href="/privacy" className="text-sm text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 block mb-2">

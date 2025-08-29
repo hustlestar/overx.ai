@@ -27,6 +27,27 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://overx.ai',
   },
   
+  // Redirects for removed/non-existent pages
+  async redirects() {
+    return [
+      {
+        source: '/docs',
+        destination: '/products',
+        permanent: true,
+      },
+      {
+        source: '/support',
+        destination: '/consultancy',
+        permanent: true,
+      },
+      {
+        source: '/careers',
+        destination: '/about',
+        permanent: true,
+      },
+    ]
+  },
+  
   // Serve shared favicon files
   async rewrites() {
     return [

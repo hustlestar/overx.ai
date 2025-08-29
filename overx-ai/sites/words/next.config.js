@@ -20,6 +20,24 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   
+  async redirects() {
+    return [
+      // Redirect non-locale blog URLs to English version
+      {
+        source: '/blog/:path*',
+        destination: '/en/blog/:path*',
+        permanent: false,
+        locale: false,
+      },
+      {
+        source: '/images/:path*',
+        destination: '/en/images/:path*',
+        permanent: false,
+        locale: false,
+      },
+    ]
+  },
+  
   async headers() {
     return [
       {
