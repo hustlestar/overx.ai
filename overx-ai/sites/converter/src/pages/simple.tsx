@@ -24,8 +24,8 @@ export default function SimpleConverterPage() {
   return (
     <>
       <EnhancedSEO
-        title={t('title')}
-        description={t('description')}
+        title={t('simpleTitle')}
+        description={t('simpleDescription')}
         canonical="https://rates.overx.ai/simple"
         structuredData={[structuredData]}
       />

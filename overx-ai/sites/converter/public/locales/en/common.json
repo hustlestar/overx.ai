@@ -1,6 +1,8 @@
 {
   "title": "Currency Converter - Real-Time Exchange Rates | Rates Pro",
   "description": "Free currency converter with live exchange rates from 12+ providers. Compare forex rates, crypto prices, and APIs. Save 2-5% on international transfers. No signup required.",
+  "simpleTitle": "Simple Currency Calculator - Quick Conversion | Rates Pro",
+  "simpleDescription": "Fast and simple currency calculator for quick conversions. No clutter, just clean currency conversion with real-time exchange rates.",
   "hero": {
     "title": "Real-Time Currency Converter",
     "subtitle": "Convert between 100+ currencies with transparent exchange rates",
@@ -245,7 +247,7 @@
   },
   "about": {
     "pageTitle": "About Exchange Rates Pro - Currency Converter",
-    "pageDescription": "Transform the way you work with currencies. Our powerful Chrome extension delivers instant, accurate exchange rates from 12+ trusted sources worldwide, ensuring you always get the best rate for your money.",
+    "pageDescription": "Powerful Chrome extension for instant currency conversion. Get accurate exchange rates from 12+ trusted sources. Save money on every transaction.",
     "hero": {
       "title": "Exchange Rates Pro",
       "subtitle": "The Smart Choice for Currency Conversion",
