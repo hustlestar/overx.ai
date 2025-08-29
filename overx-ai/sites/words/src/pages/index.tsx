@@ -5,9 +5,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Layout } from '@/components/Layout'
 import { EnhancedSEO } from '@overx-ai/shared'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function HomePage() {
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const { locale } = router
   const [hoveredFeature, setHoveredFeature] = useState<string | null>(null)
 
   const features = [
@@ -74,7 +77,7 @@ export default function HomePage() {
       <EnhancedSEO
         title="World Word War Bot - AI-Powered Language Learning on Telegram"
         description="Master vocabulary with our AI-powered Telegram bot. Learn 13+ languages through intelligent spaced repetition, contextual examples, and personalized training. Join 50,000+ learners worldwide."
-        canonical="https://words.overx.ai"
+        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}`}
       />
 
       {/* Hero Section */}

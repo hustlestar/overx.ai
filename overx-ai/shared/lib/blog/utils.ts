@@ -172,7 +172,8 @@ export function generateBlogListSEO(
   category?: string
 ): BlogSEO {
   const baseUrl = `https://${config.domain}`
-  const blogUrl = `${baseUrl}${config.basePath}`
+  const localePrefix = locale === 'en' ? '' : `/${locale}`
+  const blogUrl = `${baseUrl}${localePrefix}${config.basePath}`
   
   let title = 'Blog'
   let description = 'Latest articles and insights'
@@ -212,7 +213,8 @@ export function generateBlogPostSEO(
   locale: string
 ): BlogSEO {
   const baseUrl = `https://${config.domain}`
-  const postUrl = `${baseUrl}${config.basePath}/${post.slug}`
+  const localePrefix = locale === 'en' ? '' : `/${locale}`
+  const postUrl = `${baseUrl}${localePrefix}${config.basePath}/${post.slug}`
   
   const seoData = post.seo[locale] || post.seo[config.defaultLocale]
   const title = post.title[locale] || post.title[config.defaultLocale]
@@ -235,12 +237,12 @@ export function generateBlogPostSEO(
         logo: `${baseUrl}/favicon.svg`
       },
       keywords: seoData?.keywords || [],
-      blogUrl: `${baseUrl}${config.basePath}`,
+      blogUrl: `${baseUrl}${localePrefix}${config.basePath}`,
       mainEntityOfPage: postUrl
     }),
     createBreadcrumbListSchema([
-      { name: 'Home', url: baseUrl },
-      { name: 'Blog', url: `${baseUrl}${config.basePath}` },
+      { name: 'Home', url: `${baseUrl}${localePrefix}` },
+      { name: 'Blog', url: `${baseUrl}${localePrefix}${config.basePath}` },
       { name: title, url: postUrl }
     ])
   ]

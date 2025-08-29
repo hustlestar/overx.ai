@@ -4,9 +4,12 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 import { Layout } from '@/components/Layout'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 
 export default function PricingPage() {
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const { locale } = router
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly')
 
   const pricingPlans = [
@@ -78,7 +81,7 @@ export default function PricingPage() {
       <EnhancedSEO
         title={`Pricing - ${t('site.title')}`}
         description="Choose the perfect plan for your language learning journey with WWW Words Bot. Start free or unlock unlimited learning with Plus."
-        canonical="https://words.overx.ai/pricing"
+        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/pricing`}
       />
       
       <Layout>

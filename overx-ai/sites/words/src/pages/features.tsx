@@ -3,9 +3,12 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 import { Layout } from '@/components/Layout'
+import { useRouter } from 'next/router'
 
 export default function FeaturesPage() {
   const { t } = useTranslation('common')
+  const router = useRouter()
+  const { locale } = router
 
   const detailedFeatures = [
     {
@@ -135,7 +138,7 @@ export default function FeaturesPage() {
       <EnhancedSEO
         title={`Features - ${t('site.title')}`}
         description="Explore all the powerful features of WWW Words Bot. AI-powered translations, spaced repetition, 13 languages, and personalized learning through daily messaging."
-        canonical="https://words.overx.ai/features"
+        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/features`}
       />
       
       <Layout>

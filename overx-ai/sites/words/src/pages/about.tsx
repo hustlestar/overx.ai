@@ -4,16 +4,19 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 import { GradientLink } from '@overx-ai/shared'
+import { useRouter } from 'next/router'
 
 const AboutPage: NextPage = () => {
   const { t } = useTranslation(['common', 'about'])
+  const router = useRouter()
+  const { locale } = router
 
   return (
     <>
       <EnhancedSEO
         title="About World Word War Bot - AI Language Learning Revolution"
         description="Learn how World Word War Bot is revolutionizing language learning with AI. Our mission to make language learning accessible, effective, and enjoyable for everyone worldwide."
-        canonical="https://words.overx.ai/about"
+        canonical={`https://words.overx.ai${locale === 'en' ? '' : `/${locale}`}/about`}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
