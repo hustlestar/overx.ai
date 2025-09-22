@@ -112,7 +112,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (utm_campaign) queryParams.append('utm_campaign', utm_campaign as string)
     if (utm_content) queryParams.append('utm_content', utm_content as string)
 
-    const redirectUrl = `/products${queryParams.toString() ? '?' + queryParams.toString() : ''}`
+    const redirectUrl = `https://overx.ai/products${queryParams.toString() ? '?' + queryParams.toString() : ''}`
 
     // Send HTML with analytics tracking before redirect
     res.status(200).send(`
