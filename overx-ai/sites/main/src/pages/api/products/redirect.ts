@@ -58,6 +58,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
+  // Get the host from the request headers to preserve www/non-www
+  const host = req.headers.host || 'overx.ai'
+  const protocol = process.env.NODE_ENV === 'production' ? 'https' : 'http'
+  const baseUrl = `${protocol}://${host}`
+
   // Extract all parameters
   const {
     utm_source,
@@ -69,6 +74,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   // Log the request for debugging
   console.log('Product redirect request:', {
+    host,
+    baseUrl,
     utm_source,
     utm_medium,
     utm_campaign,
@@ -112,7 +119,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (utm_campaign) queryParams.append('utm_campaign', utm_campaign as string)
     if (utm_content) queryParams.append('utm_content', utm_content as string)
 
-    const redirectUrl = `https://overx.ai/products${queryParams.toString() ? '?' + queryParams.toString() : ''}`
+    const redirectUrl = `${baseUrl}/products${queryParams.toString() ? '?' + queryParams.toString() : ''}`
 
     // Send HTML with analytics tracking before redirect
     res.status(200).send(`
