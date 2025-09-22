@@ -121,39 +121,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const redirectUrl = `${baseUrl}/products${queryParams.toString() ? '?' + queryParams.toString() : ''}`
 
-    // Send HTML with analytics tracking before redirect
-    res.status(200).send(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>Redirecting...</title>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <!-- Google Analytics -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0P4H3XZZY"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-L0P4H3XZZY');
+    // Log analytics event (server-side)
+    console.log('Product redirect failed:', analyticsData)
 
-            // Track the redirect attempt
-            gtag('event', 'product_redirect_failed', ${JSON.stringify(analyticsData)});
-
-            // Redirect after tracking
-            setTimeout(function() {
-              window.location.href = '${redirectUrl}';
-            }, 100);
-          </script>
-        </head>
-        <body style="font-family: system-ui, -apple-system, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-          <div style="text-align: center;">
-            <p>Redirecting to products page...</p>
-            <p style="color: #666; font-size: 14px;">If you are not redirected automatically, <a href="${redirectUrl}">click here</a>.</p>
-          </div>
-        </body>
-      </html>
-    `)
+    // Use HTTP 302 redirect
+    res.redirect(302, redirectUrl)
     return
   }
 
@@ -179,37 +151,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
 
-  // Send HTML with analytics tracking before redirect
-  res.status(200).send(`
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>Redirecting to ${productKey}...</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0P4H3XZZY"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-L0P4H3XZZY');
+  // Log successful redirect for analytics (server-side)
+  console.log('Product redirect successful:', {
+    ...analyticsData,
+    final_url: finalUrl
+  })
 
-          // Track the successful redirect
-          gtag('event', 'product_redirect', ${JSON.stringify(analyticsData)});
-
-          // Redirect after tracking
-          setTimeout(function() {
-            window.location.href = '${finalUrl}';
-          }, 100);
-        </script>
-      </head>
-      <body style="font-family: system-ui, -apple-system, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-        <div style="text-align: center;">
-          <p>Redirecting to ${productKey}...</p>
-          <p style="color: #666; font-size: 14px;">If you are not redirected automatically, <a href="${finalUrl}">click here</a>.</p>
-        </div>
-      </body>
-    </html>
-  `)
+  // Use HTTP 302 redirect
+  res.redirect(302, finalUrl)
 }
