@@ -6,26 +6,34 @@ export function useLanguageSync() {
   const router = useRouter()
   const { locale } = router
   
-  console.log('[useLanguageSync] Current domain:', typeof window !== 'undefined' ? window.location.hostname : 'SSR')
-  console.log('[useLanguageSync] Current locale:', locale)
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[useLanguageSync] Current domain:', typeof window !== 'undefined' ? window.location.hostname : 'SSR')
+    console.log('[useLanguageSync] Current locale:', locale)
+  }
 
   // Set cookie on language change
   useEffect(() => {
     if (locale) {
       // Set cookie that works across all subdomains
       const cookieString = `overx-locale=${locale}; domain=.overx.ai; path=/; max-age=31536000; SameSite=Lax`
-      console.log('[useLanguageSync] Setting cookie:', cookieString)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useLanguageSync] Setting cookie:', cookieString)
+      }
       document.cookie = cookieString
       
-      // Verify cookie was set
-      console.log('[useLanguageSync] All cookies after set:', document.cookie)
+      // Verify cookie was set (development only)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useLanguageSync] All cookies after set:', document.cookie)
+      }
     }
   }, [locale])
 
   // Function to check and sync language from cookie
   const checkAndSyncLanguage = () => {
-    console.log('[useLanguageSync] Checking cookie for language sync...')
-    console.log('[useLanguageSync] Raw cookie string:', document.cookie)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[useLanguageSync] Checking cookie for language sync...')
+      console.log('[useLanguageSync] Raw cookie string:', document.cookie)
+    }
     
     const cookies = document.cookie.split(';').reduce((acc, cookie) => {
       const trimmedCookie = cookie.trim()
@@ -40,18 +48,26 @@ export function useLanguageSync() {
       return acc
     }, {} as Record<string, string>)
     
-    console.log('[useLanguageSync] Parsed cookies:', cookies)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[useLanguageSync] Parsed cookies:', cookies)
+    }
     
     const cookieLocale = cookies['overx-locale']
-    console.log('[useLanguageSync] Cookie locale:', cookieLocale, 'Current locale:', locale)
-    console.log('[useLanguageSync] Available locales:', router.locales)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[useLanguageSync] Cookie locale:', cookieLocale, 'Current locale:', locale)
+      console.log('[useLanguageSync] Available locales:', router.locales)
+    }
     
     if (cookieLocale && cookieLocale !== locale && router.locales?.includes(cookieLocale)) {
-      console.log('[useLanguageSync] Syncing locale from', locale, 'to', cookieLocale)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useLanguageSync] Syncing locale from', locale, 'to', cookieLocale)
+      }
       // Change locale without full page reload
       router.push(router.pathname, router.asPath, { locale: cookieLocale })
     } else {
-      console.log('[useLanguageSync] No sync needed')
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useLanguageSync] No sync needed')
+      }
     }
   }
 

@@ -29,16 +29,18 @@ function setCookie(name: string, value: string, days: number = 365) {
   const cookieString = `${name}=${value}; expires=${expires.toUTCString()}; path=/; ${domain ? `domain=${domain}; ` : ''}SameSite=Lax`
   
   document.cookie = cookieString
-  console.log(`[useTheme] Setting cookie: ${cookieString}`)
+  if (process.env.NODE_ENV === 'development') {
+    console.log(`[useTheme] Setting cookie: ${cookieString}`)
+  }
 }
 
 export function useTheme() {
   const [theme, setThemeState] = useState<Theme>('dark')
   const [mounted, setMounted] = useState(false)
   
-  // Debug logging
+  // Debug logging (development only)
   useEffect(() => {
-    if (mounted) {
+    if (mounted && process.env.NODE_ENV === 'development') {
       console.log('[useTheme] Current domain:', window.location.hostname)
       console.log('[useTheme] Theme state:', theme)
     }
@@ -49,11 +51,15 @@ export function useTheme() {
     
     // Load theme from cookie or system preference
     const loadTheme = () => {
-      console.log('[useTheme] Loading theme...')
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useTheme] Loading theme...')
+      }
       
       // First try to get theme from cookie
       const cookieTheme = getCookie(THEME_COOKIE_NAME) as Theme | null
-      console.log('[useTheme] Cookie theme:', cookieTheme)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useTheme] Cookie theme:', cookieTheme)
+      }
       
       if (cookieTheme && (cookieTheme === 'light' || cookieTheme === 'dark')) {
         setThemeState(cookieTheme)
@@ -61,7 +67,9 @@ export function useTheme() {
       } else {
         // No cookie, default to dark theme (OverX AI brand preference)
         const defaultTheme: Theme = 'dark'
-        console.log('[useTheme] No cookie found, using default:', defaultTheme)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[useTheme] No cookie found, using default:', defaultTheme)
+        }
         
         setThemeState(defaultTheme)
         applyTheme(defaultTheme)
@@ -80,7 +88,9 @@ export function useTheme() {
         document.documentElement.classList.add('dark')
       }
       
-      console.log('[useTheme] Applied theme class:', themeToApply)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useTheme] Applied theme class:', themeToApply)
+      }
     }
 
     loadTheme()
@@ -90,7 +100,9 @@ export function useTheme() {
     const pollInterval = setInterval(() => {
       const currentCookieValue = getCookie(THEME_COOKIE_NAME)
       if (currentCookieValue !== lastCookieValue) {
-        console.log('[useTheme] Cookie changed from', lastCookieValue, 'to', currentCookieValue)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('[useTheme] Cookie changed from', lastCookieValue, 'to', currentCookieValue)
+        }
         lastCookieValue = currentCookieValue
         if (currentCookieValue && (currentCookieValue === 'light' || currentCookieValue === 'dark')) {
           setThemeState(currentCookieValue)
@@ -102,7 +114,9 @@ export function useTheme() {
     // Listen for theme changes in the same tab
     const handleThemeChange = (e: CustomEvent) => {
       const newTheme = e.detail as Theme
-      console.log('[useTheme] Theme change event received:', newTheme)
+      if (process.env.NODE_ENV === 'development') {
+        console.log('[useTheme] Theme change event received:', newTheme)
+      }
       setThemeState(newTheme)
       applyTheme(newTheme)
     }
@@ -116,7 +130,9 @@ export function useTheme() {
   }, [])
 
   const setTheme = (newTheme: Theme) => {
-    console.log('[useTheme] Setting theme to:', newTheme)
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[useTheme] Setting theme to:', newTheme)
+    }
     setThemeState(newTheme)
     
     // Update cookie
