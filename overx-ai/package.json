@@ -13,6 +13,7 @@
     "build:all": "npm run build:shared && turbo run build",
     "build:words": "npm run build:shared && turbo run build --filter=@overx-ai/words",
     "build:converter": "npm run build:shared && turbo run build --filter=@overx-ai/converter",
+    "build:blog": "npm run build:shared && turbo run build --filter=@overx-ai/blog",
     "build:shared": "cd shared && npm run build",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "generate-main-sitemap": "node scripts/generate-main-sitemap.js",

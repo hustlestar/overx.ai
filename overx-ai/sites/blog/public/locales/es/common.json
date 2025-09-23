@@ -1,0 +1,57 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "allPosts": "Todos los Artículos",
+    "categories": "Categorías",
+    "about": "Acerca de",
+    "mainSite": "Sitio Principal",
+    "search": "Buscar"
+  },
+  "hero": {
+    "title": "Blog de OverX AI",
+    "subtitle": "Perspectivas, tutoriales y actualizaciones desde la vanguardia de la innovación en IA",
+    "cta": "Comenzar a Leer"
+  },
+  "sections": {
+    "featured": "Artículos Destacados",
+    "recent": "Artículos Recientes",
+    "categories": "Explorar por Categoría",
+    "viewAll": "Ver Todos",
+    "readMore": "Leer Más"
+  },
+  "newsletter": {
+    "title": "Mantente Actualizado",
+    "subtitle": "Recibe las últimas perspectivas de IA y actualizaciones de productos en tu correo",
+    "placeholder": "Ingresa tu correo electrónico",
+    "button": "Suscribirse",
+    "success": "¡Suscripción exitosa!",
+    "error": "Algo salió mal. Por favor, intenta de nuevo."
+  },
+  "footer": {
+    "copyright": "© 2024 OverX AI. Todos los derechos reservados.",
+    "rss": "Feed RSS",
+    "sitemap": "Mapa del Sitio",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "post": {
+    "readingTime": "{{time}} min de lectura",
+    "author": "Por {{name}}",
+    "published": "Publicado el {{date}}",
+    "updated": "Actualizado el {{date}}",
+    "share": "Compartir este artículo",
+    "tableOfContents": "Tabla de Contenidos",
+    "relatedPosts": "Artículos Relacionados",
+    "tags": "Etiquetas"
+  },
+  "search": {
+    "placeholder": "Buscar artículos...",
+    "noResults": "No se encontraron resultados para \"{{query}}\"",
+    "results": "{{count}} resultados encontrados"
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {{current}} de {{total}}"
+  }
+}
