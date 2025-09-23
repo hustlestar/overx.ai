@@ -39,7 +39,12 @@ export function Layout({ children }: LayoutProps) {
     transition: { duration: 0.5, ease: 'easeOut' as const }
   }
 
-  const navCategories = ['ai-technology', 'product-updates', 'tutorials', 'industry-insights']
+  const navCategories = [
+    { key: 'aiTechnology', slug: 'ai-technology' },
+    { key: 'productUpdates', slug: 'product-updates' },
+    { key: 'tutorials', slug: 'tutorials' },
+    { key: 'industryInsights', slug: 'industry-insights' }
+  ]
 
   return (
     <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900">
@@ -104,11 +109,11 @@ export function Layout({ children }: LayoutProps) {
 
                 {navCategories.map((category) => (
                   <SmartLink
-                    key={category}
-                    href={`/category/${category}`}
-                    className="text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors capitalize"
+                    key={category.key}
+                    href={`/category/${category.slug}`}
+                    className="text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors"
                   >
-                    {category.replace('-', ' ')}
+                    {t(`navigation.${category.key}`)}
                   </SmartLink>
                 ))}
               </div>
@@ -169,12 +174,12 @@ export function Layout({ children }: LayoutProps) {
                   </SmartLink>
                 </div>
                 {navCategories.map((category) => (
-                  <div key={category} onClick={() => setMobileMenuOpen(false)}>
+                  <div key={category.key} onClick={() => setMobileMenuOpen(false)}>
                     <SmartLink
-                      href={`/category/${category}`}
-                      className="block py-2 text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors capitalize"
+                      href={`/category/${category.slug}`}
+                      className="block py-2 text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors"
                     >
-                      {category.replace('-', ' ')}
+                      {t(`navigation.${category.key}`)}
                     </SmartLink>
                   </div>
                 ))}
@@ -218,23 +223,23 @@ export function Layout({ children }: LayoutProps) {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                OverX AI Blog
+                {t('footer.blogDescription')}
               </h4>
               <p className="text-gray-400 light:text-gray-600 text-sm">
-                Exploring the frontiers of artificial intelligence and sharing our journey.
+                {t('footer.blogSubtitle')}
               </p>
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Categories</h5>
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">{t('footer.categories')}</h5>
               <ul className="space-y-2">
                 {navCategories.map((category) => (
-                  <li key={category}>
+                  <li key={category.key}>
                     <SmartLink
-                      href={`/category/${category}`}
-                      className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors capitalize"
+                      href={`/category/${category.slug}`}
+                      className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors"
                     >
-                      {category.replace('-', ' ')}
+                      {t(`navigation.${category.key}`)}
                     </SmartLink>
                   </li>
                 ))}
@@ -242,41 +247,41 @@ export function Layout({ children }: LayoutProps) {
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Company</h5>
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">{t('footer.company')}</h5>
               <ul className="space-y-2">
                 <li>
                   <SmartLink href="https://overx.ai" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
-                    Main Site
+                    {t('footer.mainSite')}
                   </SmartLink>
                 </li>
                 <li>
                   <SmartLink href="https://overx.ai/products" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
-                    Products
+                    {t('footer.products')}
                   </SmartLink>
                 </li>
                 <li>
                   <SmartLink href="https://overx.ai/about" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
-                    About Us
+                    {t('footer.aboutUs')}
                   </SmartLink>
                 </li>
                 <li>
                   <SmartLink href="https://overx.ai/contact" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
-                    Contact
+                    {t('footer.contact')}
                   </SmartLink>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Subscribe</h5>
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">{t('footer.subscribe')}</h5>
               <p className="text-gray-400 light:text-gray-600 text-sm mb-3">
-                Get the latest posts delivered to your inbox.
+                {t('footer.subscribeDescription')}
               </p>
               <GradientLink
                 href="/subscribe"
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-sm font-medium hover:scale-105 transition-transform"
               >
-                Subscribe Now
+                {t('footer.subscribeNow')}
               </GradientLink>
             </div>
           </div>

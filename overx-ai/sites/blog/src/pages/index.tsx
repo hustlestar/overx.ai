@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next'
 import Image from 'next/image'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
 import { Layout } from '../components/Layout'
 import { SmartLink } from '../components/NextSEO'
@@ -38,6 +39,7 @@ const item = {
 }
 
 export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) {
+  const { t } = useTranslation('common')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -118,7 +120,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
                         href={`/post/${featuredPosts[0].slug}`}
                         className="px-6 py-2 bg-gradient-to-r from-blue-600/20 to-purple-600/20 light:from-blue-100 light:to-purple-100 border border-blue-600/30 light:border-blue-300 rounded-full text-blue-400 light:text-blue-600 hover:border-blue-500/50 light:hover:border-blue-400 transition-all"
                       >
-                        Read Article
+                        {t('sections.readArticle')}
                       </SmartLink>
                     </div>
                   </div>
@@ -186,7 +188,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
                           href={`/post/${post.slug}`}
                           className="text-cyan-400 hover:text-cyan-300 light:text-cyan-600 light:hover:text-cyan-500 text-sm font-medium flex items-center gap-1"
                         >
-                          Read
+                          {t('sections.readArticle')}
                           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
@@ -295,8 +297,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
               stiffness: 100
             }}
           >
-            Exploring the frontiers of artificial intelligence and sharing insights
-            on building the future of productivity
+            {t('footer.blogSubtitle')}
           </motion.p>
 
           <motion.div
@@ -322,7 +323,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
                 href="#featured"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-medium transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
               >
-                Explore More Articles
+                {t('sections.exploreMoreArticles')}
               </SmartLink>
             </motion.div>
           </motion.div>
@@ -351,7 +352,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                More Articles
+                {t('sections.moreArticles')}
               </span>
             </motion.h2>
             <motion.p
@@ -361,7 +362,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
             >
-              Explore our archive of insights on AI technology, development, and innovation
+              {t('sections.archiveSubtitle')}
             </motion.p>
           </motion.div>
 
@@ -437,7 +438,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
                       href={`/post/${post.slug}`}
                       className="text-blue-400 hover:text-blue-300 light:text-blue-600 light:hover:text-blue-500 text-sm font-medium flex items-center gap-1 group/link"
                     >
-                      Read
+                      {t('sections.readArticle')}
                       <motion.svg
                         className="w-4 h-4"
                         fill="none"
@@ -508,7 +509,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Stay Updated with AI Insights
+            {t('hero.title')}
           </motion.h2>
           <motion.p
             className="text-gray-400 light:text-gray-600 mb-8 max-w-2xl mx-auto relative z-10"
@@ -517,7 +518,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            Get the latest articles on AI, productivity, and technology delivered to your inbox.
+            {t('hero.subtitle')}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -538,7 +539,7 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
                 href="/subscribe"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full font-medium transition-all duration-300 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40"
               >
-                Subscribe
+                {t('hero.cta')}
                 <motion.svg
                   className="w-5 h-5"
                   fill="none"

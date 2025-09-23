@@ -21,7 +21,11 @@
     "recent": "Artículos Recientes",
     "categories": "Explorar por Categoría",
     "viewAll": "Ver Todos",
-    "readMore": "Leer Más"
+    "readMore": "Leer Más",
+    "readArticle": "Leer Artículo",
+    "exploreMoreArticles": "Explorar Más Artículos",
+    "moreArticles": "Más Artículos",
+    "archiveSubtitle": "Explora nuestro archivo de perspectivas sobre tecnología IA, desarrollo e innovación"
   },
   "newsletter": {
     "title": "Mantente Actualizado",

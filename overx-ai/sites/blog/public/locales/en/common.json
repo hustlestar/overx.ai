@@ -16,6 +16,12 @@
     "subtitle": "Get the latest articles on AI, productivity, and technology delivered to your inbox.",
     "cta": "Subscribe"
   },
+  "sections": {
+    "readArticle": "Read Article",
+    "exploreMoreArticles": "Explore More Articles",
+    "moreArticles": "More Articles",
+    "archiveSubtitle": "Explore our archive of insights on AI technology, development, and innovation"
+  },
   "footer": {
     "copyright": "© 2024 OverX AI. All rights reserved.",
     "rss": "RSS",
