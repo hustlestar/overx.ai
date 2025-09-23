@@ -1,9 +1,9 @@
 ---
 title: "Introducing OverX AI: Your Gateway to More Free Time"
 excerpt: "Discover how OverX AI is revolutionizing productivity through intelligent automation, giving you back the most precious resource - your time."
-coverImage: "/images/posts/introducing-overx-ai.jpg"
+coverImage: "/images/posts/overx-intro.png"
 images:
-  - url: "/images/posts/overx-ai-workspace-hero.png"
+  - url: "/images/posts/ai-workspace.png"
     alt:
       en: "Modern AI technology workspace with multiple computer monitors showing OverX AI productivity tools and automated workflows in professional office environment"
       es: "Espacio de trabajo de tecnología AI moderno con múltiples monitores mostrando herramientas de productividad OverX AI en oficina profesional"
@@ -11,7 +11,7 @@ images:
     width: 1344
     height: 768
     type: "hero"
-  - url: "/images/posts/free-time-infographic.png"
+  - url: "/images/posts/overx-intro.png"
     alt:
       en: "Infographic showing 'Free Time = Better Life' with icons of OverX AI tools including currency converter, website blocker, and AI assistants"
       es: "Infografía mostrando 'Tiempo Libre = Mejor Vida' con iconos de herramientas OverX AI incluyendo convertidor de divisas y asistentes AI"
@@ -23,7 +23,7 @@ images:
       en: "OverX AI transforms your daily workflow by automating time-consuming tasks"
       es: "OverX AI transforma tu flujo de trabajo diario automatizando tareas que consumen tiempo"
       ru: "OverX AI трансформирует ваш ежедневный рабочий процесс, автоматизируя трудозатратные задачи"
-  - url: "/images/posts/happy-professionals.png"
+  - url: "/images/posts/chatbot-ui.png"
     alt:
       en: "Happy diverse professionals using various devices with productivity apps and automation tools in bright modern co-working space"
       es: "Profesionales diversos y felices usando varios dispositivos con aplicaciones de productividad en espacio de coworking moderno"
@@ -35,7 +35,7 @@ images:
       en: "Join thousands of professionals who've reclaimed their time with OverX AI"
       es: "Únete a miles de profesionales que han recuperado su tiempo con OverX AI"
       ru: "Присоединяйтесь к тысячам профессионалов, которые вернули себе время с OverX AI"
-  - url: "/images/posts/before-after-comparison.png"
+  - url: "/images/posts/ai-workspace.png"
     alt:
       en: "Split-screen comparison showing stressed person with manual tasks versus relaxed person using OverX AI automated workflows"
       es: "Comparación de pantalla dividida mostrando persona estresada con tareas manuales versus persona relajada usando flujos automatizados OverX AI"
