@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.5.3",
     "@overx-ai/shared": "*",
     "@types/react-syntax-highlighter": "^15.5.13",
     "framer-motion": "^12.23.19",
