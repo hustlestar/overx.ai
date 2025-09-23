@@ -5,12 +5,32 @@
     "archive": "Archive",
     "categories": "Categories",
     "mainSite": "Main Site",
-    "blog": "Blog"
+    "blog": "Blog",
+    "aiTechnology": "AI Technology",
+    "productUpdates": "Product Updates",
+    "tutorials": "Tutorials",
+    "industryInsights": "Industry Insights"
+  },
+  "hero": {
+    "title": "Stay Updated with AI Insights",
+    "subtitle": "Get the latest articles on AI, productivity, and technology delivered to your inbox.",
+    "cta": "Subscribe"
   },
   "footer": {
     "copyright": "© 2024 OverX AI. All rights reserved.",
     "rss": "RSS",
     "sitemap": "Sitemap",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "blogDescription": "OverX AI Blog",
+    "blogSubtitle": "Exploring the frontiers of artificial intelligence and sharing our journey.",
+    "categories": "Categories",
+    "company": "Company",
+    "mainSite": "Main Site",
+    "products": "Products",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "subscribe": "Subscribe",
+    "subscribeDescription": "Get the latest posts delivered to your inbox.",
+    "subscribeNow": "Subscribe Now"
   }
 }

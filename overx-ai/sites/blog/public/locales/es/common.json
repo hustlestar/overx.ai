@@ -5,7 +5,11 @@
     "categories": "Categorías",
     "about": "Acerca de",
     "mainSite": "Sitio Principal",
-    "search": "Buscar"
+    "search": "Buscar",
+    "aiTechnology": "Tecnología IA",
+    "productUpdates": "Actualizaciones",
+    "tutorials": "Tutoriales",
+    "industryInsights": "Insights de la Industria"
   },
   "hero": {
     "title": "Blog de OverX AI",

@@ -1,11 +1,16 @@
 {
+  "title": "Блог OverX AI",
   "navigation": {
     "home": "Главная",
     "allPosts": "Все Статьи",
     "categories": "Категории",
     "about": "О нас",
     "mainSite": "Основной Сайт",
-    "search": "Поиск"
+    "search": "Поиск",
+    "aiTechnology": "ИИ Технологии",
+    "productUpdates": "Обновления Продукта",
+    "tutorials": "Руководства",
+    "industryInsights": "Аналитика Отрасли"
   },
   "hero": {
     "title": "Блог OverX AI",
@@ -32,7 +37,18 @@
     "rss": "RSS Лента",
     "sitemap": "Карта Сайта",
     "privacy": "Политика Конфиденциальности",
-    "terms": "Условия Использования"
+    "terms": "Условия Использования",
+    "blogDescription": "Блог OverX AI",
+    "blogSubtitle": "Исследуем границы искусственного интеллекта и делимся нашим путём.",
+    "categories": "Категории",
+    "company": "Компания",
+    "mainSite": "Основной Сайт",
+    "products": "Продукты",
+    "aboutUs": "О нас",
+    "contact": "Контакты",
+    "subscribe": "Подписаться",
+    "subscribeDescription": "Получайте последние статьи на вашу почту.",
+    "subscribeNow": "Подписаться Сейчас"
   },
   "post": {
     "readingTime": "{{time}} мин чтения",
