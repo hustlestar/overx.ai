@@ -1,3 +1,6 @@
+import { GetStaticProps } from 'next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+
 export default function TestPage() {
   return (
     <div className="min-h-screen bg-black text-white flex items-center justify-center">
@@ -7,4 +10,12 @@ export default function TestPage() {
       </div>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  }
 }

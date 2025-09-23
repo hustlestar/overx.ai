@@ -1,33 +1,30 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
+const { i18n } = require('./next-i18next.config')
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
-    locales: ['en', 'es', 'ru'],
-    defaultLocale: 'en',
-    localeDetection: false,
+    ...i18n,
+    localeDetection: false, // We handle this in middleware
   },
   reactStrictMode: true,
   swcMinify: true,
   poweredByHeader: false,
   compress: true,
-  
-  // Optimize for SEO and performance
+
+  // Optimize for performance
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  
+
   // Image optimization
   images: {
-    domains: ['blog.overx.ai', 'images.unsplash.com'],
+    domains: ['blog.overx.ai', 'images.unsplash.com', 'cdn.jsdelivr.net'],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
   },
-  
+
   // Headers for security and performance
   async headers() {
     return [
@@ -71,7 +68,7 @@ const nextConfig = {
       }
     ]
   },
-  
+
   // Rewrites for better URLs
   async rewrites() {
     return [
@@ -91,4 +88,4 @@ const nextConfig = {
   }
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+module.exports = nextConfig
