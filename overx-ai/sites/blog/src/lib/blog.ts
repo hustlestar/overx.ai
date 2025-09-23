@@ -92,7 +92,7 @@ export async function getPostBySlug(slug: string, locale: string = 'en'): Promis
       coverImage: data.coverImage || '/images/default-cover.jpg',
       images: data.images || [],
       date: data.date || new Date().toISOString(),
-      lastModified: data.lastModified,
+      lastModified: data.lastModified || data.date || new Date().toISOString(),
       author,
       category,
       tags: data.tags || [],

@@ -1,1 +1,16 @@
-{"title":"OverX AI Blog"}
+{
+  "title": "OverX AI Blog",
+  "navigation": {
+    "allPosts": "All Posts",
+    "archive": "Archive",
+    "categories": "Categories",
+    "mainSite": "Main Site",
+    "blog": "Blog"
+  },
+  "footer": {
+    "copyright": "© 2024 OverX AI. All rights reserved.",
+    "rss": "RSS",
+    "sitemap": "Sitemap",
+    "privacy": "Privacy"
+  }
+}

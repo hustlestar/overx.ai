@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SmartLink, ThemeToggle, GradientLink } from '@overx-ai/shared'
 import { useTheme, useLanguageSync } from '@overx-ai/shared'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -41,10 +42,10 @@ export function Layout({ children }: LayoutProps) {
   const navCategories = ['ai-technology', 'product-updates', 'tutorials', 'industry-insights']
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white light:bg-gray-50 light:text-gray-900">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-cyan-900/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-cyan-900/10 light:from-blue-100/40 light:via-purple-100/40 light:to-cyan-100/40" />
         {mounted && (
           <motion.div
             className="absolute inset-0"
@@ -66,9 +67,9 @@ export function Layout({ children }: LayoutProps) {
         {...headerAnimation}
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrollY > 50
-            ? 'bg-black/90 backdrop-blur-xl shadow-lg shadow-black/50'
-            : 'bg-black/50 backdrop-blur-md'
-        } border-b border-white/10`}
+            ? 'bg-black/90 backdrop-blur-xl shadow-lg shadow-black/50 light:bg-white/90 light:shadow-gray-300/50'
+            : 'bg-black/50 backdrop-blur-md light:bg-white/50'
+        } border-b border-white/10 light:border-gray-200/50`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -90,7 +91,7 @@ export function Layout({ children }: LayoutProps) {
               <div className="hidden md:flex items-center space-x-6">
                 <SmartLink
                   href="/"
-                  className="text-gray-300 hover:text-white transition-colors relative group"
+                  className="text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors relative group"
                 >
                   <span>{t('navigation.allPosts')}</span>
                   <motion.span
@@ -105,7 +106,7 @@ export function Layout({ children }: LayoutProps) {
                   <SmartLink
                     key={category}
                     href={`/category/${category}`}
-                    className="text-gray-300 hover:text-white transition-colors capitalize"
+                    className="text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors capitalize"
                   >
                     {category.replace('-', ' ')}
                   </SmartLink>
@@ -115,38 +116,21 @@ export function Layout({ children }: LayoutProps) {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-4">
-              <SmartLink
+              <GradientLink
                 href="https://overx.ai"
-                className="hidden md:block text-gray-300 hover:text-white transition-colors"
+                className="hidden md:block text-sm font-medium"
               >
-                {t('navigation.mainSite')}
-              </SmartLink>
+                OverX AI
+              </GradientLink>
 
               <ThemeToggle />
 
-              {/* Language Switcher */}
-              <div className="flex items-center space-x-1">
-                {['en', 'es', 'ru'].map((lang) => (
-                  <motion.button
-                    key={lang}
-                    onClick={() => changeLanguage(lang)}
-                    className={`px-2 py-1 text-sm rounded-md transition-all ${
-                      locale === lang
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-white/10'
-                    }`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {lang.toUpperCase()}
-                  </motion.button>
-                ))}
-              </div>
+              <LanguageSwitcher />
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10"
+                className="md:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 light:text-gray-700 light:hover:text-gray-900 light:hover:bg-gray-200/50"
               >
                 <motion.svg
                   className="w-6 h-6"
@@ -173,13 +157,13 @@ export function Layout({ children }: LayoutProps) {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10"
+              className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 light:bg-white/95 light:border-gray-200/50"
             >
               <div className="px-4 py-4 space-y-2">
                 <div onClick={() => setMobileMenuOpen(false)}>
                   <SmartLink
                     href="/"
-                    className="block py-2 text-gray-300 hover:text-white transition-colors"
+                    className="block py-2 text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors"
                   >
                     {t('navigation.allPosts')}
                   </SmartLink>
@@ -188,19 +172,19 @@ export function Layout({ children }: LayoutProps) {
                   <div key={category} onClick={() => setMobileMenuOpen(false)}>
                     <SmartLink
                       href={`/category/${category}`}
-                      className="block py-2 text-gray-300 hover:text-white transition-colors capitalize"
+                      className="block py-2 text-gray-300 hover:text-white light:text-gray-700 light:hover:text-gray-900 transition-colors capitalize"
                     >
                       {category.replace('-', ' ')}
                     </SmartLink>
                   </div>
                 ))}
                 <div onClick={() => setMobileMenuOpen(false)}>
-                  <SmartLink
+                  <GradientLink
                     href="https://overx.ai"
-                    className="block py-2 text-gray-300 hover:text-white transition-colors"
+                    className="block py-2 text-sm font-medium"
                   >
-                    {t('navigation.mainSite')}
-                  </SmartLink>
+                    OverX AI
+                  </GradientLink>
                 </div>
               </div>
             </motion.div>
@@ -225,7 +209,7 @@ export function Layout({ children }: LayoutProps) {
 
       {/* Footer */}
       <motion.footer
-        className="bg-black border-t border-white/10 py-12 relative z-10"
+        className="bg-black border-t border-white/10 light:bg-gray-50 light:border-gray-200/50 py-12 relative z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
@@ -236,19 +220,19 @@ export function Layout({ children }: LayoutProps) {
               <h4 className="text-lg font-semibold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 OverX AI Blog
               </h4>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 light:text-gray-600 text-sm">
                 Exploring the frontiers of artificial intelligence and sharing our journey.
               </p>
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200">Categories</h5>
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Categories</h5>
               <ul className="space-y-2">
                 {navCategories.map((category) => (
                   <li key={category}>
                     <SmartLink
                       href={`/category/${category}`}
-                      className="text-gray-400 hover:text-white text-sm transition-colors capitalize"
+                      className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors capitalize"
                     >
                       {category.replace('-', ' ')}
                     </SmartLink>
@@ -258,25 +242,25 @@ export function Layout({ children }: LayoutProps) {
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200">Company</h5>
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Company</h5>
               <ul className="space-y-2">
                 <li>
-                  <SmartLink href="https://overx.ai" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  <SmartLink href="https://overx.ai" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                     Main Site
                   </SmartLink>
                 </li>
                 <li>
-                  <SmartLink href="https://overx.ai/products" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  <SmartLink href="https://overx.ai/products" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                     Products
                   </SmartLink>
                 </li>
                 <li>
-                  <SmartLink href="https://overx.ai/about" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  <SmartLink href="https://overx.ai/about" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                     About Us
                   </SmartLink>
                 </li>
                 <li>
-                  <SmartLink href="https://overx.ai/contact" className="text-gray-400 hover:text-white text-sm transition-colors">
+                  <SmartLink href="https://overx.ai/contact" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                     Contact
                   </SmartLink>
                 </li>
@@ -284,8 +268,8 @@ export function Layout({ children }: LayoutProps) {
             </div>
 
             <div>
-              <h5 className="font-semibold mb-3 text-gray-200">Subscribe</h5>
-              <p className="text-gray-400 text-sm mb-3">
+              <h5 className="font-semibold mb-3 text-gray-200 light:text-gray-800">Subscribe</h5>
+              <p className="text-gray-400 light:text-gray-600 text-sm mb-3">
                 Get the latest posts delivered to your inbox.
               </p>
               <GradientLink
@@ -299,16 +283,16 @@ export function Layout({ children }: LayoutProps) {
 
           <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
             <div className="mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">{t('footer.copyright')}</p>
+              <p className="text-gray-400 light:text-gray-600 text-sm">{t('footer.copyright')}</p>
             </div>
             <div className="flex space-x-6">
-              <SmartLink href="/rss.xml" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <SmartLink href="/rss.xml" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                 {t('footer.rss')}
               </SmartLink>
-              <SmartLink href="/sitemap.xml" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <SmartLink href="/sitemap.xml" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                 {t('footer.sitemap')}
               </SmartLink>
-              <SmartLink href="https://overx.ai/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <SmartLink href="https://overx.ai/privacy" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 text-sm transition-colors">
                 {t('footer.privacy')}
               </SmartLink>
             </div>
