@@ -3,8 +3,8 @@ import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { GradientLink } from '@overx-ai/shared'
-// import { useTheme } from '@overx-ai/shared'
+import { GradientLink, useTheme } from '@overx-ai/shared'
+import { ThemeToggle } from './ThemeToggle'
 
 interface LayoutProps {
   children: ReactNode
@@ -13,11 +13,8 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   const { t } = useTranslation('common')
   const router = useRouter()
-  // const { theme } = useTheme()
-  const theme = 'dark' // Fallback for Vercel build
+  const { theme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
-  console.log('[Words Layout] Theme from hook:', theme)
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -64,6 +61,7 @@ export function Layout({ children }: LayoutProps) {
                 <span className="mr-2">📱</span>
                 Start Learning
               </a>
+              <ThemeToggle />
               <LanguageSwitcher />
               <GradientLink href="https://overx.ai">
                 OverX AI
@@ -118,7 +116,10 @@ export function Layout({ children }: LayoutProps) {
                 </a>
               </div>
               <div className="px-3 py-2 flex items-center justify-between">
-                <LanguageSwitcher />
+                <div className="flex items-center space-x-2">
+                  <ThemeToggle />
+                  <LanguageSwitcher />
+                </div>
                 <GradientLink href="https://overx.ai">
                   OverX AI
                 </GradientLink>

@@ -82,12 +82,14 @@ export function useTheme() {
     const applyTheme = (themeToApply: Theme) => {
       // Clean up any existing classes
       document.documentElement.classList.remove('light', 'dark')
-      
+
       // Apply theme class to document
       if (themeToApply === 'dark') {
         document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.add('light')
       }
-      
+
       if (process.env.NODE_ENV === 'development') {
         console.log('[useTheme] Applied theme class:', themeToApply)
       }
