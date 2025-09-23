@@ -2,7 +2,7 @@ import { BlogPost, Author } from '../types/blog'
 
 export function generateBlogPostSchema(post: BlogPost, url: string) {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org' as const,
     '@type': 'BlogPosting',
     headline: post.title,
     description: post.excerpt,
@@ -41,7 +41,7 @@ export function generateBlogPostSchema(post: BlogPost, url: string) {
 
 export function generateAuthorSchema(author: Author, url: string) {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org' as const,
     '@type': 'Person',
     name: author.name,
     description: author.bio,
@@ -76,7 +76,7 @@ export function generateBlogSchema() {
 
 export function generateBreadcrumbSchema(items: Array<{ name: string; url?: string }>) {
   return {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org' as const,
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({
       '@type': 'ListItem',

@@ -46,23 +46,15 @@ export default function PostPage({ post, relatedPosts }: PostPageProps) {
         description={post.seo?.metaDescription || post.excerpt}
         canonical={post.seo?.canonicalUrl || `https://blog.overx.ai/post/${post.slug}`}
         openGraph={{
-          type: 'article',
           title: post.title,
           description: post.excerpt,
           url: shareUrl,
-          article: {
-            publishedTime: post.date,
-            modifiedTime: post.lastModified || post.date,
-            authors: [post.author.name],
-            section: post.category.name,
-            tags: post.tags
-          },
-          images: [{
+          image: {
             url: post.coverImage,
             width: 1200,
             height: 630,
             alt: post.title
-          }]
+          }
         }}
         twitter={{
           card: 'summary_large_image',

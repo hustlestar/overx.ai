@@ -35,7 +35,7 @@ export function Layout({ children }: LayoutProps) {
   const headerAnimation = {
     initial: { y: -100, opacity: 0 },
     animate: { y: 0, opacity: 1 },
-    transition: { duration: 0.5, ease: 'easeOut' }
+    transition: { duration: 0.5, ease: 'easeOut' as const }
   }
 
   const navCategories = ['ai-technology', 'product-updates', 'tutorials', 'industry-insights']
@@ -176,30 +176,32 @@ export function Layout({ children }: LayoutProps) {
               className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10"
             >
               <div className="px-4 py-4 space-y-2">
-                <SmartLink
-                  href="/"
-                  className="block py-2 text-gray-300 hover:text-white transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t('navigation.allPosts')}
-                </SmartLink>
-                {navCategories.map((category) => (
+                <div onClick={() => setMobileMenuOpen(false)}>
                   <SmartLink
-                    key={category}
-                    href={`/category/${category}`}
-                    className="block py-2 text-gray-300 hover:text-white transition-colors capitalize"
-                    onClick={() => setMobileMenuOpen(false)}
+                    href="/"
+                    className="block py-2 text-gray-300 hover:text-white transition-colors"
                   >
-                    {category.replace('-', ' ')}
+                    {t('navigation.allPosts')}
                   </SmartLink>
+                </div>
+                {navCategories.map((category) => (
+                  <div key={category} onClick={() => setMobileMenuOpen(false)}>
+                    <SmartLink
+                      href={`/category/${category}`}
+                      className="block py-2 text-gray-300 hover:text-white transition-colors capitalize"
+                    >
+                      {category.replace('-', ' ')}
+                    </SmartLink>
+                  </div>
                 ))}
-                <SmartLink
-                  href="https://overx.ai"
-                  className="block py-2 text-gray-300 hover:text-white transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {t('navigation.mainSite')}
-                </SmartLink>
+                <div onClick={() => setMobileMenuOpen(false)}>
+                  <SmartLink
+                    href="https://overx.ai"
+                    className="block py-2 text-gray-300 hover:text-white transition-colors"
+                  >
+                    {t('navigation.mainSite')}
+                  </SmartLink>
+                </div>
               </div>
             </motion.div>
           )}
