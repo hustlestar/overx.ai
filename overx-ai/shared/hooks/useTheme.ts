@@ -144,6 +144,8 @@ export function useTheme() {
     document.documentElement.classList.remove('light', 'dark')
     if (newTheme === 'dark') {
       document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.add('light')
     }
 
     // Dispatch custom event for immediate updates in the same tab
