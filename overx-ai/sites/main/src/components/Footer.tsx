@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.resources')}</h4>
             <ul className="space-y-2">
-              <li><SmartLink href="https://blog.overx.ai" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300" external>{t('footer.navigation.blog')}</SmartLink></li>
+              <li><SmartLink href="https://blog.overx.ai" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">{t('footer.navigation.blog')}</SmartLink></li>
               <li><SmartLink href="/docs" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">{t('footer.documentation')}</SmartLink></li>
               <li><SmartLink href="/support" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">{t('footer.support')}</SmartLink></li>
             </ul>

@@ -25,7 +25,9 @@ export const SmartLink: React.FC<SmartLinkProps> = ({
   LinkComponent,
   useRouter
 }) => {
-  const isExternal = external || href.startsWith('http')
+  // Check if URL is truly external (not an OverX subdomain)
+  const isOverXDomain = href.includes('overx.ai') || href.includes('localhost')
+  const isExternal = external || (href.startsWith('http') && !isOverXDomain)
   const router = useRouter?.()
   const isActive = router?.pathname === href
 

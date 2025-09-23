@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Aprende Idiomas con IA | Bot de Telegram World Word War",
+    "description": "Domina vocabulario en cualquier idioma con nuestro bot de Telegram impulsado por IA. Traducciones inteligentes, repetición espaciada y aprendizaje personalizado para más de 50,000 usuarios."
+  },
+  "hero": {
+    "badge": "Aprendizaje de Idiomas con IA",
+    "title": "Domina Cualquier Idioma Mediante",
+    "highlight": "Conversaciones Diarias",
+    "subtitle": "Aprende vocabulario de forma natural con nuestro bot de Telegram impulsado por IA. Obtén traducciones instantáneas, practica con repetición espaciada y rastrea tu progreso - todo en tu mensajero favorito.",
+    "cta": {
+      "primary": "Comienza Gratis",
+      "secondary": "Cómo Funciona"
+    },
+    "stats": {
+      "users": "50,000+",
+      "usersLabel": "Estudiantes Activos",
+      "languages": "13",
+      "languagesLabel": "Idiomas Soportados",
+      "words": "1M+",
+      "wordsLabel": "Palabras Aprendidas Diariamente",
+      "rating": "4.8/5",
+      "ratingLabel": "Calificación de Usuarios"
+    }
+  },
+  "howItWorks": {
+    "title": "Cómo Funciona",
+    "subtitle": "Comienza a aprender en 30 segundos",
+    "steps": {
+      "start": {
+        "title": "Inicia el Bot",
+        "description": "Abre Telegram y busca @world_word_war_bot"
+      },
+      "send": {
+        "title": "Envía Cualquier Palabra",
+        "description": "Escribe una palabra en cualquier idioma para obtener traducción instantánea con IA"
+      },
+      "learn": {
+        "title": "Aprende y Practica",
+        "description": "Obtén explicaciones detalladas y practica con recordatorios diarios"
+      },
+      "track": {
+        "title": "Rastrea Tu Progreso",
+        "description": "Monitorea tu crecimiento de vocabulario y tasa de éxito"
+      }
+    }
+  },
+  "features": {
+    "title": "¿Por Qué Elegir WWW Words Bot?",
+    "subtitle": "Características que hacen el aprendizaje de idiomas sin esfuerzo",
+    "list": {
+      "ai": {
+        "title": "Traducciones con IA",
+        "description": "Obtén traducciones contextuales con ejemplos y notas culturales"
+      },
+      "spaced": {
+        "title": "Repetición Espaciada Inteligente",
+        "description": "Algoritmo científicamente probado que se adapta a tu ritmo de aprendizaje"
+      },
+      "languages": {
+        "title": "13 Idiomas",
+        "description": "Aprende cualquier combinación de idiomas soportados"
+      },
+      "exercises": {
+        "title": "Ejercicios Interactivos",
+        "description": "4 tipos diferentes de práctica para reforzar la memoria"
+      },
+      "tracking": {
+        "title": "Análisis de Progreso",
+        "description": "Estadísticas detalladas y seguimiento de rachas diarias"
+      },
+      "instant": {
+        "title": "Acceso Instantáneo",
+        "description": "Sin descargar apps - funciona directamente en Telegram"
+      }
+    },
+    "comparison": {
+      "title": "Compara con Apps Tradicionales",
+      "us": "WWW Words Bot",
+      "others": "Apps Tradicionales",
+      "points": {
+        "convenience": {
+          "label": "Conveniencia",
+          "us": "Integrado en Telegram",
+          "others": "App separada necesaria"
+        },
+        "learning": {
+          "label": "Estilo de Aprendizaje",
+          "us": "Conversación natural",
+          "others": "Lecciones estructuradas"
+        },
+        "reminders": {
+          "label": "Recordatorios",
+          "us": "Notificaciones inteligentes",
+          "others": "Alertas genéricas"
+        },
+        "price": {
+          "label": "Precio Inicial",
+          "us": "Gratis para siempre",
+          "others": "Solo prueba gratis"
+        }
+      }
+    }
+  },
+  "languages": {
+    "title": "Aprende Cualquier Idioma",
+    "subtitle": "Soporte completo para 13 idiomas principales"
+  },
+  "testimonials": {
+    "title": "Lo Que Dicen Nuestros Usuarios",
+    "subtitle": "Únete a miles de estudiantes exitosos de idiomas",
+    "users": {
+      "maria": {
+        "name": "María Rodríguez",
+        "role": "Profesora de Español",
+        "quote": "Este bot transformó cómo mis estudiantes practican vocabulario. ¡La repetición espaciada es genial!"
+      },
+      "alex": {
+        "name": "Alex Chen",
+        "role": "Desarrollador de Software",
+        "quote": "Finalmente, una app de idiomas que se ajusta a mi flujo de trabajo. Aprendo mientras chateo - ¡es perfecto!"
+      },
+      "elena": {
+        "name": "Elena Petrov",
+        "role": "Analista de Negocios",
+        "quote": "He probado muchas apps, pero esta es la única con la que me quedé. ¡Es tan conveniente!"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Precios Simples y Transparentes",
+    "subtitle": "Comienza gratis, actualiza cuando estés listo",
+    "free": {
+      "name": "Gratis",
+      "price": "$0",
+      "period": "/para siempre",
+      "features": [
+        "5-10 palabras diarias",
+        "Todas las funciones principales",
+        "Seguimiento básico de progreso",
+        "Soporte comunitario"
+      ],
+      "cta": "Comenzar Gratis"
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$2.99",
+      "period": "/mes",
+      "badge": "Más Popular",
+      "features": [
+        "Palabras diarias ilimitadas",
+        "Sin anuncios",
+        "Análisis avanzado",
+        "Soporte prioritario",
+        "Seguimiento de rachas diarias",
+        "Exportar tus datos"
+      ],
+      "cta": "Prueba Plus Gratis"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": {
+      "telegram": {
+        "question": "¿Por qué Telegram?",
+        "answer": "Telegram es donde ya pasas tiempo chateando. Aprender en un entorno familiar hace más fácil construir un hábito diario."
+      },
+      "languages": {
+        "question": "¿Puedo aprender múltiples idiomas?",
+        "answer": "¡Sí! Puedes aprender cualquier combinación de nuestros 13 idiomas soportados simultáneamente."
+      },
+      "offline": {
+        "question": "¿Funciona sin conexión?",
+        "answer": "Se requiere conexión a internet para las traducciones con IA y sincronizar tu progreso."
+      },
+      "trial": {
+        "question": "¿Hay una prueba gratuita?",
+        "answer": "El bot es gratis para usar siempre con límites diarios generosos. Las funciones Plus tienen una prueba gratuita de 30 días."
+      }
+    }
+  },
+  "cta": {
+    "title": "Comienza Tu Viaje Lingüístico Hoy",
+    "subtitle": "Únete a más de 50,000 estudiantes dominando nuevos idiomas",
+    "button": "Abrir Bot en Telegram",
+    "guarantee": "Garantía de 30 días • No requiere tarjeta de crédito"
+  }
+}

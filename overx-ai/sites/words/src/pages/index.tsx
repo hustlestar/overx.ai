@@ -120,7 +120,7 @@ export default function HomePage() {
             </a>
             <button className="px-8 py-4 border-2 border-blue-600 light:border-blue-500 text-blue-400 light:text-blue-600 hover:bg-blue-600/10 light:hover:bg-blue-50 rounded-xl font-semibold text-lg transition-all duration-300 flex items-center gap-3 min-w-[200px] justify-center">
               <span className="text-2xl">⭐</span>
-              Try Plus Features
+              {t('home:hero.cta.secondary')}
             </button>
           </div>
 
@@ -297,7 +297,7 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text light:text-gray-900">
-            Real Success Stories
+            {t('home:testimonials.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -325,7 +325,7 @@ export default function HomePage() {
       <section className="py-20 glass-card light:bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 gradient-text light:text-gray-900">
-            Pricing That Makes Sense
+            {t('home:pricing.title')}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -337,15 +337,15 @@ export default function HomePage() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-center mb-6 text-green-400 light:text-green-600 mt-4">
-                Free Plan
+                {t('home:pricing.free.name')}
               </h3>
               <div className="space-y-4 mb-8">
                 {[
-                  'Full AI translations',
-                  'All training exercises', 
-                  '5-10 new words daily',
-                  'Progress tracking',
-                  'Basic notifications'
+                  t('home:pricing.free.features.0', { defaultValue: 'Full AI translations' }),
+                  t('home:pricing.free.features.1', { defaultValue: 'All training exercises' }),
+                  t('home:pricing.free.features.2', { defaultValue: '5-10 new words daily' }),
+                  t('home:pricing.free.features.3', { defaultValue: 'Progress tracking' }),
+                  t('home:pricing.free.features.4', { defaultValue: 'Basic notifications' })
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <span className="text-green-400 light:text-green-600">✅</span>
@@ -354,11 +354,11 @@ export default function HomePage() {
                 ))}
                 <div className="flex items-center gap-3">
                   <span className="text-yellow-400 light:text-yellow-600">💚</span>
-                  <span className="text-gray-300 light:text-gray-600">Supported by minimal ads</span>
+                  <span className="text-gray-300 light:text-gray-600">{t('home:pricing.free.ads', { defaultValue: 'Supported by minimal ads' })}</span>
                 </div>
               </div>
               <button className="w-full py-3 border-2 border-green-600 light:border-green-500 text-green-400 light:text-green-600 hover:bg-green-600/10 light:hover:bg-green-50 rounded-xl font-semibold transition-all duration-300">
-                Start Free
+                {t('home:pricing.free.cta')}
               </button>
             </div>
 
@@ -370,20 +370,20 @@ export default function HomePage() {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-center mb-2 text-blue-400 light:text-blue-600 mt-4">
-                Plus Plan
+                {t('home:pricing.plus.name')}
               </h3>
               <div className="text-center mb-6">
-                <span className="text-3xl font-bold text-blue-400 light:text-blue-600">$1.99</span>
-                <span className="text-gray-400 light:text-gray-500">/month</span>
+                <span className="text-3xl font-bold text-blue-400 light:text-blue-600">{t('home:pricing.plus.price')}</span>
+                <span className="text-gray-400 light:text-gray-500">{t('home:pricing.plus.period')}</span>
               </div>
               <div className="space-y-4 mb-8">
                 {[
-                  'Everything in Free',
-                  'Unlimited new words',
-                  'No advertisements', 
-                  'Daily streak gamification',
-                  'Priority AI processing',
-                  'Advanced statistics'
+                  t('home:pricing.plus.features.0', { defaultValue: 'Everything in Free' }),
+                  t('home:pricing.plus.features.1', { defaultValue: 'Unlimited new words' }),
+                  t('home:pricing.plus.features.2', { defaultValue: 'No advertisements' }),
+                  t('home:pricing.plus.features.3', { defaultValue: 'Daily streak gamification' }),
+                  t('home:pricing.plus.features.4', { defaultValue: 'Priority AI processing' }),
+                  t('home:pricing.plus.features.5', { defaultValue: 'Advanced statistics' })
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <span className="text-blue-400 light:text-blue-600">✅</span>
@@ -396,7 +396,7 @@ export default function HomePage() {
                 </div>
               </div>
               <button className="w-full py-3 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105">
-                Try Plus Free
+                {t('home:pricing.plus.cta')}
               </button>
             </div>
           </div>
@@ -407,10 +407,10 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text light:text-gray-900">
-            Start Your Journey Today
+            {t('home:cta.title')}
           </h2>
           <p className="text-xl text-gray-300 light:text-gray-600 mb-12 max-w-2xl mx-auto">
-            Join 50,000+ language learners and transform the way you master vocabulary
+            {t('home:cta.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-2xl mx-auto mb-12">
@@ -444,7 +444,7 @@ export default function HomePage() {
               className="px-8 py-4 bg-blue-600 hover:bg-blue-700 light:bg-blue-500 light:hover:bg-blue-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3"
             >
               <span className="text-2xl">🚀</span>
-              Start Learning Free
+              {t('home:cta.button')}
             </a>
             <button className="px-8 py-4 bg-purple-600 hover:bg-purple-700 light:bg-purple-500 light:hover:bg-purple-600 text-white rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3">
               <span className="text-2xl">⭐</span>
@@ -464,7 +464,7 @@ export default function HomePage() {
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? 'en', ['common']))
+      ...(await serverSideTranslations(locale ?? 'en', ['common', 'home']))
     }
   }
 }

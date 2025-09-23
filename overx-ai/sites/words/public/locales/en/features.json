@@ -1,0 +1,158 @@
+{
+  "title": "AI Language Learning Features",
+  "subtitle": "13 Languages | Adaptive Training | Spaced Repetition",
+  "meta": {
+    "title": "AI Language Learning Features | 13 Languages | WWW Words",
+    "description": "Discover World Word War Bot's powerful AI features: 13 languages, adaptive training, spaced repetition, and personalized learning paths."
+  },
+  "hero": {
+    "title": "Powerful Features for Effective Learning",
+    "subtitle": "Everything you need to master vocabulary in any language"
+  },
+  "categories": {
+    "ai": {
+      "title": "AI-Powered Learning",
+      "description": "Advanced artificial intelligence for smarter language acquisition",
+      "features": {
+        "contextDetection": {
+          "title": "Smart Context Detection",
+          "description": "AI understands word context and provides relevant translations"
+        },
+        "culturalNotes": {
+          "title": "Cultural Notes",
+          "description": "Learn not just words, but cultural nuances and usage"
+        },
+        "autoLanguage": {
+          "title": "Auto Language Detection",
+          "description": "Send words in any language, get instant recognition"
+        },
+        "detailLevels": {
+          "title": "3 Detail Levels",
+          "description": "Quick, standard, or comprehensive translations based on your needs"
+        }
+      }
+    },
+    "practice": {
+      "title": "Practice & Retention",
+      "description": "Scientifically proven methods for long-term memory",
+      "features": {
+        "spacedRepetition": {
+          "title": "Spaced Repetition Algorithm",
+          "description": "Scientifically proven method for long-term memory retention"
+        },
+        "exerciseTypes": {
+          "title": "4 Exercise Types",
+          "description": "Varied practice keeps learning engaging and effective"
+        },
+        "smartPriority": {
+          "title": "Smart Prioritization",
+          "description": "Focus on words you struggle with most"
+        },
+        "markKnown": {
+          "title": "Mark as Known",
+          "description": "Skip words you've already mastered"
+        }
+      }
+    },
+    "personalization": {
+      "title": "Personalization",
+      "description": "Tailored learning experience for every user",
+      "features": {
+        "customNotifications": {
+          "title": "Custom Notifications",
+          "description": "Set your preferred learning schedule"
+        },
+        "timezone": {
+          "title": "Timezone Support",
+          "description": "Perfect timing no matter where you are"
+        },
+        "learningPace": {
+          "title": "Learning Pace Control",
+          "description": "5-10 words daily (free) or unlimited (Plus)"
+        },
+        "interfaceLanguages": {
+          "title": "Interface Languages",
+          "description": "Navigate in English, Spanish, Russian, or Polish"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Progress & Analytics",
+      "description": "Track your learning journey with detailed insights",
+      "features": {
+        "vocabularyTracking": {
+          "title": "Vocabulary Growth Tracking",
+          "description": "Watch your word bank expand day by day"
+        },
+        "streakCounter": {
+          "title": "Daily Streak Counter",
+          "description": "Stay motivated with gamification elements"
+        },
+        "performanceMetrics": {
+          "title": "Performance Metrics",
+          "description": "Detailed statistics on accuracy and retention"
+        },
+        "exportData": {
+          "title": "Export Your Data",
+          "description": "Download your progress anytime (Plus feature)"
+        }
+      }
+    }
+  },
+  "languages": {
+    "title": "13 Supported Languages",
+    "subtitle": "Learn from and to any combination",
+    "list": {
+      "english": "English",
+      "spanish": "Spanish",
+      "french": "French",
+      "german": "German",
+      "italian": "Italian",
+      "portuguese": "Portuguese",
+      "russian": "Russian",
+      "polish": "Polish",
+      "chinese": "Chinese",
+      "japanese": "Japanese",
+      "korean": "Korean",
+      "arabic": "Arabic",
+      "hindi": "Hindi"
+    }
+  },
+  "exercises": {
+    "title": "4 Training Exercise Types",
+    "subtitle": "Comprehensive practice for complete mastery",
+    "types": {
+      "direct": {
+        "title": "Direct Translation",
+        "description": "Translate from your native language to target language"
+      },
+      "multiple": {
+        "title": "Multiple Choice",
+        "description": "Select the correct translation from options"
+      },
+      "reverse": {
+        "title": "Reverse Translation",
+        "description": "Translate from target language back to native"
+      },
+      "synonym": {
+        "title": "Synonym Differentiation",
+        "description": "Learn nuanced differences between similar words"
+      }
+    }
+  },
+  "technology": {
+    "title": "Powered by Advanced Technology",
+    "items": {
+      "gpt": "Latest GPT Models",
+      "telegram": "Telegram Bot Platform",
+      "cloud": "Cloud Infrastructure",
+      "encryption": "End-to-End Encryption"
+    }
+  },
+  "cta": {
+    "title": "Experience All Features Free",
+    "description": "Start learning with full access to core features",
+    "button": "Start Free Trial",
+    "secondaryButton": "View Pricing"
+  }
+}

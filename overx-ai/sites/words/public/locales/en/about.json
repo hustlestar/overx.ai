@@ -1,0 +1,80 @@
+{
+  "title": "About World Word War Bot",
+  "subtitle": "AI Language Learning Revolution",
+  "meta": {
+    "title": "About World Word War Bot - AI Language Learning Revolution",
+    "description": "World Word War Bot revolutionizes language learning with AI. Making vocabulary learning accessible and effective for everyone worldwide."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description1": "World Word War Bot is on a mission to democratize language learning through AI-powered technology. We believe that everyone should have access to personalized, effective language education regardless of their location, budget, or schedule.",
+    "description2": "By leveraging the power of artificial intelligence and the convenience of Telegram messaging, we've created a learning companion that adapts to your pace, remembers your progress, and delivers bite-sized lessons exactly when you need them."
+  },
+  "story": {
+    "title": "Our Story",
+    "description1": "Founded in 2023, World Word War Bot emerged from a simple observation: traditional language learning apps require dedicated time and attention that busy people struggle to find. We asked ourselves - what if learning could happen in the moments between moments?",
+    "description2": "Our founders, passionate polyglots and AI engineers, combined their expertise to create a solution that fits seamlessly into daily life. Today, we're helping tens of thousands of learners across 100+ countries achieve their language goals."
+  },
+  "values": {
+    "title": "Our Values",
+    "items": {
+      "accessibility": {
+        "title": "Accessibility First",
+        "description": "Quality language education should be available to everyone"
+      },
+      "science": {
+        "title": "Science-Backed Methods",
+        "description": "Every feature is based on proven learning research"
+      },
+      "privacy": {
+        "title": "Privacy Focused",
+        "description": "Your data is yours - we never sell or share it"
+      },
+      "continuous": {
+        "title": "Continuous Innovation",
+        "description": "AI evolves, and so do we - constantly improving your experience"
+      }
+    }
+  },
+  "team": {
+    "title": "The Team Behind WWW Bot",
+    "description": "We're a distributed team of language enthusiasts, educators, and technologists united by a common goal: making language learning accessible, effective, and enjoyable for everyone.",
+    "roles": {
+      "ai": "AI Engineers",
+      "linguists": "Linguists",
+      "educators": "Educators",
+      "designers": "Designers"
+    }
+  },
+  "impact": {
+    "title": "Our Impact",
+    "stats": {
+      "learners": {
+        "value": "50,000+",
+        "label": "Active Learners"
+      },
+      "words": {
+        "value": "2M+",
+        "label": "Words Learned Monthly"
+      },
+      "countries": {
+        "value": "100+",
+        "label": "Countries Reached"
+      },
+      "satisfaction": {
+        "value": "4.8/5",
+        "label": "User Satisfaction"
+      }
+    }
+  },
+  "future": {
+    "title": "Looking Ahead",
+    "description": "We're constantly working on new features: more languages, advanced AI capabilities, and deeper learning insights. Our vision is a world where language barriers no longer limit human potential."
+  },
+  "cta": {
+    "title": "Join Our Mission",
+    "description": "Start your language learning journey today",
+    "button": "Start Learning Free",
+    "contact": "Get in Touch"
+  }
+}

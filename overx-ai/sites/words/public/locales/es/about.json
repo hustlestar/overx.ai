@@ -1,0 +1,80 @@
+{
+  "title": "Acerca de World Word War Bot",
+  "subtitle": "Revolución del Aprendizaje de Idiomas con IA",
+  "meta": {
+    "title": "Acerca de World Word War Bot - Revolución del Aprendizaje de Idiomas con IA",
+    "description": "World Word War Bot revoluciona el aprendizaje de idiomas con IA. Haciendo el aprendizaje de vocabulario accesible y efectivo para todos en el mundo."
+  },
+  "mission": {
+    "title": "Nuestra Misión",
+    "description1": "World Word War Bot tiene la misión de democratizar el aprendizaje de idiomas a través de tecnología impulsada por IA. Creemos que todos deberían tener acceso a educación de idiomas personalizada y efectiva sin importar su ubicación, presupuesto o horario.",
+    "description2": "Aprovechando el poder de la inteligencia artificial y la conveniencia de los mensajes de Telegram, hemos creado un compañero de aprendizaje que se adapta a tu ritmo, recuerda tu progreso y entrega lecciones breves exactamente cuando las necesitas."
+  },
+  "story": {
+    "title": "Nuestra Historia",
+    "description1": "Fundado en 2023, World Word War Bot surgió de una simple observación: las aplicaciones tradicionales de aprendizaje de idiomas requieren tiempo y atención dedicados que las personas ocupadas luchan por encontrar. Nos preguntamos: ¿qué pasaría si el aprendizaje pudiera suceder en los momentos entre momentos?",
+    "description2": "Nuestros fundadores, políglotas apasionados e ingenieros de IA, combinaron su experiencia para crear una solución que se integra perfectamente en la vida diaria. Hoy, estamos ayudando a decenas de miles de estudiantes en más de 100 países a alcanzar sus objetivos lingüísticos."
+  },
+  "values": {
+    "title": "Nuestros Valores",
+    "items": {
+      "accessibility": {
+        "title": "Accesibilidad Primero",
+        "description": "La educación de idiomas de calidad debe estar disponible para todos"
+      },
+      "science": {
+        "title": "Métodos Basados en Ciencia",
+        "description": "Cada característica está basada en investigación de aprendizaje comprobada"
+      },
+      "privacy": {
+        "title": "Enfocado en Privacidad",
+        "description": "Tus datos son tuyos - nunca los vendemos o compartimos"
+      },
+      "continuous": {
+        "title": "Innovación Continua",
+        "description": "La IA evoluciona, y nosotros también - mejorando constantemente tu experiencia"
+      }
+    }
+  },
+  "team": {
+    "title": "El Equipo Detrás de WWW Bot",
+    "description": "Somos un equipo distribuido de entusiastas de idiomas, educadores y tecnólogos unidos por un objetivo común: hacer el aprendizaje de idiomas accesible, efectivo y agradable para todos.",
+    "roles": {
+      "ai": "Ingenieros de IA",
+      "linguists": "Lingüistas",
+      "educators": "Educadores",
+      "designers": "Diseñadores"
+    }
+  },
+  "impact": {
+    "title": "Nuestro Impacto",
+    "stats": {
+      "learners": {
+        "value": "50,000+",
+        "label": "Estudiantes Activos"
+      },
+      "words": {
+        "value": "2M+",
+        "label": "Palabras Aprendidas Mensualmente"
+      },
+      "countries": {
+        "value": "100+",
+        "label": "Países Alcanzados"
+      },
+      "satisfaction": {
+        "value": "4.8/5",
+        "label": "Satisfacción del Usuario"
+      }
+    }
+  },
+  "future": {
+    "title": "Mirando Hacia Adelante",
+    "description": "Constantemente trabajamos en nuevas características: más idiomas, capacidades avanzadas de IA y conocimientos de aprendizaje más profundos. Nuestra visión es un mundo donde las barreras del idioma ya no limiten el potencial humano."
+  },
+  "cta": {
+    "title": "Únete a Nuestra Misión",
+    "description": "Comienza tu viaje de aprendizaje de idiomas hoy",
+    "button": "Comienza a Aprender Gratis",
+    "contact": "Ponte en Contacto"
+  }
+}

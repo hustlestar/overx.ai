@@ -199,7 +199,7 @@ export default function PricingPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-center mb-12">
               <span className="bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-                Feature Comparison
+                {t('pricing:comparison.title')}
               </span>
             </h2>
             

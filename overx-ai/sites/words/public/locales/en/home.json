@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "title": "Learn Languages with AI | World Word War Telegram Bot",
+    "description": "Master vocabulary in any language with our AI-powered Telegram bot. Smart translations, spaced repetition, and personalized learning for 50,000+ users worldwide."
+  },
+  "hero": {
+    "badge": "AI-Powered Language Learning",
+    "title": "Master Any Language Through",
+    "highlight": "Daily Conversations",
+    "subtitle": "Learn vocabulary naturally with our AI-powered Telegram bot. Get instant translations, practice with spaced repetition, and track your progress - all in your favorite messenger.",
+    "cta": {
+      "primary": "Start Learning Free",
+      "secondary": "How It Works"
+    },
+    "stats": {
+      "users": "50,000+",
+      "usersLabel": "Active Learners",
+      "languages": "13",
+      "languagesLabel": "Languages Supported",
+      "words": "1M+",
+      "wordsLabel": "Words Learned Daily",
+      "rating": "4.8/5",
+      "ratingLabel": "User Rating"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Start learning in 30 seconds",
+    "steps": {
+      "start": {
+        "title": "Start the Bot",
+        "description": "Open Telegram and search for @world_word_war_bot"
+      },
+      "send": {
+        "title": "Send Any Word",
+        "description": "Type a word in any language to get instant AI translation"
+      },
+      "learn": {
+        "title": "Learn & Practice",
+        "description": "Get detailed explanations and practice with daily reminders"
+      },
+      "track": {
+        "title": "Track Progress",
+        "description": "Monitor your vocabulary growth and success rate"
+      }
+    }
+  },
+  "features": {
+    "title": "Why Choose WWW Words Bot?",
+    "subtitle": "Features that make language learning effortless",
+    "list": {
+      "ai": {
+        "title": "AI-Powered Translations",
+        "description": "Get context-aware translations with examples and cultural notes"
+      },
+      "spaced": {
+        "title": "Smart Spaced Repetition",
+        "description": "Scientifically proven algorithm adapts to your learning pace"
+      },
+      "languages": {
+        "title": "13 Languages",
+        "description": "Learn any combination of supported languages"
+      },
+      "exercises": {
+        "title": "Interactive Exercises",
+        "description": "4 different practice types to reinforce memory"
+      },
+      "tracking": {
+        "title": "Progress Analytics",
+        "description": "Detailed statistics and daily streak tracking"
+      },
+      "instant": {
+        "title": "Instant Access",
+        "description": "No apps to download - works directly in Telegram"
+      }
+    },
+    "comparison": {
+      "title": "Compare with Traditional Apps",
+      "us": "WWW Words Bot",
+      "others": "Traditional Apps",
+      "points": {
+        "convenience": {
+          "label": "Convenience",
+          "us": "Built into Telegram",
+          "others": "Separate app needed"
+        },
+        "learning": {
+          "label": "Learning Style",
+          "us": "Natural conversation",
+          "others": "Structured lessons"
+        },
+        "reminders": {
+          "label": "Reminders",
+          "us": "Smart notifications",
+          "others": "Generic alerts"
+        },
+        "price": {
+          "label": "Starting Price",
+          "us": "Free forever",
+          "others": "Free trial only"
+        }
+      }
+    }
+  },
+  "languages": {
+    "title": "Learn Any Language",
+    "subtitle": "Full support for 13 major languages"
+  },
+  "testimonials": {
+    "title": "What Our Users Say",
+    "subtitle": "Join thousands of successful language learners",
+    "users": {
+      "maria": {
+        "name": "Maria Rodriguez",
+        "role": "Spanish Teacher",
+        "quote": "This bot transformed how my students practice vocabulary. The spaced repetition is genius!"
+      },
+      "alex": {
+        "name": "Alex Chen",
+        "role": "Software Developer",
+        "quote": "Finally, a language app that fits my workflow. I learn while chatting - it's perfect!"
+      },
+      "elena": {
+        "name": "Elena Petrov",
+        "role": "Business Analyst",
+        "quote": "I've tried many apps, but this is the only one I stuck with. It's so convenient!"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, upgrade when you're ready",
+    "free": {
+      "name": "Free",
+      "price": "$0",
+      "period": "/forever",
+      "features": [
+        "5-10 words daily",
+        "All core features",
+        "Basic progress tracking",
+        "Community support"
+      ],
+      "cta": "Start Free"
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$2.99",
+      "period": "/month",
+      "badge": "Most Popular",
+      "features": [
+        "Unlimited words daily",
+        "No advertisements",
+        "Advanced analytics",
+        "Priority support",
+        "Daily streak tracking",
+        "Export your data"
+      ],
+      "cta": "Try Plus Free"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "telegram": {
+        "question": "Why Telegram?",
+        "answer": "Telegram is where you already spend time chatting. Learning in a familiar environment makes it easier to build a daily habit."
+      },
+      "languages": {
+        "question": "Can I learn multiple languages?",
+        "answer": "Yes! You can learn any combination of our 13 supported languages simultaneously."
+      },
+      "offline": {
+        "question": "Does it work offline?",
+        "answer": "An internet connection is required for AI translations and syncing your progress."
+      },
+      "trial": {
+        "question": "Is there a free trial?",
+        "answer": "The bot is free to use forever with generous daily limits. Plus features have a 30-day free trial."
+      }
+    }
+  },
+  "cta": {
+    "title": "Start Your Language Journey Today",
+    "subtitle": "Join 50,000+ learners mastering new languages",
+    "button": "Open Bot in Telegram",
+    "guarantee": "30-day money-back guarantee • No credit card required"
+  }
+}

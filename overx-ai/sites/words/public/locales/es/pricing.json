@@ -1,0 +1,126 @@
+{
+  "title": "Elige Tu Plan",
+  "subtitle": "Comienza gratis, actualiza cuando estés listo",
+  "meta": {
+    "title": "Precios - Planes del Bot de Aprendizaje de Idiomas | World Word War",
+    "description": "Elige el plan perfecto para tu viaje de aprendizaje de idiomas con WWW Words Bot. Comienza gratis o desbloquea aprendizaje ilimitado con Plus."
+  },
+  "billing": {
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "save": "Ahorra 20%"
+  },
+  "plans": {
+    "free": {
+      "name": "Gratis Para Siempre",
+      "price": "$0",
+      "period": "/mes",
+      "description": "Perfecto para estudiantes casuales",
+      "features": [
+        "Traducciones completas con IA",
+        "Todos los ejercicios de entrenamiento",
+        "5-10 palabras nuevas diarias",
+        "Seguimiento de progreso",
+        "Notificaciones básicas",
+        "Soportado por anuncios mínimos"
+      ],
+      "cta": "Comenzar Gratis"
+    },
+    "plus": {
+      "name": "Plus",
+      "price": "$1.99",
+      "priceYearly": "$19.99",
+      "period": "/mes",
+      "periodYearly": "/año",
+      "badge": "Más Popular",
+      "description": "Para estudiantes serios de idiomas",
+      "features": [
+        "Todo en Gratis",
+        "Palabras nuevas ilimitadas",
+        "Sin anuncios",
+        "Gamificación de racha diaria",
+        "Procesamiento IA prioritario",
+        "Estadísticas avanzadas",
+        "Exporta tu progreso",
+        "Precios regionales disponibles"
+      ],
+      "cta": "Prueba Plus Gratis"
+    }
+  },
+  "comparison": {
+    "title": "Comparar Planes",
+    "subtitle": "Ve lo que incluye cada plan",
+    "headers": {
+      "feature": "Característica",
+      "free": "Gratis",
+      "plus": "Plus"
+    },
+    "features": {
+      "aiTranslations": "Traducciones IA",
+      "exerciseTypes": "Todos los Tipos de Ejercicios",
+      "progressTracking": "Seguimiento de Progreso",
+      "dailyWords": "Palabras Nuevas Diarias",
+      "advertisements": "Anuncios",
+      "dailyStreaks": "Rachas Diarias",
+      "priorityProcessing": "Procesamiento IA Prioritario",
+      "advancedStats": "Estadísticas Avanzadas",
+      "exportData": "Exportar Datos de Progreso",
+      "earlyAccess": "Características de Acceso Temprano"
+    },
+    "values": {
+      "unlimited": "Ilimitado",
+      "limited": "5-10",
+      "minimal": "Mínimos",
+      "none": "Ninguno",
+      "yes": "✓",
+      "no": "✗"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "items": {
+      "switch": {
+        "question": "¿Puedo cambiar entre planes?",
+        "answer": "¡Sí! Puedes actualizar a Plus en cualquier momento y volver a Gratis al final de tu período de facturación."
+      },
+      "trial": {
+        "question": "¿Hay una prueba gratuita para Plus?",
+        "answer": "¡Sí! Ofrecemos una prueba gratuita de 30 días de las características Plus para todos los nuevos usuarios."
+      },
+      "payment": {
+        "question": "¿Qué métodos de pago aceptan?",
+        "answer": "Aceptamos todas las tarjetas de crédito principales, PayPal y varios métodos de pago regionales a través de nuestro procesador de pagos."
+      },
+      "student": {
+        "question": "¿Ofrecen descuentos para estudiantes?",
+        "answer": "¡Sí! Los estudiantes pueden obtener 50% de descuento en suscripciones Plus con un correo electrónico estudiantil válido."
+      },
+      "offline": {
+        "question": "¿Puedo usar el bot sin conexión?",
+        "answer": "El bot requiere una conexión a internet para proporcionar traducciones IA y sincronizar tu progreso."
+      },
+      "data": {
+        "question": "¿Están seguros mis datos?",
+        "answer": "Absolutamente. Usamos cifrado estándar de la industria y nunca vendemos tus datos. Tu progreso de aprendizaje es privado y seguro."
+      },
+      "cancel": {
+        "question": "¿Puedo cancelar en cualquier momento?",
+        "answer": "¡Sí! Puedes cancelar tu suscripción Plus en cualquier momento. Mantendrás las características Plus hasta el final de tu período de facturación actual."
+      },
+      "languages": {
+        "question": "¿Todos los idiomas están incluidos en ambos planes?",
+        "answer": "¡Sí! Los 13 idiomas están disponibles tanto en los planes Gratis como Plus. La diferencia está en el número de palabras diarias y características adicionales."
+      }
+    }
+  },
+  "guarantee": {
+    "title": "Garantía de Devolución de 30 Días",
+    "description": "Prueba Plus sin riesgo. Si no estás satisfecho en 30 días, te reembolsaremos tu pago - sin preguntas."
+  },
+  "cta": {
+    "title": "¿Listo para Acelerar tu Aprendizaje?",
+    "description": "Únete a miles de estudiantes que han actualizado a Plus",
+    "button": "Iniciar Prueba Gratuita",
+    "secondary": "Continuar con Gratis"
+  }
+}

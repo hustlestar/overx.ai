@@ -1,0 +1,158 @@
+{
+  "title": "Características de Aprendizaje de Idiomas con IA",
+  "subtitle": "13 Idiomas | Entrenamiento Adaptativo | Repetición Espaciada",
+  "meta": {
+    "title": "Características de Aprendizaje de Idiomas con IA | 13 Idiomas | WWW Words",
+    "description": "Descubre las poderosas características de IA de World Word War Bot: 13 idiomas, entrenamiento adaptativo, repetición espaciada y rutas de aprendizaje personalizadas."
+  },
+  "hero": {
+    "title": "Características Poderosas para un Aprendizaje Efectivo",
+    "subtitle": "Todo lo que necesitas para dominar el vocabulario en cualquier idioma"
+  },
+  "categories": {
+    "ai": {
+      "title": "Aprendizaje Impulsado por IA",
+      "description": "Inteligencia artificial avanzada para una adquisición de idiomas más inteligente",
+      "features": {
+        "contextDetection": {
+          "title": "Detección Inteligente de Contexto",
+          "description": "La IA comprende el contexto de la palabra y proporciona traducciones relevantes"
+        },
+        "culturalNotes": {
+          "title": "Notas Culturales",
+          "description": "Aprende no solo palabras, sino matices culturales y uso"
+        },
+        "autoLanguage": {
+          "title": "Detección Automática de Idioma",
+          "description": "Envía palabras en cualquier idioma, obtén reconocimiento instantáneo"
+        },
+        "detailLevels": {
+          "title": "3 Niveles de Detalle",
+          "description": "Traducciones rápidas, estándar o completas según tus necesidades"
+        }
+      }
+    },
+    "practice": {
+      "title": "Práctica y Retención",
+      "description": "Métodos científicamente probados para la memoria a largo plazo",
+      "features": {
+        "spacedRepetition": {
+          "title": "Algoritmo de Repetición Espaciada",
+          "description": "Método científicamente probado para retención de memoria a largo plazo"
+        },
+        "exerciseTypes": {
+          "title": "4 Tipos de Ejercicios",
+          "description": "La práctica variada mantiene el aprendizaje atractivo y efectivo"
+        },
+        "smartPriority": {
+          "title": "Priorización Inteligente",
+          "description": "Enfócate en las palabras con las que más luchas"
+        },
+        "markKnown": {
+          "title": "Marcar como Conocido",
+          "description": "Omite palabras que ya dominas"
+        }
+      }
+    },
+    "personalization": {
+      "title": "Personalización",
+      "description": "Experiencia de aprendizaje adaptada para cada usuario",
+      "features": {
+        "customNotifications": {
+          "title": "Notificaciones Personalizadas",
+          "description": "Establece tu horario de aprendizaje preferido"
+        },
+        "timezone": {
+          "title": "Soporte de Zona Horaria",
+          "description": "Tiempo perfecto sin importar dónde estés"
+        },
+        "learningPace": {
+          "title": "Control de Ritmo de Aprendizaje",
+          "description": "5-10 palabras diarias (gratis) o ilimitado (Plus)"
+        },
+        "interfaceLanguages": {
+          "title": "Idiomas de Interfaz",
+          "description": "Navega en inglés, español, ruso o polaco"
+        }
+      }
+    },
+    "analytics": {
+      "title": "Progreso y Analíticas",
+      "description": "Rastrea tu viaje de aprendizaje con información detallada",
+      "features": {
+        "vocabularyTracking": {
+          "title": "Seguimiento del Crecimiento del Vocabulario",
+          "description": "Observa cómo tu banco de palabras se expande día a día"
+        },
+        "streakCounter": {
+          "title": "Contador de Racha Diaria",
+          "description": "Mantente motivado con elementos de gamificación"
+        },
+        "performanceMetrics": {
+          "title": "Métricas de Rendimiento",
+          "description": "Estadísticas detalladas sobre precisión y retención"
+        },
+        "exportData": {
+          "title": "Exporta tus Datos",
+          "description": "Descarga tu progreso en cualquier momento (característica Plus)"
+        }
+      }
+    }
+  },
+  "languages": {
+    "title": "13 Idiomas Soportados",
+    "subtitle": "Aprende desde y hacia cualquier combinación",
+    "list": {
+      "english": "Inglés",
+      "spanish": "Español",
+      "french": "Francés",
+      "german": "Alemán",
+      "italian": "Italiano",
+      "portuguese": "Portugués",
+      "russian": "Ruso",
+      "polish": "Polaco",
+      "chinese": "Chino",
+      "japanese": "Japonés",
+      "korean": "Coreano",
+      "arabic": "Árabe",
+      "hindi": "Hindi"
+    }
+  },
+  "exercises": {
+    "title": "4 Tipos de Ejercicios de Entrenamiento",
+    "subtitle": "Práctica integral para dominio completo",
+    "types": {
+      "direct": {
+        "title": "Traducción Directa",
+        "description": "Traduce de tu idioma nativo al idioma objetivo"
+      },
+      "multiple": {
+        "title": "Opción Múltiple",
+        "description": "Selecciona la traducción correcta entre las opciones"
+      },
+      "reverse": {
+        "title": "Traducción Inversa",
+        "description": "Traduce del idioma objetivo de vuelta al nativo"
+      },
+      "synonym": {
+        "title": "Diferenciación de Sinónimos",
+        "description": "Aprende diferencias matizadas entre palabras similares"
+      }
+    }
+  },
+  "technology": {
+    "title": "Impulsado por Tecnología Avanzada",
+    "items": {
+      "gpt": "Últimos Modelos GPT",
+      "telegram": "Plataforma Bot de Telegram",
+      "cloud": "Infraestructura en la Nube",
+      "encryption": "Cifrado de Extremo a Extremo"
+    }
+  },
+  "cta": {
+    "title": "Experimenta Todas las Características Gratis",
+    "description": "Comienza a aprender con acceso completo a las características principales",
+    "button": "Iniciar Prueba Gratuita",
+    "secondaryButton": "Ver Precios"
+  }
+}

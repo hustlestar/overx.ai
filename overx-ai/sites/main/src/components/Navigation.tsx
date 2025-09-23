@@ -40,7 +40,7 @@ export function Navigation() {
               <span>{t('navigation.products')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
             </SmartLink>
-            <SmartLink href="https://blog.overx.ai" className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group" external>
+            <SmartLink href="https://blog.overx.ai" className="text-gray-800 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 relative group">
               <span>{t('navigation.blog')}</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
             </SmartLink>
