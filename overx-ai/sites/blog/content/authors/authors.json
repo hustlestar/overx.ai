@@ -1,31 +1,25 @@
 {
   "authors": [
     {
+      "id": "jack-ma",
+      "name": "Jack Ma",
+      "bio": "Founder & CEO of OverX AI. Building AI tools to give people more free time.",
+      "avatar": "/images/authors/jack.jpg",
+      "social": {
+        "twitter": "jack_overxai",
+        "linkedin": "jackma-overxai",
+        "github": "hustlestar"
+      }
+    },
+    {
       "id": "overx-team",
-      "name": "OverX AI Team",
-      "bio": "The collective voice of OverX AI's engineering, product, and research teams",
-      "avatar": "/images/authors/overx-team.jpg",
+      "name": "Jack Ma",
+      "bio": "Founder & CEO of OverX AI. Building AI tools to give people more free time.",
+      "avatar": "/images/authors/jack.jpg",
       "social": {
-        "twitter": "overxai",
-        "linkedin": "company/overxai"
-      }
-    },
-    {
-      "id": "ai-research",
-      "name": "AI Research Team",
-      "bio": "Our AI research team explores cutting-edge developments in artificial intelligence and machine learning",
-      "avatar": "/images/authors/ai-research.jpg",
-      "social": {
-        "twitter": "overxai_research"
-      }
-    },
-    {
-      "id": "engineering",
-      "name": "Engineering Team",
-      "bio": "Technical insights and best practices from OverX AI's engineering team",
-      "avatar": "/images/authors/engineering.jpg",
-      "social": {
-        "github": "overxai"
+        "twitter": "jack_overxai",
+        "linkedin": "jackma-overxai",
+        "github": "hustlestar"
       }
     }
   ]
