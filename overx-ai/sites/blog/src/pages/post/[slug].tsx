@@ -149,11 +149,11 @@ export default function PostPage({ post, relatedPosts }: PostPageProps) {
             </div>
             
             {/* Content */}
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
               <div className="flex flex-col lg:flex-row gap-12">
                 {/* Main Content */}
-                <div className="flex-1">
-                  <div 
+                <article className="flex-1 min-w-0 lg:max-w-4xl">
+                  <div
                     className="prose prose-invert prose-lg max-w-none
                       prose-headings:font-bold prose-headings:tracking-tight
                       prose-h1:text-4xl prose-h2:text-3xl prose-h3:text-2xl
@@ -230,34 +230,36 @@ export default function PostPage({ post, relatedPosts }: PostPageProps) {
                       </div>
                     </div>
                   </div>
-                </div>
-                
+                </article>
+
                 {/* Sidebar */}
-                <aside className="lg:w-80">
+                <aside className="lg:w-64 flex-shrink-0">
                   {/* Share Buttons */}
-                  <div className="sticky top-24">
-                    <h3 className="font-semibold mb-4">Share this article</h3>
-                    <div className="flex flex-col space-y-3">
-                      <SmartLink
-                        href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
-                        className="flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
-                        external
-                      >
-                        Share on Twitter
-                      </SmartLink>
-                      <SmartLink
-                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
-                        className="flex items-center justify-center px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg transition-colors"
-                        external
-                      >
-                        Share on LinkedIn
-                      </SmartLink>
-                      <button
-                        onClick={() => navigator.clipboard.writeText(shareUrl)}
-                        className="flex items-center justify-center px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
-                      >
-                        Copy Link
-                      </button>
+                  <div className="sticky top-24 space-y-4">
+                    <div className="bg-gray-900/50 border border-gray-800 rounded-xl p-6">
+                      <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-gray-400">Share Article</h3>
+                      <div className="flex flex-col space-y-2">
+                        <SmartLink
+                          href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
+                          className="flex items-center justify-center px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors text-sm"
+                          external
+                        >
+                          Twitter
+                        </SmartLink>
+                        <SmartLink
+                          href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
+                          className="flex items-center justify-center px-4 py-2 bg-blue-800 hover:bg-blue-900 rounded-lg transition-colors text-sm"
+                          external
+                        >
+                          LinkedIn
+                        </SmartLink>
+                        <button
+                          onClick={() => navigator.clipboard.writeText(shareUrl)}
+                          className="flex items-center justify-center px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-sm"
+                        >
+                          Copy Link
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </aside>
