@@ -635,11 +635,13 @@ const getStubPosts = (locale: string) => {
 }
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) => {
-  const { getAllPosts, getFeaturedPosts } = await import('../lib/blog')
+  const { getAllPosts } = await import('../lib/blog')
 
   const allPosts = await getAllPosts(locale ?? 'en')
-  const featuredPosts = await getFeaturedPosts(locale ?? 'en', 2)
-  const recentPosts = allPosts.filter(post => !post.featured).slice(0, 3)
+  // First 2 posts for the featured section (sorted by date, newest first)
+  const featuredPosts = allPosts.slice(0, 2)
+  // Remaining posts for the "More Articles" section
+  const recentPosts = allPosts.slice(2)
 
   return {
     props: {
