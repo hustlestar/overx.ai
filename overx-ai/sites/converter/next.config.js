@@ -29,17 +29,98 @@ const nextConfig = {
   // Redirects
   async redirects() {
     return [
-      // Redirect all converter.overx.ai/blog URLs to rates.overx.ai/blog
-      {
-        source: '/blog/:path*',
-        destination: 'https://rates.overx.ai/blog/:path*',
-        permanent: true,
-      },
       // Redirect contact page to main site consultancy
       {
         source: '/contact',
-        destination: 'https://www.overx.ai/consultancy',
+        destination: 'https://overx.ai/consultancy',
         permanent: true,
+      },
+      // Redirect /en/ routes to / (canonical URL without default locale prefix)
+      {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
+        permanent: true,
+        locale: false,
+      },
+      // Redirect locale-specific static pages to canonical English versions
+      // These pages use client-side language switching, not server-side routes
+      {
+        source: '/ru/privacy',
+        destination: '/privacy',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/ru/terms',
+        destination: '/terms',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/ru/contact',
+        destination: 'https://overx.ai/consultancy',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/privacy',
+        destination: '/privacy',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/terms',
+        destination: '/terms',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/contact',
+        destination: 'https://overx.ai/consultancy',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/ru/about',
+        destination: '/about',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/about',
+        destination: '/about',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/ru/sources',
+        destination: '/sources',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/sources',
+        destination: '/sources',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/ru/settings',
+        destination: '/settings',
+        permanent: true,
+        locale: false,
+      },
+      {
+        source: '/es/settings',
+        destination: '/settings',
+        permanent: true,
+        locale: false,
       },
     ]
   },

@@ -1,6 +1,7 @@
 {
   "title": "OverX AI Blog",
   "navigation": {
+    "home": "Home",
     "allPosts": "All Posts",
     "archive": "Archive",
     "categories": "Categories",
@@ -22,6 +23,16 @@
     "moreArticles": "More Articles",
     "archiveSubtitle": "Explore our archive of insights on AI technology, development, and innovation"
   },
+  "category": {
+    "title": "{{name}} - OverX AI Blog",
+    "description": "Browse all {{name}} articles on the OverX AI Blog"
+  },
+  "loading": "Loading...",
+  "post": "article",
+  "posts": "articles",
+  "noPostsYet": "No articles yet",
+  "noPostsDescription": "Check back soon for articles in this category.",
+  "browseAllPosts": "Browse All Posts",
   "footer": {
     "copyright": "© 2024 OverX AI. All rights reserved.",
     "rss": "RSS",

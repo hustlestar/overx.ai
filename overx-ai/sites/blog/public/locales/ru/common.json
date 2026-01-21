@@ -28,6 +28,16 @@
     "moreArticles": "Другие Статьи",
     "archiveSubtitle": "Исследуйте наш архив идей об ИИ технологиях, разработке и инновациях"
   },
+  "category": {
+    "title": "{{name}} - Блог OverX AI",
+    "description": "Смотрите все статьи категории {{name}} в Блоге OverX AI"
+  },
+  "loading": "Загрузка...",
+  "post": "статья",
+  "posts": "статей",
+  "noPostsYet": "Пока нет статей",
+  "noPostsDescription": "Загляните позже - скоро здесь появятся статьи.",
+  "browseAllPosts": "Смотреть Все Статьи",
   "newsletter": {
     "title": "Оставайтесь в Курсе",
     "subtitle": "Получайте последние идеи ИИ и обновления продуктов на вашу почту",
@@ -54,7 +64,7 @@
     "subscribeDescription": "Получайте последние статьи на вашу почту.",
     "subscribeNow": "Подписаться Сейчас"
   },
-  "post": {
+  "postDetails": {
     "readingTime": "{{time}} мин чтения",
     "author": "Автор: {{name}}",
     "published": "Опубликовано {{date}}",

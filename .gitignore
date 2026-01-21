@@ -1,1 +1,9 @@
 overx-ai/sites/cv/
+
+# Documentation and data files
+docs/
+google-coverage-data/
+*.zip
+
+# Windows path artifacts
+"C:\Users\hustl\.claude\plugins\marketplaces\claude-plugins-official/"

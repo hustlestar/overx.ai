@@ -2,5 +2,18 @@
   "buildCommand": "cd ../.. && npm install && npm run build:converter",
   "outputDirectory": ".next",
   "installCommand": "cd ../.. && npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "converter.overx.ai"
+        }
+      ],
+      "destination": "https://rates.overx.ai/:path*",
+      "permanent": true
+    }
+  ]
 }

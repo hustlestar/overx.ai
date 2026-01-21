@@ -30,6 +30,13 @@ const nextConfig = {
   // Redirects for removed/non-existent pages
   async redirects() {
     return [
+      // Redirect www to non-www for canonical URL consistency
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.overx.ai' }],
+        destination: 'https://overx.ai/:path*',
+        permanent: true,
+      },
       {
         source: '/docs',
         destination: '/products',

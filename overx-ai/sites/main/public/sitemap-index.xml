@@ -2,14 +2,18 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://overx.ai/sitemap.xml</loc>
-    <lastmod>2025-08-31T08:11:38.597Z</lastmod>
+    <lastmod>2026-01-12T20:49:18.232Z</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://blog.overx.ai/sitemap.xml</loc>
+    <lastmod>2026-01-12T20:49:18.232Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://rates.overx.ai/sitemap.xml</loc>
-    <lastmod>2025-08-31T08:11:38.597Z</lastmod>
+    <lastmod>2026-01-12T20:49:18.232Z</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://words.overx.ai/sitemap.xml</loc>
-    <lastmod>2025-08-31T08:11:38.597Z</lastmod>
+    <lastmod>2026-01-12T20:49:18.232Z</lastmod>
   </sitemap>
 </sitemapindex>

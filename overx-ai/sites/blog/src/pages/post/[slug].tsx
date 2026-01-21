@@ -115,7 +115,7 @@ export default function PostPage({ post, relatedPosts }: PostPageProps) {
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <div className="max-w-4xl mx-auto">
                   <div className="mb-4">
-                    <Breadcrumbs items={breadcrumbItems} />
+                    <Breadcrumbs items={breadcrumbItems} baseUrl="https://blog.overx.ai" />
                   </div>
                   <span className={`inline-block px-3 py-1 text-sm font-medium rounded-full bg-gradient-to-r ${post.category.color} text-white mb-4`}>
                     {post.category.name}

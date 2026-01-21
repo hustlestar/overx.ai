@@ -23,7 +23,10 @@ async function generateConverterSitemap() {
     'compare-currency-exchange-apis-2024-complete-guide',
     'real-time-currency-alerts-maximize-exchange-rates',
     'cryptocurrency-vs-traditional-currency-exchange-2024',
-    'avoid-dynamic-currency-conversion-scams-complete-guide'
+    'avoid-dynamic-currency-conversion-scams-complete-guide',
+    'advanced-currency-math-complex-multi-currency-expressions',
+    'complete-guide-currency-conversion-mathematical-expressions',
+    'how-to-convert-currency-mathematical-expressions-tutorial'
   ]
 
   // Add blog post URLs for all locales

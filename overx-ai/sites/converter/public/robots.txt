@@ -6,6 +6,7 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 Disallow: /404
+Disallow: /public/locales/
 Crawl-delay: 1
 
 # Major search engines

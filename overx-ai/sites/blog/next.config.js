@@ -83,6 +83,10 @@ const nextConfig = {
       {
         source: '/feed/:lang',
         destination: '/api/feed/:lang',
+      },
+      {
+        source: '/rss.xml',
+        destination: '/api/feed/en',
       }
     ]
   }

@@ -111,12 +111,14 @@ export function EnhancedSEO({
   }
 
   // Create enhanced Twitter Card with automatic fallbacks
+  const imageData = defaultImage || siteDefaults.defaultImage
   const enhancedTwitter = {
     card: 'summary_large_image' as const,
     site: '@overxai',
     title,
     description: fallbackDescription,
-    image: (defaultImage || siteDefaults.defaultImage).url,
+    image: imageData.url,
+    imageAlt: imageData.alt,
     ...twitter
   }
 

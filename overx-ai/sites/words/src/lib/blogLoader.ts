@@ -4,7 +4,12 @@ import { wordsBlogConfig } from './blogConfig'
 
 // Dynamic imports for blog content
 const contentModules = {
-  'test-post': () => import('../content/blog/test-post')
+  'test-post': () => import('../content/blog/test-post'),
+  // Temporarily commented out - syntax errors in these files need investigation
+  // 'mastering-spaced-repetition-vocabulary-learning': () => import('../content/blog/mastering-spaced-repetition-vocabulary-learning'),
+  // 'telegram-bot-language-learning-revolution': () => import('../content/blog/telegram-bot-language-learning-revolution'),
+  // '13-languages-multilingual-learning-strategies': () => import('../content/blog/13-languages-multilingual-learning-strategies'),
+  // 'ai-powered-vocabulary-context-learning': () => import('../content/blog/ai-powered-vocabulary-context-learning')
 }
 
 /**
@@ -77,13 +82,13 @@ export function getAllBlogPostSlugs(): string[] {
  */
 export function getBlogCategories() {
   const categoryMap = new Map<string, number>()
-  
+
   blogPostsMetadata.forEach(post => {
     post.tags.forEach(tag => {
       categoryMap.set(tag, (categoryMap.get(tag) || 0) + 1)
     })
   })
-  
+
   return Array.from(categoryMap.entries())
     .filter(([category]) => wordsBlogConfig.categories[category])
     .map(([category, count]) => ({
@@ -93,4 +98,29 @@ export function getBlogCategories() {
       postCount: count
     }))
     .sort((a, b) => b.postCount - a.postCount)
+}
+
+/**
+ * Get all category slugs for static path generation
+ */
+export function getAllCategorySlugs(): string[] {
+  return Object.keys(wordsBlogConfig.categories)
+}
+
+/**
+ * Get category by slug with localized content
+ */
+export function getCategoryBySlug(slug: string, locale: string = 'en') {
+  const categoryKey = Object.keys(wordsBlogConfig.categories).find(
+    key => wordsBlogConfig.categories[key].slug === slug
+  )
+
+  if (!categoryKey) return null
+
+  const category = wordsBlogConfig.categories[categoryKey]
+  return {
+    slug: category.slug,
+    name: category.name[locale as keyof typeof category.name] || category.name.en,
+    description: category.description[locale as keyof typeof category.description] || category.description.en
+  }
 }

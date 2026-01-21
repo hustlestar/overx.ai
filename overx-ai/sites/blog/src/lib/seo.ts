@@ -82,7 +82,12 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url?: stri
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      ...(item.url && { item: item.url })
+      ...(item.url && {
+        item: {
+          '@type': 'WebPage',
+          '@id': item.url
+        }
+      })
     }))
   }
 }
