@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 Disallow: /404
 
 Sitemap: https://blog.overx.ai/sitemap.xml

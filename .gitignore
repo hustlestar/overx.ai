@@ -4,6 +4,7 @@ overx-ai/sites/cv/
 docs/
 google-coverage-data/
 *.zip
+*.csv
 
 # Windows path artifacts
 "C:\Users\hustl\.claude\plugins\marketplaces\claude-plugins-official/"
