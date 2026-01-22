@@ -1,4 +1,5 @@
 {
+  "title": "Blog de OverX AI",
   "navigation": {
     "home": "Inicio",
     "allPosts": "Todos los Artículos",
@@ -27,6 +28,16 @@
     "moreArticles": "Más Artículos",
     "archiveSubtitle": "Explora nuestro archivo de perspectivas sobre tecnología IA, desarrollo e innovación"
   },
+  "category": {
+    "title": "{{name}} - Blog de OverX AI",
+    "description": "Explora todos los artículos de {{name}} en el Blog de OverX AI"
+  },
+  "loading": "Cargando...",
+  "post": "artículo",
+  "posts": "artículos",
+  "noPostsYet": "Aún no hay artículos",
+  "noPostsDescription": "Vuelve pronto para ver artículos en esta categoría.",
+  "browseAllPosts": "Ver Todos los Artículos",
   "newsletter": {
     "title": "Mantente Actualizado",
     "subtitle": "Recibe las últimas perspectivas de IA y actualizaciones de productos en tu correo",
@@ -40,9 +51,20 @@
     "rss": "Feed RSS",
     "sitemap": "Mapa del Sitio",
     "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+    "terms": "Términos de Servicio",
+    "blogDescription": "Blog de OverX AI",
+    "blogSubtitle": "Explorando las fronteras de la inteligencia artificial y compartiendo nuestro viaje.",
+    "categories": "Categorías",
+    "company": "Empresa",
+    "mainSite": "Sitio Principal",
+    "products": "Productos",
+    "aboutUs": "Acerca de Nosotros",
+    "contact": "Contacto",
+    "subscribe": "Suscribirse",
+    "subscribeDescription": "Recibe las últimas publicaciones en tu correo.",
+    "subscribeNow": "Suscribirse Ahora"
   },
-  "post": {
+  "postDetails": {
     "readingTime": "{{time}} min de lectura",
     "author": "Por {{name}}",
     "published": "Publicado el {{date}}",

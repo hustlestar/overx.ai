@@ -180,7 +180,17 @@ export function getAllTags(locale: string = 'en'): string[] {
     const { data } = matter(fileContents)
     return data.tags || []
   })
-  
+
   const allTags = posts.flat()
   return Array.from(new Set(allTags)).sort()
+}
+
+export function getAllCategorySlugs(): string[] {
+  const categories = getCategories()
+  return Object.values(categories).map(category => category.slug)
+}
+
+export function getCategoryBySlug(slug: string): Category | null {
+  const categories = getCategories()
+  return Object.values(categories).find(category => category.slug === slug) || null
 }

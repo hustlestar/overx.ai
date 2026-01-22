@@ -252,6 +252,109 @@ export default function ConsultancyPage() {
             </div>
           </section>
           
+          {/* Why Choose Us Section */}
+          <section className="py-24 relative">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
+                    Why Choose OverX AI for Your AI Journey
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                  Our approach combines deep technical expertise with practical business understanding to deliver AI solutions that create real value.
+                </p>
+              </div>
+
+              <div className="prose prose-lg dark:prose-invert max-w-4xl mx-auto text-gray-700 dark:text-gray-300">
+                <p>
+                  At OverX AI, we understand that successful AI implementation requires more than just technical know-how.
+                  Our team brings years of experience in machine learning, data engineering, and software development,
+                  combined with a deep understanding of business processes and organizational change management.
+                </p>
+
+                <p>
+                  We work with companies of all sizes, from startups looking to integrate AI into their products
+                  to established enterprises seeking to modernize their operations through intelligent automation.
+                  Our consultants have delivered solutions across diverse industries including finance, healthcare,
+                  e-commerce, manufacturing, and professional services.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">Our Methodology</h3>
+                <p>
+                  Every engagement begins with a thorough assessment of your current capabilities, data infrastructure,
+                  and business objectives. We believe in starting small and proving value quickly, then scaling
+                  solutions based on demonstrated results. This approach minimizes risk while maximizing return on investment.
+                </p>
+
+                <p>
+                  Our team stays at the forefront of AI technology, continuously evaluating new tools and techniques
+                  to ensure our clients benefit from the latest advances. Whether you need custom machine learning models,
+                  natural language processing solutions, or computer vision systems, we have the expertise to deliver.
+                </p>
+
+                <h3 className="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-white">Commitment to Success</h3>
+                <p>
+                  We measure our success by your outcomes, not just project completion. Our ongoing support ensures
+                  that your AI solutions continue to deliver value long after the initial implementation.
+                  From performance monitoring to model retraining, we provide the support you need to maintain
+                  competitive advantage through AI.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900/30 dark:to-black">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
+                    Frequently Asked Questions
+                  </span>
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                <div className="bg-white dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">What types of AI projects do you work on?</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    We work on a wide range of AI projects including conversational AI (chatbots and virtual assistants),
+                    predictive analytics, document processing and extraction, recommendation systems, computer vision applications,
+                    and custom machine learning models tailored to specific business needs.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">How long does a typical AI implementation take?</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Project timelines vary based on complexity and scope. A proof of concept can often be delivered within 4-6 weeks,
+                    while full production implementations typically range from 3-6 months. We focus on delivering value incrementally
+                    so you can see results early in the process.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Do you work with small businesses or only enterprises?</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    We work with organizations of all sizes. Our flexible engagement models allow us to provide value
+                    to startups looking to integrate AI into their products as well as large enterprises undertaking
+                    organization-wide digital transformation initiatives.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900/50 p-6 rounded-xl border border-gray-200 dark:border-gray-800">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">What happens after the project is complete?</h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Our commitment extends beyond project delivery. We offer ongoing support packages that include
+                    performance monitoring, model maintenance, and continuous improvement. We also provide training
+                    for your team to ensure they can effectively manage and evolve the AI solutions we build together.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Contact Form Section */}
           <section className="py-24 relative" id="booking">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -263,7 +366,7 @@ export default function ConsultancyPage() {
                 </h2>
                 <p className="text-xl text-gray-500">{t('consultancy.form.heading')}</p>
               </div>
-              
+
               <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-10 rounded-2xl border border-gray-200 dark:border-white/10 shadow-xl dark:shadow-none">
                 <ContactForm />
               </div>

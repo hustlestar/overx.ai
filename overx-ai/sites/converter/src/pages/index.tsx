@@ -104,6 +104,19 @@ export default function HomePage() {
         title={t('title')}
         description={t('description')}
         canonical="https://rates.overx.ai"
+        openGraph={{
+          type: 'website',
+          title: t('title'),
+          description: t('description'),
+          url: 'https://rates.overx.ai',
+          siteName: 'Exchange Rates Pro',
+          image: {
+            url: 'https://rates.overx.ai/og-image.png',
+            width: 1312,
+            height: 736,
+            alt: 'Exchange Rates Pro - Real-time Currency Converter'
+          }
+        }}
         twitter={{
           card: 'summary_large_image',
           site: '@overxai',

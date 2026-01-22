@@ -68,13 +68,13 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
           '@type': 'ListItem',
           position: 1,
           name: 'Home',
-          item: 'https://converter.overx.ai',
+          item: 'https://rates.overx.ai',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'Blog',
-          item: 'https://converter.overx.ai/blog',
+          item: 'https://rates.overx.ai/blog',
         },
         {
           '@type': 'ListItem',
@@ -90,7 +90,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
       <EnhancedSEO
         title={post.seo[currentLang].metaTitle}
         description={post.seo[currentLang].metaDescription}
-        canonical={`https://converter.overx.ai/blog/${post.slug}`}
+        canonical={`https://rates.overx.ai/blog/${post.slug}`}
         additionalMetaTags={[
           { property: 'article:published_time', content: post.publishedAt },
           ...(post.updatedAt ? [{ property: 'article:modified_time', content: post.updatedAt }] : []),
@@ -115,6 +115,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               { name: 'Blog', url: '/blog' },
               { name: post.title[currentLang] },
             ]}
+            baseUrl="https://rates.overx.ai"
           />
 
           {/* Article Header */}
@@ -238,7 +239,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               <a
                 href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                   post.title[currentLang]
-                )}&url=${encodeURIComponent(`https://converter.overx.ai/blog/${post.slug}`)}`}
+                )}&url=${encodeURIComponent(`https://rates.overx.ai/blog/${post.slug}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 rounded-lg glass-effect hover:bg-white/10 light:hover:bg-gray-100 transition-colors"
@@ -247,7 +248,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               </a>
               <a
                 href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-                  `https://converter.overx.ai/blog/${post.slug}`
+                  `https://rates.overx.ai/blog/${post.slug}`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -257,7 +258,7 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               </a>
               <a
                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                  `https://converter.overx.ai/blog/${post.slug}`
+                  `https://rates.overx.ai/blog/${post.slug}`
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

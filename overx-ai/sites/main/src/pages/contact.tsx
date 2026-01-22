@@ -59,9 +59,21 @@ const ContactPage: NextPage = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-8 text-center">
               Contact OverX AI
             </h1>
-            <p className="text-xl text-gray-200 text-center mb-12">
+            <p className="text-xl text-gray-200 text-center mb-6">
               Ready to transform your business with AI? Let's discuss your needs.
             </p>
+            <div className="text-center mb-12 max-w-3xl mx-auto">
+              <p className="text-gray-300 mb-4">
+                Whether you're looking to automate repetitive tasks, build custom AI agents, develop Chrome extensions,
+                or integrate intelligent solutions into your existing workflows, our team is here to help you achieve
+                your goals. We specialize in creating practical AI solutions that deliver measurable results.
+              </p>
+              <p className="text-gray-300">
+                From initial consultation to full implementation and ongoing support, we partner with you at every stage.
+                Our expertise spans conversational AI, automation tools, productivity applications, and custom software development.
+                Every project starts with understanding your unique challenges and objectives.
+              </p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-12">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
@@ -155,6 +167,10 @@ const ContactPage: NextPage = () => {
               <div className="space-y-8">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
                   <h3 className="text-xl font-bold text-white mb-4">Direct Contact</h3>
+                  <p className="text-gray-300 text-sm mb-4">
+                    Prefer to reach out directly? We're always happy to hear from potential clients and partners.
+                    Our team monitors inquiries around the clock to ensure timely responses.
+                  </p>
                   <div className="space-y-4">
                     <div>
                       <p className="text-sm text-gray-400 mb-1">Email</p>
@@ -165,6 +181,10 @@ const ContactPage: NextPage = () => {
                     <div>
                       <p className="text-sm text-gray-400 mb-1">Response Time</p>
                       <p className="text-white">Within 24 hours</p>
+                    </div>
+                    <div>
+                      <p className="text-sm text-gray-400 mb-1">Business Hours</p>
+                      <p className="text-white">Monday - Friday, 9:00 AM - 6:00 PM (CET)</p>
                     </div>
                   </div>
                 </div>

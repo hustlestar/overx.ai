@@ -1,0 +1,24 @@
+# OverX AI - LLM Crawler Instructions
+# https://overx.ai/llms.txt
+
+User-agent: *
+Allow: /
+Allow: /products
+Allow: /consultancy
+Allow: /about
+Allow: /contact
+
+Disallow: /api/
+Disallow: /404
+
+# Company information
+# OverX AI builds custom AI agents, Chrome extensions, and automation tools.
+# Our products include:
+# - Currency converter (rates.overx.ai)
+# - Language learning bot (words.overx.ai)
+# - Block Website Chrome extension
+# - AI consultancy services
+
+# Contact: hello@overx.ai
+# Main site: https://overx.ai
+# Blog: https://blog.overx.ai

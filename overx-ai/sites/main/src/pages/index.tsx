@@ -83,12 +83,8 @@ export default function HomePage({ lastModified }: HomePageProps) {
     createOrganizationSchema({
       name: 'OverX AI',
       url: 'https://overx.ai',
-      logo: 'https://overx.ai/logo.png',
-      sameAs: [
-        'https://twitter.com/overxai',
-        'https://linkedin.com/company/overxai',
-        'https://github.com/overxai'
-      ],
+      logo: 'https://overx.ai/og-image.png',
+      sameAs: [],
       contactPoint: {
         telephone: '+1-555-123-4567',
         contactType: 'customer service',
@@ -557,6 +553,46 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          {/* About OverX AI Section */}
+          <section className="py-24 relative">
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400 bg-clip-text text-transparent">
+                    About OverX AI
+                  </span>
+                </h2>
+              </div>
+
+              <div className="prose prose-lg dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+                <p>
+                  OverX AI is a technology company dedicated to creating intelligent solutions that help individuals and businesses
+                  work smarter and more efficiently. We build custom AI agents, Chrome extensions, Telegram bots, and automation tools
+                  that address real-world challenges and deliver measurable productivity improvements.
+                </p>
+
+                <p>
+                  Our mission is to democratize access to AI technology by creating practical, user-friendly tools that anyone can use.
+                  Whether you're a professional looking to streamline your workflow, a business owner seeking to automate repetitive tasks,
+                  or a developer wanting to integrate AI capabilities into your applications, we have solutions designed for your needs.
+                </p>
+
+                <p>
+                  Founded by engineers and AI specialists with experience at leading technology companies, OverX AI combines deep technical
+                  expertise with a commitment to exceptional user experience. We believe that the best AI tools are those that seamlessly
+                  integrate into existing workflows, providing value without complexity.
+                </p>
+
+                <p>
+                  Our product portfolio includes the Block Website Chrome extension for improved focus and productivity, the Exchange Rates Pro
+                  currency converter for international business and travel, and the World Word War language learning bot that helps users
+                  master new vocabulary through spaced repetition and interactive exercises. Each product reflects our philosophy of creating
+                  tools that are powerful yet intuitive.
+                </p>
               </div>
             </div>
           </section>

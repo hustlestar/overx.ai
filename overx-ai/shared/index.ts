@@ -20,6 +20,7 @@ export * from './lib/schema'
 
 // SEO utilities
 export { ContentOptimizer } from './lib/seo/contentOptimizer'
+export { generateHrefLangAlternates } from './lib/seo/hreflang'
 
 // Blog utilities
 export * from './lib/blog'

@@ -39,12 +39,13 @@ export default function BlogPage({ posts, categories }: BlogPageProps) {
 
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black light:from-gray-50 light:via-white light:to-gray-100">
         <div className="container mx-auto px-4 py-8">
-          <Breadcrumbs 
+          <Breadcrumbs
             items={[
               { name: t('navigation.home'), url: '/' },
               { name: t('blog.title') }
             ]}
             className="mb-8"
+            baseUrl="https://words.overx.ai"
           />
 
           {/* Hero Section */}

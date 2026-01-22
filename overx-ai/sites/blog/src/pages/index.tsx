@@ -5,12 +5,14 @@ import { useTranslation } from 'next-i18next'
 import { motion } from 'framer-motion'
 import { Layout } from '../components/Layout'
 import { SmartLink } from '../components/NextSEO'
+import { CategoryNav } from '../components/CategoryNav'
 import { useEffect, useState } from 'react'
-import type { BlogPost } from '../types/blog'
+import type { BlogPost, Category } from '../types/blog'
 
 interface HomePageProps {
   featuredPosts: BlogPost[]
   recentPosts: BlogPost[]
+  categories: Category[]
 }
 
 const container = {
@@ -38,7 +40,7 @@ const item = {
   }
 }
 
-export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) {
+export default function HomePage({ featuredPosts, recentPosts, categories }: HomePageProps) {
   const { t } = useTranslation('common')
   const [mounted, setMounted] = useState(false)
 
@@ -210,6 +212,28 @@ export default function HomePage({ featuredPosts, recentPosts }: HomePageProps) 
               ))}
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold mb-6 text-center">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                {t('sections.browseByCategory', 'Browse by Category')}
+              </span>
+            </h2>
+            <CategoryNav
+              categories={categories}
+              className="flex justify-center"
+              showDescription={false}
+            />
+          </motion.div>
         </div>
       </section>
 
@@ -635,19 +659,23 @@ const getStubPosts = (locale: string) => {
 }
 
 export const getStaticProps: GetStaticProps<HomePageProps> = async ({ locale }) => {
-  const { getAllPosts } = await import('../lib/blog')
+  const { getAllPosts, getCategories } = await import('../lib/blog')
 
   const allPosts = await getAllPosts(locale ?? 'en')
   // First 2 posts for the featured section (sorted by date, newest first)
   const featuredPosts = allPosts.slice(0, 2)
   // Remaining posts for the "More Articles" section
   const recentPosts = allPosts.slice(2)
+  // Get all categories for navigation
+  const categoriesMap = getCategories()
+  const categories = Object.values(categoriesMap)
 
   return {
     props: {
       ...(await serverSideTranslations(locale ?? 'en', ['common'])),
       featuredPosts,
       recentPosts,
+      categories,
     },
   }
 }

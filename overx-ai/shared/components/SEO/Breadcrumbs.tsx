@@ -6,12 +6,23 @@ interface BreadcrumbsProps {
   items: BreadcrumbItem[]
   className?: string
   separator?: string
+  baseUrl?: string
 }
 
-export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ 
-  items, 
+// Helper function to ensure URL is absolute
+const toAbsoluteUrl = (url: string, baseUrl: string = 'https://overx.ai'): string => {
+  if (!url) return baseUrl
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url
+  }
+  return `${baseUrl}${url.startsWith('/') ? url : `/${url}`}`
+}
+
+export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
+  items,
   className = '',
-  separator = '›'
+  separator = '›',
+  baseUrl = 'https://overx.ai'
 }) => {
   const structuredData: StructuredData = {
     '@context': 'https://schema.org',
@@ -20,7 +31,12 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({
       '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      ...(item.url && { item: item.url })
+      ...(item.url && {
+        item: {
+          '@type': 'WebPage',
+          '@id': toAbsoluteUrl(item.url, baseUrl)
+        }
+      })
     }))
   }
 
