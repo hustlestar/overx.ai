@@ -26,7 +26,6 @@ export function CategoryNav({ categories, className = '', title, showDescription
             key={category.slug}
             href={`/category/${category.slug}`}
             className={`group inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 border border-gray-200 dark:border-gray-700 light:border-gray-200 hover:scale-105 bg-gradient-to-r ${category.color} bg-opacity-10 hover:bg-opacity-20 text-gray-800 dark:text-gray-200 light:text-gray-800`}
-            title={category.description}
           >
             {category.name}
             <svg
