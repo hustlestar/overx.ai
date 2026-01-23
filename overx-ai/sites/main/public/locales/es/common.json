@@ -231,6 +231,13 @@
     "description": "Nuestro equipo de consultoría IA puede ayudarte a construir soluciones a medida que se ajusten perfectamente a las necesidades de tu negocio.",
     "button": "Reservar Consulta"
   },
+  "about": {
+    "title": "Sobre OverX AI",
+    "paragraph1": "OverX AI es una empresa tecnológica dedicada a crear soluciones inteligentes que ayudan a personas y empresas a trabajar de manera más inteligente y eficiente. Desarrollamos agentes de IA personalizados, extensiones de Chrome, bots de Telegram y herramientas de automatización que abordan desafíos del mundo real y ofrecen mejoras de productividad medibles.",
+    "paragraph2": "Nuestra misión es democratizar el acceso a la tecnología de IA creando herramientas prácticas y fáciles de usar que cualquiera pueda utilizar. Ya seas un profesional que busca optimizar su flujo de trabajo, un empresario que desea automatizar tareas repetitivas, o un desarrollador que quiere integrar capacidades de IA en sus aplicaciones, tenemos soluciones diseñadas para tus necesidades.",
+    "paragraph3": "Fundada por ingenieros y especialistas en IA con experiencia en empresas tecnológicas líderes, OverX AI combina una profunda experiencia técnica con un compromiso con la experiencia de usuario excepcional. Creemos que las mejores herramientas de IA son aquellas que se integran perfectamente en los flujos de trabajo existentes, proporcionando valor sin complejidad.",
+    "paragraph4": "Nuestro portafolio de productos incluye la extensión Block Website para Chrome para mejorar el enfoque y la productividad, el conversor de divisas Exchange Rates Pro para negocios internacionales y viajes, y el bot WWW Words para aprender idiomas que ayuda a los usuarios a dominar nuevo vocabulario mediante repetición espaciada y ejercicios interactivos. Cada producto refleja nuestra filosofía de crear herramientas potentes pero intuitivas."
+  },
   "footer": {
     "rights": "Todos los derechos reservados",
     "navigation": {
