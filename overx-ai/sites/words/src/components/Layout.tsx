@@ -3,7 +3,7 @@ import { useTranslation } from 'next-i18next'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
-import { GradientLink, useTheme } from '@overx-ai/shared'
+import { GradientLink, useTheme, NewsletterForm, FeedbackWidget, type Locale } from '@overx-ai/shared'
 import { ThemeToggle } from './ThemeToggle'
 
 interface LayoutProps {
@@ -135,7 +135,7 @@ export function Layout({ children }: LayoutProps) {
       {/* Footer */}
       <footer className="border-t border-gray-800 light:border-gray-200 bg-gray-900/50 light:bg-gray-100/50 backdrop-blur-sm mt-20">
         <div className="container mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-8">
             <div className="col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-2xl">🤖</span>
@@ -147,7 +147,7 @@ export function Layout({ children }: LayoutProps) {
                 Your AI-powered language learning companion. Master vocabulary through intelligent spaced repetition and contextual learning.
               </p>
               <div className="flex space-x-4">
-                <a 
+                <a
                   href="https://t.me/world_word_war_bot"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -156,7 +156,7 @@ export function Layout({ children }: LayoutProps) {
                 >
                   <span className="text-2xl">💬</span>
                 </a>
-                <a 
+                <a
                   href="https://twitter.com/overxai"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -167,7 +167,7 @@ export function Layout({ children }: LayoutProps) {
                 </a>
               </div>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4 text-white light:text-gray-900">Product</h4>
               <ul className="space-y-2">
@@ -176,14 +176,34 @@ export function Layout({ children }: LayoutProps) {
                 <li><a href="https://t.me/world_word_war_bot" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Try Bot</a></li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4 text-white light:text-gray-900">Company</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">About</Link></li>
                 <li><Link href="/blog" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Blog</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">Contact</Link></li>
                 <li><a href="https://overx.ai" className="text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 transition-colors">OverX AI</a></li>
               </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold mb-4 text-white light:text-gray-900">{t('footer.newsletter', 'Newsletter')}</h4>
+              <p className="text-gray-400 light:text-gray-600 text-sm mb-3">
+                {t('footer.newsletterDescription', 'Get language learning tips and updates.')}
+              </p>
+              <NewsletterForm
+                sourceSite="words"
+                locale={(router.locale || 'en') as Locale}
+                compact
+                translations={{
+                  emailPlaceholder: t('footer.emailPlaceholder', 'Your email'),
+                  submitButton: t('footer.subscribe', 'Subscribe'),
+                  submittingButton: t('footer.subscribing', 'Subscribing...'),
+                  successMessage: t('footer.subscribeSuccess', 'Subscribed!'),
+                  errorMessage: t('footer.subscribeError', 'Try again'),
+                }}
+              />
             </div>
           </div>
           
@@ -197,6 +217,23 @@ export function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </footer>
+
+      {/* Feedback Widget */}
+      <FeedbackWidget
+        sourceSite="words"
+        locale={(router.locale || 'en') as Locale}
+        translations={{
+          buttonLabel: t('feedback.button', 'Feedback'),
+          title: t('feedback.title', 'Send Feedback'),
+          ratingLabel: t('feedback.ratingLabel', 'How was your experience?'),
+          messagePlaceholder: t('feedback.messagePlaceholder', 'Tell us what you think...'),
+          emailPlaceholder: t('feedback.emailPlaceholder', 'Your email (optional)'),
+          submitButton: t('feedback.submit', 'Send Feedback'),
+          submittingButton: t('feedback.submitting', 'Sending...'),
+          successMessage: t('feedback.success', 'Thanks for your feedback!'),
+          errorMessage: t('feedback.error', 'Failed to send. Please try again.'),
+        }}
+      />
     </div>
   )
 }

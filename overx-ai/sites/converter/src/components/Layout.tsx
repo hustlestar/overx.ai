@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { ThemeToggle } from './ThemeToggle'
-import { GradientLink } from '@overx-ai/shared'
+import { GradientLink, NewsletterForm, FeedbackWidget, type Locale } from '@overx-ai/shared'
 import { useTheme } from '@/hooks/useTheme'
 
 interface LayoutProps {
@@ -124,7 +124,7 @@ export function Layout({ children }: LayoutProps) {
       {/* Footer */}
       <footer className="mt-20 border-t border-gray-800 light:border-gray-200">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
             <div className="col-span-2">
               <p className="text-sm text-gray-400 light:text-gray-600 mb-4">{t('footer.poweredBy')}</p>
               <p className="text-xs text-gray-600 light:text-gray-500 max-w-md">
@@ -149,12 +149,44 @@ export function Layout({ children }: LayoutProps) {
                 {t('footer.contact')}
               </Link>
             </div>
+            <div>
+              <p className="text-sm font-medium text-gray-300 light:text-gray-700 mb-3">{t('footer.newsletter', 'Newsletter')}</p>
+              <NewsletterForm
+                sourceSite="converter"
+                locale={(router.locale || 'en') as Locale}
+                compact
+                translations={{
+                  emailPlaceholder: t('footer.emailPlaceholder', 'Your email'),
+                  submitButton: t('footer.subscribe', 'Subscribe'),
+                  submittingButton: t('footer.subscribing', 'Subscribing...'),
+                  successMessage: t('footer.subscribeSuccess', 'Subscribed!'),
+                  errorMessage: t('footer.subscribeError', 'Try again'),
+                }}
+              />
+            </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-800 light:border-gray-200 text-center text-xs text-gray-600 light:text-gray-500">
             © {new Date().getFullYear()} OverX AI. All rights reserved.
           </div>
         </div>
       </footer>
+
+      {/* Feedback Widget */}
+      <FeedbackWidget
+        sourceSite="converter"
+        locale={(router.locale || 'en') as Locale}
+        translations={{
+          buttonLabel: t('feedback.button', 'Feedback'),
+          title: t('feedback.title', 'Send Feedback'),
+          ratingLabel: t('feedback.ratingLabel', 'How was your experience?'),
+          messagePlaceholder: t('feedback.messagePlaceholder', 'Tell us what you think...'),
+          emailPlaceholder: t('feedback.emailPlaceholder', 'Your email (optional)'),
+          submitButton: t('feedback.submit', 'Send Feedback'),
+          submittingButton: t('feedback.submitting', 'Sending...'),
+          successMessage: t('feedback.success', 'Thanks for your feedback!'),
+          errorMessage: t('feedback.error', 'Failed to send. Please try again.'),
+        }}
+      />
     </div>
   )
 }

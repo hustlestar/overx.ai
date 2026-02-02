@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { appWithTranslation } from 'next-i18next'
-import { useTheme, useLanguageSync, debugSyncStatus } from '@overx-ai/shared'
+import { useTheme, useLanguageSync, debugSyncStatus, FeedbackWidget, type Locale } from '@overx-ai/shared'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -39,9 +39,12 @@ function App({ Component, pageProps }: AppProps) {
     }
   }, [router.events])
 
+  const locale = (router.locale || 'en') as Locale
+
   return (
     <div className={`${inter.variable} font-sans`}>
       <Component {...pageProps} />
+      <FeedbackWidget sourceSite="main" locale={locale} />
     </div>
   )
 }

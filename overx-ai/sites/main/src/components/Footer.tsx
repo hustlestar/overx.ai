@@ -1,14 +1,18 @@
 import { SmartLink } from '../components/NextSEO'
 import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
+import { NewsletterForm, type Locale } from '@overx-ai/shared'
 
 export function Footer() {
-  const { t } = useTranslation('common')
+  const { t, i18n } = useTranslation('common')
+  const router = useRouter()
+  const locale = (router.locale || i18n.language || 'en') as Locale
 
   return (
     <footer className="relative bg-white dark:bg-black border-t border-gray-200 dark:border-white/10 py-16 transition-colors duration-300 z-10">
       <div className="absolute inset-0 bg-gradient-to-t from-blue-900/5 to-transparent dark:from-blue-900/5 dark:to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           <div>
             <h4 className="text-lg font-semibold mb-4">{t('footer.navigation.products')}</h4>
             <ul className="space-y-2">
@@ -40,6 +44,24 @@ export function Footer() {
               <li><SmartLink href="/privacy" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">{t('footer.privacyPolicy')}</SmartLink></li>
               <li><SmartLink href="/terms" className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300">{t('footer.termsOfService')}</SmartLink></li>
             </ul>
+          </div>
+          <div>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.newsletter', 'Newsletter')}</h4>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+              {t('footer.newsletterDescription', 'Stay updated with our latest products and AI insights.')}
+            </p>
+            <NewsletterForm
+              sourceSite="main"
+              locale={locale}
+              compact
+              translations={{
+                emailPlaceholder: t('footer.emailPlaceholder', 'Enter your email'),
+                submitButton: t('footer.subscribe', 'Subscribe'),
+                submittingButton: t('footer.subscribing', 'Subscribing...'),
+                successMessage: t('footer.subscribeSuccess', 'Thanks! You\'re subscribed.'),
+                errorMessage: t('footer.subscribeError', 'Please try again.'),
+              }}
+            />
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-white/10">

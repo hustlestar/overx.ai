@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
-import { SmartLink, ThemeToggle, GradientLink } from '@overx-ai/shared'
+import { SmartLink, ThemeToggle, GradientLink, NewsletterForm, FeedbackWidget, type Locale } from '@overx-ai/shared'
 import { useTheme, useLanguageSync } from '@overx-ai/shared'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
@@ -277,12 +277,18 @@ export function Layout({ children }: LayoutProps) {
               <p className="text-gray-400 light:text-gray-600 text-sm mb-3">
                 {t('footer.subscribeDescription')}
               </p>
-              <GradientLink
-                href="/subscribe"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-sm font-medium hover:scale-105 transition-transform"
-              >
-                {t('footer.subscribeNow')}
-              </GradientLink>
+              <NewsletterForm
+                sourceSite="blog"
+                locale={(locale || 'en') as Locale}
+                compact
+                translations={{
+                  emailPlaceholder: t('footer.emailPlaceholder', 'Enter your email'),
+                  submitButton: t('footer.subscribeNow', 'Subscribe'),
+                  submittingButton: t('footer.subscribing', 'Subscribing...'),
+                  successMessage: t('footer.subscribeSuccess', 'Thanks! You\'re subscribed.'),
+                  errorMessage: t('footer.subscribeError', 'Please try again.'),
+                }}
+              />
             </div>
           </div>
 
@@ -304,6 +310,23 @@ export function Layout({ children }: LayoutProps) {
           </div>
         </div>
       </motion.footer>
+
+      {/* Feedback Widget */}
+      <FeedbackWidget
+        sourceSite="blog"
+        locale={(locale || 'en') as Locale}
+        translations={{
+          buttonLabel: t('feedback.button', 'Feedback'),
+          title: t('feedback.title', 'Send Feedback'),
+          ratingLabel: t('feedback.ratingLabel', 'How was your experience?'),
+          messagePlaceholder: t('feedback.messagePlaceholder', 'Tell us what you think...'),
+          emailPlaceholder: t('feedback.emailPlaceholder', 'Your email (optional)'),
+          submitButton: t('feedback.submit', 'Send Feedback'),
+          submittingButton: t('feedback.submitting', 'Sending...'),
+          successMessage: t('feedback.success', 'Thanks for your feedback!'),
+          errorMessage: t('feedback.error', 'Failed to send. Please try again.'),
+        }}
+      />
     </div>
   )
 }
