@@ -172,9 +172,11 @@ export function FeedbackWidget({
               placeholder={t.messagePlaceholder}
               required
               rows={3}
+              maxLength={1000}
               disabled={isSubmitting}
               className="w-full px-3 py-2 bg-gray-800 light:bg-gray-100 border border-gray-700 light:border-gray-300 rounded-lg text-white light:text-gray-900 placeholder-gray-500 light:placeholder-gray-400 focus:outline-none focus:border-blue-400 resize-none disabled:opacity-50"
             />
+            <p className="text-xs text-gray-500 light:text-gray-400 text-right mt-1">{message.length}/1000</p>
           </div>
 
           {/* Email (optional) */}

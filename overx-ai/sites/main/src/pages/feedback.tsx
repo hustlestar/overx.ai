@@ -158,7 +158,7 @@ const FeedbackPage: NextPage = () => {
     await submit({
       source: selectedProduct.source,
       app_name: selectedProduct.name,
-      email: email.trim() || 'anonymous@feedback.overx.ai',
+      email: email.trim() || undefined,
       text: `[Rating: ${rating}/5]\n\n${message.trim()}`,
     })
   }
@@ -289,10 +289,12 @@ const FeedbackPage: NextPage = () => {
                       }}
                       required
                       rows={5}
+                      maxLength={2000}
                       disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 resize-none disabled:opacity-50"
                       placeholder={t('feedback.form.messagePlaceholder', 'Tell us what you liked, what could be improved, or any features you\'d like to see...')}
                     />
+                    <p className="mt-1 text-xs text-gray-400 text-right">{message.length}/2000</p>
                   </div>
 
                   {/* Email (optional) */}

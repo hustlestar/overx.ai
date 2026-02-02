@@ -53,7 +53,7 @@ export interface FeedbackFormData {
 export interface AppFeedbackFormData {
   source: FeedbackSource
   app_name: string
-  email: string
+  email?: string
   text: string
 }
 

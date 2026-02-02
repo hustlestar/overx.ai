@@ -171,12 +171,14 @@ export default function ContactPage() {
                       name="message"
                       required
                       rows={5}
+                      maxLength={2000}
                       value={formData.message}
                       onChange={handleChange}
                       disabled={isSubmitting}
                       className="w-full px-4 py-3 bg-white/10 light:bg-gray-100 border border-white/20 light:border-gray-300 rounded-lg text-white light:text-gray-900 placeholder-gray-500 light:placeholder-gray-400 focus:outline-none focus:border-blue-400 resize-none disabled:opacity-50"
                       placeholder={t('contact.form.messagePlaceholder', 'Describe your question or issue...')}
                     />
+                    <p className="mt-1 text-xs text-gray-500 text-right">{formData.message.length}/2000</p>
                   </div>
 
                   <button
