@@ -10,10 +10,40 @@ export * from './components/UI'
 // Blog Components
 export * from './components/Blog'
 
+// Form Components
+export * from './components/Forms'
+
 // Hooks
 export { useTheme } from './hooks/useTheme'
 export { useLanguageSync } from './hooks/useLanguageSync'
 export { debugSyncStatus } from './hooks/debugSync'
+export {
+  useFormSubmission,
+  useContactForm,
+  useNewsletterForm,
+  useSupportForm,
+  useQuoteForm,
+  useFeedbackForm,
+  useAppFeedbackForm,
+} from './hooks/useFormSubmission'
+export type {
+  FormType,
+  SourceSite,
+  Locale,
+  FeedbackSource,
+  ContactFormData,
+  NewsletterFormData,
+  SupportFormData,
+  QuoteFormData,
+  FeedbackFormData,
+  AppFeedbackFormData,
+  AppFeedbackUserInput,
+  UseAppFeedbackOptions,
+  FormSubmissionResponse,
+  FormStatus,
+  UseFormSubmissionOptions,
+  UseFormSubmissionResult,
+} from './hooks/useFormSubmission'
 
 // Schema utilities
 export * from './lib/schema'
