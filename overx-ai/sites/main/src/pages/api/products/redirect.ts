@@ -11,6 +11,9 @@ const PRODUCT_URLS: Record<string, string> = {
   'block-website': 'https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa',
   'site_blocker': 'https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa',
 
+  'breathing-exercises': 'https://chromewebstore.google.com/detail/breathing-exercises-medit/fghajdnplonfdpoeagigdpnfcfojlhbg',
+  'breathing_exercises': 'https://chromewebstore.google.com/detail/breathing-exercises-medit/fghajdnplonfdpoeagigdpnfcfojlhbg',
+
   // Telegram Bots
   'learn-words': 'https://words.overx.ai',
   'language-focus': 'https://t.me/language_focus_bot',

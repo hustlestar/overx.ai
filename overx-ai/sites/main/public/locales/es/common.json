@@ -54,6 +54,10 @@
     "yourLawyer": {
       "title": "Tu Abogado Bot",
       "description": "Orientación legal bielorrusa experta 24/7. 90% menos costo que abogados tradicionales."
+    },
+    "breathingExercises": {
+      "title": "Ejercicios de Respiración - Meditación y Atención Plena",
+      "description": "Transforma tu bienestar con ejercicios de respiración guiados, meditación y prácticas de atención plena directamente en tu navegador."
     }
   },
   "values": {
@@ -189,7 +193,11 @@
     "spacedRepetition": "Repetición espaciada",
     "voiceSupport": "Soporte de voz",
     "exerciseTypes4": "4 tipos de ejercicios",
-    "captionExtraction": "Extracción de descripciones"
+    "captionExtraction": "Extracción de descripciones",
+    "guidedBreathing": "Respiración guiada",
+    "meditationTimer": "Temporizador de meditación",
+    "mindfulnessReminders": "Recordatorios de atención plena",
+    "breathingTechniques": "Múltiples técnicas"
   },
   "productsCta": {
     "title": "¿Necesitas una Solución Personalizada?",

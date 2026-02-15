@@ -54,6 +54,10 @@
     "yourLawyer": {
       "title": "Your Lawyer Bot",
       "description": "Expert Belarusian legal guidance 24/7. 90% less cost than traditional lawyers."
+    },
+    "breathingExercises": {
+      "title": "Breathing Exercises - Meditation & Mindfulness",
+      "description": "Transform your well-being with guided breathing exercises, meditation, and mindfulness practices right in your browser."
     }
   },
   "values": {
@@ -189,7 +193,11 @@
     "spacedRepetition": "Spaced repetition",
     "voiceSupport": "Voice support",
     "exerciseTypes4": "4 exercise types",
-    "captionExtraction": "Caption extraction"
+    "captionExtraction": "Caption extraction",
+    "guidedBreathing": "Guided breathing",
+    "meditationTimer": "Meditation timer",
+    "mindfulnessReminders": "Mindfulness reminders",
+    "breathingTechniques": "Multiple techniques"
   },
   "productsCta": {
     "title": "Need a Custom Solution?",

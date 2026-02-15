@@ -70,6 +70,13 @@ const FeedbackPage: NextPage = () => {
       source: 'bot',
     },
     {
+      id: 'breathingExercises',
+      name: t('productList.breathingExercises.title', 'Breathing Exercises - Meditation & Mindfulness'),
+      description: t('productList.breathingExercises.description'),
+      icon: '🫁',
+      source: 'extension',
+    },
+    {
       id: 'instagramSaver',
       name: t('productList.instagramSaver.title', 'Instagram Description Saver'),
       description: t('productList.instagramSaver.description'),
