@@ -27,17 +27,13 @@
       "title": "Block Website: Autocontrol",
       "description": "Transforma las distracciones digitales en bienestar físico. El único bloqueador que te hace más saludable."
     },
-    "claudeCodeBot": {
-      "title": "Claude Code Bot de Telegram",
-      "description": "Programa en cualquier lugar con asistencia IA. Por voz o texto, sin costos de API."
-    },
-    "consultBy": {
-      "title": "Consult.by",
-      "description": "Asesoría legal instantánea y asequible para Bielorrusia. Consejo profesional al precio de un café."
-    },
     "currencyConverter": {
       "title": "Conversor de Divisas",
       "description": "Conversión de divisas con privacidad y cálculos complejos en más de 100 monedas."
+    },
+    "instagramBot": {
+      "title": "Instagram Downloader & Saver",
+      "description": "Guarda contenido de Instagram en privado. Extrae descripciones, guarda reels y posts en calidad original, sin marcas de agua."
     },
     "instagramSaver": {
       "title": "Guardador de Descripciones Instagram",
@@ -51,14 +47,6 @@
       "title": "WWW Words Bot",
       "description": "Convierte la mensajería diaria en aprendizaje de idiomas. 13 idiomas con repetición inteligente."
     },
-    "memeBuyBot": {
-      "title": "Bot de Compra de Memes Telegram",
-      "description": "Nunca pierdas oportunidades cripto. Trading automatizado a velocidad sobrehumana."
-    },
-    "privetBot": {
-      "title": "Bot Privet",
-      "description": "Compañero IA con memoria real y emociones. Conversaciones naturales por voz en múltiples idiomas."
-    },
     "reelSaver": {
       "title": "Guardador de Reels/Posts Instagram",
       "description": "Guarda contenido de Instagram en privado. Calidad original, sin marcas de agua."
@@ -67,10 +55,6 @@
       "title": "Tu Abogado Bot",
       "description": "Orientación legal bielorrusa experta 24/7. 90% menos costo que abogados tradicionales."
     },
-    "yourLearner": {
-      "title": "Tu Aprendiz Bot",
-      "description": "Domina la gramática con tutoría IA personalizada. Aprendizaje adaptativo a tu ritmo."
-    }
   },
   "values": {
     "title": "Por Qué Elegir OverX AI",
@@ -193,22 +177,6 @@
     "noWatermarks": "Sin marcas de agua",
     "privacyFocused": "Enfocado en privacidad",
     "enterpriseReliability": "Confiabilidad empresarial",
-    "voiceCoding": "Programación por voz",
-    "zeroApiCosts": "Sin costos de API",
-    "multipleProjects": "Múltiples proyectos",
-    "taskQueueSystem": "Sistema de cola de tareas",
-    "emotionalAwareness": "Conciencia emocional",
-    "longTermMemory": "Memoria a largo plazo",
-    "multiLanguageVoice": "Voz multi-idioma",
-    "openSource": "Código abierto",
-    "monitoring247": "Monitoreo 24/7",
-    "subSecondExecution": "Ejecución sub-segundo",
-    "multiDexSupport": "Soporte multi-DEX",
-    "patternRecognition": "Reconocimiento de patrones",
-    "responseUnder1Min": "Respuesta < 1 minuto",
-    "completePrivacy": "Privacidad completa",
-    "affordablePricing": "Precios accesibles",
-    "belarusianLaw": "Cobertura de ley bielorrusa",
     "availability247": "Disponibilidad 24/7",
     "costSavings90": "90% de ahorro en costos",
     "customKnowledgeBase": "Base de conocimiento personalizada",
@@ -221,10 +189,7 @@
     "spacedRepetition": "Repetición espaciada",
     "voiceSupport": "Soporte de voz",
     "exerciseTypes4": "4 tipos de ejercicios",
-    "aiGeneratedExercises": "Ejercicios generados por IA",
-    "intelligentEvaluation": "Evaluación inteligente",
-    "smartNotifications": "Notificaciones inteligentes",
-    "adaptiveLearning": "Aprendizaje adaptativo"
+    "captionExtraction": "Extracción de descripciones"
   },
   "productsCta": {
     "title": "¿Necesitas una Solución Personalizada?",

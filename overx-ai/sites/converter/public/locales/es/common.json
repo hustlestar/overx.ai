@@ -26,7 +26,7 @@
     "rates": "Tipos de Cambio",
     "apis": "Fuentes de Divisas",
     "blog": "Blog",
-    "about": "Acerca de",
+    "download": "Descargar",
     "favorites": "Favoritos",
     "settings": "Configuración"
   },
@@ -360,7 +360,7 @@
     "ZWL": "Dólar Zimbabuense"
   },
   "footer": {
-    "about": "Acerca de",
+    "download": "Descargar",
     "api": "API",
     "privacy": "Privacidad",
     "terms": "Términos",

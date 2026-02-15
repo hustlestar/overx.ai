@@ -56,20 +56,6 @@ const FeedbackPage: NextPage = () => {
       source: 'extension',
     },
     {
-      id: 'claudeCodeBot',
-      name: t('productList.claudeCodeBot.title', 'Claude Code Telegram Bot'),
-      description: t('productList.claudeCodeBot.description'),
-      icon: '🤖',
-      source: 'bot',
-    },
-    {
-      id: 'privetBot',
-      name: t('productList.privetBot.title', 'Privet Bot'),
-      description: t('productList.privetBot.description'),
-      icon: '👋',
-      source: 'bot',
-    },
-    {
       id: 'yourLawyer',
       name: t('productList.yourLawyer.title', 'Your Lawyer Bot'),
       description: t('productList.yourLawyer.description'),
@@ -77,31 +63,10 @@ const FeedbackPage: NextPage = () => {
       source: 'bot',
     },
     {
-      id: 'consultBy',
-      name: t('productList.consultBy.title', 'Consult.by'),
-      description: t('productList.consultBy.description'),
-      icon: '📋',
-      source: 'web',
-    },
-    {
       id: 'languageFocus',
       name: t('productList.languageFocus.title', 'Language Focus Bot'),
       description: t('productList.languageFocus.description'),
       icon: '🎯',
-      source: 'bot',
-    },
-    {
-      id: 'yourLearner',
-      name: t('productList.yourLearner.title', 'Your Learner Bot'),
-      description: t('productList.yourLearner.description'),
-      icon: '📖',
-      source: 'bot',
-    },
-    {
-      id: 'memeBuyBot',
-      name: t('productList.memeBuyBot.title', 'Meme Telegram Buy Bot'),
-      description: t('productList.memeBuyBot.description'),
-      icon: '🚀',
       source: 'bot',
     },
     {

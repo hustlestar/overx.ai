@@ -27,17 +27,13 @@
       "title": "Block Website: Self Control",
       "description": "Transform digital distractions into physical wellness. The only website blocker that makes you healthier."
     },
-    "claudeCodeBot": {
-      "title": "Claude Code Telegram Bot",
-      "description": "Code anywhere with AI assistance. Voice or text, zero API costs."
-    },
-    "consultBy": {
-      "title": "Consult.by",
-      "description": "Instant, affordable legal guidance for Belarus. Professional advice at the price of coffee."
-    },
     "currencyConverter": {
       "title": "Exchange Rates Pro",
       "description": "Privacy-first currency conversion with complex calculations across 100+ currencies."
+    },
+    "instagramBot": {
+      "title": "Instagram Downloader & Saver",
+      "description": "Save Instagram content privately. Extract captions, save reels and posts in original quality, no watermarks."
     },
     "instagramSaver": {
       "title": "Instagram Description Saver",
@@ -51,14 +47,6 @@
       "title": "WWW Words Bot",
       "description": "Turn daily messaging into language learning. 13 languages with smart repetition."
     },
-    "memeBuyBot": {
-      "title": "Meme Telegram Buy Bot",
-      "description": "Never miss crypto opportunities. Automated trading at superhuman speed."
-    },
-    "privetBot": {
-      "title": "Privet Bot",
-      "description": "AI companion with real memory and emotions. Natural voice conversations in multiple languages."
-    },
     "reelSaver": {
       "title": "Instagram Reel/Post Saver",
       "description": "Save Instagram content privately. Original quality, no watermarks."
@@ -67,10 +55,6 @@
       "title": "Your Lawyer Bot",
       "description": "Expert Belarusian legal guidance 24/7. 90% less cost than traditional lawyers."
     },
-    "yourLearner": {
-      "title": "Your Learner Bot",
-      "description": "Master grammar with personalized AI tutoring. Adaptive learning at your pace."
-    }
   },
   "values": {
     "title": "Why Choose OverX AI",
@@ -193,22 +177,6 @@
     "noWatermarks": "No watermarks",
     "privacyFocused": "Privacy-focused",
     "enterpriseReliability": "Enterprise reliability",
-    "voiceCoding": "Voice coding",
-    "zeroApiCosts": "Zero API costs",
-    "multipleProjects": "Multiple projects",
-    "taskQueueSystem": "Task queue system",
-    "emotionalAwareness": "Emotional awareness",
-    "longTermMemory": "Long-term memory",
-    "multiLanguageVoice": "Multi-language voice",
-    "openSource": "Open source",
-    "monitoring247": "24/7 monitoring",
-    "subSecondExecution": "Sub-second execution",
-    "multiDexSupport": "Multi-DEX support",
-    "patternRecognition": "Pattern recognition",
-    "responseUnder1Min": "Response < 1 minute",
-    "completePrivacy": "Complete privacy",
-    "affordablePricing": "Affordable pricing",
-    "belarusianLaw": "Belarusian law coverage",
     "availability247": "24/7 availability",
     "costSavings90": "90% cost savings",
     "customKnowledgeBase": "Custom knowledge base",
@@ -221,10 +189,7 @@
     "spacedRepetition": "Spaced repetition",
     "voiceSupport": "Voice support",
     "exerciseTypes4": "4 exercise types",
-    "aiGeneratedExercises": "AI-generated exercises",
-    "intelligentEvaluation": "Intelligent evaluation",
-    "smartNotifications": "Smart notifications",
-    "adaptiveLearning": "Adaptive learning"
+    "captionExtraction": "Caption extraction"
   },
   "productsCta": {
     "title": "Need a Custom Solution?",

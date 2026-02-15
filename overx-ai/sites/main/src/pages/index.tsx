@@ -344,7 +344,7 @@ export default function HomePage({ lastModified }: HomePageProps) {
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-500">{t('products.subtitle')}</p>
               </div>
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 gap-8">
                 {/* Productivity Tools */}
                 <a href="https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa" target="_blank" rel="noopener noreferrer" className="block group">
                   <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg hover:shadow-xl" style={{ willChange: 'transform' }}>
@@ -379,23 +379,6 @@ export default function HomePage({ lastModified }: HomePageProps) {
                     </div>
                   </div>
                 </a>
-                {/* Legal Services */}
-                <SmartLink href="/products#legal" className="block group">
-                  <div className="relative bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-black p-8 rounded-2xl border border-gray-200 dark:border-white/10 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-gray-300 dark:hover:border-white/20 shadow-lg hover:shadow-xl" style={{ willChange: 'transform' }}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-teal-100/50 to-emerald-100/50 dark:from-teal-600/10 dark:to-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <div className="relative z-10">
-                      <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-lg mb-6 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-                        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                        </svg>
-                      </div>
-                      <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-teal-400 group-hover:to-emerald-400 transition-all duration-300">{t('productList.consultBy.title')}</h3>
-                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {t('productList.consultBy.description')}
-                      </p>
-                    </div>
-                  </div>
-                </SmartLink>
               </div>
               {/* View All Products CTA */}
               <div className="text-center mt-12">
@@ -421,11 +404,20 @@ export default function HomePage({ lastModified }: HomePageProps) {
                   <div className="inline-flex items-center px-4 py-2 bg-green-600/20 border border-green-600/30 rounded-full mb-6">
                     <span className="text-green-400 font-medium">{t('featuredProduct.label')}</span>
                   </div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-                      {t('productList.learnWords.title')}
-                    </span>
-                  </h2>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-full overflow-hidden ring-2 ring-green-400/50 flex-shrink-0">
+                      <img
+                        src="/images/products/www.jpg"
+                        alt={t('productList.learnWords.title')}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold">
+                      <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                        {t('productList.learnWords.title')}
+                      </span>
+                    </h2>
+                  </div>
                   <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
                     {t('productList.learnWords.description')}
                   </p>

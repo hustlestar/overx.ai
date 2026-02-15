@@ -4,6 +4,7 @@
   "private": true,
   "workspaces": [
     "shared",
+    "packages/*",
     "sites/*"
   ],
   "scripts": {

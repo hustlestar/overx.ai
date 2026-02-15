@@ -24,7 +24,7 @@ export function Layout({ children }: LayoutProps) {
     { name: t('navigation.converter'), href: '/simple' },
     { name: t('navigation.apis'), href: '/sources' },
     { name: t('navigation.blog'), href: '/blog' },
-    { name: t('navigation.about'), href: '/about' },
+    { name: t('navigation.download'), href: '/about', highlight: true },
   ]
 
   return (
@@ -37,19 +37,29 @@ export function Layout({ children }: LayoutProps) {
               <Link href="/" className="text-xl font-bold gradient-text light:text-gray-900">
                 Exchange Rates Pro
               </Link>
-              <div className="hidden md:flex space-x-6">
+              <div className="hidden md:flex space-x-6 items-center">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`transition-colors duration-200 ${
-                      router.pathname === item.href
-                        ? 'text-blue-500 light:text-blue-600'
-                        : 'text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  item.highlight ? (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-medium hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/25"
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`transition-colors duration-200 ${
+                        router.pathname === item.href
+                          ? 'text-blue-500 light:text-blue-600'
+                          : 'text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>
@@ -90,18 +100,29 @@ export function Layout({ children }: LayoutProps) {
             <div className="md:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1 bg-black light:bg-white border-t border-gray-800 light:border-gray-200">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                      router.pathname === item.href
-                        ? 'text-blue-500 light:text-blue-600 bg-blue-500/10 light:bg-blue-50'
-                        : 'text-gray-400 light:text-gray-600 hover:text-white light:hover:text-gray-900 hover:bg-white/10 light:hover:bg-gray-100'
-                    }`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  item.highlight ? (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block mx-3 my-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-base font-medium text-center hover:from-blue-600 hover:to-cyan-600 transition-all duration-200"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                        router.pathname === item.href
+                          ? 'text-blue-500 light:text-blue-600 bg-blue-500/10 light:bg-blue-50'
+                          : 'text-gray-400 light:text-gray-600 hover:text-white light:hover:text-gray-900 hover:bg-white/10 light:hover:bg-gray-100'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
                 ))}
                 <div className="px-3 py-2 flex items-center justify-between">
                   <LanguageSwitcher />
@@ -133,7 +154,7 @@ export function Layout({ children }: LayoutProps) {
             </div>
             <div>
               <Link href="/about" className="text-sm text-gray-400 hover:text-white light:text-gray-600 light:hover:text-gray-900 block mb-2">
-                {t('footer.about')}
+                {t('footer.download')}
               </Link>
             </div>
             <div>

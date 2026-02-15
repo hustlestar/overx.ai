@@ -16,6 +16,8 @@ interface Product {
   color: string
   href?: string
   features?: string[]
+  image?: string
+  imageShape?: 'circle' | 'square'
 }
 
 const products: Product[] = [
@@ -32,7 +34,9 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.currencies100Plus', 'productFeatures.complexCalculations', 'productFeatures.privacyFirst', 'productFeatures.languages9'],
-    href: 'https://rates.overx.ai'
+    href: 'https://rates.overx.ai',
+    image: '/images/products/converter.png',
+    imageShape: 'square'
   },
   {
     id: 'blockWebsite',
@@ -46,12 +50,14 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.smartPatternBlocking', 'productFeatures.wellnessActivities', 'productFeatures.passwordProtection', 'productFeatures.realTimeSync'],
-    href: 'https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa'
+    href: 'https://chromewebstore.google.com/detail/block-website-self-contro/obfpjaknohmdgkhambgdkfhnijccdhfa',
+    image: '/images/products/blocker.png',
+    imageShape: 'square'
   },
   {
-    id: 'instagramSaver',
-    titleKey: 'productList.instagramSaver.title',
-    descriptionKey: 'productList.instagramSaver.description',
+    id: 'instagramBot',
+    titleKey: 'productList.instagramBot.title',
+    descriptionKey: 'productList.instagramBot.description',
     category: 'productivity',
     color: 'from-purple-500 to-pink-500',
     icon: (
@@ -59,75 +65,11 @@ const products: Product[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
     ),
-    features: ['productFeatures.antiDetectionTech', 'productFeatures.smartCaching', 'productFeatures.multiLanguage']
-  },
-  {
-    id: 'reelSaver',
-    titleKey: 'productList.reelSaver.title',
-    descriptionKey: 'productList.reelSaver.description',
-    category: 'productivity',
-    color: 'from-indigo-500 to-purple-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-      </svg>
-    ),
-    features: ['productFeatures.originalQuality', 'productFeatures.noWatermarks', 'productFeatures.privacyFocused', 'productFeatures.enterpriseReliability']
-  },
-  // Communication
-  {
-    id: 'claudeCodeBot',
-    titleKey: 'productList.claudeCodeBot.title',
-    descriptionKey: 'productList.claudeCodeBot.description',
-    category: 'communication',
-    color: 'from-cyan-500 to-teal-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
-    features: ['productFeatures.voiceCoding', 'productFeatures.zeroApiCosts', 'productFeatures.multipleProjects', 'productFeatures.taskQueueSystem']
-  },
-  {
-    id: 'privetBot',
-    titleKey: 'productList.privetBot.title',
-    descriptionKey: 'productList.privetBot.description',
-    category: 'communication',
-    color: 'from-rose-500 to-pink-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
-    features: ['productFeatures.emotionalAwareness', 'productFeatures.longTermMemory', 'productFeatures.multiLanguageVoice', 'productFeatures.openSource']
-  },
-  {
-    id: 'memeBuyBot',
-    titleKey: 'productList.memeBuyBot.title',
-    descriptionKey: 'productList.memeBuyBot.description',
-    category: 'communication',
-    color: 'from-yellow-500 to-orange-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-      </svg>
-    ),
-    features: ['productFeatures.monitoring247', 'productFeatures.subSecondExecution', 'productFeatures.multiDexSupport', 'productFeatures.patternRecognition']
+    features: ['productFeatures.originalQuality', 'productFeatures.noWatermarks', 'productFeatures.captionExtraction', 'productFeatures.privacyFocused'],
+    href: 'https://t.me/instagram_safe_bot',
+    image: '/images/products/reel.jpg'
   },
   // Legal
-  {
-    id: 'consultBy',
-    titleKey: 'productList.consultBy.title',
-    descriptionKey: 'productList.consultBy.description',
-    category: 'legal',
-    color: 'from-teal-500 to-emerald-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-      </svg>
-    ),
-    features: ['productFeatures.responseUnder1Min', 'productFeatures.completePrivacy', 'productFeatures.affordablePricing', 'productFeatures.belarusianLaw']
-  },
   {
     id: 'yourLawyer',
     titleKey: 'productList.yourLawyer.title',
@@ -139,7 +81,9 @@ const products: Product[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
       </svg>
     ),
-    features: ['productFeatures.availability247', 'productFeatures.costSavings90', 'productFeatures.customKnowledgeBase', 'productFeatures.contextualThreads']
+    features: ['productFeatures.availability247', 'productFeatures.costSavings90', 'productFeatures.customKnowledgeBase', 'productFeatures.contextualThreads'],
+    href: 'https://t.me/belarus_law_support_bot',
+    image: '/images/products/lawyer.jpg'
   },
   // Education
   {
@@ -153,7 +97,9 @@ const products: Product[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
-    features: ['productFeatures.languagePatterns14', 'productFeatures.aiScoring', 'productFeatures.progressTracking', 'productFeatures.scenarios100Plus']
+    features: ['productFeatures.languagePatterns14', 'productFeatures.aiScoring', 'productFeatures.progressTracking', 'productFeatures.scenarios100Plus'],
+    href: 'https://t.me/nlp_trick_bot',
+    image: '/images/products/lang.jpg'
   },
   {
     id: 'learnWords',
@@ -167,21 +113,9 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.languages13', 'productFeatures.spacedRepetition', 'productFeatures.voiceSupport', 'productFeatures.exerciseTypes4'],
-    href: 'https://words.overx.ai'
+    href: 'https://words.overx.ai',
+    image: '/images/products/www.jpg'
   },
-  {
-    id: 'yourLearner',
-    titleKey: 'productList.yourLearner.title',
-    descriptionKey: 'productList.yourLearner.description',
-    category: 'education',
-    color: 'from-amber-500 to-orange-500',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-      </svg>
-    ),
-    features: ['productFeatures.aiGeneratedExercises', 'productFeatures.intelligentEvaluation', 'productFeatures.smartNotifications', 'productFeatures.adaptiveLearning']
-  }
 ]
 
 export default function ProductsPage() {
@@ -192,7 +126,6 @@ export default function ProductsPage() {
   const categories = [
     { id: 'all', label: t('products.viewAll') },
     { id: 'productivity', label: t('products.categories.productivity') },
-    { id: 'communication', label: t('products.categories.communication') },
     { id: 'legal', label: t('products.categories.legal') },
     { id: 'education', label: t('products.categories.education') }
   ]
@@ -304,11 +237,21 @@ export default function ProductsPage() {
                       <div className={`absolute inset-0 bg-gradient-to-br ${product.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
                       
                       <div className="relative z-10">
-                        <div className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <div className="text-white">
-                            {product.icon}
+                        {product.image ? (
+                          <div className={`w-12 h-12 ${product.imageShape === 'square' ? 'rounded-lg' : 'rounded-full'} overflow-hidden mb-4 group-hover:scale-110 transition-transform duration-300 ring-2 ring-gray-200 dark:ring-white/20`}>
+                            <img
+                              src={product.image}
+                              alt={t(product.titleKey)}
+                              className="w-full h-full object-cover"
+                            />
                           </div>
-                        </div>
+                        ) : (
+                          <div className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                            <div className="text-white">
+                              {product.icon}
+                            </div>
+                          </div>
+                        )}
                         
                         <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white transition-all duration-300">
                           {t(product.titleKey)}

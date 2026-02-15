@@ -5,10 +5,39 @@
 This is a monorepo containing multiple Next.js applications for the OverX.ai ecosystem:
 
 - **sites/main**: Main marketing site (overx.ai)
-- **sites/converter**: Currency converter app (rates.overx.ai) 
+- **sites/converter**: Currency converter app (rates.overx.ai)
 - **sites/words**: Word learning app (words.overx.ai)
 - **sites/blog**: Blog platform (blog.overx.ai)
 - **shared**: Shared components and utilities
+- **packages/forms-api-client**: TypeScript client for the Forms API
+
+## Forms API (api.overx.ai)
+
+The unified forms backend is located at `/Users/user/JACK/1B-bots/form-aggregator/`.
+
+### Frontend Integration
+
+```tsx
+// Using the shared hook
+import { useContactForm } from '@overx-ai/shared'
+
+const { submit, isSubmitting, isSuccess, isError } = useContactForm({
+  sourceSite: 'main',
+  locale: 'en',
+})
+
+// Using the newsletter component
+import { NewsletterForm } from '@overx-ai/shared'
+
+<NewsletterForm sourceSite="blog" locale="en" compact />
+```
+
+### Environment Variables
+
+```env
+# Required in each site's .env.local
+NEXT_PUBLIC_FORMS_API_URL=https://api.overx.ai
+```
 
 ## SEO Optimization Lessons Learned
 

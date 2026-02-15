@@ -16,6 +16,12 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
 
+  // Environment variables that will be inlined at build time
+  env: {
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://blog.overx.ai',
+    NEXT_PUBLIC_FORMS_API_URL: process.env.NEXT_PUBLIC_FORMS_API_URL || 'https://api.overx.ai',
+  },
+
   // Image optimization
   images: {
     domains: ['blog.overx.ai', 'images.unsplash.com', 'cdn.jsdelivr.net'],
