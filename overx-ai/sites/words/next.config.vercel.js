@@ -33,6 +33,13 @@ const nextConfig = {
     return config
   },
   
+  // Skip native binaries during nft file tracing — their paths cause micromatch
+  // to recurse infinitely (RangeError / SIGSEGV). These files are build-time
+  // tools and are never needed in the Vercel runtime output.
+  experimental: {
+    outputFileTracingIgnores: ['**/@swc/**', '**/*.node'],
+  },
+
   // Disable type checking and linting during build to avoid monorepo conflicts
   typescript: {
     ignoreBuildErrors: true,

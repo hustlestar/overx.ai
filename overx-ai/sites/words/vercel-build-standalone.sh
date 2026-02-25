@@ -104,8 +104,7 @@ cp next.config.vercel.js next.config.js
 
 # Build words site
 echo "Building words site..."
-# Invoke next build directly via node so we can pass --stack-size (blocked in NODE_OPTIONS)
-node --stack-size=65536 node_modules/.bin/next build
+npm run build
 BUILD_EXIT=$?
 
 # Restore original config regardless of build result
