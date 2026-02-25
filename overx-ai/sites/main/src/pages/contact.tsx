@@ -18,6 +18,8 @@ const ContactPage: NextPage = () => {
   // Honeypot field - hidden from users, bots fill it
   const [website, setWebsite] = useState('')
 
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
+
   const { submit, isSubmitting, isSuccess, isError, error, reset } = useContactForm({
     sourceSite: 'main',
     locale: (router.locale || i18n.language || 'en') as Locale,
@@ -51,7 +53,13 @@ const ContactPage: NextPage = () => {
       <EnhancedSEO
         title={t('contact.seo.title', 'Contact OverX AI - Get Custom AI Solutions for Your Business')}
         description={t('contact.seo.description', 'Contact OverX AI to discuss custom AI agents, automation solutions, and consulting services. Get a free consultation and see how we can transform your business.')}
-        canonical="https://overx.ai/contact"
+        canonical={`https://overx.ai${localePrefix}/contact`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/contact' },
+          { hrefLang: 'en', href: 'https://overx.ai/contact' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/contact' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/contact' },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

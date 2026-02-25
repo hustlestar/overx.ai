@@ -4,12 +4,10 @@ import { wordsBlogConfig } from './blogConfig'
 
 // Dynamic imports for blog content
 const contentModules = {
-  'test-post': () => import('../content/blog/test-post'),
-  // Temporarily commented out - syntax errors in these files need investigation
-  // 'mastering-spaced-repetition-vocabulary-learning': () => import('../content/blog/mastering-spaced-repetition-vocabulary-learning'),
-  // 'telegram-bot-language-learning-revolution': () => import('../content/blog/telegram-bot-language-learning-revolution'),
-  // '13-languages-multilingual-learning-strategies': () => import('../content/blog/13-languages-multilingual-learning-strategies'),
-  // 'ai-powered-vocabulary-context-learning': () => import('../content/blog/ai-powered-vocabulary-context-learning')
+  'mastering-spaced-repetition-vocabulary-learning': () => import('../content/blog/mastering-spaced-repetition-vocabulary-learning'),
+  'telegram-bot-language-learning-revolution': () => import('../content/blog/telegram-bot-language-learning-revolution'),
+  '13-languages-multilingual-learning-strategies': () => import('../content/blog/13-languages-multilingual-learning-strategies'),
+  'ai-powered-vocabulary-context-learning': () => import('../content/blog/ai-powered-vocabulary-context-learning')
 }
 
 /**

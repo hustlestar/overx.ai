@@ -48,19 +48,6 @@ const nextConfig = {
         permanent: true,
         locale: false,
       },
-      // Redirect non-locale blog URLs to English version
-      {
-        source: '/blog/:path*',
-        destination: '/en/blog/:path*',
-        permanent: false,
-        locale: false,
-      },
-      {
-        source: '/images/:path*',
-        destination: '/en/images/:path*',
-        permanent: false,
-        locale: false,
-      },
     ]
   },
   
@@ -99,16 +86,18 @@ const nextConfig = {
   },
   
   async rewrites() {
-    return [
-      {
-        source: '/sitemap.xml',
-        destination: '/api/sitemap'
-      },
-      {
-        source: '/robots.txt',
-        destination: '/api/robots'
-      }
-    ]
+    return {
+      beforeFiles: [
+        {
+          source: '/sitemap.xml',
+          destination: '/api/sitemap'
+        },
+        {
+          source: '/robots.txt',
+          destination: '/api/robots'
+        }
+      ]
+    }
   }
 }
 

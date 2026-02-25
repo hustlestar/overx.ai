@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { BaseSEO, SmartLink, OptimizedImage, PreconnectLink } from '../components/NextSEO'
 import { Breadcrumbs, createOrganizationSchema, createWebSiteSchema, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
@@ -15,6 +16,8 @@ interface HomePageProps {
 export default function HomePage({ lastModified }: HomePageProps) {
   const { t } = useTranslation('common')
   const { theme } = useTheme()
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
   const [scrollY, setScrollY] = useState(0)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [mounted, setMounted] = useState(false)
@@ -104,7 +107,13 @@ export default function HomePage({ lastModified }: HomePageProps) {
       <BaseSEO
         title="OverX AI - Custom AI Agents & Automation Solutions | Save 10+ Hours/Week"
         description="Build custom AI agents, Chrome extensions & automation tools with OverX AI. Free currency converter, AI consultancy, and SaaS solutions. Transform your workflow today."
-        canonical="https://overx.ai"
+        canonical={`https://overx.ai${localePrefix}`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai' },
+          { hrefLang: 'en', href: 'https://overx.ai' },
+          { hrefLang: 'es', href: 'https://overx.ai/es' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru' },
+        ]}
         openGraph={{
           type: 'website',
           title: 'OverX AI - Custom AI Agents & Automation Solutions',

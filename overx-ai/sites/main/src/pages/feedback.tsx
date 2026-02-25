@@ -24,6 +24,7 @@ const FeedbackPage: NextPage = () => {
   const { t, i18n } = useTranslation('common')
   const router = useRouter()
   const locale = (router.locale || i18n.language || 'en') as Locale
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
 
   // Product list with their feedback sources
   const products: Product[] = [
@@ -140,7 +141,13 @@ const FeedbackPage: NextPage = () => {
       <EnhancedSEO
         title={t('feedback.seo.title', 'Product Feedback - Help Us Improve | OverX AI')}
         description={t('feedback.seo.description', 'Share your feedback about OverX AI products. Help us improve our AI tools, Chrome extensions, and Telegram bots. Your input shapes our development.')}
-        canonical="https://overx.ai/feedback"
+        canonical={`https://overx.ai${localePrefix}/feedback`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/feedback' },
+          { hrefLang: 'en', href: 'https://overx.ai/feedback' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/feedback' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/feedback' },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

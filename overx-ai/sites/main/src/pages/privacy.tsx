@@ -1,15 +1,26 @@
 import React from 'react'
-import { NextPage } from 'next'
+import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 
 const PrivacyPage: NextPage = () => {
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
+
   return (
     <>
       <EnhancedSEO
         title="Privacy Policy - OverX AI"
         description="OverX AI's privacy policy explains how we collect, use, and protect your data. We're committed to transparency and your privacy."
-        canonical="https://overx.ai/privacy"
+        canonical={`https://overx.ai${localePrefix}/privacy`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/privacy' },
+          { hrefLang: 'en', href: 'https://overx.ai/privacy' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/privacy' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/privacy' },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -234,6 +245,14 @@ const PrivacyPage: NextPage = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  }
 }
 
 export default PrivacyPage

@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
 import { BaseSEO, SmartLink } from '../components/NextSEO'
 import { createOrganizationSchema, Breadcrumbs, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
@@ -85,6 +86,8 @@ const services: ConsultancyService[] = [
 export default function ConsultancyPage() {
   const { t } = useTranslation('common')
   const { theme } = useTheme()
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
 
   const structuredData = [
     createOrganizationSchema({
@@ -123,7 +126,13 @@ export default function ConsultancyPage() {
       <BaseSEO
         title="AI Consultancy Services - OverX AI | Expert AI Implementation"
         description="Transform your business with OverX AI's expert consultancy services. From AI strategy to implementation, we guide you through every step of your AI journey."
-        canonical="https://overx.ai/consultancy"
+        canonical={`https://overx.ai${localePrefix}/consultancy`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/consultancy' },
+          { hrefLang: 'en', href: 'https://overx.ai/consultancy' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/consultancy' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/consultancy' },
+        ]}
         openGraph={{
           type: 'website',
           title: 'OverX AI Consultancy - Expert AI Solutions',
