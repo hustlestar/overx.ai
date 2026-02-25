@@ -104,10 +104,18 @@ cp next.config.vercel.js next.config.js
 
 # Build words site
 echo "Building words site..."
+# Increase Node.js call stack size to avoid micromatch RangeError in Next.js nft step
+export NODE_OPTIONS="--stack-size=65536"
 npm run build
+BUILD_EXIT=$?
 
-# Restore original config
+# Restore original config regardless of build result
 mv next.config.js next.config.vercel.js
 mv next.config.original.js next.config.js
+
+if [ $BUILD_EXIT -ne 0 ]; then
+  echo "Build failed with exit code $BUILD_EXIT"
+  exit $BUILD_EXIT
+fi
 
 echo "Build complete!"
