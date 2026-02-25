@@ -1,42 +1,53 @@
 import { NextApiRequest, NextApiResponse } from 'next'
-import { getAllPosts } from '@/lib/blog'
+import { blogPostsMetadata } from '@/content/blog/metadata'
 
 const SITE_URL = 'https://words.overx.ai'
+const LOCALES = ['en', 'es', 'ru']
+
+function buildUrl(path: string, locale: string): string {
+  const localePath = locale === 'en' ? '' : `/${locale}`
+  return `${SITE_URL}${localePath}${path}`
+}
+
+function buildHreflang(path: string): string {
+  return `
+    <xhtml:link rel="alternate" hreflang="x-default" href="${buildUrl(path, 'en')}"/>
+    ${LOCALES.map(l => `<xhtml:link rel="alternate" hreflang="${l}" href="${buildUrl(path, l)}"/>`).join('\n    ')}`
+}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const posts = getAllPosts()
-  
+  // Use metadata from blogLoader system (excludes test-post, all real content)
+  const posts = blogPostsMetadata.filter(post => post.slug !== 'test-post')
+
   const staticPages = [
-    '',
-    '/features',
-    '/pricing',
-    '/blog'
+    { path: '/', changefreq: 'daily', priority: '1.0' },
+    { path: '/features', changefreq: 'weekly', priority: '0.8' },
+    { path: '/pricing', changefreq: 'monthly', priority: '0.7' },
+    { path: '/about', changefreq: 'monthly', priority: '0.7' },
+    { path: '/blog', changefreq: 'weekly', priority: '0.8' },
   ]
-  
+
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${staticPages
-    .map(page => {
-      return `
-    <url>
-      <loc>${SITE_URL}${page}</loc>
-      <lastmod>${new Date().toISOString()}</lastmod>
-      <changefreq>${page === '' ? 'daily' : 'weekly'}</changefreq>
-      <priority>${page === '' ? '1.0' : '0.8'}</priority>
-    </url>`
-    })
-    .join('')}
-  ${posts
-    .map(post => {
-      return `
-    <url>
-      <loc>${SITE_URL}/blog/${post.slug}</loc>
-      <lastmod>${new Date(post.date).toISOString()}</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.6</priority>
-    </url>`
-    })
-    .join('')}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  ${staticPages.flatMap(page =>
+    LOCALES.map(locale => `
+  <url>
+    <loc>${buildUrl(page.path, locale)}</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>${buildHreflang(page.path)}
+  </url>`)
+  ).join('')}
+  ${posts.flatMap(post =>
+    LOCALES.map(locale => `
+  <url>
+    <loc>${buildUrl(`/blog/${post.slug}`, locale)}</loc>
+    <lastmod>${new Date(post.publishedAt).toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>${buildHreflang(`/blog/${post.slug}`)}
+  </url>`)
+  ).join('')}
 </urlset>`
 
   res.setHeader('Content-Type', 'text/xml')

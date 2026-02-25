@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next'
 import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { BaseSEO, SmartLink, OptimizedImage } from '../components/NextSEO'
 import { createProductSchema, Breadcrumbs, useTheme } from '@overx-ai/shared'
 import { useTranslation } from 'next-i18next'
@@ -137,6 +138,8 @@ const products: Product[] = [
 export default function ProductsPage() {
   const { t } = useTranslation('common')
   const { theme } = useTheme()
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
 
   const categories = [
@@ -169,7 +172,13 @@ export default function ProductsPage() {
       <BaseSEO
         title="Products - OverX AI | AI Solutions That Give You Time Back"
         description="Explore OverX AI's suite of intelligent products designed to automate tasks and improve your life. From productivity tools to AI assistants, find the perfect solution for your needs."
-        canonical="https://overx.ai/products"
+        canonical={`https://overx.ai${localePrefix}/products`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/products' },
+          { hrefLang: 'en', href: 'https://overx.ai/products' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/products' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/products' },
+        ]}
         openGraph={{
           type: 'website',
           title: 'OverX AI Products - Smart Solutions for Modern Life',

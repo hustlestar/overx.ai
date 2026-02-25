@@ -1,15 +1,26 @@
 import React from 'react'
-import { NextPage } from 'next'
+import { NextPage, GetStaticProps } from 'next'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 
 const TermsPage: NextPage = () => {
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
+
   return (
     <>
       <EnhancedSEO
         title="Terms of Service - OverX AI"
         description="Read OverX AI's terms of service for using our AI solutions, Chrome extensions, and consulting services. Clear terms for business partnerships."
-        canonical="https://overx.ai/terms"
+        canonical={`https://overx.ai${localePrefix}/terms`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/terms' },
+          { hrefLang: 'en', href: 'https://overx.ai/terms' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/terms' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/terms' },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -196,6 +207,14 @@ const TermsPage: NextPage = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  }
 }
 
 export default TermsPage

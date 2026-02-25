@@ -1,15 +1,26 @@
 import React from 'react'
-import { NextPage } from 'next'
+import { NextPage, GetStaticProps } from 'next'
+import { useRouter } from 'next/router'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { EnhancedSEO } from '@overx-ai/shared'
 import { GradientLink } from '@overx-ai/shared'
 
 const AboutPage: NextPage = () => {
+  const router = useRouter()
+  const localePrefix = router.locale && router.locale !== 'en' ? `/${router.locale}` : ''
+
   return (
     <>
       <EnhancedSEO
         title="About OverX AI - Leading AI Automation & Custom Solutions"
         description="Learn about OverX AI's mission to revolutionize businesses with custom AI agents, automation tools, and consulting services. Trusted by companies worldwide."
-        canonical="https://overx.ai/about"
+        canonical={`https://overx.ai${localePrefix}/about`}
+        alternates={[
+          { hrefLang: 'x-default', href: 'https://overx.ai/about' },
+          { hrefLang: 'en', href: 'https://overx.ai/about' },
+          { hrefLang: 'es', href: 'https://overx.ai/es/about' },
+          { hrefLang: 'ru', href: 'https://overx.ai/ru/about' },
+        ]}
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -156,6 +167,14 @@ const AboutPage: NextPage = () => {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale ?? 'en', ['common'])),
+    },
+  }
 }
 
 export default AboutPage

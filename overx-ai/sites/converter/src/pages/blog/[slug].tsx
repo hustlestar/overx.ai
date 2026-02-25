@@ -90,7 +90,13 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
       <EnhancedSEO
         title={post.seo[currentLang].metaTitle}
         description={post.seo[currentLang].metaDescription}
-        canonical={`https://rates.overx.ai/blog/${post.slug}`}
+        canonical={`https://rates.overx.ai${router.locale && router.locale !== 'en' ? `/${router.locale}` : ''}/blog/${post.slug}`}
+        alternates={[
+          { hrefLang: 'x-default', href: `https://rates.overx.ai/blog/${post.slug}` },
+          { hrefLang: 'en', href: `https://rates.overx.ai/blog/${post.slug}` },
+          { hrefLang: 'es', href: `https://rates.overx.ai/es/blog/${post.slug}` },
+          { hrefLang: 'ru', href: `https://rates.overx.ai/ru/blog/${post.slug}` },
+        ]}
         additionalMetaTags={[
           { property: 'article:published_time', content: post.publishedAt },
           ...(post.updatedAt ? [{ property: 'article:modified_time', content: post.updatedAt }] : []),
