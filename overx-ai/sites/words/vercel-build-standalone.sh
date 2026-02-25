@@ -104,9 +104,8 @@ cp next.config.vercel.js next.config.js
 
 # Build words site
 echo "Building words site..."
-# Increase Node.js call stack size to avoid micromatch RangeError in Next.js nft step
-export NODE_OPTIONS="--stack-size=65536"
-npm run build
+# Invoke next build directly via node so we can pass --stack-size (blocked in NODE_OPTIONS)
+node --stack-size=65536 node_modules/.bin/next build
 BUILD_EXIT=$?
 
 # Restore original config regardless of build result
