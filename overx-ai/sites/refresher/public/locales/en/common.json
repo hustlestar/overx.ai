@@ -1,0 +1,51 @@
+{
+  "site": { "name": "Refresher", "tagline": "Meditation & Focus" },
+  "hero": {
+    "title": "Breathe. Focus. Restore.",
+    "subtitle": "Science-backed breathing techniques to calm your mind and sharpen your focus.",
+    "cta": "Download on the App Store",
+    "badge": "Free · HealthKit · No Ads"
+  },
+  "techniques": {
+    "title": "Four Techniques. Infinite Calm.",
+    "subtitle": "Each method is grounded in clinical research and optimized for daily practice.",
+    "box": {
+      "name": "Box Breathing",
+      "description": "Inhale, hold, exhale, hold — 4 seconds each. Used by Navy SEALs for stress control."
+    },
+    "478": {
+      "name": "4-7-8 Breathing",
+      "description": "Inhale 4s, hold 7s, exhale 8s. Dr. Weil's technique for instant calm and sleep."
+    },
+    "coherent": {
+      "name": "Coherent Breathing",
+      "description": "5 breaths per minute. Synchronizes your heart rate and nervous system."
+    },
+    "wim": {
+      "name": "Wim Hof Method",
+      "description": "Controlled hyperventilation followed by retention. Boost energy and immunity."
+    }
+  },
+  "privacy": {
+    "title": "Your Data Stays Yours",
+    "subtitle": "No servers. No tracking. No ads.",
+    "points": [
+      "All data stored on-device or your private iCloud",
+      "No third-party SDKs — no Firebase, no analytics",
+      "In-app purchases processed by Apple only"
+    ]
+  },
+  "howItWorks": {
+    "title": "Simple by Design",
+    "steps": [
+      { "step": "1", "title": "Choose Your Technique", "description": "Pick from four science-backed breathing methods." },
+      { "step": "2", "title": "Follow the Pacer", "description": "Beautiful animated guide syncs with your breath." },
+      { "step": "3", "title": "Track Your Progress", "description": "HealthKit integration logs your mindfulness minutes." }
+    ]
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "poweredBy": "Powered by OverX AI"
+  }
+}

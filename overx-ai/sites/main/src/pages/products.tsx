@@ -67,8 +67,8 @@ const products: Product[] = [
       </svg>
     ),
     features: ['productFeatures.guidedBreathing', 'productFeatures.meditationTimer', 'productFeatures.mindfulnessReminders', 'productFeatures.breathingTechniques'],
-    href: 'https://chromewebstore.google.com/detail/breathing-exercises-medit/fghajdnplonfdpoeagigdpnfcfojlhbg',
-    image: '/images/products/breath.png',
+    href: 'https://refresher.overx.ai',
+    image: '/images/products/refresher.png',
     imageShape: 'square'
   },
   {

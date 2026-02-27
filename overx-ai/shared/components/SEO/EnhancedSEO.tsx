@@ -56,6 +56,16 @@ const SITE_DEFAULTS = {
       height: 736,
       alt: 'WWW Words Bot - Learn Languages Through Daily Messaging'
     }
+  },
+  'refresher.overx.ai': {
+    siteName: 'Refresher: Meditation & Focus - OverX AI',
+    domain: 'https://refresher.overx.ai',
+    defaultImage: {
+      url: 'https://refresher.overx.ai/og-image.png',
+      width: 1312,
+      height: 736,
+      alt: 'Refresher - Breathing Exercises & Meditation for iPhone'
+    }
   }
 }
 
@@ -78,6 +88,7 @@ export function EnhancedSEO({
       if (hostname.includes('blog.')) return 'blog.overx.ai'
       if (hostname.includes('rates.')) return 'rates.overx.ai'
       if (hostname.includes('words.')) return 'words.overx.ai'
+      if (hostname.includes('refresher.')) return 'refresher.overx.ai'
       return 'overx.ai'
     }
     
@@ -86,6 +97,7 @@ export function EnhancedSEO({
       if (canonical.includes('blog.overx.ai')) return 'blog.overx.ai'
       if (canonical.includes('rates.overx.ai')) return 'rates.overx.ai'
       if (canonical.includes('words.overx.ai')) return 'words.overx.ai'
+      if (canonical.includes('refresher.overx.ai')) return 'refresher.overx.ai'
       return 'overx.ai'
     }
     

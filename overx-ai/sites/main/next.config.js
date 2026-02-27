@@ -31,6 +31,17 @@ const nextConfig = {
   // Redirects for removed/non-existent pages
   async redirects() {
     return [
+      // Redirect /refresher to dedicated subdomain
+      {
+        source: '/refresher',
+        destination: 'https://refresher.overx.ai',
+        permanent: true,
+      },
+      {
+        source: '/refresher/:path*',
+        destination: 'https://refresher.overx.ai/:path*',
+        permanent: true,
+      },
       // Redirect www to non-www for canonical URL consistency
       {
         source: '/:path*',

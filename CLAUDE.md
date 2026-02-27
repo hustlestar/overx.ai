@@ -11,7 +11,8 @@ overx-ai/
 │   ├── blog/               # Next.js - blog.overx.ai (port 3001)
 │   ├── cv/                 # Static HTML - cv.overx.ai (port 3002)
 │   ├── converter/          # Next.js - rates.overx.ai (port 3003)
-│   └── words/              # Next.js - words.overx.ai (port 3004)
+│   ├── words/              # Next.js - words.overx.ai (port 3004)
+│   └── refresher/          # Next.js - refresher.overx.ai (port 3005)
 ├── shared/                 # Shared components and utilities
 ├── seo-tools/             # SEO monitoring and health checks
 └── scripts/               # Build and maintenance scripts
@@ -23,6 +24,7 @@ overx-ai/
 - **CV**: http://localhost:3002 - Professional CV/Resume (AI & Agent Development focus)
 - **Converter**: http://localhost:3003 - Currency converter with Chrome extension
 - **Words**: http://localhost:3004 - Learn Words Telegram bot landing page
+- **Refresher**: http://localhost:3005 - iOS app marketing subdomain (refresher.overx.ai)
 
 ## Development Commands
 ```bash
@@ -34,6 +36,7 @@ npm run build              # Build main site only
 npm run build:all          # Build all sites
 npm run build:converter    # Build converter site
 npm run build:words        # Build words site
+npm run build:refresher    # Build refresher site (builds shared first)
 npm run generate-sitemap   # Generate XML sitemaps for all sites
 npm run check-seo         # Run SEO health audit
 
@@ -280,6 +283,16 @@ Remember: Every decision should improve SEO performance. When in doubt, choose t
 - **Build Command**: `npm install && npm run build:words`
 - **Output Directory**: `sites/words/.next`
 - **Install Command**: `npm install`
+
+### Refresher Site (refresher.overx.ai)
+- **Root Directory**: `/` (repository root)
+- **Build Command**: `npm install && npm run build:refresher`
+- **Output Directory**: `sites/refresher/.next`
+- **Install Command**: `npm install`
+- **Framework**: Next.js, i18n (en/ru/es), package `@overx-ai/refresher`
+- **⚠️ Pending**: Create Vercel project + configure `refresher.overx.ai` DNS
+- **⚠️ Pending**: Replace `APP_STORE_URL` placeholder in `sites/refresher/src/lib/constants.ts` with real App Store ID after submission
+- **⚠️ Pending**: Generate `public/og-image.png` (1312×736) using MCP image tools
 
 ### Important Build Notes
 - All sites build from the repository root to respect npm workspaces

@@ -1,0 +1,51 @@
+{
+  "site": { "name": "Refresher", "tagline": "Meditación y Enfoque" },
+  "hero": {
+    "title": "Respira. Enfócate. Restaura.",
+    "subtitle": "Técnicas de respiración respaldadas por la ciencia para calmar tu mente y agudizar tu enfoque.",
+    "cta": "Descargar en App Store",
+    "badge": "Gratis · HealthKit · Sin anuncios"
+  },
+  "techniques": {
+    "title": "Cuatro Técnicas. Calma Infinita.",
+    "subtitle": "Cada método está fundamentado en investigación clínica.",
+    "box": {
+      "name": "Respiración de Caja",
+      "description": "Inhalar, sostener, exhalar, sostener — 4 segundos cada uno. Usado por Navy SEALs."
+    },
+    "478": {
+      "name": "Respiración 4-7-8",
+      "description": "Inhalar 4s, sostener 7s, exhalar 8s. Técnica del Dr. Weil para calma instantánea."
+    },
+    "coherent": {
+      "name": "Respiración Coherente",
+      "description": "5 respiraciones por minuto. Sincroniza tu ritmo cardíaco y sistema nervioso."
+    },
+    "wim": {
+      "name": "Método Wim Hof",
+      "description": "Hiperventilación controlada seguida de retención. Aumenta energía e inmunidad."
+    }
+  },
+  "privacy": {
+    "title": "Tus Datos Son Tuyos",
+    "subtitle": "Sin servidores. Sin rastreo. Sin anuncios.",
+    "points": [
+      "Todos los datos almacenados en el dispositivo o tu iCloud privado",
+      "Sin SDKs de terceros — sin Firebase, sin analíticas",
+      "Compras procesadas solo por Apple"
+    ]
+  },
+  "howItWorks": {
+    "title": "Simple por Diseño",
+    "steps": [
+      { "step": "1", "title": "Elige Tu Técnica", "description": "Elige entre cuatro métodos de respiración respaldados por la ciencia." },
+      { "step": "2", "title": "Sigue el Marcapasos", "description": "Una guía animada sincroniza con tu respiración." },
+      { "step": "3", "title": "Sigue Tu Progreso", "description": "La integración con HealthKit registra tus minutos de mindfulness." }
+    ]
+  },
+  "footer": {
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "poweredBy": "Desarrollado por OverX AI"
+  }
+}
