@@ -6,5 +6,14 @@ google-coverage-data/
 *.zip
 *.csv
 
+# IDE files
+.idea/workspace.xml
+
+# Loose image files at repo root
+blocker.png
+converter.png
+lang.jpg
+lawyer.jpg
+
 # Windows path artifacts
 "C:\Users\hustl\.claude\plugins\marketplaces\claude-plugins-official/"
