@@ -7,7 +7,7 @@ import { EnhancedSEO } from '@overx-ai/shared'
 
 const structuredData = [
   {
-    '@context': 'https://schema.org',
+    '@context': 'https://schema.org' as const,
     '@type': 'SoftwareApplication',
     name: 'Refresher: Meditation & Focus',
     operatingSystem: 'iOS',
