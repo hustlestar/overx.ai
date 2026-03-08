@@ -22,9 +22,8 @@ export default function Document() {
                   if (parts.length === 2) return parts.pop().split(';').shift();
                 }
                 var theme = getCookie('overx-theme') || 'dark';
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                }
+                document.documentElement.classList.remove('light', 'dark');
+                document.documentElement.classList.add(theme === 'light' ? 'light' : 'dark');
               })();
             `,
           }}

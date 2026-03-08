@@ -1,27 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useTheme } from '@overx-ai/shared'
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(true)
-
-  useEffect(() => {
-    const cookieTheme = document.cookie
-      .split(';')
-      .find(c => c.trim().startsWith('overx-theme='))
-    const theme = cookieTheme ? cookieTheme.split('=')[1].trim() : 'dark'
-    setIsDark(theme === 'dark')
-    document.documentElement.classList.toggle('dark', theme === 'dark')
-  }, [])
-
-  const toggle = () => {
-    const newTheme = isDark ? 'light' : 'dark'
-    setIsDark(!isDark)
-    document.documentElement.classList.toggle('dark', !isDark)
-    document.cookie = `overx-theme=${newTheme};path=/;domain=.overx.ai;max-age=31536000`
-  }
+  const { theme, toggleTheme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <button
-      onClick={toggle}
+      onClick={toggleTheme}
       className="p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       aria-label="Toggle theme"
     >

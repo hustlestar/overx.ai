@@ -124,23 +124,23 @@ export default function HomePage() {
         </section>
 
         {/* Privacy Highlight */}
-        <section className="py-24 bg-gray-900 dark:bg-gray-950 text-white">
+        <section className="py-24 bg-gray-100 dark:bg-gray-950 text-gray-900 dark:text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-8">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
               Privacy First
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('privacy.title')}</h2>
-            <p className="text-xl text-gray-400 mb-12">{t('privacy.subtitle')}</p>
+            <p className="text-xl text-gray-500 dark:text-gray-400 mb-12">{t('privacy.subtitle')}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               {privacyPoints.map((point, i) => (
                 <div key={i} className="flex items-start gap-3 text-left max-w-xs">
-                  <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-300 text-sm">{point}</span>
+                  <span className="text-gray-600 dark:text-gray-300 text-sm">{point}</span>
                 </div>
               ))}
             </div>
