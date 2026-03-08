@@ -19,6 +19,8 @@ export default function PrivacyPage() {
       />
       <Layout>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <LegalLanguageTabs selectedLang={lang} onSelect={setLang} />
+
           {/* Medical disclaimer notice */}
           <div className="mb-10 p-4 rounded-xl border border-amber-300 dark:border-amber-700 bg-amber-50 dark:bg-amber-950/30 text-amber-800 dark:text-amber-300 text-sm">
             <strong>{content.disclaimerTitle}:</strong>{' '}
@@ -27,8 +29,6 @@ export default function PrivacyPage() {
 
           <h1 className="text-4xl font-bold mb-2">{content.pageTitle}</h1>
           <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">{content.lastUpdated}</p>
-
-          <LegalLanguageTabs selectedLang={lang} onSelect={setLang} />
 
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-10">
             {content.sections.map((section) => (

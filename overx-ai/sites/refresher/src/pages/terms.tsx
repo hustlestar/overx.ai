@@ -19,6 +19,8 @@ export default function TermsPage() {
       />
       <Layout>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <LegalLanguageTabs selectedLang={lang} onSelect={setLang} />
+
           {/* Medical Disclaimer — prominent */}
           <div className="mb-10 p-6 rounded-xl border-2 border-red-400 dark:border-red-700 bg-red-50 dark:bg-red-950/30">
             <div className="flex items-start gap-3">
@@ -37,8 +39,6 @@ export default function TermsPage() {
 
           <h1 className="text-4xl font-bold mb-2">{content.pageTitle}</h1>
           <p className="text-gray-500 dark:text-gray-400 text-sm mb-8">{content.lastUpdated}</p>
-
-          <LegalLanguageTabs selectedLang={lang} onSelect={setLang} />
 
           <div className="prose prose-gray dark:prose-invert max-w-none space-y-10">
             {content.sections.map((section) => (
