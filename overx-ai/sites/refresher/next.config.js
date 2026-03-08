@@ -4,7 +4,7 @@ const { i18n } = require('./next-i18next.config')
 const nextConfig = {
   i18n: {
     ...i18n,
-    localeDetection: true,
+    localeDetection: false,
   },
   reactStrictMode: true,
   swcMinify: true,
@@ -19,20 +19,7 @@ const nextConfig = {
     minimumCacheTTL: 60 * 60 * 24 * 365,
   },
   async redirects() {
-    return [
-      {
-        source: '/en',
-        destination: '/',
-        permanent: true,
-        locale: false,
-      },
-      {
-        source: '/en/:path*',
-        destination: '/:path*',
-        permanent: true,
-        locale: false,
-      },
-    ]
+    return []
   },
   async rewrites() {
     return [

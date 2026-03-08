@@ -176,7 +176,7 @@ export default function HomePage() {
             <p className="text-blue-100 text-lg mb-10">
               Start your mindfulness journey today. Free to download.
             </p>
-            <AppStoreCTA size="lg" className="bg-white text-blue-700 hover:bg-blue-50" />
+            <AppStoreCTA size="lg" variant="light" />
           </div>
         </section>
       </Layout>
